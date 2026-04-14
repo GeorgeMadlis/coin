@@ -78,7 +78,7 @@ the model full codebase context.
 coin/pipeline/     One script per pipeline step (steps 1–7)
 coin/prompts/      Ready-to-paste web UI prompts for each step
 coin/agent/        Automated orchestrator and watch-mode daemon
-coin/ingestion/    Source adapters (URL, PDF, audio, social, browser)
+coin/ingestion/    Source adapters (URL, PDF, audio, subtitles, social, browser)
 coin/memory/       Ultramemory — embedding store + semantic search
 coin/store/        SQLite schema
 coin/web/          FastAPI web UI + REST API
@@ -87,10 +87,29 @@ artifacts/         Intermediate pipeline artifacts (groups.json, etc.)
 STRUCTURE.md       Full repo map — paste into any web UI for context
 ```
 
-YouTube inputs:
-`coin ingest https://www.youtube.com/watch?v=...` fetches the transcript when one
-is available. Local `.txt`, `.md`, `.srt`, and `.vtt` transcript files can also
-be ingested directly.
+---
+
+## Ingesting YouTube content
+
+COIN offers two strategies for YouTube sources depending on your needs:
+
+```bash
+# Fast: fetch the caption/subtitle track — no model, no download
+coin ingest https://www.youtube.com/watch?v=<id> --audio-subtitles
+
+# Accurate: download audio and transcribe locally via Whisper
+coin ingest https://www.youtube.com/watch?v=<id> --audio
+```
+
+`--audio-subtitles` uses yt-dlp to pull the caption track (manual subtitles
+preferred, auto-generated captions as fallback). It requires no local model
+and completes in seconds. Use it when the video already has good captions.
+
+`--audio` downloads the audio stream and transcribes it with Whisper. Use it
+when the captions are absent, machine-translated, or low quality.
+
+Both strategies produce the same output format in `artifacts/documents/` and
+feed identically into the rest of the pipeline.
 
 ---
 
@@ -98,12 +117,12 @@ be ingested directly.
 
 ```
 Raw sources
-    ↓ step 1  ingest      → store/documents
-    ↓ step 2  embed       → store/chunks_vss
+    ↓ step 1  ingest      → artifacts/documents/
+    ↓ step 2  embed       → store/chunks (DB)
     ↓ step 3  group       → artifacts/groups.json
     ↓ step 4  compile     → wiki/*.md
-    ↓ step 5  link        → store/backlinks
-    ↓ step 6  lint        → store/lint_findings
+    ↓ step 5  link        → store/backlinks (DB)
+    ↓ step 6  lint        → store/lint_findings (DB)
     ↓ step 7  qa          → cited answer
 ```
 
@@ -115,6 +134,10 @@ Each step reads from and writes to files that both modes share.
 
 PRs welcome. Run tests with `pytest tests/ -v`.
 Code style: `ruff` + `black`. Type hints required on all public functions.
+
+Structural changes (new pipeline steps, new directories, changed artifact
+locations) must update `STRUCTURE.md` in the same commit. See the
+**Architecture governance** section of STRUCTURE.md for the full rules.
 
 ---
 

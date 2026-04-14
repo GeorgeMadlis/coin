@@ -36,11 +36,25 @@ def _mode_note(manual: bool) -> None:
 @app.command()
 def ingest(
     source: str = typer.Argument(help="URL, file path, --tweet, or --audio"),
-    tweet: bool = typer.Option(False),
-    audio: bool = typer.Option(False),
+    tweet: bool = typer.Option(False, help="Treat source as a social post URL"),
+    audio: bool = typer.Option(False, help="Download audio and transcribe via Whisper"),
+    audio_subtitles: bool = typer.Option(
+        False,
+        "--audio-subtitles",
+        help="Fetch caption track from YouTube (faster than --audio, no transcription)",
+    ),
     manual: bool = typer.Option(False, help="Print manual-mode prompt instead of running"),
 ) -> None:
-    """Step 1 — Ingest a source into the knowledge base."""
+    """Step 1 — Ingest a source into the knowledge base.
+
+    Source type is detected automatically from the URL or file extension.
+    Use the flags below to override detection:
+
+    \b
+    --audio            Download audio → Whisper transcript (requires local model)
+    --audio-subtitles  Fetch YouTube caption track (fast, no model needed)
+    --tweet            Treat source as a social post
+    """
     if manual:
         _mode_note(manual=True)
         prompt_path = Path(__file__).parent / "prompts" / "01_ingest.md"
@@ -51,7 +65,19 @@ def ingest(
         )
         return
 
-    hint = "tweet" if tweet else ("audio" if audio else None)
+    if sum([tweet, audio, audio_subtitles]) > 1:
+        console.print("[red]Error:[/red] only one of --tweet, --audio, --audio-subtitles may be set at a time.")
+        raise typer.Exit(1)
+
+    hint: str | None
+    if tweet:
+        hint = "tweet"
+    elif audio:
+        hint = "audio"
+    elif audio_subtitles:
+        hint = "audio_subtitles"
+    else:
+        hint = None
 
     async def _run() -> None:
         from coin.pipeline.step1_ingest import run as ingest_run
