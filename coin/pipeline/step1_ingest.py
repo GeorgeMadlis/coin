@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 from coin.config import settings
-from coin.ingestion.audio_ingestor import ingest_audio
+from coin.ingestion.audio_ingestor import ingest_audio, is_transcript_path, looks_like_youtube_source
 from coin.ingestion.pdf_ingestor import ingest_document
 from coin.ingestion.social_ingestor import ingest_social_post
 from coin.ingestion.url_ingestor import ingest_url
@@ -51,6 +51,8 @@ async def _select_ingestor(source: str, media_type_hint: str | None) -> dict[str
     if media_type_hint == "tweet":
         return await ingest_social_post(source)
     if media_type_hint == "audio":
+        return await ingest_audio(source)
+    if looks_like_youtube_source(source) or is_transcript_path(source):
         return await ingest_audio(source)
 
     suffix = Path(source).suffix.lower()

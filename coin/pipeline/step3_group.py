@@ -97,7 +97,10 @@ async def _load_summaries() -> str:
         for f in sorted(docs_dir.glob("*.json")):
             doc = json.loads(f.read_text(encoding="utf-8"))
             excerpt = doc.get("content", "")[:400].replace("\n", " ")
-            lines.append(f"[doc {doc['doc_id']}] {doc['source_url']}\n{excerpt}\n")
+            title = str(doc.get("title", "")).strip()
+            lines.append(
+                f"[doc {doc['doc_id']}] {doc['source_url']}\nTitle: {title}\n{excerpt}\n"
+            )
     return "\n---\n".join(lines) if lines else "(no documents ingested yet)"
 
 

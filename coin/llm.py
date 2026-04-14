@@ -7,6 +7,8 @@ import re
 from dataclasses import dataclass
 from urllib.parse import urlparse
 
+from coin.ingestion.audio_ingestor import label_from_title
+
 
 @dataclass
 class OfflineLLM:
@@ -19,12 +21,21 @@ class OfflineLLM:
 
     def _group_documents(self, user: str) -> str:
         groups: dict[str, list[int]] = {}
-        for match in re.finditer(r"\[doc (\d+)\] ([^\n]+)", user):
-            doc_id = int(match.group(1))
-            source = match.group(2).strip()
-            parsed = urlparse(source)
-            host = parsed.netloc or parsed.path or "Documents"
-            label = host.replace("www.", "").split(".")[0].replace("-", " ").title() or "Documents"
+        for block in user.split("\n---\n"):
+            header = re.search(r"\[doc (\d+)\] ([^\n]+)", block)
+            if not header:
+                continue
+
+            doc_id = int(header.group(1))
+            source = header.group(2).strip()
+            title_match = re.search(r"^Title:\s*(.+)$", block, re.MULTILINE)
+            title = title_match.group(1).strip() if title_match else ""
+
+            label = label_from_title(title)
+            if not label:
+                parsed = urlparse(source)
+                host = parsed.netloc or parsed.path or "Documents"
+                label = host.replace("www.", "").split(".")[0].replace("-", " ").title() or "Documents"
             groups.setdefault(label, []).append(doc_id)
 
         if not groups:

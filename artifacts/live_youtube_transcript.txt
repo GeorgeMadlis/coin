@@ -1,0 +1,1153 @@
+In 1988,
+an anthropologist in Utah published a
+book with a graph in it that should have
+ended careers. The graph showed a curve,
+a single curve that described what
+happens inside every civilization right
+before it collapses. Not some of them,
+every single one he could find.
+17 civilizations on six continents
+across 5,000 years of recorded history,
+and they all traced the same arc. They
+all hit the same wall. His name was
+Joseph Tainter. He was not famous. He
+was not trying to be. He had spent most
+of the previous decade
+>> [music]
+>> on his hands and knees in the red dirt
+outside a dormant volcano in New Mexico,
+cataloging the ruins of people who had
+walked away from their own cities. And
+what he found in those ruins, the
+pattern that kept showing up, no matter
+which dead civilization he examined, is
+something that I have genuinely not been
+able to stop thinking about since I
+first encountered it. I have spent an
+embarrassing number of late nights with
+this material, and the deeper I went,
+the worse it got.
+Because here is what Tainter discovered,
+and here is what nobody wanted to hear.
+Civilizations do not collapse because of
+barbarians.
+They do not collapse because of drought
+[music]
+or plague or earthquakes or resource
+depletion
+or any of the things you were taught in
+school. He tested 11 of those
+conventional explanations across all 17
+cases. Every single one failed. Some of
+them failed embarrassingly. The
+barbarian theory, the one that gets
+trotted out in every documentary about
+Rome you have ever watched, cannot
+explain [music]
+why Rome was beating those exact same
+barbarians for centuries before the
+collapse. The barbarians did not
+suddenly get stronger.
+Rome got weaker.
+And the reason it got weaker
+is the reason every civilization that
+has ever collapsed got weaker. They
+built too much to save themselves,
+and the thing they built is what killed
+them.
+What nobody knew at the time Tainter
+published, what would take another three
+decades and researchers from completely
+unrelated fields to confirm,
+is that this pattern goes far deeper
+than metaphor or historical tendency. It
+is a mathematical law,
+and it has a threshold, a specific,
+calculable point on the curve where the
+system flips from functional to doomed.
+And the most recent proof of that
+threshold, published just last year,
+says something about its behavior
+that I personally think is the most
+disturbing finding in any field I have
+ever covered [clears throat]
+on this channel. It says there is no
+warning. The system looks fine right up
+until the moment it is not fine,
+and then it is over. But I am getting
+ahead of myself. We need to see the
+curve first. We need to understand what
+Tainter actually found
+because the setup matters. You need to
+feel the weight of the evidence before
+we get to what it implies about the room
+you are sitting in
+right now. Tainter's argument starts
+with something so obvious it sounds
+almost stupid when you say it out loud.
+Societies are problem-solving
+organizations.
+That is what they do.
+That is all they do. A group of humans
+encounters a problem, drought, invasion,
+famine,
+trade disputes, crime,
+and they solve it by adding complexity.
+They create a new role, a new
+institution, a new law, a new tax, a new
+branch of government.
+Early on, this works beautifully. The
+first irrigation system transforms a
+village.
+The first legal code prevents blood
+feuds.
+The first standing army stops the raids.
+Each addition of complexity produces
+enormous returns.
+Your life gets tangibly better.
+The math is easy.
+Invest in complexity, get back more than
+you put in. But here is where the curve
+starts to bend, and I need you to pay
+attention to this next part because it
+explains everything that comes after.
+You solve your easiest problems first.
+That is just human nature.
+The low-hanging fruit
+>> [music]
+>> gets picked early. Each subsequent
+problem
+is a little harder,
+a little more expensive,
+a little more resistant to simple fixes.
+The 10th law you write does not produce
+the same benefit as the first. The 100th
+bureaucratic office does not deliver the
+same efficiency gain as the 10th.
+The returns on each additional unit of
+complexity start declining.
+>> [music]
+>> Not immediately, not dramatically, but
+steadily, predictably, mathematically.
+Tainter graphed this. He called it the
+marginal return on complexity, and the
+curve he drew has a shape that once you
+see it, you cannot unsee. It rises
+steeply on the left, flattens in the
+middle, and then, at a certain point, it
+crosses zero and goes negative. Past
+that point, every new regulation, every
+new agency, every new layer of
+administration costs more than it
+produces. The civilization is now
+spending more on the machinery of
+problem-solving
+than the machinery is returning in
+solved problems. And the cruel part, the
+part that I think makes this
+fundamentally different from every other
+theory of collapse I have encountered,
+is that the people inside the system
+cannot stop
+>> [music]
+>> because the problems have not gone away.
+The barbarians are still at the border.
+The crops still need water.
+The trade routes [music]
+still need protecting. So the society
+keeps adding complexity, keeps climbing
+the curve past the point of negative
+returns,
+keeps spending more to get less
+until the whole structure becomes so
+expensive to maintain that collapse,
+actual collapse, becomes the more
+economical option. That is Tainter's
+thesis.
+Collapse is not a catastrophe.
+It is an economizing process,
+a civilization shedding complexity it
+can no longer afford. And he did not
+just theorize this. He showed it
+happening across 17 independent cases. I
+want to walk through one of them because
+the specific numbers matter here.
+And the one that has the best data is
+also the one you think you already
+understand.
+Rome, 451 BC,
+the Roman Republic governs itself with
+the 12 tables,
+140 provisions short enough that
+schoolboys memorized them.
+The entire legal apparatus of what would
+become the most powerful civilization in
+the Western world fit on a few bronze
+tablets in the forum. That is where the
+curve starts.
+>> [music]
+>> Now watch it climb. By the time Emperor
+Justinian ordered a consolidation of
+Roman law in 534 AD, his legal
+commission had to compress 3 million
+lines of accumulated legal text into
+something usable.
+3 million lines. They managed to get it
+down to 150,000,
+spread across the Digest alone, which
+pulled from the writings of 38 separate
+jurists. The Codex Justinianus,
+the portion dealing specifically with
+imperial constitutions,
+contained individual statutes. From 140
+provisions to 4,562
+statutes. That is a 33 times
+multiplication of the legal code across
+a single millennium.
+And I am not even counting the
+Theodosian Code that came before it,
+which already held over 2,500
+constitutions by 438 AD.
+And no, I am not making that up.
+These documents survive. You can go read
+them. But the legal code was just one
+dimension of the complexity explosion.
+The administrative structure tells the
+same story from a different angle.
+Under Augustus, around 27 BC, Rome
+administered roughly 25 to 28 provinces,
+clean,
+manageable.
+By the time Diocletian took power in 284
+AD
+and decided the empire needed
+restructuring,
+he doubled the number of provinces to
+around 100, organized them into 12
+dioceses and four prefectures, [music]
+and separated civil and military
+authority into entirely parallel command
+chains. The civil service roughly
+doubled from an estimated 15,000
+to 30,000. A contemporary named
+Lactantius, admittedly hostile to
+Diocletian,
+wrote that there were now more men using
+tax money than there were paying it.
+Diocletian also issued the Edict on
+Maximum Prices in 301 AD, which set
+price ceilings on over 1,200 goods,
+services, and wages across the entire
+empire.
+The penalty for violating it
+>> [music]
+>> was death. It was universally ignored
+within 4 years.
+Think about that for a second.
+The most powerful man in the Western
+world issues a death penalty backed
+economic regulation covering 1,200
+categories
+and the complexity of the economy simply
+routes around it like water around a
+rock. The system had become too complex
+>> [music]
+>> for even absolute authority to control.
+And then there is the coinage.
+This is Tainter's favorite metric. And
+honestly it might be the most elegant
+proof of his entire thesis. Under
+Augustus
+the Roman denarius was roughly 95%
+silver, around 3.9 g of actual precious
+metal. By Marcus Aurelius, about 75%
+under Septimius Severus, below 60.
+By the time of Gallienus around 269 AD
+the denarius contained between 2 and 5%
+silver. The coin still looked like a
+coin. It still had an emperor's face on
+it.
+But it had been hollowed out from the
+inside.
+Each debasement was a complexity
+response.
+The army needed paying.
+The bureaucracy needed funding.
+The frontiers needed defending. Minting
+more coins from less silver
+was the simplest available solution. The
+first debasements genuinely financed
+real capability. The last ones financed
+nothing.
+They were the empire feeding on its
+[music] own skeleton. And here is the
+part that should disturb you.
+If you plot the silver content of Roman
+coinage over time
+you get a curve and that curve
+matches the shape of Tainter's marginal
+returns graph almost perfectly.
+Steep value on the left flattening in
+the middle
+collapse on the right.
+>> [music]
+>> But one civilization is not a law.
+One data point even one as well
+documented as Rome
+is an anecdote. And Tainter knew that.
+So he kept looking. The Ottoman Empire
+followed the same trajectory with no
+knowledge of Tainter's theory and no
+structural connection to Rome.
+In 1365
+Murad the first administered two
+provinces. Two.
+The Imperial Council had three viziers.
+By the late 1500s
+the empire governed 42 provinces with 11
+viziers and a central bureaucracy that
+had grown from 38 salaried scribes in
+1549
+to roughly 1,500 by the 17
+90s.
+That is a 40 times increase in
+administrative staff in 250 years.
+The Janissary Corps
+is maybe the most vivid example of
+complexity eating its own host.
+Originally about 2,000 elite soldiers
+recruited through the devşirme system
+trained for up to 14 years in the
+seven-tiered Enderun Palace Academy.
+By 1808 the core had swelled to 140,000
+of whom only about 10% were actually
+trained soldiers. The rest were
+civilians who had purchased enrollment
+for the tax exemptions and privileges.
+They had stopped being a military force
+and started being a protection racket.
+In 1810 alone
+Janissaries set over 2,000 arson fires
+in Constantinople and then demanded
+bribes to extinguish them. I actually
+find this detail almost darkly funny
+in a way that makes you wince. The
+institution built to defend the empire
+was literally burning down the capital
+for pocket money. Sultan Mahmud II
+solved the problem in 1826
+by surrounding their barracks with
+artillery and killing over 6,000 of them
+in a single day. The event is officially
+called
+the Auspicious Incident
+which is one of history's more savage
+euphemisms.
+The Ottoman legal system reached a
+complexity that borders on the absurd.
+At its peak four to five parallel legal
+jurisdictions operated simultaneously.
+Sharia courts
+secular Kanun courts Millet courts where
+non-Muslim communities adjudicated under
+their own religious laws
+capitulatory courts for foreign
+nationals and after the Tanzimat reforms
+a new layer of secular state courts on
+top of everything else.
+The Mecelle the empire's attempted legal
+codification between 1869 and 1876
+produced 1,851 articles across 16
+volumes.
+And it covered only civil law. Family
+law was not even touched.
+The Maya Chaco Canyon
+the Western Zhou Dynasty which collapsed
+in 771 BC. Tainter tracked monumental
+construction among the Maya as a proxy
+for complexity investment and the curve
+peaks and collapses
+in exactly the shape his model predicts.
+The Chacoans in New Mexico built an
+extraordinary trade network linking
+different altitude zones to hedge
+against climate variability. [music]
+And it worked until the coordination
+costs exceeded the benefits at which
+point they did something remarkable.
+They just left.
+Walked away from their great houses
+and went back to simpler ways of living.
+Voluntarily shed complexity.
+Tainter would say they made [music] the
+rational choice.
+The curve told them it was time to go.
+17 civilizations
+every continent
+5,000 years.
+The same curve.
+There is one more voice I need you to
+hear before we leave the historical
+record. Because he comes at this problem
+[music] from a direction nobody
+expected. And honestly, his story is one
+of the saddest in this entire saga.
+Mancur Olson grew up on a farm near
+Buxton, North Dakota. Son of Norwegian
+immigrants
+>> [music]
+>> brilliant kid. Won a Rhodes Scholarship
+to Oxford got his PhD at Harvard. And in
+1965 published a book called The Logic
+of Collective Action that in the words
+of Jonathan Rauch blew a hole in the
+hull of American political science. He
+proved something uncomfortable.
+Rational individuals will not act to
+achieve common group interests unless
+the group is small enough
+or offers selective incentives. The free
+rider problem.
+It sounds abstract until you realize it
+explains why small organized lobbying
+groups consistently defeat the diffuse
+interests of millions of citizens. But
+it was his 1982 book The Rise and
+Decline of Nations
+that connects directly to Tainter's
+curve. Olson showed that in politically
+stable democracies small interest groups
+accumulate over time like plaque in an
+artery. Each one lobbies for
+protectionist policies whose benefits
+are concentrated among members while
+costs are spread invisibly across
+everyone else. One lobbying group is
+harmless. A thousand of them accumulated
+over decades [music] of uninterrupted
+stability
+makes the entire economy rigid slow and
+incapable of adapting. He called it
+institutional sclerosis.
+And here is the punchline that I keep
+coming back to.
+His core prediction was testable.
+And it tested well. The longer a society
+enjoys uninterrupted political stability
+the slower it grows.
+Post-war Germany and Japan whose old
+interest group networks had been
+completely [music] destroyed experienced
+economic miracles. Stable undisrupted
+Britain stagnated under layers of
+accumulated coalitions.
+Stability itself is the disease. The
+thing that feels like health is the
+thing that [music] is killing you.
+Olson collapsed outside his office at
+the University of Maryland
+on February 19th, 1998.
+Heart attack. Dead at 66.
+He was [music] buried at the Grove
+Norwegian Lutheran Cemetery
+near the farm where he grew up.
+I find something almost unbearable about
+that. A man who spent his life studying
+how institutions [music] die
+dying suddenly without warning
+in the middle of his work.
+His colleagues said he was in the middle
+of his most ambitious project yet.
+>> [music]
+>> It was never finished. But this was not
+just about the past anymore.
+A physicist at MIT was about to prove
+that this pattern has the force of a
+natural law behind it. Yaneer Bar-Yam
+grew up in Boston, got his PhD from MIT
+studying [music] semiconductor defects.
+And then did something unusual for a
+physicist. He pointed his mathematical
+tools at human civilization and asked a
+simple question.
+Is there a maximum complexity that a
+hierarchical organization can handle?
+The answer
+is yes.
+And the limit
+is hard. Bar-Yam formalized something
+called the multi-scale [music]
+law of requisite variety, which is a
+mouthful, but the core idea is elegant
+[music] enough to explain in a sentence.
+The complexity of your organization
+>> [music]
+>> must match the complexity of the
+problems it faces at every scale
+simultaneously.
+Not just overall, at every level. A
+government that has enough total
+bureaucratic capacity, but concentrates
+it all at the top,
+cannot solve problems that require local
+adaptation. A decentralized system that
+handles local issues beautifully cannot
+coordinate a national response.
+And here is the part that really
+matters. Byam proved a conservation law.
+When your total resources are fixed,
+increasing complexity at one scale
+necessarily decreases it at another. You
+cannot have it both ways.
+There is no free lunch in complexity
+space.
+Byam published the proof.
+It is a theorem, not a suggestion.
+And Byam did not just theorize.
+>> [music]
+>> He made predictions.
+His food price model identified a
+critical threshold, specifically when
+the FAO food price index crosses 210,
+above which social unrest becomes highly
+probable. He submitted this analysis to
+the United States government on December
+13th, 2010.
+Four days later,
+a fruit vendor in Tunisia
+set himself on fire
+and the Arab Spring began. I spent a
+long time sitting with that one.
+Four days.
+The math was right.
+>> [music]
+>> The government had the paper on their
+desk and nobody acted.
+>> [music]
+>> His ethnic violence model, published in
+Science in September 2007,
+found that when ethnic groups are
+distributed in patches between 20 and 60
+km wide, violence erupts with 90%
+geographic correlation.
+Below 20 km, people are well-mixed and
+peaceful.
+Above 60, well-separated and peaceful.
+In between, the math says blood. [music]
+He tested it against actual violence in
+India and the former Yugoslavia.
+90% match.
+But I personally think the most
+underrated part of Byam's work, the
+piece that ties back to Tainter [music]
+in a way that should keep you up
+tonight,
+is the implication for modern
+institutional complexity. Because what
+his math says
+>> [music]
+>> is that technology does not save you.
+Technology increases the complexity of
+the environment faster than it increases
+the complexity of the organizational
+response.
+>> [music]
+>> The world gets harder to govern faster
+than governance gets better at governing
+it.
+>> [music]
+>> The gap between environmental complexity
+and institutional complexity widens,
+>> [music]
+>> which means every smartphone, every
+algorithm,
+every interconnected global supply chain
+functions as an accelerant for the very
+complexity it was designed to manage.
+Now, I need to show you the modern
+numbers.
+And I want to be honest. This is the
+section I found most difficult to
+research because the numbers are so
+large,
+they start to feel fake.
+They are not fake. Every figure I am
+about to give you comes from a published
+government source
+or a peer-reviewed study.
+The United States Federal Register, the
+document where all new federal
+regulations are published, started in
+1936
+with 2,620
+pages. In 2024,
+it hit an all-time record of 106,109
+pages.
+That is a 40 times increase. That single
+year contained 3,248
+final rules,
+which works out to 19 new regulations
+for every one law that Congress actually
+passed. If you wanted to read the 2024
+Federal Register at a normal pace of 250
+words per minute,
+>> [music]
+>> it would take you 44
+work weeks. That is almost an entire
+working year of doing nothing but
+reading regulations.
+And then the next year's batch would
+arrive.
+>> [music]
+>> The Code of Federal Regulations,
+the accumulated body
+of all current rules, grew from 22,877
+pages in 1960
+to approximately 190,000 pages today.
+The Mercatus Center at George Mason
+University
+counts the binding restrictions in that
+code.
+>> [music]
+>> The words like shall and must and may
+not,
+and the number has crossed 1.1 million.
+>> [music]
+>> If you add state regulatory codes,
+you get 416 million words
+>> [music]
+>> and over 6 million restrictions.
+Reading them all would take 11 and a
+half years.
+The US tax code started [music] as 27
+pages of law in 1913,
+a one-page form, rates of 1 to 7%.
+[music]
+Today, the comprehensive tax reference a
+professional actually needs spans
+approximately 70,000 pages containing 4
+million words. That is five times the
+Bible,
+seven times War and Peace.
+Americans spend somewhere between 6 and
+a half
+and 7.9 billion hours per year on tax
+compliance,
+equivalent to about 3.8 million
+full-time workers
+at a cost estimated between 430
+and 546 billion dollars annually. That
+is not a typing error.
+>> [music]
+>> That is roughly the GDP of Norway spent
+every year on the act of figuring out
+what you owe.
+And the financial regulation comparison
+is, I think, the single most damning
+data point in this entire story. The
+Glass-Steagall Act of 1933
+separated commercial and investment
+banking in 37 pages.
+37.
+It included a personal threat of 5 years
+imprisonment for violators.
+>> [music]
+>> And it worked for 66 years. The
+Dodd-Frank Act of 2010
+>> [music]
+>> attempted to address a similar category
+of systemic financial risk. It [music]
+runs 848 pages, 23 times longer,
+and required agencies to write nearly
+400 new implementing regulations.
+By mid-2013,
+>> [music]
+>> those implementing rules had generated
+13,789
+additional pages of regulatory text. 42
+words of regulation
+for every one word of the original law.
+Over 60% of the implementation deadlines
+were missed.
+That is the curve.
+You are looking at the curve.
+Right now,
+in your own country,
+in your own tax return, in your own
+health care system, where the number of
+billing codes jumped from 14,000 under
+ICD-9
+to over 155,000
+>> [music]
+>> under ICD-10, which includes a specific
+code for being pecked by a chicken
+and a separate code for a subsequent
+encounter with a flaming pair of water
+skis.
+I wish I were joking.
+The code is V90.107
+XD.
+Look it up. [music]
+And the health care numbers just keep
+getting worse the deeper you dig.
+Between 1975
+and 2010,
+the number of physicians in the United
+States
+grew by about 150%. [music] The number
+of health care administrators grew by an
+estimated 3,200%.
+The current ratio is approximately 10
+administrators for every one doctor.
+Administrative costs in US health care
+consume roughly 1 trillion dollars
+annually,
+somewhere between 15 and 30%
+>> [music]
+>> of total national health spending.
+Hospital administrative expenditures
+>> [music]
+>> hit 687
+billion dollars in 2023
+versus 346 billion for direct patient
+care. That is a two-to-one ratio.
+Hospitals in America now spend twice as
+much on administration
+>> [music]
+>> as they do on actually treating
+patients.
+The United States spends 1,500 dollars
+per person per year on health care
+administration. Germany, the next
+highest among developed nations, spends
+306.
+>> [music]
+>> Let that difference sit for a moment.
+And doctors,
+the people this system supposedly exists
+to support, complete an average of 39
+prior authorizations per week, spending
+13 hours of their time on paperwork for
+insurance companies. 93% reported delays
+care. 29% report the system has directly
+caused a serious adverse event for a
+patient.
+The complexity built to manage health
+care is now actively preventing health
+care. I want to give you one more
+example because I think it shows the
+curve operating at the corporate scale.
+And it involves a company you know,
+General Electric. At its peak under Jack
+Welch, GE reached a market
+capitalization
+of roughly $600 billion, the
+most valuable company
+in America. Welch grew it 30-fold
+through acquisitions across wildly
+diverse sectors: jet engines, insurance,
+NBC, plastics, credit cards, synthetic
+derivatives.
+GE Capital became, in effect, an
+unregulated bank with a lightbulb logo.
+The stock eventually lost $540 billion
+in value,
+a sum larger than the GDP [music] of
+Belgium.
+In 2018, GE was removed from the Dow
+Jones Industrial Average after
+continuous membership since 1896.
+By 2021,
+it was broken into three separate
+companies.
+A Yale analysis called it a massive
+management mistake.
+An activist investor called it the
+biggest failure of corporate governance
+in corporate history. And I would argue
+it is neither of those things. It is
+Tainter's curve playing out inside a
+single organization across a single
+human lifetime. GE did not fail because
+of bad management.
+It failed because the complexity of
+managing that many unrelated businesses
+in that many unrelated markets
+exceeded the capacity of any hierarchy
+to coordinate them. Bar-Yam would have
+predicted it
+from the math
+alone. And then there is software,
+which might be the purest expression of
+the complexity curve operating in real
+time. Windows 1.0 in 1985
+contained approximately 5,000 lines of
+code.
+Windows XP in 2001
+had around 40 million. Windows 11 is
+estimated at 60 to 100 million lines.
+That is a potential 20,000-fold increase
+in 40 years. And the consequences track
+the curve with mathematical precision.
+The Standish Group's Chaos reports found
+that in 1994
+only 16.2%
+of software projects were delivered on
+time and on budget.
+31%
+were canceled outright. Budget overruns
+averaged 189%.
+By 2020,
+the success rate had clawed its way up
+to 31%,
+which is still a catastrophic failure
+rate for a mature industry. Projects
+exceeding $10 million
+are 10 times more likely to be canceled
+than those under a million. The
+healthcare.gov launch in October 2013
+is the case study that haunts everyone
+in the field.
+Original budget $93.7
+million.
+Final cost over $1.7 billion.
+47 private contractors with no single
+individual in charge. Stress tests the
+day before launch showed the site failed
+with only 1,100 simultaneous users
+against an expected 50 to 60,000. A
+McKinsey review delivered months earlier
+had flagged more than a dozen critical
+risks.
+The steering committee did not act. They
+launched anyway.
+Over the prior decade, 94%
+of large federal IT projects had been
+unsuccessful, and nobody stopped to ask
+whether maybe, just maybe,
+the systems we are building have crossed
+the complexity threshold beyond which
+human institutions can manage them.
+And here is where I need to introduce
+the man who saw what was coming and was
+called crazy for it.
+Peter Turchin, born in the Soviet Union
+in 1957.
+His father,
+Valentin Turchin, was a physicist and
+dissident who was expelled from the USSR
+in 1977.
+Peter studied biology,
+earned a PhD in zoology from Duke, and
+spent years modeling the population
+dynamics of beetles and lemmings before
+asking a question that changed his life.
+>> [music]
+>> Do human societies follow the same
+mathematical cycles as animal
+populations?
+In February 2010,
+he published a letter in Nature, one of
+the most prestigious scientific journals
+on Earth, predicting that the coming
+decade would bring a period of growing
+instability in the United States. He
+identified the specific drivers:
+stagnating
+real wages, an expanding wealth gap,
+an overproduction of people with
+advanced degrees competing for a fixed
+number of elite positions,
+exploding public debt.
+He gave a date. He said instability
+would peak around 2020.
+Nobody believed him. He told Time
+magazine in 2020,
+quote, "They had no reason to believe I
+was not crazy."
+End quote. Then came Occupy Wall Street
+in 2011.
+The rise of political populism across
+the West,
+>> [music]
+>> Brexit,
+the George Floyd protests, January 6th,
+2021.
+Every single event fell within his
+predicted window.
+His computational model, published in
+the book Ages of Discord in 2016,
+had identified roughly 50-year cycles of
+American instability
+with peaks around 1870, 1920,
+1970,
+and projecting forward to 2020. The
+model hit its target.
+Turchin's concept of elite
+overproduction is, I think, one of the
+most important ideas
+nobody talks about. When a society
+produces more aspiring elites than it
+can absorb into the existing power
+structure,
+the surplus becomes what he calls
+counter-elites. People with the
+education and ambition to lead but no
+path to power.
+They mobilize popular discontent.
+They fragment consensus.
+They turn the machinery of governance
+into a battlefield. American households
+worth $10 million or
+more
+grew from 66,000
+in 1983
+to 350,000
+in 2010.
+Francis Bacon warned about this in the
+17th century. Sedition follows, he
+wrote,
+when more are bred scholars than
+preferment can take off.
+400 years ago, and we still have not
+listened. Turchin built something called
+the Seshat Global History Databank,
+nearly 300,000 records linked to over
+400 historical polities from the
+Neolithic to the Industrial Revolution,
+coded across 1,500 variables.
+This is not speculation dressed up as
+science.
+This is the largest quantitative history
+data set
+ever assembled. And what it shows,
+across every civilization in the
+database, is the same pattern Tainter
+found in his 17 case studies. A 2017
+paper in the Proceedings of the National
+Academy of Sciences
+used Seshat data to identify a single
+dimension of complexity that structures
+global variation in human social
+organization. Civilizations do not
+develop in random directions.
+They climb the same axis,
+and they fall off the same edge.
+Turchin warns that the instability
+period is not over. Historical data
+across multiple civilizations
+show typically last 10 [music] to 15
+years. If his 2010 prediction was
+correct, and every marker suggests it
+was, then we are somewhere around year
+14 or 15,
+which could mean the worst is behind us,
+or it could mean we are in the final
+escalation before the peak.
+The data cannot distinguish between
+those two scenarios from inside the
+window. You would need to wait until it
+is over to know which one you were in.
+And by then, of course,
+the answer would be academic. [music]
+I want to pause here and say something
+directly
+because I think it matters.
+I am not a doom prophet. I did not go
+into this research looking for evidence
+that civilization is ending. I went into
+it because I was curious about a graph
+in a 37-year-old anthropology book. But
+the convergence of evidence across these
+four completely independent research
+programs, Tainter's archaeology,
+Bar-Yam's physics, Turchin's ecology and
+history, and Olson's economics,
+is something I cannot explain away.
+[music]
+They did not collaborate.
+They did not cite each other,
+at least not initially. They started
+from different continents,
+different centuries,
+different academic disciplines,
+and they arrived at the same place.
+But here is what made me lose sleep, and
+I am not being dramatic. I genuinely had
+trouble sleeping after I found this
+paper.
+In 2025,
+two researchers named Ken Hou and Houa
+published a mathematical proof on arXiv
+that civilizational type collapse
+behaves as a first order phase
+transition. I need you to understand
+[music] what that means
+because it is the difference between a
+slow decline and a light switch. A
+second order phase transition is
+gradual. Think of a magnet being slowly
+heated. It loses its magnetism
+progressively.
+There are warning [music] signs. The
+system slows down.
+Fluctuations increase.
+You can see it coming.
+A first order phase transition is not
+that.
+A first order phase transition is water
+freezing. Liquid one instant, solid the
+next.
+A bridge holding
+and then not holding. No gradual
+weakening.
+No creak before the snap.
+The system performs its function right
+up until the threshold and then it does
+not. Kahn and Hoerl derived an exact
+threshold formula: alpha sub c equals 1
+over 1 minus beta
+where alpha is the feedback
+amplification rate and beta is the
+adaptive coupling of the system. Below
+the threshold, the system self-corrects.
+Above it, sudden irreversible collapse.
+And for systems with power law feedback
+dynamics, which include institutional
+dynamics market competition and natural
+selection, the standard early warning
+framework, the one scientists use to
+detect approaching tipping points, fails
+completely. There are no warning
+signals.
+The standard indicators that work for
+second order transitions produce no
+useful information
+whatsoever for first order ones.
+The system looks stable at every point
+on the curve
+including the last one. I want to be
+careful here because I know how this
+sounds
+>> [music]
+>> and I do not want to be irresponsible
+with this.
+There are real criticisms of every
+researcher I have mentioned. Tainter's
+curve is conceptual
+not precisely calibrated. Turchin's
+model has been accused of being too
+linear.
+Baylyam's work on civilizational
+complexity is harder to test than his
+food price or violence models and Kahn
+and Hoerl's paper is a theoretical proof
+about a class of systems
+not a direct measurement of any specific
+civilization.
+But here is what I cannot get past.
+Four independent research traditions
+archaeology, physics, ecology and
+economics [music]
+starting from completely different
+premises
+using completely different methods,
+studying completely different data sets,
+all converge on the same conclusion.
+There is a threshold. The threshold is
+generated internally by the
+problem-solving apparatus itself and the
+dynamics of the threshold suggests that
+crossing it is sudden
+not gradual. Tainter made one more
+observation
+that I have not been able to shake. He
+noted that in the ancient world
+>> [music]
+>> when a civilization collapsed, its
+neighbors survived.
+Rome fell
+but Persia continued. The Maya lowlands
+emptied but the highlands adapted.
+Collapse was local because civilizations
+were local.
+Modern civilization is not local. The
+supply chains are global. The financial
+systems are interconnected.
+The communication networks are
+instantaneous.
+No single nation can collapse
+independently, Tainter wrote because it
+would simply be absorbed by neighboring
+competitors.
+Therefore when the threshold is crossed
+world civilization will collapse as a
+whole. A 2023 study in PNAS by Martin
+Scheffer
+found that states had a median lifespan
+of roughly 200 years. They become more
+vulnerable to collapse as they age
+not because of any single cause but
+because accumulated complexity creates
+brittleness.
+The United States
+>> [music]
+>> is 250 years old. The European Union's
+core institutions are 70 years into
+their experiment. [music]
+Both are in the zone where Scheffer's
+data says vulnerability peaks.
+And Turchin says the instability phase
+is not over. Historical data shows these
+periods last 10 to 15 years. If his
+model is right
+and it has been right about everything
+else so far
+we are somewhere in the middle.
+The real question is not whether the
+pattern is real. The evidence for that
+spans 5,000 [music] years and 17
+civilizations and the largest
+quantitative history database ever
+built. The real question is the one the
+math itself closes the door on.
+Can you tell where you are on the curve
+before you cross the threshold?
+And the answer according to the most
+recent proof
+is no. Not because we have not looked
+hard enough
+not because we need better data
+or smarter models but because the
+mathematics of first order phase
+transitions do not produce warning
+signals.
+The bridge feels solid at every point
+[music] including the last point. The
+absence of a warning signal is built
+into the physics [music] itself. You
+interact with the curve every day. Every
+time you file a tax return. Every time
+you wait for an insurance company to
+authorize a procedure your doctor
+already approved. Every time a software
+update breaks something that was
+working. Every time you sit in a meeting
+that exists to plan another meeting.
+That is not bureaucratic [music]
+inconvenience. That is the texture of a
+civilization on the right side of
+Tainter's curve where each additional
+unit of complexity costs more than it
+returns.
+And if the math is right and four
+independent research programs say it is
+then the feeling of solidity you
+experience right now, the sense that the
+systems [music] around you are
+functioning, that tomorrow will resemble
+today, tells you nothing.
+The math predicts you would feel exactly
+this way at every single point on the
+curve
+including the last one.

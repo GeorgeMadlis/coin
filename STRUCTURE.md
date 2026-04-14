@@ -41,7 +41,7 @@ Each step lives in `coin/pipeline/stepN_name.py` and produces a persistent
 artifact (a file or DB row). Steps can be run independently.
 
 ```
-Step 1  ingest      Raw source → RawDocument (text + metadata)        → store/documents
+Step 1  ingest      Raw source / transcript → RawDocument             → store/documents
 Step 2  embed       RawDocument chunks → vector embeddings             → store/chunks_vss
 Step 3  group       Chunk embeddings → topic clusters                  → artifacts/groups.json
 Step 4  compile     Topic group + chunks → wiki article (.md)          → wiki/*.md
@@ -80,7 +80,7 @@ coin/                          ← Python package
 ├── ingestion/                 ← Source adapters (used by step1)
 │   ├── url_ingestor.py        Web pages, RSS
 │   ├── pdf_ingestor.py        PDFs, EPUB, DOCX
-│   ├── audio_ingestor.py      MP3/MP4/YouTube → Whisper transcript
+│   ├── audio_ingestor.py      MP3/MP4/YouTube/subtitles → transcript text
 │   ├── social_ingestor.py     Twitter/X, Reddit, HN
 │   └── browser_clip.py        Receives clips from Chrome extension
 │
@@ -155,7 +155,7 @@ lint_findings  id, kind, article_slug, detail, resolved, created_at
 ## CLI commands
 
 ```bash
-coin ingest <source>           # Step 1 — ingest a URL, file, or --tweet
+coin ingest <source>           # Step 1 — ingest a URL, file, transcript, or --tweet
 coin embed                     # Step 2 — embed all un-embedded chunks
 coin group                     # Step 3 — cluster into topic groups
 coin compile [--topic <name>]  # Step 4 — write/update wiki articles
@@ -200,3 +200,7 @@ COIN_PORT                  7860
 
 Each prompt in `coin/prompts/` is self-contained — it tells the model exactly
 what inputs to expect, what to produce, and in what format.
+
+Transcript inputs:
+- Local `.txt`, `.md`, `.srt`, and `.vtt` files are valid ingest sources.
+- YouTube URLs can be ingested directly when a transcript is available.

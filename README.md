@@ -2,7 +2,7 @@
 
 **An LLM-compiled knowledge base for [ConnectedNature](https://connectednature.com).**
 
-Ingest raw sources (URLs, PDFs, audio, social posts), compile them into an
+Ingest raw sources (URLs, PDFs, audio, social posts, YouTube transcripts), compile them into an
 interconnected wiki with citations and a knowledge graph, answer questions
 against your KB, and keep everything current with watch mode.
 
@@ -22,6 +22,8 @@ required.** Ideal for development, curation, and one-off research sessions.
 
 ```bash
 coin ingest https://example.com/article    # fetch + save raw text to disk
+coin ingest https://www.youtube.com/watch?v=hQLEu3ZIrYU
+coin ingest /path/to/transcript.vtt
 # → open coin/prompts/02_group.md in Claude.ai, paste your document list
 # → copy the topic groups back into artifacts/groups.json
 # → open coin/prompts/03_compile.md, paste one topic group
@@ -84,6 +86,11 @@ wiki/              Compiled Markdown articles (git-tracked)
 artifacts/         Intermediate pipeline artifacts (groups.json, etc.)
 STRUCTURE.md       Full repo map — paste into any web UI for context
 ```
+
+YouTube inputs:
+`coin ingest https://www.youtube.com/watch?v=...` fetches the transcript when one
+is available. Local `.txt`, `.md`, `.srt`, and `.vtt` transcript files can also
+be ingested directly.
 
 ---
 

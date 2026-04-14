@@ -28,6 +28,7 @@ dependencies = [
     "pymupdf>=1.24",
     "openai-whisper>=20231117",
     "yt-dlp>=2024.4",
+    "youtube-transcript-api>=0.6.2",
 
     # NLP
     "spacy>=3.7",
@@ -94,3 +95,6 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["coin"]
