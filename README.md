@@ -130,6 +130,23 @@ Each step reads from and writes to files that both modes share.
 
 ---
 
+## FAQ
+
+**Q: What LLM is used to answer questions asked with `coin ask <question>`?**
+
+None. `coin ask` is pure retrieval — it searches the vector store for the 5
+closest chunks and returns them verbatim. No model call is made, no answer is
+synthesised.
+
+The `--manual` flag (`coin ask "..." --manual`) is the path that involves an
+LLM: it renders the [05_qa.md](coin/prompts/05_qa.md) prompt with the retrieved
+excerpts so you can paste it into Claude.ai or ChatGPT yourself.
+
+If you want agent-mode synthesis (model call + generated answer), that is not
+yet implemented in `coin/pipeline/step7_qa.py`.
+
+---
+
 ## Contributing
 
 PRs welcome. Run tests with `pytest tests/ -v`.
