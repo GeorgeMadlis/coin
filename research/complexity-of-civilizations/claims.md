@@ -159,3 +159,48 @@ Flagged items marked with `[FLAG]` are candidates for Stage 2 source-tracing.
 ## Francis Bacon
 
 - **Bacon**: "Sedition follows when more are bred scholars than preferment can take off." (17th century)
+
+---
+
+## Tainter — direct interview claims (new source: YouTube interview, https://www.youtube.com/watch?v=X3LP5IMWe84)
+
+### Collapse definition (Tainter's own words)
+- **Tainter**: Collapse is "the rapid simplification of a society — the rapid loss of an established level of socio-political and economic complexity," often accompanied by population loss, decreased literacy, territorial reduction, and economic simplification.
+- **Tainter**: Population decline often precedes the political collapse — it functions as an early indicator of problems, not a consequence.
+- **Tainter**: The word "rapid" must be defined relative to each individual society; there is no universal timescale for what counts as rapid.
+
+### Roman Empire — additional detail
+- **Tainter**: The Roman Empire was producing approximately 1 million coins per day in the 4th century — an industrial scale of production driven entirely by the need to pay the army, not to raise anyone's standard of living.
+- **Tainter**: The Roman army may have doubled from approximately 300,000 permanent troops to approximately 600,000 under the reforming emperors of the late 3rd century. The Roman Empire was the only pre-modern state to maintain a standing army sufficient for all needs.
+- **Tainter**: Silver debasement originated in 64 AD under Nero (from ~98% to ~90% silver); the process proved a slippery slope, continuing until ~268 AD when silver content reached approximately 2%.
+- **Tainter**: Roman expansion was financed by appropriating surplus from conquered peoples; by the First Century AD Rome had reached its natural boundaries (Rhine, Danube, North Africa, the Levant) and had to sustain itself on fixed annual agricultural output — ending the growth phase.
+- **Tainter**: The Eastern Roman Empire survived because it was simply wealthier — the older, more economically developed half. The East would buy off barbarians and redirect them toward the West.
+- **Tainter**: The fall of Rome took several decades in the middle of the 5th century AD; 476 is a conventional date, not the moment of collapse.
+
+### Europe's avoidance of collapse
+- **Tainter**: When Napoleon invaded Russia, approximately 1 in 4 Frenchmen was in the army and another 1 in 4 was in the clergy — only half the population economically supporting the other half. Europe in the 17th–18th centuries was close to collapsing.
+- **Tainter**: Europe avoided collapse through a sequence of windfalls: (1) colonial exploitation of gold and silver from the Americas and spices from the Orient; (2) discovery of coal in 18th-century England. Without these energy subsidies, collapse was plausible.
+
+### Energy and complexity
+- **Tainter**: Complexity has a metabolic/energy cost in all societies; today this cost is hidden because it is paid with fossil fuels. Ancient societies paid directly in higher taxes and harder labour.
+- **Tainter**: Energy return on investment (EROI) for US oil and gas was approximately 100:1 in 1940. It is now approximately 15:1 and will continue to decline.
+- **Tainter**: Declining EROI is equal in importance to climate change as a challenge to modern civilisation — it is not about running out of oil, but about the net profit of producing it declining.
+- **Tainter**: Historical energy transitions take 40–50 years.
+- **Tainter**: Information technology is currently in a phase of increasing returns but will inevitably reach a saturation point and then diminishing returns — as every economic transformation does.
+
+### Innovation and diminishing returns
+- **Tainter**: Innovation itself follows a diminishing-returns curve. In the 1970s, journal papers in *Science* or *Nature* typically had one author; today papers have 3–20+ authors. This reflects depletion of simple problems: it takes more and more researchers to achieve a conceptual breakthrough.
+- **Tainter** (and colleagues): A study using the US Patent Office database (data 1974–~2012) found that innovation productivity declined by over 20% in a 30-year period. The metric: patents per author (output per worker) — the standard measure of economic productivity applied to innovation — fell consistently. Approximately 50% of US patents come from overseas, so the database measures global innovation.
+- **Tainter**: The cost of innovation is increasing while the productivity of innovation is declining; this process will continue. Funding bodies will eventually phase out costly research areas with declining output.
+
+### Critique of alternative theories
+- **Tainter**: Ecological overshoot (Jared Diamond's *Collapse* and similar work) has "really no good evidence" — there is no case where one can demonstrate a society collapsed due to resource shortage. Tainter has written specific reviews of Diamond's reasoning.
+- **Tainter**: The conventional economic argument that innovation and market forces will always solve resource shortages rests on an implicit, unacknowledged assumption that problem-solving complexity does not itself face diminishing returns. His innovation research directly falsifies this assumption.
+
+### Meadows / Club of Rome
+- **Tainter** (direct confirmation): The Club of Rome *Limits to Growth* analysis (Meadows et al., 1972) and Tainter's diminishing-returns framework are consistent — both describe increasing costs and declining output. Tainter confirmed this to Dennis Meadows personally.
+
+### General advice and framing
+- **Tainter**: "We are a species that muddles through — that is all we have ever done and all we ever will do." Humanity will continue to find its way step by step without a plan.
+- **Tainter**: "Complexity itself is not necessarily a bad thing. Complexity is either useful and affordable or it isn't."
+- **Tainter**: The first step toward addressing modern challenges is awareness — particularly of the energy basis of complexity.
