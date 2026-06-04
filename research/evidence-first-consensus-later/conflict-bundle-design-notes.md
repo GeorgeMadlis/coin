@@ -40,7 +40,14 @@
 
 ## Example application: Estonian forestry
 
-A conflict bundle should record short-term carbon accounting, long-term timber-substitution accounting, biodiversity indicators, legal restrictions, rural-economic claims, and ownership/land-category differences as separate dimensions. A digital twin can show what follows under each framework, but the trade-off remains a governance decision.
+A conflict bundle should record short-term carbon accounting, long-term timber-substitution accounting, biodiversity indicators, legal restrictions, rural-economic claims, and ownership/land-category differences as separate dimensions. It should also type the increment number being used:
+
+1. Eurostat/Statistics Estonia: net annual increment on forest available for wood supply, 9.1 million m3 in 2023, compared with 11.6 million m3 removals.
+2. IEA Bioenergy: average annual increment of growing stock in managed forests, 12.8 million m3/year for 2007-2017.
+3. Estonian Climate Ministry: average annual increment, 16.2 million m3/year for 2011-2019.
+4. Carbon-stock/LULUCF frame: business-as-usual felling around 11.5 million m3/year may reduce 2050 growing stock, while 9.4-9.8 million m3/year is associated with stable or increasing stock in the cited additional-measures scenario.
+
+A digital twin can show what follows under each framework, but the trade-off remains a governance decision.
 
 ## Example application: climate attribution
 

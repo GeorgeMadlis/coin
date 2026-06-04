@@ -39,26 +39,34 @@
    -> Status: supported with qualification.
 
 9. **High harvesting pressure is visible in Eurostat's 2026 forestry update.**
-   Eurostat reports that in 2023 Estonia was the only EU country with available data where wood removals exceeded net annual increment.
-   -> Status: supports harvesting-pressure framing, not a direct clear-cutting-rate ranking.
+   Eurostat reports that in 2023 Estonia was the only EU country with available data where wood removals exceeded net annual increment: removals were 11.6 million m3 and net annual increment was 9.1 million m3. Statistics Estonia reports the same quantities as 11,564 thousand m3 removals and 9,100 thousand m3 net increment.
+   -> Status: supports harvesting-pressure framing and the EU-comparable over-cut verdict, not a direct clear-cutting-rate ranking.
 
-10. **Climate-change attribution should not be treated as a symmetrical open dispute.**
+10. **The Estonian wood-balance verdict flips under different increment definitions.**
+    IEA Bioenergy reports 2007-2017 average annual increment of growing stock in managed forests at 12.8 million m3/year, while Estonia's Climate Ministry reports 2011-2019 average annual increment at 16.2 million m3/year. These definitions make a 2023 felling level around 11.6 million m3 appear below increment rather than above it.
+    -> Status: concrete conflict-bundle example; the disagreement is about accounting object and boundary, not only raw felling volume.
+
+11. **Carbon-accounting benchmarks create another verdict.**
+    The Sustainable Biomass Program revised risk assessment summarises projections in which business-as-usual felling of 11.5 million m3/year leaves total forest growing stock about 11% lower by 2050, while an additional-measures scenario with 9.4-9.8 million m3/year keeps growing stock stable until 2041 and slightly increasing until 2050. The European Commission 2025 climate progress factsheet reports Estonia's LULUCF sector as a net emitter in 2023 and with an accounted debit for 2021-2023.
+    -> Status: supports the claim that wood-balance sufficiency and carbon-sink stability are different tests.
+
+12. **Climate-change attribution should not be treated as a symmetrical open dispute.**
     The public article distinguishes scientifically open questions from politically amplified controversies to avoid false equivalence.
     -> Status: design requirement, not a minor caveat.
 
 ## Claims rejected or narrowed
 
-11. **Rejected stronger wording: Estonia has one of the highest rates of commercial clear-cutting relative to forest area in the European Union.**
+13. **Rejected stronger wording: Estonia has one of the highest rates of commercial clear-cutting relative to forest area in the European Union.**
     The current source set does not directly support this exact EU-relative commercial clear-cutting sentence.
     -> Public wording should use the narrower supported version: Estonia has one of Europe's highest recent forest-loss rates, and Estonian forest management is predominantly clear-cutting based.
 
-12. **Rejected stronger system claim: Earth digital twins can resolve conflicts over environmental governance.**
+14. **Rejected stronger system claim: Earth digital twins can resolve conflicts over environmental governance.**
     The article should not claim automatic resolution. It should claim improved inspectability, provenance, and structured disagreement.
 
-13. **Rejected stronger blockchain claim: immutable records certify truth.**
+15. **Rejected stronger blockchain claim: immutable records certify truth.**
     Immutability preserves record history. It does not certify model quality, legal validity, or ethical justification.
 
-14. **Rejected stronger AI claim: agent summaries can become governance verdicts.**
+16. **Rejected stronger AI claim: agent summaries can become governance verdicts.**
     AI outputs may assist deliberation but should not replace evidence review or accountable decision-making.
 
 ---
