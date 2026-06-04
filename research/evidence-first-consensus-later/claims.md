@@ -1,6 +1,6 @@
 # Claims - Evidence First, Consensus Later
 
-**Inquiry:** "Earth-related digital twins cannot automatically solve environmental conflicts, but they can make those conflicts more inspectable by linking claims to data, models, assumptions, uncertainty, provenance, and governance decisions."
+**Inquiry:** "Earth-related digital twins cannot automatically resolve conflicts over environmental governance, but they can make those conflicts more inspectable by linking claims to data, models, assumptions, uncertainty, provenance, and governance decisions."
 
 ---
 
@@ -52,7 +52,7 @@
     The current source set does not directly support this exact EU-relative commercial clear-cutting sentence.
     -> Public wording should use the narrower supported version: Estonia has one of Europe's highest recent forest-loss rates, and Estonian forest management is predominantly clear-cutting based.
 
-12. **Rejected stronger system claim: Earth digital twins can resolve environmental conflict.**
+12. **Rejected stronger system claim: Earth digital twins can resolve conflicts over environmental governance.**
     The article should not claim automatic resolution. It should claim improved inspectability, provenance, and structured disagreement.
 
 13. **Rejected stronger blockchain claim: immutable records certify truth.**

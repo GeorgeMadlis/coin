@@ -1,6 +1,6 @@
 # Conflict Bundle Design Notes - Evidence First, Consensus Later
 
-**Purpose:** define the minimum record needed for an environmental conflict to become inspectable without pretending that the record resolves the conflict.
+**Purpose:** define the minimum record needed for a conflict over environmental governance to become inspectable without pretending that the record resolves the conflict.
 
 ---
 
