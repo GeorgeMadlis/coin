@@ -20,6 +20,8 @@ The article should avoid any claim that Earth digital twins are neutral. Their d
 
 The Estonian forestry example is useful but must stay precisely sourced. The strongest supported wording is that Estonia has one of Europe's highest recent forest-loss or clearing rates, and that Estonian forest management is predominantly clear-cutting based. The source set does not directly establish the stronger phrase "one of the highest rates of commercial clear-cutting relative to forest area in the European Union."
 
+The Eurostat update makes the example more concrete. With 2023 removals at 11.6 million m3 and net annual increment at 9.1 million m3, the EU-comparable wood-balance verdict is over-cut. But IEA Bioenergy's managed-forest increment figure of 12.8 million m3/year and Estonia's Climate Ministry increment figure of 16.2 million m3/year produce a different wood-balance reading. Carbon-stock and LULUCF accounting add another layer: the dispute is not just about whether fellings exceed increment, but about which forest area, increment definition, mortality treatment, time period, and climate-accounting objective should govern the verdict.
+
 The climate-attribution example requires asymmetric treatment. A conflict-documentation system should distinguish genuine scientific uncertainty from manufactured controversy. Treating settled attribution science and politically amplified denial as equivalent entries would be a design failure.
 
 ## Key design implication
