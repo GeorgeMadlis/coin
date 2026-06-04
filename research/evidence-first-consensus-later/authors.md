@@ -1,6 +1,6 @@
 # Sources and Works - Evidence First, Consensus Later
 
-**Inquiry:** "Earth-related digital twins cannot automatically solve environmental conflicts, but they can make those conflicts more inspectable by linking claims to data, models, assumptions, uncertainty, provenance, and governance decisions."
+**Inquiry:** "Earth-related digital twins cannot automatically resolve conflicts over environmental governance, but they can make those conflicts more inspectable by linking claims to data, models, assumptions, uncertainty, provenance, and governance decisions."
 
 ---
 
