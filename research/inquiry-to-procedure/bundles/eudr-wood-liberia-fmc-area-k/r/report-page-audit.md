@@ -12,7 +12,6 @@ gsp-aoi: "liberia_fmc_area_k_contract_boundary"
 The canonical report PDF hash is
 `cb83898664221ffb851a2193403fbe0cd2069faeb3ab21327796ea2ebd1f81d5`; page count is `12`.
 The canonical HTML hash is `a9c10dafadce5e28e1106ae549d5a14cbab58baa9f4c4a0d858f0f3cd44f1de3`.
-The derived contact sheet is `../reproduction/liberia_fmc_area_k_contact_sheet.pdf`.
 
 | page | purpose | expected artifact/source | observed content | AOI/map/legend/metrics visible | visual QA status | limitation |
 |---:|---|---|---|---|---|---|

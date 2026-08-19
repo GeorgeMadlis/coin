@@ -31,16 +31,14 @@ Then branch by inspection need:
 - Method/evidence: [s/task-scope.md](s/task-scope.md), [s/data-sources.md](s/data-sources.md),
   [s/modeling.md](s/modeling.md), [s/gsp-mapping.md](s/gsp-mapping.md), and
   [s/report-structure.md](s/report-structure.md).
-- Report inspection: [r/report-page-audit.md](r/report-page-audit.md),
-  [r/artifact-inventory.md](r/artifact-inventory.md), and the local
-  [contact-sheet guide](liberia_fmc_area_k_contact_sheet_guide.html).
+- Report inspection: [r/report-page-audit.md](r/report-page-audit.md) and
+  [r/artifact-inventory.md](r/artifact-inventory.md).
 - Provenance/reproduction: [reproduction/source-evidence.json](reproduction/source-evidence.json),
-  [reproduction/index.md](reproduction/index.md), [reproduction/data.md](reproduction/data.md), and
-  [reproduction/liberia_fmc_area_k_contact_sheet.pdf](reproduction/liberia_fmc_area_k_contact_sheet.pdf).
+  [reproduction/index.md](reproduction/index.md), and [reproduction/data.md](reproduction/data.md).
 - Inquiry/evolution: [inquiry/index.md](inquiry/index.md), then
   [inquiry/round-0001.md](inquiry/round-0001.md) through
   [inquiry/round-0008.md](inquiry/round-0008.md).
 
-In a published snapshot, open `report.html` through the local contact-sheet guide. The source bundle
-does not copy counterpart evidence artifacts; the published snapshot may contain a verified
-`evidence-package/` copy for offline inspection.
+In a published snapshot, open the copied `report.html` in `evidence-package/` for offline
+inspection. The source bundle does not copy counterpart evidence artifacts; the published snapshot
+may contain a verified `evidence-package/` copy after handoff verification.

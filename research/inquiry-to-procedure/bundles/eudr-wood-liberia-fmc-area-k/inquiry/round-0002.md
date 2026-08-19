@@ -14,7 +14,6 @@ fc-touches:
   - reproduction/code.md
   - reproduction/data.md
   - reproduction/source-evidence.json
-  - reproduction/contact-sheet-status.md
 ---
 # Round 0002 - Real Area K Evidence-Only Report
 
@@ -41,8 +40,7 @@ to this task bundle's reproduction record.
   observers used for clustering.
 - Tier-2 Sentinel-2 confirmation: `20` dated crops exported for the top five events; confirmation
   JSON SHA-256 `0ccea3cd1feed07d9658197d98400eb8530916b48ca884dc0475ef729bc08362`.
-- Contact sheet: `reproduction/liberia_fmc_area_k_contact_sheet.pdf`, SHA-256
-  `9de23e9d617d2b45600608a53e6d7e3477e9825d1bc1542519524bae7a4f254b`.
+- Contact sheet: private derived artifact removed from the public bundle.
 
 ## Effect On State
 
@@ -54,8 +52,8 @@ shipment source linkage, chain of custody, or a legal compliance outcome.
 ## Resulting Revisions
 
 Current R-axis and REPRO-axis files now reference `area-k-real-003`; `source-evidence.json` records
-the final handoff, report hashes, event-cluster hash, Tier-2 confirmation hash, contact-sheet hash,
-and the remaining page-4 regional-view limitation.
+the final handoff, report hashes, event-cluster hash, Tier-2 confirmation hash, and the remaining
+page-4 regional-view limitation.
 
 ## Classification Rationale
 
