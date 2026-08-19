@@ -30,9 +30,6 @@ fc-touches:
   - reproduction/environment.md
   - reproduction/gee-auth.md
   - reproduction/source-evidence.json
-  - reproduction/contact-sheet-status.md
-  - reproduction/liberia_fmc_area_k_contact_sheet.pdf
-  - reproduction/liberia_fmc_area_k_contact_sheet.pdf.metadata.json
   - EUDR_WOOD_LIBERIA_FMC_AREA_K_BUNDLE_READING_GUIDE.md
   - liberia_fmc_area_k_contact_sheet_guide.html
   - log.md
@@ -76,9 +73,7 @@ regenerate the contact sheet from the new canonical PDF, and refresh local inspe
   low-confidence alerts.
 - Report PDF pages 5-8 and the regenerated contact sheet were rendered and visually inspected.
   Page 6 visibly contains Hansen/JRC, TMF deforestation, TMF degradation and RADD comparison maps.
-- Contact sheet:
-  `reproduction/liberia_fmc_area_k_contact_sheet.pdf`, SHA-256
-  `3135ab23fe592bf13d66600568554f9b145a503cf67fa1efdfebcc307dbc8e53`.
+- Contact sheet: private derived artifact removed from the public bundle.
 
 ## Effect On State
 
@@ -129,11 +124,10 @@ structure concepts in the source bundle.
 - `reproduction/data.md` supersedes `reproduction/data.md@round-0002`.
 - `reproduction/environment.md` supersedes `reproduction/environment.md@round-0001`.
 - `reproduction/gee-auth.md` supersedes `reproduction/gee-auth.md@round-0001`.
-- `reproduction/contact-sheet-status.md` supersedes `reproduction/contact-sheet-status.md@round-0002`.
 - Created `s/report-structure.md`.
 - Created `r/report-page-audit.md`.
 - Replaced `reproduction/source-evidence.json` with a compact round-4 provenance record.
-- Regenerated `reproduction/liberia_fmc_area_k_contact_sheet.pdf` and metadata.
+- Regenerated a derived contact-sheet artifact later removed from the public bundle.
 - Updated the bundle reading guide and local contact-sheet guide.
 - Appended `log.md` and `inquiry/index.md`.
 

@@ -32,7 +32,6 @@ counterpart `manifest.json`.
 | RADD combined alerts PNG | `reports/aoi_report_v2/liberia_fmc_area_k_contract_boundary/evidence/17_radd_alerts_confirmed_low_confidence.png` | `eb1211bb21b2d9cb9b4c6f17867770a90d3c164602b8226ce23418fd9cd61978` | no |
 | Sentinel before/after PNG | `reports/aoi_report_v2/liberia_fmc_area_k_contract_boundary/evidence/06_before_after.png` | `5ef1283f4c66dbafe0fef84771fd7709ceb4143e2c56e00afdc9b8ae956974bd` | yes |
 | regional overview PNG | `reports/aoi_report_v2/liberia_fmc_area_k_contract_boundary/evidence/07_regional_overview.png` | `c45d248a346d67bd21b5e98cebaeb847b31a9bce47999f6268d062886655cb9e` | yes |
-| derived contact sheet | `reproduction/liberia_fmc_area_k_contact_sheet.pdf` | `26cde87fde59c6c23b560679c7d99a5ac85d8c71892f1570f24294c05341f5ab` | yes |
 
 These are references to counterpart outputs. Counterpart rasters and reports are not copied into the
 source bundle. They are copied only into a generated publication snapshot after handoff and manifest

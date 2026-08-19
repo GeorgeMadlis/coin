@@ -148,13 +148,6 @@
     "crop_count": 20,
     "role": "Tier-2 visual confirmation context; not shipment/tree/log source linkage"
   },
-  "contact_sheet": {
-    "path": "reproduction/liberia_fmc_area_k_contact_sheet.pdf",
-    "sha256": "26cde87fde59c6c23b560679c7d99a5ac85d8c71892f1570f24294c05341f5ab",
-    "metadata_path": "reproduction/liberia_fmc_area_k_contact_sheet.pdf.metadata.json",
-    "source_report_pdf_sha256": "8a065c495ead890082948e48a0c913dae9c84de9ef02ddf4269d13dbad50ebc1",
-    "source_manifest_sha256": "bef58f2d0c372231d76e8b213eb929884f6acd60a8a01de476998fb78f457084"
-  },
   "counterpart_fix_round_005": {
     "counterpart_commit": "61285bd6ac2ef45708dee660620bd9db4181d3c2",
     "counterpart_commit_summary": "Register TMF/RADD/Hansen-canopy datasets and real per-metric provenance",

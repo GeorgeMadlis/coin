@@ -25,7 +25,6 @@ plot.
 ## Inspection Guides
 
 - [Liberia FMC Area K bundle reading guide](EUDR_WOOD_LIBERIA_FMC_AREA_K_BUNDLE_READING_GUIDE.md)
-- [Local contact-sheet guide](liberia_fmc_area_k_contact_sheet_guide.html)
 
 ## Axes
 
