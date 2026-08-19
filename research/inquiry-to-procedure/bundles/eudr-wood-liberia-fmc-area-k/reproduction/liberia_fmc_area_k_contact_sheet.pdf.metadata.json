@@ -1,0 +1,24 @@
+{
+  "artifact_type": "derived_pdf_contact_sheet",
+  "evidence_role": "non-evidentiary-convenience-artifact",
+  "layout": {
+    "columns": 3,
+    "embedded_thumbnail_max_long_edge_px": 1200,
+    "gutter_pt": 4,
+    "margin_pt": 14,
+    "page_count": 12,
+    "page_format": "A2-width-content-aspect-height",
+    "page_height_pt": 2217.5042616649284,
+    "page_width_pt": 1190.5511811023623,
+    "rows": 4
+  },
+  "output_pdf": "bundles/eudr-wood-liberia-fmc-area-k/reproduction/liberia_fmc_area_k_contact_sheet.pdf",
+  "output_pdf_sha256": "26cde87fde59c6c23b560679c7d99a5ac85d8c71892f1570f24294c05341f5ab",
+  "renderer": "tools/pdf_contact_sheet.py",
+  "source_bundle_id": "area-k-real-005",
+  "source_manifest_sha256": "bef58f2d0c372231d76e8b213eb929884f6acd60a8a01de476998fb78f457084",
+  "source_pdf": "/Users/server/projects/eudr-dmi-gil/audit/evidence/2026-08-17/area-k-real-005/reports/aoi_report_v2/liberia_fmc_area_k_contract_boundary/report.pdf",
+  "source_pdf_sha256": "8a065c495ead890082948e48a0c913dae9c84de9ef02ddf4269d13dbad50ebc1",
+  "source_report_pdf_sha256": "8a065c495ead890082948e48a0c913dae9c84de9ef02ddf4269d13dbad50ebc1",
+  "visual_acceptance_requirement": "bundles/eudr-gee/inquiry/round-0015.md"
+}
