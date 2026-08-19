@@ -5,7 +5,7 @@ status: draft
 updated: 2026-08-19
 sources:
   - bundles/framework-self/            # observer-disagreement-framework, self-description bundle
-  - bundles/eudr-wood-liberia-fmc-area-k/  # geospatial-evidence-framework, applied EUDR bundle
+  - bundles/eudr-coffee-brazil-fazenda-sucuri/  # geospatial-evidence-framework, applied EUDR bundle
 ---
 
 # Bundle evolution analysis
@@ -16,11 +16,10 @@ per-bundle evolution analysis, then the cross-bundle synthesis and its honest li
 
 ## 1. Approach decision: commit the bundles, do not link the repos
 
-Both source repositories — `observer-disagreement-framework` and `geospatial-evidence-framework`
-(local `Users/server/projects/...`) — are **private**. Linking them from a public research trail
-would give the reader a 404 and defeat the trail's purpose. The alternative adopted here is to
-commit **one self-contained bundle from each repository** into the public COIN repo, under
-`research/inquiry-to-procedure/bundles/`, and cite in-repo paths.
+The `observer-disagreement-framework` source repository is private, while the applied EUDR evidence
+is now drawn from the public `geospatial-evidence-framework` Fazenda Sucuri bundle. The adopted
+public trail commits one readable bundle snapshot for each trajectory into the COIN repo under
+`research/inquiry-to-procedure/bundles/`, and cites in-repo paths.
 
 This is not a workaround; it is the more faithful option, for three reasons.
 
@@ -35,20 +34,16 @@ This is not a workaround; it is the more faithful option, for three reasons.
    observable substrate from which code, instructions, and retained uncertainty can be read off.
    Committing the substrate lets the reader do that reading.
 
-### Caveats to handle before committing
+### Committed-state caveats
 
-- **Trim `_site/`.** The self bundle ships a full rendered `_site/` HTML tree that roughly doubles
-  its size and duplicates the Markdown source. Commit the Markdown source tree only
+- **`_site/` is trimmed.** The public COIN snapshot keeps the framework-self Markdown source tree
   (`agent-contract.md`, `answer.md`, `log.md`, `index.md`, `inquiry/`, `r/*.csv`, `s/`, `pf/`,
-  `reproduction/`). Keep the two CSVs; they carry the metrics and the retrospective classification.
-- **Counterpart references are pins, not data.** The EUDR bundle references a private counterpart
-  repo (`single-earth/eudr-dmi-gil@61285bd…`, and a `GeorgeMadlis/eudr-dmi-gil` remote) by commit
-  and checksum only. Its own evidence discipline forbids copying counterpart artifacts into the
-  source bundle. So committing it exposes **references**, not Single.Earth data. Given the
-  Single.Earth Foundation council relationship and ConnectedNature's published critique of
-  Single.Earth-connected work, this is a disclosure point to decide deliberately: keep the pins
-  (recommended — they are provenance, not payload) and, if useful, add a one-line note in the trail
-  that the counterpart repo is third-party and private.
+  `reproduction/`) and omits the rendered `_site/` tree. The two CSVs are retained because they
+  carry the metrics and retrospective classification.
+- **The applied snapshot omits machine/data artifacts.** The Fazenda Sucuri copy keeps the Markdown
+  trajectory, method, and result summaries, while omitting JSON, GeoJSON, PDF, and canonical
+  `report.html` artifacts. It links back to the public source bundle for repository context without
+  republishing those files through COIN.
 - **"pinned-not-reproduced" is the honest provenance state.** The EUDR `answer.md` is
   `human_review_required` with provenance `pinned-not-reproduced`: hashes and artifacts were
   independently checked, but no qualifying independent rerun was performed. The trail should state
@@ -66,7 +61,7 @@ research/inquiry-to-procedure/
 ├── bundle-evolution-analysis.md          (this file)
 └── bundles/
     ├── framework-self/                    (Markdown source tree only)
-    └── eudr-wood-liberia-fmc-area-k/      (Markdown source tree only)
+    └── eudr-coffee-brazil-fazenda-sucuri/ (Markdown source tree only; no JSON/PDF/GeoJSON/report.html)
 ```
 
 ## 2. Bundle A — framework-self (general, self-referential)
@@ -117,61 +112,52 @@ re-litigation rate not measurable for lack of stable issue identifiers. The desc
 supports claims about **research-state evolution**, and explicitly refuses claims its record cannot
 support. That refusal is itself evidence for the article's Source Evaluation section.
 
-## 3. Bundle B — eudr-wood-liberia-fmc-area-k (applied)
+## 3. Bundle B — eudr-coffee-brazil-fazenda-sucuri (applied)
 
-Source: `geospatial-evidence-framework`, EUDR wood/timber task bundle. 8 native rounds,
-2026-08-14 → 2026-08-17, parties `codex` and `claude`, plus two imported lineage rounds from the
-parent `eudr-gee` method-family.
+Source: `geospatial-evidence-framework`, EUDR coffee task bundle. 7 native rounds,
+2026-08-11 → 2026-08-12, party `codex`.
 
-### The coffee → wood correction, in the record
+### The coffee screening correction, in the record
 
-`reproduction/lineage.md` imports two parent rounds by reference (not renumbered):
+The applied trajectory shows the same reduction pattern in a public coffee-screening case. Review
+findings become concrete repairs: a Sentinel-2 visual defect is fixed (round 2), the AOI
+administrative labels and report map behavior are corrected (round 4), the coffee temporal mask is
+repaired so current coffee preserves baseline-year coffee while "new commodity since baseline"
+remains a separate layer (round 6), and the page-4 regional overview gap is fixed at the
+renderer/publish-contract level (round 7).
 
-- **`eudr-gee` round 30 (contestation, 2026-08-12):** "Liberia public-source discovery showed the
-  coffee-shaped parent method could not represent wood without semantic distortion." The concrete
-  reason: wood cannot be a coffee-style commodity mask because forest degradation and source
-  geometry are separate evidence dimensions.
-- **`eudr-gee` round 31 (consolidation, 2026-08-12):** the parent method gains separate wood
-  deforestation/degradation streams and explicit production-geometry / source-linkage status.
-
-This is the article's applied demonstration end to end: a commodity-specific (coffee) assumption
-entered the parent method, applied wood evidence exposed it as contestation, and the method was
-consolidated into a more general shape. The task bundle then **inherits** the corrected semantics
-rather than re-deriving them.
+The bundle therefore supports the article through a public EUDR coffee screening case: a sequence of
+observed defects is converted into corrected artifacts, tighter source semantics, and an explicitly
+limited screening verdict.
 
 ### The reduction outputs, concretely
 
-- **Deterministic procedure / schema.** `s/modeling.md` carries a `wood_evidence_state` schema with
-  separate `deforestation`, `degradation`, `production_geometry`, `harvest_or_source_linkage`,
-  `legal_provenance_context`, `evidence_conflicts`, `evidence_gaps`, and `manual_review_required`
-  fields. Round 4 populates it with per-source areas (e.g. Hansen ≈ 10,914 ha, JRC-TMF ≈ 5,386 ha,
-  RADD confirmed ≈ 13,502 ha) reported as **source/process disagreement, not averaged and not
-  treated as automatic contradictions**. → This maps onto EUDR Layer A (commodity-independent land
-  evidence) and Layer C (wood-specific degradation), with the schema keeping them separate.
-- **AI instruction / guardrail.** `s/task-scope.md` is an explicit **Frame Declaration** with a
-  Scope-Change Protocol: classify every proposed move as same-frame evidence evolution,
-  task-boundary change, method-family/rule change, or unresolved; append a round only for the first;
-  escalate unresolved cases to the human. Out-of-scope items explicitly include "silently
-  generalizing Liberia-specific findings into the global wood method" and "coffee/cocoa
-  commodity-mask semantics." → The scope-drift error of the parent method is now a standing
-  instruction that prevents its recurrence. This is Layer-B thinking made procedural: production
-  linkage and chain-of-custody are named as separate, currently-missing evidence rather than assumed.
-- **Retained uncertainty.** `answer.md` sits at `human_review_required`; production plot, harvesting
-  block, and chain-of-custody linkage are recorded as **unresolved / missing**, and provenance is
-  `pinned-not-reproduced`. → The human-in-the-loop boundary is structural, not a temporary gap, and
-  the bundle refuses to convert missing linkage into a zero-valued layer.
+- **Deterministic procedure / schema.** `s/modeling.md` and `r/results.md` keep FDP-only,
+  MapBiomas-only, and both-source agreement evidence distinct. New coffee/post-2020 loss overlap is
+  reported source-specifically (FDP 0.27 ha; MapBiomas 0.0 ha; both-source agreement 0.0 ha), not
+  averaged into a single warrant. → This maps onto EUDR Layer A (land/forest-loss evidence), Layer B
+  (AOI/production linkage), and Layer C (coffee evidence) without pretending those layers are
+  interchangeable.
+- **AI instruction / guardrail.** `s/task-scope.md` fixes the task as EUDR coffee screening for
+  Brazil / Minas Gerais / Fazenda Sucuri, and `s/gsp-mapping.md` records the evidence flow from AOI
+  admission through forest baseline, post-2020 loss, coffee masks, overlap metrics, and human
+  review. → Repeated review issues are absorbed as standing method constraints rather than kept only
+  as historical commentary.
+- **Retained uncertainty.** `answer.md` sits at `human_review_required` with provenance
+  `pinned-not-reproduced`. It explicitly says the result is a screening flag, not a legal
+  non-compliance determination. → The human-in-the-loop boundary is structural, not a temporary gap.
 
 ## 4. Cross-bundle synthesis
 
 What the two committed bundles **jointly support**:
 
 1. Recorded human–AI inquiry can be progressively reduced into the three outputs the article names —
-   deterministic procedure (self rounds 12–13; EUDR `wood_evidence_state`), durable AI instruction
-   (self Wolfram guardrail; EUDR Frame Declaration + Scope-Change Protocol), and explicitly retained
-   uncertainty (self `fc-status: open`; EUDR `human_review_required` / missing linkage).
+   deterministic procedure (self rounds 12–13; EUDR source-specific mask/overlap reporting), durable
+   AI instruction (self Wolfram guardrail; EUDR scope and mapping constraints), and explicitly
+   retained uncertainty (self `fc-status: open`; EUDR `human_review_required`).
 2. The human's own framing is a legitimate object of the inquiry, not a fixed input: the self bundle
-   corrects a human scope-widening in-record (round 4); the EUDR line corrects a human/parent
-   coffee-shaped decomposition (parent rounds 30–31).
+   corrects a human scope-widening in-record (round 4); the EUDR line corrects visual, map,
+   temporal-mask, and publish-contract defects in-record.
 3. Reproducibility is not correctness: the EUDR `pinned-not-reproduced` state and the self bundle's
    refusal to claim unmeasurable metrics both keep deterministic execution separate from epistemic
    warrant.
@@ -183,20 +169,20 @@ What they **do not** support (the honest negative, to keep in the synthesis):
   these cases**; they do not make it general.
 - No measurement here shows that compression reduces error *recurrence* — the self bundle's own
   observer-distance metrics are largely `NOT_MEASURABLE`, and no transfer experiment exists.
-- The EUDR three-layer decomposition is coupled, not clean: Layer B (production linkage) is exactly
-  the part recorded as missing, so the tidy A→B→C separation is an argued target, not a demonstrated
-  pipeline.
+- The EUDR three-layer decomposition is coupled, not clean: the Fazenda Sucuri record is still a
+  screening case, so A→B→C is an argued structure for evidence discipline rather than a legal
+  determination pipeline.
 
 ## 5. Effect on the article and the research folder
 
-- **Research trail:** replace the two "pending" placeholders with in-repo links to
-  `bundles/framework-self/` and `bundles/eudr-wood-liberia-fmc-area-k/`, and add one line each noting
-  the source repository is private and the bundle is the committed public evidence.
-- **Claims ledger (V1, V2):** resolved — repos are private; the committed bundles are the evidence.
+- **Research trail:** link to `bundles/framework-self/` and
+  `bundles/eudr-coffee-brazil-fazenda-sucuri/`, noting that the applied public copy omits JSON,
+  GeoJSON, PDF, and canonical `report.html` artifacts.
+- **Claims ledger (V1, V2):** resolved — the committed bundles are the evidence.
   Upgrade the previously generic `[sourced: repository state]` tags to specific bundle/round refs
   (done in `claims.md`).
 - **Evidence Base / Source Evaluation:** can now cite the specifics above (frame-change 2/13, the
-  coffee→wood parent rounds 30–31, the Wolfram validator guardrail, the `NOT_MEASURABLE` honesty,
-  `human_review_required`).
+  Fazenda Sucuri visual/mask/publish-contract fixes, the Wolfram validator guardrail, the
+  `NOT_MEASURABLE` honesty, `human_review_required`).
 - **Synthesis:** unchanged in direction — the strong general claim remains not established; the
   bundles strengthen the narrow, defensible result without inflating it.

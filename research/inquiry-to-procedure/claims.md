@@ -62,25 +62,24 @@ The originating proposition and its negative are recorded first so that later cl
 
 ## Evidence provenance — committed bundles (resolves V1, V2)
 
-Both source repositories (`observer-disagreement-framework`, `geospatial-evidence-framework`) are
-private. Rather than link them, one bundle from each is committed into COIN under
-`research/inquiry-to-procedure/bundles/` and cited by in-repo path. This makes the evidence
-inspectable and is more faithful to the thesis (the bundle *is* the trajectory object). See
-`bundle-evolution-analysis.md` for the full reading. Bundle-sourced claims below upgrade the earlier
-generic "repository state" tag to specific round/file references.
+The source `observer-disagreement-framework` repository is private; its public evidence is the
+committed `framework-self` bundle. The applied EUDR evidence uses the public
+`geospatial-evidence-framework` Fazenda Sucuri bundle, copied into COIN as a reading snapshot with
+JSON, GeoJSON, PDF, and canonical `report.html` artifacts omitted. Bundle-sourced claims below
+upgrade the earlier generic "repository state" tag to specific round/file references.
 
-- **C3′** *[sourced: bundles/framework-self/log.md; bundles/eudr-wood-liberia-fmc-area-k/log.md]* Two committed bundles: framework-self (20 rounds, parties codex/claude) and the EUDR wood bundle (8 native rounds + imported eudr-gee lineage rounds 30–31).
-- **C4′** *[sourced: bundles/eudr-wood-liberia-fmc-area-k/reproduction/lineage.md]* The coffee→wood correction is recorded as eudr-gee round 30 (contestation: coffee-shaped method cannot represent wood without semantic distortion) and round 31 (consolidation: separate wood deforestation/degradation streams + production-geometry/source-linkage status).
-- **C5′** *[sourced: bundles/eudr-wood-liberia-fmc-area-k/s/task-scope.md]* The Frame Declaration + Scope-Change Protocol names "silently generalizing Liberia-specific findings into the global wood method" and "coffee/cocoa commodity-mask semantics" as out of scope, and routes unresolved moves to the human.
-- **C-schema** *[sourced: bundles/eudr-wood-liberia-fmc-area-k/s/modeling.md]* The `wood_evidence_state` schema separates deforestation, degradation, production_geometry, harvest_or_source_linkage, legal_provenance_context; round 4 reports per-source areas as dataset disagreement (not averaged) with `manual_review_required: true`.
+- **C3′** *[sourced: bundles/framework-self/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/log.md]* Two committed bundles: framework-self (20 rounds, parties codex/claude) and the Fazenda Sucuri EUDR coffee bundle (7 native rounds).
+- **C4′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* The applied trajectory records repeated conversion of review findings into corrected artifacts: Sentinel-2 visual repair, AOI label/report-map fixes, coffee temporal-mask correction, and page-4 regional-overview repair, while preserving the screening verdict class.
+- **C5′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/s/task-scope.md; bundles/eudr-coffee-brazil-fazenda-sucuri/s/gsp-mapping.md]* The task scope fixes EUDR coffee screening for Brazil/Minas Gerais/Fazenda Sucuri and keeps production/evidence linkage explicit rather than silently generalizing from a commodity mask alone.
+- **C-schema** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/s/modeling.md; bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md]* The modeling and results separate FDP-only, MapBiomas-only, and both-source agreement signals; new coffee/post-2020 loss overlap is source-specific rather than averaged into a single warrant.
 - **C-frame4** *[sourced: bundles/framework-self/inquiry/round-0004.md]* Round 4 records a human-instructed scope widening (observer disagreement → statement evolution) as a frame transition f(t)→f(t+1) with SHA256 hashes and fc-supersedes on answer/pf/s pages. Direct support for C1–C2 and the "human framing is itself under inquiry" claim.
 - **C-wolfram** *[sourced: bundles/framework-self/inquiry/round-0019.md; s/specification.md]* Rounds 18–19 make Wolfram observer theory a mandatory `fc-foundation-role: formal-analogy` disclosure with validator rejection conditions; specification frontmatter records `fc-irreducibility: none`. Upgrades C19 from [flagged] to [sourced].
 - **C-metrics** *[sourced: bundles/framework-self/r/metrics-rounds-0001-0013.csv]* Frame-change frequency 2/13; observer-handoff 2/12; observer-distance family NOT_MEASURABLE with stated reasons; round 14 excluded to avoid circular self-measurement. Support for C12–C13 and C16's honest-negative half.
-- **C-review** *[sourced: bundles/eudr-wood-liberia-fmc-area-k/answer.md]* Current answer is `human_review_required`, provenance `pinned-not-reproduced`; production plot / harvesting block / chain-of-custody recorded as unresolved/missing. Support for C17–C18 and the structural human-in-the-loop boundary.
+- **C-review** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* Current answer is `human_review_required`, provenance `pinned-not-reproduced`; the bundle records a screening flag, not a legal non-compliance determination. Support for C17–C18 and the structural human-in-the-loop boundary.
 
 ## Items still to verify
 
 - **V3** Re-check C6–C9 against the current consolidated EUDR text and latest environment FAQ iteration at publication time; the cutoff date and Article 3 wording are stable, but degradation-condition phrasing has moved across FAQ iterations.
 - **V4** No measurement yet exists for C16's open part (does compression reduce error recurrence?); mark as unresolved, not supported. The framework-self metrics confirm this is NOT_MEASURABLE from the current record, not merely unmeasured.
-- **V5** Before committing, trim the framework-self `_site/` rendered tree (keep Markdown source + CSVs) and decide disposition of the EUDR counterpart commit references (`single-earth/eudr-dmi-gil`, `GeorgeMadlis/eudr-dmi-gil`) — recommended: keep as provenance pins; add a one-line third-party/private note.
+- **V5** Resolved in the committed COIN snapshot: the framework-self `_site/` rendered tree is not present; Markdown source and CSVs are retained; the applied EUDR bundle is the Fazenda Sucuri reading snapshot, with JSON, GeoJSON, PDF, and canonical `report.html` artifacts omitted.
 - **V6** Some framework-self commit refs read "NOT AVAILABLE until merge" (rounds 19–20); pin the committed snapshot to a resolved state or note them as pending.

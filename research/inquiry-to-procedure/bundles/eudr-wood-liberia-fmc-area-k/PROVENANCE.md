@@ -1,1 +1,0 @@
-The single-earth/eudr-dmi-gil counterpart repository is third-party and private; it is referenced here by commit hash and checksum only, and no counterpart evidence artifacts are copied into this bundle. The current evidence state is human_review_required / pinned-not-reproduced.

@@ -21,8 +21,7 @@ inquiry moved away from.
 
 The evidence is two version-controlled trajectories rather than a literature: the
 observer-disagreement framework (general and partly self-referential) and the EUDR geospatial
-evidence repository (applied). The EUDR coffee → wood → generic-deforestation sequence is the
-load-bearing example.
+evidence repository (applied). The Fazenda Sucuri coffee screening sequence is the applied example.
 
 ## What the evidence supports
 
@@ -32,15 +31,15 @@ load-bearing example.
    consumed, not merely stored. On the two cases, the third interpretation (compilation substrate)
    is not simply a rename of the first two.
 
-2. **The human's own framing is a legitimate object of inquiry.** The EUDR sequence shows a
-   commodity-specific assumption entering via the human's initial decomposition, propagating through
-   AI execution, and being corrected only by later evidence. This supports the design principle that
-   the AI should test the posed decomposition against the governing evidence, not merely execute it.
+2. **The task framing and artifact contract are legitimate objects of inquiry.** The EUDR sequence
+   shows commodity-mask semantics, visual evidence, map labels, and publish-contract requirements
+   being corrected through later review rounds. This supports the design principle that the AI
+   should test the posed decomposition against the governing evidence, not merely execute it.
 
 3. **A regulation-grounded decomposition exists and is more general than the method-family the
    repository first used.** Layers A (commodity-independent land evidence), B (production linkage),
-   and C (commodity-specific evidence) follow from the EUDR text and are more precise than either a
-   coffee or a wood method. This is the inquiry's strongest concrete result.
+   and C (commodity-specific evidence) follow from the EUDR text and are more precise than a single
+   commodity-mask method. This is the inquiry's strongest concrete result.
 
 ## Where the proposition overstates
 
@@ -83,15 +82,15 @@ load-bearing example.
   "promising."
 - Present EUR-Lex / FAQ facts as drawn from the regulation with citations; re-verify degradation
   wording against the latest FAQ iteration at publication (see claims V3).
-- The source repositories are private. Evidence is provided as two bundles committed into COIN
-  (`bundles/framework-self/`, `bundles/eudr-wood-liberia-fmc-area-k/`); the research trail cites
-  in-repo paths, not private URLs. See `bundle-evolution-analysis.md`. Before committing: trim the
-  framework-self `_site/` tree, decide disposition of the EUDR counterpart commit pins
-  (recommended: keep as provenance, add a third-party/private note), and resolve or flag the
-  "NOT AVAILABLE until merge" refs (claims V5, V6).
+- Evidence is provided as two bundles committed into COIN (`bundles/framework-self/`,
+  `bundles/eudr-coffee-brazil-fazenda-sucuri/`). The framework-self source is private; the applied
+  EUDR source is mirrored as a public reading snapshot with JSON, GeoJSON, PDF, and canonical
+  `report.html` artifacts omitted. See `bundle-evolution-analysis.md`. The remaining open
+  provenance caveat is the framework-self "NOT AVAILABLE until merge" refs (claims V6), which are
+  flagged rather than silently removed.
 - The EUDR bundle's own state is `human_review_required` / `pinned-not-reproduced`. Do not let the
-  public prose imply the evidence is reproduced or that a compliance verdict has been reached; it
-  has not.
+  public prose imply the evidence is reproduced or that a legal compliance verdict has been reached;
+  it has not.
 
 ## Verdict (draft)
 
