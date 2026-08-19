@@ -1,0 +1,19 @@
+{
+  "aoi_id": "liberia_fmc_area_k_contract_boundary",
+  "bundle_id": "eudr-wood-liberia-fmc-area-k",
+  "commodity": "wood",
+  "counterpart_repository": "single-earth/eudr-dmi-gil",
+  "country": "Liberia",
+  "country_code": "LR",
+  "evidence_bundle_id": "area-k-real-005",
+  "evidence_handoff": "/Users/server/projects/eudr-dmi-gil/out/okf_handoffs/eudr-wood-liberia-fmc-area-k.json",
+  "execution_engine": "local-pinned-raster",
+  "method_engine": "gee",
+  "parent_bundle": "eudr-gee",
+  "profile": "okf-gsp",
+  "purpose": "eudr",
+  "counterpart_commit": "61285bd6ac2ef45708dee660620bd9db4181d3c2",
+  "region": "Nimba; Grand Gedeh; River Cess",
+  "report_pdf_sha256": "8a065c495ead890082948e48a0c913dae9c84de9ef02ddf4269d13dbad50ebc1",
+  "schema_version": "okf-gsp-task-bundle-v1"
+}
