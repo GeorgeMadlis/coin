@@ -1,6 +1,6 @@
 ---
 inquiry: inquiry-to-procedure
-title: From Inquiry to Procedure — Human–AI Research as Progressive Reduction
+title: From Inquiry to Procedure — Critical Overview
 status: draft
 updated: 2026-08-19
 ---
@@ -13,11 +13,22 @@ deliberately more sceptical than the public prose.
 
 ## What the case is
 
-The inquiry advances a proposition about method: that a recorded human–AI inquiry trajectory earns
-its keep by helping reduce an underspecified problem into three outputs — deterministic procedures,
-improved AI instructions, and explicitly retained uncertainty — rather than by being preserved
-indefinitely as memory. The earlier "external memory" framing is treated as a weaker rival that this
-inquiry moved away from.
+The inquiry is no longer best framed as asking whether the trajectory itself is the method. The
+corrected ontology separates three objects:
+
+- **Recorded trajectory `H`:** provenance of method formation, including observable assumptions,
+  corrections, supersessions, frame changes, rejected approaches, evidence changes, and state
+  transitions.
+- **Method-evolution protocol `P`:** the procedure that consumes such provenance and decides what a
+  finding should become: code, test, validator, specification, agent instruction,
+  evidence-semantic rule, unresolved question, or provenance-only record.
+- **Operational method `M`:** the current specifications, code, tests, validators, AI instructions,
+  evidence semantics, decision procedures, and explicit unresolved questions needed to perform the
+  task now.
+
+Routine execution should normally be `M + current/new evidence E -> result`. Historical provenance
+can become relevant again when revising `M`, but that does not make the whole trajectory part of the
+routine operational method.
 
 The evidence is two version-controlled trajectories rather than a literature: the
 observer-disagreement framework (general and partly self-referential) and the EUDR geospatial
@@ -25,61 +36,93 @@ evidence repository (applied). The Fazenda Sucuri coffee screening sequence is t
 
 ## What the evidence supports
 
-1. **The compilation reading is coherent and does real descriptive work.** The repositories show
-   inquiry material being converted into code, tests, agent instructions, and retained open
-   questions. This is more than provenance and more than memory: parts of the trajectory are
-   consumed, not merely stored. On the two cases, the third interpretation (compilation substrate)
-   is not simply a rename of the first two.
+1. **The bundles demonstrate provenance of observable method formation.** They record changes in
+   assumptions, scope, evidence semantics, artifacts, validation expectations, and unresolved
+   questions. This supports claims about recorded research-state evolution, not a full cognitive
+   reconstruction of either the human or the model.
 
-2. **The task framing and artifact contract are legitimate objects of inquiry.** The EUDR sequence
-   shows commodity-mask semantics, visual evidence, map labels, and publish-contract requirements
-   being corrected through later review rounds. This supports the design principle that the AI
-   should test the posed decomposition against the governing evidence, not merely execute it.
+2. **The records show transformation into operational artifacts.** Inquiry findings were in fact
+   converted into code, tests, specifications, validators, AI instructions, source-semantics
+   constraints, and explicit uncertainty. This demonstrates transformation. It does not demonstrate
+   that the historical record itself constitutes method.
 
-3. **A regulation-grounded decomposition exists and is more general than the method-family the
-   repository first used.** Layers A (commodity-independent land evidence), B (production linkage),
-   and C (commodity-specific evidence) follow from the EUDR text and are more precise than a single
-   commodity-mask method. This is the inquiry's strongest concrete result.
+3. **A candidate meta-method is visible.** Across the two cases, findings are classified, routed to
+   operational destinations, checked, and then either compiled into current method or left as
+   provenance. That transformation procedure can be described as a provisional method-evolution
+   protocol, but it is not yet validated as best practice.
+
+4. **A regulation-grounded EUDR decomposition remains a durable result.** Layers A
+   (land/forest-change evidence), B (production linkage), and C (commodity-specific evidence) follow
+   from the EUDR evidence problem and are more precise than a single commodity-mask method. The
+   historical rounds that led to this decomposition are provenance of method formation; the current
+   decomposition is part of the operational EUDR method.
 
 ## Where the proposition overstates
 
-1. **Two cases, one self-referential, cannot carry a general law of method.** The strong form of the
-   proposition — that recorded inquiry *generally* reduces error or transfers across problems — is
-   not established. The honest conclusion is the narrow one: the trajectory is an observable
-   substrate through which one *can* discover what should become code, instruction, or retained
-   uncertainty. Whether this reliably beats deriving the same outputs from final evidence alone is
-   open. The public article must not report the strong claim as settled. (Non-negotiable: the strong
-   claim is not established, and the synthesis says so plainly.)
+1. **Historical dependence of discovery is not operational dependence of execution.** The fact that
+   a trajectory contributed causally to discovering a method does not imply that the trajectory is
+   required to execute the resulting method. A laboratory notebook can show how a procedure was
+   discovered without being part of the procedure. A build trace can help produce an executable
+   without being needed to run it.
 
-2. **"Deterministic" is quietly doing too much work unless checked.** The fabricated-input episode is
+2. **The counterfactual advantage has not been tested.** The two bundles do not compare
+   history-aware derivation against history-blind derivation from the same final evidence and
+   problem. They therefore cannot show whether access to trajectory improves method formation beyond
+   what a competent investigator could derive from the final state.
+
+3. **Operational sufficiency is a separate question.** If an agent can apply the current method to
+   new evidence without replaying historical rounds, that is expected after successful reduction. It
+   does not show that history lacked value during discovery.
+
+4. **Method revision is another untested question.** The evidence does not yet show whether archived
+   provenance materially improves diagnosis when the current method fails, contains an unexplained
+   constraint, encounters a source-authenticity problem, or faces a new class of case.
+
+5. **"Deterministic" is quietly doing too much work unless checked.** The fabricated-input episode is
    the standing counter-example: reproducibility preserved an invalid evidence state. Determinism and
    epistemic correctness are separate properties. Any wording that lets "reduced to code" imply
    "verified as correct" is an overstatement and should be caught in review.
 
-3. **Wolfram terminology risks smuggling in an explanation.** Computational irreducibility and the
+6. **Wolfram terminology risks smuggling in an explanation.** Computational irreducibility and the
    bounded observer are used as vocabulary. The failure mode to guard against is treating the absence
    of a discovered reduction as proof of irreducibility. As motivation this is fine; as a claim about
    the research process it is unsupported.
 
+## Roles, not forced alternatives
+
+"Provenance," "external memory," and "compilation substrate" should not be treated as three mutually
+exclusive interpretations.
+
+- **Provenance** describes what the record is epistemically: evidence of what happened in the
+  inquiry.
+- **External memory** describes one way an agent can access or use the record: loading past states to
+  guide present work.
+- **Compilation substrate** describes one possible role the record can play inside a transformation
+  process: material that a method-evolution protocol reads when deciding what to compile into `M`.
+
+The corrected claim is therefore not that provenance was defeated by compilation. It is that
+recorded provenance can be used by a method-evolution protocol, and successful outputs of that
+process belong to the operational method.
+
 ## What remains contested
 
-- **Retention vs. compression.** The external-memory reading and the compilation reading disagree on
-  when history should stop being consulted. The inquiry favours compression with archival retention,
-  but has no measured criterion for the transition point. This is asserted, not shown.
+- **History-aware vs history-blind formation.** Could a competent human-AI investigator, given the
+  final evidence and problem but no recorded trajectory, derive substantially the same operational
+  method, instructions, guardrails, and unresolved questions? This has not been tested.
+- **Revision value of archived provenance.** When `M` fails, does access to `H` improve diagnosis,
+  prevent reintroduction of superseded assumptions, or produce better revisions? This has not been
+  tested.
+- **Transfer of distilled instructions.** Whether an instruction distilled from one trajectory helps
+  on a different problem, or merely encodes non-transferable context, is still unresolved.
 - **Coupling in the EUDR decomposition.** Layer B couples A and C: the deforestation test is not
   fully independent of commodity semantics because production linkage is required. Whether the clean
-  three-layer picture survives contact with messy supply-chain data (double counting, coarse
-  ecological-intensity resolution) is not yet tested.
-- **Transfer of distilled instructions.** Whether an instruction distilled from one trajectory helps
-  on a different problem — or merely encodes non-transferable context — is untested and currently
-  belongs in open questions, not results.
+  three-layer picture survives messy supply-chain data is not yet tested.
 
 ## Editorial cautions for the public draft
 
-- Lead the competing-interpretations section with the strongest comparator (external memory), not a
-  straw man.
-- Keep the negative conclusion visible in the synthesis; do not soften "not established" into
-  "promising."
+- Do not describe the trajectory as itself the method merely because it helped produce the method.
+- Keep the negative conclusion visible: the existing two cases demonstrate transformation, not
+  counterfactual advantage.
 - Present EUR-Lex / FAQ facts as drawn from the regulation with citations; re-verify degradation
   wording against the latest FAQ iteration at publication (see claims V3).
 - Evidence is provided as two bundles committed into COIN (`bundles/framework-self/`,
@@ -94,8 +137,10 @@ evidence repository (applied). The Fazenda Sucuri coffee screening sequence is t
 
 ## Verdict (draft)
 
-The inquiry establishes a narrow, defensible result and a plausible but unproven general thesis. It
-is publishable as a working draft provided the synthesis states plainly that the strong claim is not
-established and that the evidence is two internal cases. The EUDR three-layer decomposition is the
-most durable contribution and could stand on its own as a smaller, better-supported inquiry if the
-methodological thesis proves hard to sustain.
+The inquiry demonstrates observable conversion of recorded findings into operational artifacts:
+code, tests, specifications, validators, instructions, evidence semantics, and retained uncertainty.
+It does not demonstrate the counterfactual advantage of recording the trajectory, either for initial
+method formation or for later method revision. The publishable result is narrower and cleaner:
+recorded trajectories are provenance of method formation, a candidate method-evolution protocol may
+use that provenance to revise operational method, and successfully compiled lessons need not remain
+in routine active context.

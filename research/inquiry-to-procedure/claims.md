@@ -1,6 +1,6 @@
 ---
 inquiry: inquiry-to-procedure
-title: From Inquiry to Procedure — Human–AI Research as Progressive Reduction
+title: From Inquiry to Procedure — Recorded Inquiry, Method Evolution, and Operational Method
 status: draft
 updated: 2026-08-19
 ---
@@ -17,13 +17,15 @@ The originating proposition and its negative are recorded first so that later cl
 
 ## Proposition under test
 
-- **C0** *[inferential]* The methodological value of a recorded human–AI inquiry trajectory lies in progressive reduction — turning an underspecified problem into deterministic procedures, improved AI instructions, and explicitly retained uncertainty — rather than in indefinite preservation of every step.
-- **C0-neg** *[inferential]* The defensible negative: the trajectory has little methodological value if the same procedure, instructions, and open-question set can be derived reliably from the final evidence alone, or if intermediate states mainly propagate obsolete assumptions and scope errors. This negative is available, which is what makes C0 falsifiable.
+- **C0** *[inferential]* Recorded human–AI inquiry is primarily provenance of method formation: a historical record of observable assumptions, corrections, supersessions, frame changes, evidence changes, rejected approaches, and state transitions. Its methodological value, if any, lies in whether a disciplined method-evolution protocol can use that provenance to produce or revise a more reliable operational method than could be obtained from the current evidence/state alone.
+- **C0-neg** *[inferential]* The defensible negative: if history-blind derivation from the final evidence/problem reliably produces the same or a better operational method, and archived provenance provides no material advantage during later method revision, then the trajectory's durable role is provenance/auditability rather than a necessary component of method. This negative has not been tested by the existing two-bundle analysis.
+- **C0a** *[inferential]* The inquiry should distinguish three objects: recorded trajectory `H`; method-evolution protocol `P`, which decides what a finding becomes; and operational method `M`, consisting of the specifications, code, tests, validators, AI instructions, evidence semantics, decision procedures, and explicit unresolved questions required to perform the task now.
+- **C0b** *[inferential]* Routine execution should normally use `M + current/new evidence E -> result`, not `H + M + E -> result`. Archived trajectory may become relevant again when revising `M`, for example after a contradiction, source-authenticity failure, frame change, unexplained constraint, scope drift, or evidence that the current method is inadequate.
 
 ## Boundedness of inquiry
 
 - **C1** *[inferential]* Human and AI inquiry are both bounded, and the bounds compound: a human's partial command of the relevant science produces an incomplete decomposition, and the model executing within that frame can amplify rather than question it.
-- **C2** *[inferential]* Recording an inquiry is methodologically useful only when the record helps expose and repair framing errors, not when it merely stores them. (Distinguishes a documenting log from a correcting log.)
+- **C2** *[inferential]* Recording an inquiry is methodologically useful for method formation or revision only when a process can use the record to expose and repair framing errors, identify superseded assumptions, or explain why an operational constraint exists. Mere storage is provenance/auditability, not itself an operational rule.
 
 ## Evidence base — the two trajectories
 
@@ -47,14 +49,14 @@ The originating proposition and its negative are recorded first so that later cl
 
 ## Competing interpretations
 
-- **C14** *[inferential]* Three readings of the log compete: (a) provenance record; (b) external memory; (c) intermediate representation / compilation substrate. The external-memory reading is the strongest rival to (c) and was the inquiry's own earlier position.
-- **C15** *[inferential]* The external-memory reading justifies indefinite retention and gives no account of when history should stop being consulted — its principal weakness relative to the compilation reading.
+- **C14** *[inferential]* "Provenance," "external memory," and "compilation substrate" name roles at different conceptual levels rather than mutually exclusive interpretations. Provenance describes what the record is epistemically; external memory describes one possible access/use pattern; compilation substrate describes one possible role the record can play inside a transformation process.
+- **C15** *[inferential]* The process that consumes recorded provenance and decides whether a finding becomes code, test, validator, specification, agent instruction, evidence-semantic rule, unresolved question, or provenance-only is best treated as a candidate method-evolution protocol, not as the recorded trajectory itself.
 
 ## Critical synthesis
 
-- **C16** *[inferential]* The two cases support the weaker core of C0 (reduction into procedure / instruction / retained uncertainty is demonstrable) but do not establish the strong general form (that recorded inquiry generally reduces error or transfers across problems).
+- **C16** *[inferential]* The two bundles support a narrow empirical claim: recorded findings were observably transformed into later code, tests, specifications, instructions, evidence semantics, and explicit uncertainty. They do not establish that the recorded history was necessary to obtain those artifacts, that history-aware derivation beats history-blind derivation, or that replaying history is necessary for routine execution.
 - **C17** *[sourced: repository state — fabricated-input episode]* "Deterministic" is not "true": hashes and reruns preserved an invalid evidence state until later inquiry exposed a source-authenticity problem. Reproducibility preserves whatever it is given, including error.
-- **C18** *[inferential]* A reduction may be retired from routine computation only after it has itself survived scrutiny; for a public research trail the historical trajectory should be archived rather than deleted even after it leaves the AI's operational context.
+- **C18** *[inferential]* A recorded trajectory should generally be archived rather than deleted, but once a finding has been successfully compiled into the operational method and independently scrutinized, unnecessary history can leave routine active context. Archived provenance should be reactivated for method revision when current practice fails or becomes unexplained.
 
 ## Terminology discipline
 
@@ -83,3 +85,5 @@ upgrade the earlier generic "repository state" tag to specific round/file refere
 - **V4** No measurement yet exists for C16's open part (does compression reduce error recurrence?); mark as unresolved, not supported. The framework-self metrics confirm this is NOT_MEASURABLE from the current record, not merely unmeasured.
 - **V5** Resolved in the committed COIN snapshot: the framework-self `_site/` rendered tree is not present; Markdown source and CSVs are retained; the applied EUDR bundle is the Fazenda Sucuri reading snapshot, with JSON, GeoJSON, PDF, and canonical `report.html` artifacts omitted.
 - **V6** Some framework-self commit refs read "NOT AVAILABLE until merge" (rounds 19–20); pin the committed snapshot to a resolved state or note them as pending.
+- **V7** No controlled comparison has yet tested history-aware derivation against history-blind derivation: competent agents given the same problem and final evidence, with only one condition receiving the recorded trajectory.
+- **V8** No controlled method-revision experiment has yet tested whether archived provenance materially improves diagnosis and revision when the current operational method encounters a contradiction, unexplained rule, frame failure, source-authenticity problem, or new class of case.
