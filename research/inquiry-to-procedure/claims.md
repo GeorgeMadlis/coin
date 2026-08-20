@@ -87,3 +87,10 @@ upgrade the earlier generic "repository state" tag to specific round/file refere
 - **V6** Some framework-self commit refs read "NOT AVAILABLE until merge" (rounds 19–20); pin the committed snapshot to a resolved state or note them as pending.
 - **V7** No controlled comparison has yet tested history-aware derivation against history-blind derivation: competent agents given the same problem and final evidence, with only one condition receiving the recorded trajectory.
 - **V8** No controlled method-revision experiment has yet tested whether archived provenance materially improves diagnosis and revision when the current operational method encounters a contradiction, unexplained rule, frame failure, source-authenticity problem, or new class of case.
+
+## Additional claims
+
+- **C20** *[inferential]* Operational reducibility does not imply epistemic disposability when a later research state materially contradicts, invalidates, or reframes an earlier conclusion: a bundle chain can be reducible for routine execution while remaining non-disposable for epistemic audit.
+- **C21** *[inferential]* A determination changes as a function of at least evidence (E), frame/assumptions/scope (F), and procedure/instructions (P); distinguishing evidence-driven, frame-driven, and procedure-driven change requires retaining more than the final state — approximately a minimum reconstructible state {claim, evidence, frame, procedure, verdict, reason-for-transition}.
+- **C22** *[inferential]* Retained bundle history is provenance; method appears only when rules govern what to do with a material contradiction between states — reconstruct, compare, discriminate, supersede, retain conflict, or reopen. Retention supplies the evidence for the method; the rules constitute the method.
+- **C23** *[flagged]* The present two bundles do not yet demonstrate that typed, reconstructible archived history actually improves later conflict resolution or method revision.
