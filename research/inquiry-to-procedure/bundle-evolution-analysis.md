@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: Bundle evolution analysis — two committed trajectories
 status: draft
-updated: 2026-08-19
+updated: 2026-08-20
 sources:
   - bundles/framework-self/            # observer-disagreement-framework, self-description bundle
   - bundles/eudr-coffee-brazil-fazenda-sucuri/  # geospatial-evidence-framework, applied EUDR bundle
@@ -189,7 +189,68 @@ What they do not support:
   problems. Two bundles, one self-referential, can support a disciplined case study, not a general
   law.
 
-## 5. Effect on the article and the research folder
+## 5. Bundle evolution mechanics
+
+Bundle evolution should not collapse transitions into a linear `supersedes` chain. The minimum
+typed relation set needs to distinguish at least:
+
+- **`supersedes`**: a later state replaces an earlier state within the same relevant frame,
+  assumptions, scope, definitions, and procedure.
+- **`contradicts`**: two states cannot both hold under the reconstructed evidence, frame, and
+  procedure.
+- **`reframes`**: the later state changes the governing assumptions, scope, definitions, or problem
+  object.
+- **`reopens`**: a settled or provisionally settled state is returned to contestation because new
+  evidence, a procedural correction, or a frame change makes the prior resolution unstable.
+- **`supersedes-under-assumptions`**: the later state replaces the earlier one only under stated
+  assumptions, scope limits, evidence versions, or procedure versions.
+
+A bare `supersedes` link silently encodes the latest observer's frame as epistemic progress, which
+is exactly the failure the retention argument is meant to prevent.
+
+The determination at time `t` should be treated as a function:
+
+```text
+D_t = f(E_t, F_t, P_t)
+```
+
+where `E` is the evidence and its versions, `F` is the frame / assumptions / scope / definitions,
+and `P` is the procedure / method / instruction version. A result can change with the same evidence
+and nominal frame if the procedure was corrected, such as after scope-drift repair or correction of
+an earlier AI-generated conceptualization. Observer identity matters only through the operationally
+relevant differences it introduces: prompt or instruction version, method version, assumptions,
+scope, and dataset versions. Bare identity is not itself an explanatory variable.
+
+As a candidate answer to the article's open retention question, the minimum reconstructible state is:
+
+```text
+R_t = {C_t, E_t, F_t, P_t, V_t, Δ_t}
+```
+
+Here `C_t` is the claim state, `E_t` the referenced evidence, `F_t` the relevant
+frame/assumptions, `P_t` the procedure/version, `V_t` the verdict or determination, and `Δ_t`
+the stated reason for transition. What must survive is enough to reconstruct the contested
+transition, not every prompt, transcript, or temporary artifact.
+
+The symmetric resolution procedure is:
+
+```text
+contradiction -> reconstruct competing claims -> isolate differing evidence, assumptions, and
+procedure -> seek discriminating evidence -> confirm supersession, retain conflict, or reopen the
+earlier state
+```
+
+This deliberately does not instruct agents to find arguments for either side. The work is to
+reconstruct the competing states, identify the operative differences, and then decide whether the
+record warrants supersession, retained conflict, or reopening.
+
+The boundary between provenance and method must stay explicit. Retention supplies the evidence for
+the method; the rules governing reconstruction, comparison, discrimination, supersession, conflict
+retention, and reopening constitute the method.
+
+The historical record is provenance; the disciplined use of that record to reconstruct, compare, discriminate, supersede, retain conflict, or reopen is method.
+
+## 6. Effect on the article and the research folder
 
 - **Research trail:** link to `bundles/framework-self/` and
   `bundles/eudr-coffee-brazil-fazenda-sucuri/`, noting that the applied public copy omits JSON,
