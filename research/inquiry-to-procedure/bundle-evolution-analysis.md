@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: Bundle evolution analysis — two committed trajectories
 status: draft
-updated: 2026-08-20
+updated: 2026-08-24
 sources:
   - bundles/framework-self/            # observer-disagreement-framework, self-description bundle
   - bundles/eudr-coffee-brazil-fazenda-sucuri/  # geospatial-evidence-framework, applied EUDR bundle
@@ -14,6 +14,11 @@ This note performs the evidence work for the *Inquiry to Procedure* article usin
 bundles rather than links to the source repositories. It records the approach decision, the
 per-bundle evolution analysis, and the cross-bundle synthesis with its limits.
 
+Scope note: this file remains about the two formal bundle cases. Supporting
+recorded inquiries, including the MHS/world-models example under
+`recorded-inquiries/`, are intentionally analyzed below bundle level and should
+not be counted as a third formal bundle case.
+
 The corrected interpretation separates four things:
 
 - the bundle as a historical/provenance record;
@@ -24,6 +29,13 @@ The corrected interpretation separates four things:
 The evidence can establish that `historical finding -> later code/test/instruction/specification`
 occurred. It cannot establish from these cases alone that recorded history was necessary to obtain
 the later artifact, or that replaying history is necessary to execute the resulting artifact.
+
+It also cannot establish this by contrasting "history" with an impossible blank observer. No human
+or AI observer begins from zero. The relevant counterfactual asks what the local recorded trajectory
+`H_{0:t}: S_0 -> S_1 -> ... -> S_t` adds beyond the next observer's background knowledge `B_j`,
+explicitly communicated prior knowledge `L`, and a sufficiently specified current project/problem
+state `S_t`. In other words, the comparison is `B_j + L + S_t` versus
+`B_j + L + S_t + H_{0:t}`.
 
 ## 1. Approach decision: commit the bundles, do not link the repos
 
@@ -69,6 +81,7 @@ research/inquiry-to-procedure/
 ├── claims.md
 ├── critical-overview.md
 ├── bundle-evolution-analysis.md          (this file)
+├── recorded-inquiries/                   (supporting non-bundle records)
 └── bundles/
     ├── framework-self/                    (Markdown source tree only)
     └── eudr-coffee-brazil-fazenda-sucuri/ (Markdown source tree only; no JSON/PDF/GeoJSON/report.html)
@@ -110,8 +123,8 @@ over rounds 1-13: formation 1, enrichment 8, critique 1, contestation 1, consoli
   retained conceptual clarification; `fc-status` stays `open`.
 
 These observations show recorded findings becoming later operational artifacts. They do not prove
-that the same artifacts could not have been derived from the final evidence and problem without the
-round history.
+that the same artifacts could not have been derived from appropriate observer background knowledge,
+explicit prior knowledge, and an adequate current-state handoff without the round history.
 
 ### Honest measurement gaps (Source Evaluation material)
 
@@ -183,8 +196,11 @@ What they do not support:
   artifacts.
 - They do not establish that replaying or loading the historical trajectory is necessary for routine
   execution once the method has been successfully compiled.
-- They do not compare history-aware derivation with history-blind derivation from final evidence.
+- They do not compare trajectory-aware derivation with trajectory-blind derivation from appropriate
+  observer background knowledge, explicit prior knowledge, and an adequate current-state handoff.
 - They do not test whether archived provenance improves later method revision under failure.
+- They do not test whether recorded project history improves cross-observer handoff or transfer when
+  observers differ in background knowledge or framing.
 - They do not establish a general law that recorded inquiry reduces error or transfers across
   problems. Two bundles, one self-referential, can support a disciplined case study, not a general
   law.
@@ -261,4 +277,5 @@ The historical record is provenance; the disciplined use of that record to recon
   Sucuri visual/mask/publish-contract fixes, the Wolfram validator guardrail, the `NOT_MEASURABLE`
   honesty, `human_review_required`).
 - **Synthesis:** revise direction: the bundles demonstrate observed transformation into operational
-  artifacts, but not the counterfactual advantage of recording the trajectory.
+  artifacts, but not the incremental value of recording the trajectory beyond a rich current-state
+  handoff.

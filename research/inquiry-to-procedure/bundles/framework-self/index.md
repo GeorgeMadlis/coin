@@ -5,6 +5,8 @@ This bundle describes the observer-disagreement-framework project itself, in lay
 ## Level map
 
 - [answer.md](answer.md) - L0: a compact layman's answer describing what the project is.
+- [agent-contract.md](agent-contract.md) - How agents should read and update this bundle.
+- [log.md](log.md) - Append-only bundle change log.
 - [PF: problem](pf/overview.md) - What problem the framework tries to solve.
 - [S: framework](s/overview.md) - What model, method, and literature anchors it uses.
 - [R: status](r/overview.md) - What exists now and what remains open.

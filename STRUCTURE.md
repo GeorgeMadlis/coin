@@ -7,11 +7,14 @@
 
 ## What COIN is
 
-COIN (ConnectedInformation) is an LLM-compiled knowledge base for the
-ConnectedNature website. It ingests raw sources (URLs, PDFs, audio, social
-posts) and compiles them into an interconnected wiki with citations, a knowledge
-graph, Q&A with auto-research, contradiction linting, and watch-mode
-auto-updates.
+COIN (ConnectedInformation) is an LLM-compiled knowledge base and common
+research/provenance layer for ConnectedNature and ConnectedInfo. ConnectedNature
+publishes broad and systemic public inquiries; ConnectedInfo publishes focused
+claim-by-claim public fact-checks. COIN can support either output mode, and not
+every COIN inquiry needs to be published. It ingests raw sources (URLs, PDFs,
+audio, social posts) and compiles them into an interconnected wiki with
+citations, a knowledge graph, Q&A with auto-research, contradiction linting, and
+watch-mode auto-updates.
 
 Inspired by Andrej Karpathy's idea: feed raw data into an LLM → compile a
 structured, auto-linked knowledge base.
@@ -108,6 +111,7 @@ coin/                          ← Python package
 └── cli.py                     Typer CLI — all commands
 
 wiki/                          ← Compiled Markdown articles (git-tracked)
+research/                      ← Curated research trails, recorded inquiries, claim ledgers, and source-check bundles
 artifacts/                     ← Intermediate pipeline artifacts (groups.json etc.)
 chrome-extension/              ← Manifest V3 browser clip extension
 tests/

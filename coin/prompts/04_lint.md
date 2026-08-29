@@ -1,4 +1,4 @@
-# COIN · Step 4 of 5 — Lint the wiki for contradictions and gaps
+# COIN · Manual prompt — Lint the wiki for contradictions and gaps
 
 ## Instructions for the LLM (paste everything below this line into Claude.ai or ChatGPT)
 
