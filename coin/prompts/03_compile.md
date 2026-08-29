@@ -1,4 +1,4 @@
-# COIN · Step 3 of 5 — Compile a wiki article
+# COIN · Manual prompt — Compile a wiki article
 
 ## Instructions for the LLM (paste everything below this line into Claude.ai or ChatGPT)
 

@@ -1,10 +1,15 @@
 # COIN — ConnectedInformation
 
-**An LLM-compiled knowledge base for [ConnectedNature](https://connectednature.com).**
+**An LLM-compiled knowledge base and research/provenance layer for ConnectedNature and ConnectedInfo.**
 
 Ingest raw sources (URLs, PDFs, audio, social posts, YouTube transcripts), compile them into an
 interconnected wiki with citations and a knowledge graph, answer questions
 against your KB, and keep everything current with watch mode.
+
+COIN is the common research/provenance layer. [ConnectedNature](https://connectednature.com)
+publishes broad and systemic public inquiries; ConnectedInfo publishes focused
+claim-by-claim public fact-checks. COIN can support either output mode, and not
+every COIN inquiry needs to be published.
 
 Inspired by Andrej Karpathy's idea: feed raw data into an LLM → compile a
 structured, self-writing knowledge base.
@@ -82,6 +87,7 @@ coin/ingestion/    Source adapters (URL, PDF, audio, subtitles, social, browser)
 coin/memory/       Ultramemory — embedding store + semantic search
 coin/store/        SQLite schema
 coin/web/          FastAPI web UI + REST API
+research/          Curated research trails, recorded inquiries, and source-check bundles
 wiki/              Compiled Markdown articles (git-tracked)
 artifacts/         Intermediate pipeline artifacts (groups.json, etc.)
 STRUCTURE.md       Full repo map — paste into any web UI for context

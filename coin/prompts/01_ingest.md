@@ -1,4 +1,4 @@
-# COIN · Step 1 of 5 — Ingest and normalize a source
+# COIN · Manual prompt — Ingest and normalize a source
 
 ## Instructions for the LLM (paste everything below this line into Claude.ai or ChatGPT)
 

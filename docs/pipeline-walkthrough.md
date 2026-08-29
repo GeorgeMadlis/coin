@@ -160,9 +160,10 @@ coin lint --manual
 coin lint --apply path/to/findings.json
 ```
 
-**What happens:** The LLM reviews all articles and flags issues such as
-contradictory claims between articles, topics mentioned but never compiled, and
-citations that point to ingested sources that have since been updated.
+**What happens:** Agent mode runs deterministic structural checks over the
+compiled wiki articles, such as missing references, very thin articles, and
+unresolved `[[wikilinks]]`. Manual mode renders the LLM review prompt in
+`coin/prompts/04_lint.md` for broader contradiction and gap review.
 
 **Output:** `store/lint_findings (DB)`, printed as a table:
 
@@ -186,17 +187,20 @@ coin ask --manual "What is the complexity threshold Tainter describes?"
 ```
 
 **What happens:** The question is matched against the stored chunks via semantic
-search. The LLM produces a cited answer drawn from the relevant passages.
+search. The current agent path returns the closest retrieved material with
+source URLs. Manual mode renders the LLM prompt in `coin/prompts/05_qa.md` if
+you want a synthesized cited answer.
 
 **Example output:**
 
 ```
 What is the complexity threshold Tainter describes?
 ───────────────────────────────────────────────────
-Tainter's thesis is that every civilization reaches a point where adding more
-complexity — more administration, specialisation, or infrastructure — yields
-diminishing marginal returns. Once that curve turns negative, collapse becomes
-inevitable regardless of external pressures [^1].
+Here is the closest material currently in the knowledge base:
+
+[1] Tainter's thesis is that every civilization reaches a point where adding
+more complexity — more administration, specialisation, or infrastructure —
+yields diminishing marginal returns...
 
 Confidence: high
 

@@ -1,4 +1,4 @@
-# COIN · Step 2 of 5 — Group documents into topics
+# COIN · Manual prompt — Group documents into topics
 
 ## Instructions for the LLM (paste everything below this line into Claude.ai or ChatGPT)
 
