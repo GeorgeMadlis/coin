@@ -1,0 +1,51 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {},
+  "frontmatter_raw": "NOT AVAILABLE in this committed COIN copy",
+  "inquiry": {
+    "bundle_round_for_page": "NOT AVAILABLE in this committed COIN copy",
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "INDEX",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "6c404334bc172001ca364f71b813ac2ab1c15fc9af076964d8e3d54457c0594a",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "27b0534ce64712ed62390d162c0cc10167dfad285ba00334f5a329dfa88bcf64",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "b9c8cb332c6c6da43d1a6b541e522177863e70b1ab818f7a5ac8983db9eda6ff"
+  },
+  "represented_artifact": {
+    "artifact_type": "Index",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "index.html",
+    "metadata_path": "metadata/index.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "bundle-index",
+    "source_path": "index.md",
+    "title": "index.html"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

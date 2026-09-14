@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bundle specification pointer</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / s / specification</nav>
+<h1>Bundle specification pointer</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.</dd><dt>fc-axis</dt><dd><span class="badge axis-s">S</span></dd><dt>fc-irreducibility</dt><dd><span class="badge irreducibility">none</span></dd><dt>fc-level</dt><dd><span class="badge level-3">L3</span></dd><dt>fc-round</dt><dd>19</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-supersedes</dt><dd>s/specification.md@r12</dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Bundle specification pointer</dd><dt>type</dt><dd>Finding</dd></dl></section>
+<article class="content"><p>The normative bundle specification for this pilot bundle is now
+<a href="../_refs/spec/SPEC.html">spec/SPEC.md</a>, the repository's OKF-FC profile for OKF
+v0.1 fact-checking and statement-evolution bundles. Version 0.1.1 requires
+every future full or lightweight bundle generated under this framework to emit
+<code>s/foundations/wolfram-observer-theory.md</code> as a mandatory
+<code>fc-foundation-role: formal-analogy</code> disclosure.</p>
+<p>The Wolfram page must keep direct Wolfram concepts separate from project
+translations and project extensions; it cannot be replaced by
+<code>ait-compression.md</code>, <code>coarse-graining-statmech.md</code>,
+<code>second-order-cybernetics.md</code>, a YouTube transcript, or an external link alone.
+Validators must reject missing pages, invalid attribution classes, missing
+analogy guardrails, sole-transcript sourcing, and generic relevance text that
+does not name bundle-used observer concepts.</p>
+<p>The profile also defines the PF/S/R/REPRO and INQUIRY axes, disclosure levels,
+frontmatter fields, stage/type rules, repository-round versus bundle-round
+distinction, supersession discipline, canonical-state rule, derived-artifact
+requirements, profiles, source policies, and validation contract.</p>
+<p>The theoretical rationale remains in
+<a href="../_refs/docs/framework_v3.html#2-formal-core">docs/framework_v3.md section 2</a>
+and <a href="../_refs/docs/framework_v3.html#3-delivery-format-okf-fact-checking-bundles-with-round-records">section 3</a>.
+The operational ledger policy is summarized in
+<a href="../_refs/docs/round-ledgers.html">docs/round-ledgers.md</a>. The historical source
+remains <a href="../_refs/docs/framework_v2.html">docs/framework_v2.md</a>, which governed
+rounds 1-3.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/s/specification.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

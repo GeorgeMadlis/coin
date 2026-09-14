@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wolfram observer theory</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / s / foundations / wolfram-observer-theory</nav>
+<h1>Wolfram observer theory</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Cross-cutting computational-observer foundation used as a formal analogy, separated from this project&#x27;s translations and extensions.</dd><dt>fc-axis</dt><dd><span class="badge axis-s">S</span></dd><dt>fc-foundation</dt><dd>wolfram-observer-theory</dd><dt>fc-foundation-bundle-additions</dt><dd>framework-self uses the foundation to classify its own observer vocabulary and specification rules.</dd><dt>fc-foundation-role</dt><dd>formal-analogy</dd><dt>fc-foundation-source-registry-version</dt><dd>none</dd><dt>fc-foundation-template-modified</dt><dd>False</dd><dt>fc-foundation-template-version</dt><dd>1.0.0</dd><dt>fc-group</dt><dd><span class="badge group">framework-foundation</span></dd><dt>fc-level</dt><dd><span class="badge level-2">L2</span></dd><dt>fc-round</dt><dd>19</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-supersedes</dt><dd>s/foundations/wolfram-observer-theory.md@r18</dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Wolfram observer theory</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h2 id="role-in-this-framework">Role in this framework</h2>
+<p>Wolfram observer theory is this bundle's cross-cutting observer foundation. It
+is used as a formal analogy: a bounded observer extracts a reduced
+representation from a richer computational process. The analogy motivates this
+framework's context windows, compression functions, observer trajectories,
+rulial-space/frame-translation analogy, and dialogic irreducibility.</p>
+<p>The foundation page is mandatory because the framework's observer vocabulary
+should not be hidden inside adjacent pages on AIT/MDL, statistical-mechanical
+coarse-graining, second-order cybernetics, or external links. Those sources are
+important comparisons, but they do not satisfy the Wolfram foundation
+disclosure by themselves.</p>
+<h2 id="directly-sourced-wolfram-concepts">Directly sourced Wolfram concepts</h2>
+<ul>
+<li>Computational irreducibility and the inability, in general, to shortcut a
+  computational process.</li>
+<li>Computational boundedness of observers.</li>
+<li>Observer equivalencing or coarse-graining of detailed states into reduced
+  impressions.</li>
+<li>Pockets or slices of computational reducibility inside broader
+  computational irreducibility.</li>
+<li>Observer persistence through time.</li>
+<li>The ruliad and rulial space.</li>
+<li>Observers sampling bounded regions of computational possibility.</li>
+<li>Movement or translation between descriptions in rulial space.</li>
+<li>Multiway evolution and alternative computational histories.</li>
+</ul>
+<h2 id="formal-translations-made-by-this-project">Formal translations made by this project</h2>
+<ul>
+<li><code>O_i = (C_i, f_i)</code> models a present observer as a context window and framing
+  function.</li>
+<li><code>C_i</code> is the subset of the surviving record available or attended to by an
+  observer.</li>
+<li><code>f_i</code> is an observer's bounded compression or framing function.</li>
+<li><code>f_i(R intersect C_i)</code> is the interpretation emitted from accessible record
+  material.</li>
+<li>Frame difference is treated as analogous to separation or translation in
+  rulial space, without asserting a measured rulial metric.</li>
+<li>A statement trajectory is treated as a path through interpretive states.</li>
+<li>Dialogic irreducibility applies the computational-irreducibility analogy to
+  inquiry rounds.</li>
+</ul>
+<h2 id="project-extensions-not-derived-from-wolfram">Project extensions not derived from Wolfram</h2>
+<ul>
+<li>The recording function <code>r</code>.</li>
+<li>The surviving record <code>R = r(E)</code>.</li>
+<li>Factual irreducibility.</li>
+<li>Type I, Type II, and Type III disagreement taxonomy.</li>
+<li>Five-stage statement trajectory taxonomy: formation, enrichment, critique,
+  contestation, and consolidation.</li>
+<li>Stage descent and type descent claims.</li>
+<li>Propositions P1-P5 and P4'.</li>
+<li>OKF round records, supersession, source pinning, and provenance discipline.</li>
+<li>The requirement that future bundles carry this page as a validator-visible
+  foundation disclosure.</li>
+</ul>
+<h2 id="non-claims-and-limitations">Non-claims and limitations</h2>
+<p>This bundle does not identify human disagreement, social inquiry, or statement
+evolution literally with Wolfram-model physics. It asserts no measured rulial
+metric between human observers or agent frames. The validity of this bundle
+does not depend on acceptance of Wolfram's fundamental-physics program.</p>
+<p>Wolfram primary sources are used here as sources for Wolfram's concepts, not as
+independent validation of those concepts or of this project's extensions.
+Independent commentary is listed separately from Wolfram primary sources. A
+YouTube transcript may be supplementary in future work, but it is not used here
+as the sole source for any Wolfram-derived claim. Direct quotation is avoided
+because exact wording is not needed for the current bundle role. Any future
+uncertain attribution must be marked <code>UNVERIFIED</code>.</p>
+<h2 id="source-map">Source map</h2>
+<table>
+<thead>
+<tr>
+<th>Framework concept or claim</th>
+<th>Source identity</th>
+<th>Attribution class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computational irreducibility</td>
+<td>Stephen Wolfram, <em>A New Kind of Science</em>, ISBN 1-57955-008-8, Chapter 12 section 6 "Computational Irreducibility"; Stephen Wolfram, "Twenty Years Later," 2022-05-16, DOI 10.31855/ff94a37f-c25</td>
+<td>direct Wolfram concept</td>
+<td>Supports shortcut-limit vocabulary and the analogy behind dialogic irreducibility.</td>
+</tr>
+<tr>
+<td>Computational boundedness of observers</td>
+<td>Stephen Wolfram, "Observer Theory," 2023-12-11, DOI 10.31855/afd076b9-7b8; Stephen Wolfram, "Computational Foundations for the Second Law of Thermodynamics," 2023-02-03 canonical publication page; Stephen Wolfram, "On the Nature of Time," 2024-10-08, DOI 10.31855/f77ca8d0-17d</td>
+<td>direct Wolfram concept</td>
+<td>Supports the bounded-observer premise, not the project's full disagreement taxonomy.</td>
+</tr>
+<tr>
+<td>Observer equivalencing/coarse-graining</td>
+<td>Stephen Wolfram, "Observer Theory," 2023-12-11, DOI 10.31855/afd076b9-7b8</td>
+<td>direct Wolfram concept</td>
+<td>Supports the claim that observers reduce detailed states into smaller sets of impressions.</td>
+</tr>
+<tr>
+<td>Pockets or slices of computational reducibility</td>
+<td>Stephen Wolfram, "Observer Theory," 2023-12-11, DOI 10.31855/afd076b9-7b8; Stephen Wolfram, "Computational Foundations for the Second Law of Thermodynamics," 2023-02-03 canonical publication page</td>
+<td>direct Wolfram concept</td>
+<td>Motivates why bounded observers can form useful narratives inside irreducible processes.</td>
+</tr>
+<tr>
+<td>Ruliad and rulial space</td>
+<td>Stephen Wolfram, "The Concept of the Ruliad," 2021-11-10 canonical publication page; Stephen Wolfram, "Exploring Rulial Space: The Case of Turing Machines," arXiv:2101.10907</td>
+<td>direct Wolfram concept</td>
+<td>The project uses these terms as analogy, not as measured social geometry.</td>
+</tr>
+<tr>
+<td>Sampling bounded regions of computational possibility</td>
+<td>Stephen Wolfram, "The Concept of the Ruliad," 2021-11-10 canonical publication page; Stephen Wolfram, "Observer Theory," 2023-12-11, DOI 10.31855/afd076b9-7b8; Stephen Wolfram, "On the Nature of Time," 2024-10-08, DOI 10.31855/f77ca8d0-17d</td>
+<td>direct Wolfram concept</td>
+<td>Supports observer-dependent impressions.</td>
+</tr>
+<tr>
+<td>Multiway histories and alternative computational paths</td>
+<td>Stephen Wolfram, "Observer Theory," 2023-12-11, DOI 10.31855/afd076b9-7b8; Stephen Wolfram, "On the Nature of Time," 2024-10-08, DOI 10.31855/f77ca8d0-17d; Stephen Wolfram, "Exploring Rulial Space," arXiv:2101.10907</td>
+<td>direct Wolfram concept</td>
+<td>Motivates trajectory language without proving human inquiry dynamics.</td>
+</tr>
+<tr>
+<td><code>O_i = (C_i, f_i)</code></td>
+<td><code>docs/framework_v3.md</code> section 2.1; <code>docs/formal-core.md</code> section 2.4</td>
+<td>project translation</td>
+<td>This is the framework's notation, not Wolfram's notation.</td>
+</tr>
+<tr>
+<td>Context window <code>C_i</code></td>
+<td><code>docs/framework_v3.md</code> section 2.1; <code>docs/formal-core.md</code> section 2.4</td>
+<td>project translation</td>
+<td>Inspired by bounded sampling, formalized here over <code>R</code>.</td>
+</tr>
+<tr>
+<td>Compression/framing function <code>f_i</code></td>
+<td><code>docs/framework_v3.md</code> section 2.1; <code>docs/formal-core.md</code> section 2.4</td>
+<td>project translation</td>
+<td>Bridges Wolfram equivalencing, AIT/MDL compression, and interpretive frames.</td>
+</tr>
+<tr>
+<td>Interpretation <code>f_i(R intersect C_i)</code></td>
+<td><code>docs/framework_v3.md</code> section 2.1; <code>docs/formal-core.md</code> section 2.5</td>
+<td>project translation</td>
+<td>This bundle's static observer formula.</td>
+</tr>
+<tr>
+<td>Frame difference as rulial-space analogy</td>
+<td><code>docs/framework_v3.md</code> section 1; <code>docs/related-work.md</code> section "Wolfram Observer Theory"</td>
+<td>project translation</td>
+<td>No measured physical distance is claimed.</td>
+</tr>
+<tr>
+<td>Statement trajectory</td>
+<td><code>docs/framework_v3.md</code> sections 1 and 2.2; <code>docs/formal-core.md</code> section 3</td>
+<td>project translation</td>
+<td>Motivated by computational paths/time, but formalized for inquiry records.</td>
+</tr>
+<tr>
+<td>Dialogic irreducibility</td>
+<td><code>docs/framework_v3.md</code> sections 2.3 and 2.5</td>
+<td>project extension</td>
+<td>Inspired by computational irreducibility; not a Wolfram theorem about dialogue.</td>
+</tr>
+<tr>
+<td>Recording function <code>r</code> and surviving record <code>R = r(E)</code></td>
+<td><code>docs/framework_v3.md</code> section 2.1; <code>docs/formal-core.md</code> sections 2.2 and 2.3</td>
+<td>project extension</td>
+<td>Added to distinguish archival loss from present observer limits.</td>
+</tr>
+<tr>
+<td>Factual irreducibility</td>
+<td><code>docs/framework_v3.md</code> section 2.3; <code>docs/formal-core.md</code> section 2.7</td>
+<td>project extension</td>
+<td>No direct Wolfram analogue; closest counterparts are underdetermination and provenance literatures.</td>
+</tr>
+<tr>
+<td>Type I/II/III taxonomy</td>
+<td><code>docs/framework_v3.md</code> section 2.4; <code>docs/formal-core.md</code> section 2.7</td>
+<td>project extension</td>
+<td>Contestation-stage taxonomy introduced by this project.</td>
+</tr>
+<tr>
+<td>Five-stage statement trajectory</td>
+<td><code>docs/framework_v3.md</code> section 2.2; <code>docs/formal-core.md</code> section 3.5</td>
+<td>project extension</td>
+<td>Uses inquiry/dialogue counterparts, not Wolfram source terminology.</td>
+</tr>
+<tr>
+<td>OKF round records and supersession discipline</td>
+<td><code>docs/framework_v3.md</code> section 3; <code>spec/SPEC.md</code> sections 8, 10, 11, and 15</td>
+<td>project extension</td>
+<td>Provenance implementation for statement trajectories.</td>
+</tr>
+<tr>
+<td>Ruliology commentary</td>
+<td>Dean Rickles, Hatem Elshatlawy, and Xerxes D. Arsiwalla, "Ruliology: Linking Computation, Observers and Physical Law," arXiv:2308.16068</td>
+<td>independent comparison</td>
+<td>Philosophical context for Wolfram's ruliology and observers; not a Wolfram primary source.</td>
+</tr>
+<tr>
+<td>Generalized observer theory</td>
+<td>Hatem Elshatlawy, Dean Rickles, Xerxes D. Arsiwalla, and Alexander Blum, "Towards a Generalized Theory of Observers," arXiv:2504.16225</td>
+<td>independent comparison</td>
+<td>Independent preprint context; not validation of this bundle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relevance-to-this-bundle">Relevance to this bundle</h2>
+<p>The <code>framework-self</code> bundle uses this foundation to make its own theory
+legible. Its PF and S concepts use the observer model <code>O_i = (C_i, f_i)</code>,
+context windows, compression/framing functions, observer trajectories, and
+dialogic irreducibility. Its inquiry records use the project extensions:
+recording function discipline, surviving-record awareness, the Type I/II/III
+taxonomy for contestation rounds, the five-stage taxonomy for all rounds, and
+OKF supersession/ledger rules.</p>
+<p>This bundle also uses the foundation as a drift-control test for the framework
+itself. The Step 3 specification now requires future generated bundles to emit
+this exact foundation path and to keep Wolfram-source concepts separate from
+project translations and extensions. The neighboring
+<a href="ait-compression.html">Algorithmic information theory and compression</a> page
+therefore remains an adjacent compression foundation, not a substitute for this
+Wolfram observer-theory disclosure.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/s/foundations/wolfram-observer-theory.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

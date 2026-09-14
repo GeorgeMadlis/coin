@@ -3,14 +3,14 @@ type: Finding
 title: "Report page audit"
 fc-level: 2
 fc-axis: R
-fc-round: 7
-fc-supersedes: "r/report-page-audit.md@round-0006"
+fc-round: 8
+fc-supersedes: "r/report-page-audit.md@round-0007"
 gsp-provenance: pinned-not-reproduced
 ---
 # Report page audit
 
 The report PDF hash is
-`e5c8da5dcf11afc2fae68129b59fa5c8c0fc48029df2ba528ba9c92a0666c87d`; page count is 12.
+`dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7`; page count is 12.
 The derived contact sheet is `../reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf`.
 
 | page | title | audit note |
@@ -22,7 +22,7 @@ The derived contact sheet is `../reproduction/fazenda_sucuri_screening_aoi_conta
 | 5 | Forest Baseline 2020 | Baseline forest and available overlays render with layer-specific legend rows; coffee is labeled `Coffee plantations (2020)`. |
 | 6 | Forest Loss After 2020 | Loss and current commodity overlap context renders; coffee is labeled `Coffee plantations (2024)`, preserving the baseline coffee footprint. |
 | 7 | Satellite Evidence | Baseline/recent Sentinel-2 paired situation panel; round 2 fixed the previous half-black baseline panel. |
-| 8 | Interpretation | Source-specific vs source-agreement distinction is carried into text. |
+| 8 | Interpretation | Source-specific vs source-agreement distinction is carried into text; canonical `report.html` additionally exposes the FDP/JRC morphology and threshold-sensitivity section. |
 | 9 | Data And Methods | Dataset and method details. |
 | 10 | Audit Trail | Commit, generated time, and artifact record. |
 | 11 | Deterministic Artifacts | Manifest and reproducibility records. |
@@ -53,3 +53,9 @@ Round 7 refreshes the audit after the recurring page-4 regional-overview defect 
 counterpart renderer. The source report page 4 and the regenerated contact sheet were rendered to
 PNG and visually checked; the page-4 map box is populated rather than showing the previous
 "not available" gap panel.
+
+Round 8 refreshes the audit against the 2026-09-11 evidence package. The canonical PDF remains 12
+pages; no 13th page is added for the new diagnostic. The new FDP/JRC morphology and threshold
+sensitivity evidence lives in `report.html`, `report.json`, `metrics.csv`, and the copied
+`evidence/coffee_jrc_diagnostics/` PNG/JSON/CSV artifacts. The regenerated contact-sheet metadata
+still records 3 columns, 4 rows, 14 pt margin, 4 pt gutter, and source `page_count: 12`.

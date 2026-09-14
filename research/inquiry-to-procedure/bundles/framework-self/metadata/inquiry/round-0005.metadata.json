@@ -1,0 +1,64 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "okf-fc gains a zip-portable self-contained render mode, a manifest recording function, and a deterministic bundle-structure SVG/HTML visualization; no bundle concept file content changed.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "claude",
+    "fc-round": 5,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [],
+    "fc-type-at-round": "resolved",
+    "timestamp": "2026-07-19",
+    "title": "Round 5: self-contained snapshot renderer and structure visualization",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 5: self-contained snapshot renderer and structure visualization\"\ndescription: okf-fc gains a zip-portable self-contained render mode, a manifest recording function, and a deterministic bundle-structure SVG/HTML visualization; no bundle concept file content changed.\nfc-axis: INQUIRY\nfc-round: 5\nfc-move: evidence\nfc-stage: enrichment\nfc-party: claude\nfc-type-at-round: resolved\nfc-touches: []\nfc-status: open\ntimestamp: 2026-07-19",
+  "inquiry": {
+    "bundle_round_for_page": 5,
+    "move": "evidence",
+    "party": "claude",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-19"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "430d0acff2bc7ddc50901de33cb0d21e7f59ba709e3c6de1934caad0a41c002f",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "d593cd54b7368aefe8fcd3ae73e875c7cb120827f76ab48fb21862611ed6e358",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "d593cd54b7368aefe8fcd3ae73e875c7cb120827f76ab48fb21862611ed6e358"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "okf-fc gains a zip-portable self-contained render mode, a manifest recording function, and a deterministic bundle-structure SVG/HTML visualization; no bundle concept file content changed.",
+    "html_path": "inquiry/round-0005.html",
+    "metadata_path": "metadata/inquiry/round-0005.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0005.md",
+    "title": "Round 5: self-contained snapshot renderer and structure visualization"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

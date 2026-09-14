@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / glossary</nav>
+<h1>Glossary</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 0 scope commitments, terminology, and bundle-glossary policy.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Glossary</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><p>This is the repository-level glossary for the statement-evolution framework.
+It is not, by itself, a promise that every bundle has a separate glossary file.
+The current bundle layout in <a href="framework_v3.html#32-bundle-layout-one-bundle-per-fact-checking-problem">docs/framework_v3.md</a>
+does not reserve a glossary path. Bundle-specific terms should be defined in
+the relevant PF/S/R/REPRO/INQUIRY concept file unless a later specification
+creates a dedicated glossary convention. For the pilot bundle, <code>framework-self</code>
+currently has no separate glossary; its method vocabulary is summarized in
+<a href="../bundles/framework-self/s/method.md">bundles/framework-self/s/method.md</a><span class="unresolved" title="Unresolved local link">⚠ unresolved</span>,
+and the shared framework vocabulary is defined here.</p>
+<p>This file now fills the Step 0 glossary stub from the current v3 framework
+brief and the earlier executed Step 0 draft work. It remains <code>fc-status: open</code>
+because the framework is still provisional: later Step 1/2/3 work may sharpen
+the literature counterparts, proof status, or bundle schema.</p>
+<h2 id="scope-commitments">Scope Commitments</h2>
+<p>This framework treats statement evolution as a <strong>computational-epistemic</strong>
+phenomenon. A statement changes because bounded observers compress an
+accessible record through limited context windows and frames. The framework
+does not claim that every disagreement is sincere, neutral, or free of
+interests; it deliberately brackets motivated reasoning, power, incentives,
+and identity-protective cognition for Step 8's limitations analysis.</p>
+<p>The project makes five commitments:</p>
+<ol>
+<li><strong>Analogy, not physics.</strong> Wolfram observer theory supplies vocabulary and
+   structure, but the framework does not claim that human or AI disagreement
+   literally is rulial distance. Every Wolfram-derived term must also have a
+   computational definition that stands on its own.</li>
+<li><strong>Two-stage access to the past.</strong> Present observers do not inspect the
+   event stream <code>E</code> directly. They inspect the surviving record <code>R = r(E)</code>,
+   where <code>r</code> is a lossy recording function applied by past observers,
+   instruments, archives, or pipelines.</li>
+<li><strong>Two regimes, one machinery.</strong> Multi-party disagreement and single-party
+   self-disagreement are modeled with the same machinery. The single-party
+   case is diagonal: later and earlier time slices of one observer trajectory
+   can disagree.</li>
+<li><strong>Statement evolution is broader than disagreement.</strong> Observer disagreement
+   is the contestation stage of a larger statement trajectory. A statement can
+   also pass through formation, enrichment, critique, and consolidation.</li>
+<li><strong>Records prevent future factual irreducibility.</strong> The OKF bundle discipline
+   records rounds, supersession, provenance, code, data, and derived artifacts
+   so the trajectory does not later become underdetermined about its own
+   history.</li>
+</ol>
+<h2 id="abbreviations-and-paths">Abbreviations and Paths</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OKF</td>
+<td>Open Knowledge Format, the markdown bundle format targeted by this project.</td>
+</tr>
+<tr>
+<td>FC, <code>fc-*</code></td>
+<td>Fact-checking namespace for project-specific frontmatter keys. It names project metadata fields; it is not itself an axis.</td>
+</tr>
+<tr>
+<td>PF, <code>pf/</code></td>
+<td>Problem Formulation axis. Defines the claim, scope, and problem terms.</td>
+</tr>
+<tr>
+<td>S, <code>s/</code></td>
+<td>Solution axis. Defines method, algorithm, specification, assumptions, and frame.</td>
+</tr>
+<tr>
+<td>R, <code>r/</code></td>
+<td>Results axis. Reports outputs, verdicts, uncertainty, and agreement metrics. Distinct from uppercase <code>R</code>, the surviving record in the formal model.</td>
+</tr>
+<tr>
+<td>REPRO, <code>reproduction/</code></td>
+<td>Reproduction axis. Pins code, data, environment, checksums, commands, and provenance needed to re-derive a result.</td>
+</tr>
+<tr>
+<td>INQUIRY, <code>inquiry/</code></td>
+<td>Trajectory axis. Records rounds, moves, stage/type classifications, and supersession history.</td>
+</tr>
+<tr>
+<td>L0-L3</td>
+<td>Disclosure levels. L0 is the most compressed lay answer; L1 plain overview; L2 method/result detail; L3 full context or per-item detail.</td>
+</tr>
+<tr>
+<td><code>repo_round</code></td>
+<td>Root repository round recorded in the root <code>log.md</code>.</td>
+</tr>
+<tr>
+<td><code>bundle_round</code></td>
+<td>Bundle-local round recorded in <code>bundles/&lt;id&gt;/log.md</code> and <code>bundles/&lt;id&gt;/inquiry/round-NNNN.md</code>.</td>
+</tr>
+<tr>
+<td><code>rNNNN</code> in snapshot names</td>
+<td>Bundle-local round number, not repository round number. Example: <code>r0009</code> means bundle round 9.</td>
+</tr>
+<tr>
+<td>P1-P5</td>
+<td>Provisional propositions in <code>docs/framework_v3.md</code> section 2.5. P4' is the v3 stage-ordering conjecture.</td>
+</tr>
+<tr>
+<td>AIT</td>
+<td>Algorithmic information theory, used as the established counterpart for compression-as-understanding.</td>
+</tr>
+<tr>
+<td>AGM</td>
+<td>Alchourron-Gardenfors-Makinson belief revision theory.</td>
+</tr>
+<tr>
+<td>W3C PROV</td>
+<td>World Wide Web Consortium provenance data model.</td>
+</tr>
+<tr>
+<td>FAIR</td>
+<td>Findable, Accessible, Interoperable, Reusable data principles.</td>
+</tr>
+<tr>
+<td>SHA256</td>
+<td>Cryptographic hash used to pin file or data contents.</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Pull request, the repository unit for one change.</td>
+</tr>
+<tr>
+<td>CI</td>
+<td>Continuous integration checks run for repository changes.</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td>Frontmatter format used at the top of concept files.</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>Rendered inspection format generated into <code>_site/</code>.</td>
+</tr>
+<tr>
+<td><code>_site/</code></td>
+<td>Derived HTML render of a bundle, committed for manual inspection but regenerated from source.</td>
+</tr>
+<tr>
+<td><code>digest.txt</code></td>
+<td>Temporary local digest output. It is not repository content and should be ignored.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="frontmatter-fields">Frontmatter Fields</h2>
+<p><code>fc-*</code> fields are custom fact-checking metadata fields used in YAML
+frontmatter. The prefix keeps project metadata separate from standard OKF keys.</p>
+<h3 id="fc-axis"><code>fc-axis</code></h3>
+<p><code>fc-axis</code> says which major bundle lane a concept belongs to. Fact-checking
+bundles are organized around five axes, not only the PF/S/R trio:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Path</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PF</code></td>
+<td><code>pf/</code></td>
+<td>Problem Formulation: what claim, problem, scope, or domain framing is being defined.</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td><code>s/</code></td>
+<td>Solution: method, algorithm, assumptions, thresholds, frame, or specification.</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td><code>r/</code></td>
+<td>Results: verdicts, outputs, uncertainty, agreement metrics, or result status.</td>
+</tr>
+<tr>
+<td><code>REPRO</code></td>
+<td><code>reproduction/</code></td>
+<td>Reproduction: code, data, environment, checksums, commands, and provenance.</td>
+</tr>
+<tr>
+<td><code>INQUIRY</code></td>
+<td><code>inquiry/</code></td>
+<td>Rounds/history: how the statement changed over time, including moves, stages, types, and supersession.</td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-axis: R</code> is therefore different from formal symbol <code>R = r(E)</code>: the former
+means the Results axis; the latter means the surviving record.</p>
+<h3 id="fc-level"><code>fc-level</code></h3>
+<p><code>fc-level</code> records the disclosure depth of a concept file. Lower values are
+more compressed; higher values expose more detail.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>L0: lay or top-level answer.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>L1: plain overview.</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>L2: method, result, or formal detail.</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>L3: full context, exact specification, edge cases, or per-item detail.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fc-group"><code>fc-group</code></h3>
+<p><code>fc-group</code> is not yet a general field in <a href="framework_v3.html">docs/framework_v3.md</a>.
+In the <code>framework-self</code> pilot bundle it is used locally on
+<code>s/foundations/*</code> pages to group literature anchors:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning in <code>framework-self</code> foundations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>Static regime: disagreement considered as a cross-section at one moment.</td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td>Sequential regime: belief change, inquiry, and argument across time.</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Factual irreducibility: cases where surviving evidence can underdetermine later interpretation because records are missing from <code>R</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>For example, factual irreducibility is Group C in the pilot foundations section.
+This grouping should not be treated as a universal bundle rule unless a later
+specification promotes <code>fc-group</code> into the shared schema.</p>
+<h3 id="fc-round"><code>fc-round</code></h3>
+<p><code>fc-round</code> answers "when in the ledger?" Its meaning depends on file type:</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concept file</td>
+<td>The bundle round in which this version of the concept was established.</td>
+</tr>
+<tr>
+<td><code>inquiry/round-NNNN.md</code></td>
+<td>The round file's own bundle-local round number.</td>
+</tr>
+<tr>
+<td>Root <code>log.md</code></td>
+<td>Repository rounds are recorded as table rows, not usually as <code>fc-round</code> frontmatter.</td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-round</code> is a counter, not a lifecycle classification.</p>
+<h3 id="fc-stage"><code>fc-stage</code></h3>
+<p><code>fc-stage</code> answers "what kind of trajectory step was this round?" It is used
+on inquiry round records and is layered over <code>fc-move</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>formation</code></td>
+<td>First creation of the statement on this trajectory.</td>
+</tr>
+<tr>
+<td><code>enrichment</code></td>
+<td>Adds information with no live rival position.</td>
+</tr>
+<tr>
+<td><code>critique</code></td>
+<td>Questions or probes assumptions without maintaining a rival position.</td>
+</tr>
+<tr>
+<td><code>contestation</code></td>
+<td>A live disagreement with a standing counter-position.</td>
+</tr>
+<tr>
+<td><code>consolidation</code></td>
+<td>Settlement, convention, verdict revision, supersession, or declared underdetermination.</td>
+</tr>
+</tbody>
+</table>
+<p>Short form: <code>fc-round</code> records <strong>which numbered step</strong>; <code>fc-stage</code> records
+<strong>what lifecycle role that step played</strong>.</p>
+<h3 id="fc-move"><code>fc-move</code></h3>
+<p><code>fc-move</code> records the operational move made in an inquiry round. <code>fc-stage</code> is
+layered over it; the same move can realize different stages depending on
+whether a standing counter-position exists.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Possible stage(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>question</code></td>
+<td>A request that adds missing context or tests a frame.</td>
+<td><code>enrichment</code>, <code>critique</code></td>
+</tr>
+<tr>
+<td><code>objection</code></td>
+<td>A critical challenge to a claim, assumption, method, or frame.</td>
+<td><code>critique</code>, <code>contestation</code></td>
+</tr>
+<tr>
+<td><code>evidence</code></td>
+<td>New record content or provenance added to the trajectory.</td>
+<td><code>formation</code>, <code>enrichment</code>, <code>contestation</code></td>
+</tr>
+<tr>
+<td><code>frame-change</code></td>
+<td>A change in compression function, category scheme, method, or interpretive frame.</td>
+<td><code>contestation</code>, <code>consolidation</code></td>
+</tr>
+<tr>
+<td><code>convention</code></td>
+<td>A jointly adopted rule for treating remaining ambiguity.</td>
+<td><code>consolidation</code></td>
+</tr>
+<tr>
+<td><code>verdict-revision</code></td>
+<td>A revised outcome, answer, or status.</td>
+<td><code>consolidation</code></td>
+</tr>
+</tbody>
+</table>
+<p>The disambiguator is the live state of the trajectory: an <code>objection</code> that
+probes assumptions without maintaining a rival claim is critique; an objection
+that opens or sustains a rival position is contestation.</p>
+<h3 id="other-fc-fields">Other <code>fc-*</code> fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Values or form</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fc-type-at-round</code></td>
+<td><code>I</code>, <code>II</code>, <code>III</code>, <code>resolved</code></td>
+<td>Contestation-only disagreement type for the round. Type I is context-window divergence; Type II is frame/compression divergence; Type III is missing-record/factual irreducibility.</td>
+</tr>
+<tr>
+<td><code>fc-status</code></td>
+<td><code>open</code>, <code>resolved</code>, <code>underdetermined</code></td>
+<td>Current status of a concept or round. <code>underdetermined</code> is used when a contestation has bottomed out at a factual-irreducibility floor.</td>
+</tr>
+<tr>
+<td><code>fc-irreducibility</code></td>
+<td><code>computational</code>, <code>factual</code>, <code>none</code></td>
+<td>Whether a re-derivation obstacle is resource-relative, absolute/informational, or absent.</td>
+</tr>
+<tr>
+<td><code>fc-supersedes</code></td>
+<td><code>&lt;path&gt;@r&lt;round&gt;</code></td>
+<td>The previous concept version replaced by this version. Git history preserves the old text.</td>
+</tr>
+<tr>
+<td><code>fc-touches</code></td>
+<td>list of paths</td>
+<td>Concept files affected by an inquiry round.</td>
+</tr>
+<tr>
+<td><code>fc-party</code></td>
+<td>party id, e.g. <code>codex</code>, <code>claude</code>, <code>human</code>, <code>self</code></td>
+<td>The observer/agent that authored the round.</td>
+</tr>
+<tr>
+<td><code>fc-foundation</code></td>
+<td>foundation id, e.g. <code>wolfram-observer-theory</code></td>
+<td>Identifies a mandatory cross-cutting foundation concept.</td>
+</tr>
+<tr>
+<td><code>fc-foundation-role</code></td>
+<td>role id, e.g. <code>formal-analogy</code></td>
+<td>States how the foundation is used by the bundle.</td>
+</tr>
+<tr>
+<td><code>fc-foundation-template-version</code></td>
+<td>version string</td>
+<td>Records the canonical foundation template emitted by generator tooling.</td>
+</tr>
+<tr>
+<td><code>fc-foundation-template-modified</code></td>
+<td>boolean</td>
+<td>Records whether generic foundation text was changed.</td>
+</tr>
+<tr>
+<td><code>fc-foundation-bundle-additions</code></td>
+<td>list or scalar summary</td>
+<td>Records bundle-specific additions to a foundation template.</td>
+</tr>
+<tr>
+<td><code>fc-foundation-source-registry-version</code></td>
+<td>version string, <code>none</code>, or <code>NOT ADOPTED</code></td>
+<td>Records the source registry version if one is adopted.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="formal-symbols">Formal Symbols</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E</code></td>
+<td>Event stream: the events as they occur, including later claims, objections, evidence submissions, and revisions.</td>
+</tr>
+<tr>
+<td><code>r</code></td>
+<td>Recording function: the lossy process by which past observers, instruments, archives, or pipelines compress <code>E</code> into records. It is generally non-invertible.</td>
+</tr>
+<tr>
+<td><code>R = r(E)</code></td>
+<td>Surviving record: the accessible trace left after recording. Present observers do not access <code>E</code> directly; they access some part of <code>R</code>.</td>
+</tr>
+<tr>
+<td><code>C_i</code></td>
+<td>Context window for observer <code>i</code>: the subset of <code>R</code> considered or available to that observer.</td>
+</tr>
+<tr>
+<td><code>f_i</code></td>
+<td>Compression function or frame for observer <code>i</code>: the bounded function that maps accessible record content into an interpretation.</td>
+</tr>
+<tr>
+<td><code>O_i = (C_i, f_i)</code></td>
+<td>Present observer <code>i</code>, modeled by a context window and a compression function.</td>
+</tr>
+<tr>
+<td><code>f_i(R intersect C_i)</code></td>
+<td>Interpretation emitted by observer <code>i</code> from the accessible surviving record.</td>
+</tr>
+<tr>
+<td><code>f_1(R intersect C_1) != f_2(R intersect C_2)</code></td>
+<td>Disagreement between two observers' interpretations.</td>
+</tr>
+<tr>
+<td><code>O(t) = (C(t), f(t))</code></td>
+<td>Observer trajectory: one observer's context and frame as indexed by round/time.</td>
+</tr>
+<tr>
+<td><code>e(t)</code></td>
+<td>Evidence or record content added during round <code>t</code>.</td>
+</tr>
+<tr>
+<td><code>C(t+1) = C(t) union e(t)</code></td>
+<td>Context update: a round can expand the accessible context window.</td>
+</tr>
+<tr>
+<td><code>f(t+1) = update(f(t))</code></td>
+<td>Frame update: a round can revise the compression function.</td>
+</tr>
+<tr>
+<td><code>p: N -&gt; P</code></td>
+<td>Party-assignment function in the sequential multi-observer model. It maps each round number to the acting party in the set of parties <code>P</code>.</td>
+</tr>
+<tr>
+<td><code>stage(t)</code></td>
+<td>Stage-classification function assigning round <code>t</code> to formation, enrichment, critique, contestation, or consolidation.</td>
+</tr>
+</tbody>
+</table>
+<p>The core chain is <code>E -&gt; r -&gt; R -&gt; f -&gt; interpretation</code>: events are recorded
+lossily, the surviving record is accessed by a present observer, and that
+observer's bounded compression function emits an interpretation.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Computational definition</th>
+<th>Wolfram-source concept / established counterpart</th>
+<th>Limitation status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event stream</td>
+<td>The sequence of events before present interpretation, extended recursively by the inquiry's own rounds.</td>
+<td>Wolfram state evolution / process history; historiography event record.</td>
+<td>Not a limitation by itself.</td>
+</tr>
+<tr>
+<td>Observer</td>
+<td>A bounded compressor that maps accessible records through a frame into an interpretation.</td>
+<td>Wolfram observer; Simon bounded rationality; second-order cybernetics.</td>
+<td>Resource-relative.</td>
+</tr>
+<tr>
+<td>Context window</td>
+<td>The subset of the surviving record available or attended to by an observer.</td>
+<td>Observer slice of accessible state; information set or evidence set.</td>
+<td>Usually resource-relative, unless records are absent from <code>R</code>.</td>
+</tr>
+<tr>
+<td>Compression function</td>
+<td>The frame <code>f</code> that coarse-grains accessible record content into an interpretation.</td>
+<td>Wolfram coarse-graining; algorithmic information theory compression; model or prior.</td>
+<td>Resource-relative when translation is hard, not impossible.</td>
+</tr>
+<tr>
+<td>Equivalence relation / coarse-graining</td>
+<td>The grouping induced when <code>f</code> treats different record states as the same for interpretation.</td>
+<td>Coarse-graining in statistical mechanics; partitions in agreement theory.</td>
+<td>Resource-relative unless source distinctions are absent from <code>R</code>.</td>
+</tr>
+<tr>
+<td>Pocket of reducibility</td>
+<td>A pattern a bounded observer can compress and use despite a larger irreducible process.</td>
+<td>Wolfram reducibility inside computational irreducibility.</td>
+<td>Resource-relative.</td>
+</tr>
+<tr>
+<td>Interpretation</td>
+<td>The output of applying <code>f</code> to <code>R intersect C</code>.</td>
+<td>Observer-produced reality slice; model output or judgment.</td>
+<td>Depends on <code>R</code>, <code>C</code>, and <code>f</code>.</td>
+</tr>
+<tr>
+<td>Disagreement</td>
+<td>Non-equality between interpretations from different observers or time slices.</td>
+<td>Aumann-style disagreement under differing priors/partitions; argumentation conflict.</td>
+<td>Type-dependent.</td>
+</tr>
+<tr>
+<td>Recording function <code>r</code></td>
+<td>Lossy compression from event stream <code>E</code> to surviving record <code>R</code>.</td>
+<td>Extension of observer/compression vocabulary to provenance; W3C PROV / FAIR nearest counterpart.</td>
+<td>Loss is absolute once information is absent from <code>R</code>.</td>
+</tr>
+<tr>
+<td>Surviving record <code>R</code></td>
+<td>The record left after <code>r(E)</code>, and the only input present observers can access.</td>
+<td>Archive, dataset, trace, provenance record.</td>
+<td>Can impose absolute informational limits.</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>The recorded chain of custody, generation, versions, checksums, and commands for <code>R</code> or derived results.</td>
+<td>W3C PROV / FAIR reproducibility.</td>
+<td>Missing provenance creates factual irreducibility.</td>
+</tr>
+<tr>
+<td>Computational irreducibility</td>
+<td>A process whose result cannot generally be shortcut by a bounded observer even when inputs are present.</td>
+<td>Wolfram computational irreducibility.</td>
+<td>Resource-relative.</td>
+</tr>
+<tr>
+<td>Factual irreducibility</td>
+<td>A limit caused by information absent from <code>R</code>, so no observer can recover it by more compute or a new frame.</td>
+<td>Project extension; Quine-Duhem and historiographic underdetermination as counterparts.</td>
+<td>Absolute / informational.</td>
+</tr>
+<tr>
+<td>Underdetermination</td>
+<td>Multiple interpretations remain compatible with the surviving record.</td>
+<td>Quine-Duhem; analytic historiography.</td>
+<td>Absolute when caused by missing records; otherwise may be resource-relative.</td>
+</tr>
+<tr>
+<td>Knowledge bundle</td>
+<td>A self-contained OKF directory of concept files, reproduction facts, and inquiry records for one problem.</td>
+<td>OKF bundle; provenance package.</td>
+<td>A countermeasure, not a limitation.</td>
+</tr>
+<tr>
+<td>Coarse-graining family</td>
+<td>The same content expressed at increasing resolution, from L0 to L3, with deeper levels adding detail.</td>
+<td>Multi-resolution model; abstraction hierarchy.</td>
+<td>Lossy by design at shallow levels.</td>
+</tr>
+<tr>
+<td>Consistency condition</td>
+<td>Current shallower levels must not contradict current deeper levels; contradictions are fixed by recorded supersession.</td>
+<td>Refinement consistency; belief revision.</td>
+<td>Process rule.</td>
+</tr>
+<tr>
+<td>Disclosure level</td>
+<td>Reader-facing compression depth, L0 through L3.</td>
+<td>Progressive disclosure; abstraction level.</td>
+<td>Resource-relative to the reader's need.</td>
+</tr>
+<tr>
+<td>Proxy observer</td>
+<td>A consuming agent that reads only as deep as the user's question requires and answers from that level.</td>
+<td>Observer as bounded compressor; human-computer interaction progressive disclosure.</td>
+<td>Resource-relative.</td>
+</tr>
+<tr>
+<td>Participating observer</td>
+<td>An agent or human whose move extends the trajectory and must be logged, classified, and attributed.</td>
+<td>Dialogue-game participant; second-order observer.</td>
+<td>Process rule.</td>
+</tr>
+<tr>
+<td>Statement trajectory</td>
+<td>The recorded sequence through which a claim is formed, enriched, critiqued, contested, and consolidated or left open.</td>
+<td>Wolfram path through state space; Peirce inquiry; belief revision.</td>
+<td>Dialogically irreducible in general.</td>
+</tr>
+<tr>
+<td>Round</td>
+<td>One trajectory step: claim, move, state update, and possibly revised claim.</td>
+<td>State-transition step; dialogue move.</td>
+<td>Process rule.</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>The action taken in a round: question, objection, evidence, frame-change, convention, or verdict-revision.</td>
+<td>Dialogue-game move; belief-revision operator.</td>
+<td>Type/stage-dependent.</td>
+</tr>
+<tr>
+<td>Stage</td>
+<td>Lifecycle classification of a round, layered over <code>fc-move</code>: formation, enrichment, critique, contestation, or consolidation.</td>
+<td>Inquiry-stage vocabulary; argumentation dialogue modes.</td>
+<td>Process classification.</td>
+</tr>
+<tr>
+<td>Formation</td>
+<td>The first round that emits the statement on a trajectory.</td>
+<td>Initial state / claim formation.</td>
+<td>Process classification.</td>
+</tr>
+<tr>
+<td>Enrichment</td>
+<td>Addition of information with no standing counter-position.</td>
+<td>Evidence accumulation; inquiry expansion.</td>
+<td>Usually resource-relative.</td>
+</tr>
+<tr>
+<td>Critique</td>
+<td>Critical analysis or probing of assumptions without maintaining a rival position.</td>
+<td>Critical inquiry; frame testing.</td>
+<td>Usually resource-relative.</td>
+</tr>
+<tr>
+<td>Contestation</td>
+<td>A live disagreement in which a standing counter-position exists.</td>
+<td>Argumentation conflict; disagreement regime.</td>
+<td>Type-dependent.</td>
+</tr>
+<tr>
+<td>Consolidation</td>
+<td>Adoption of a convention, verdict revision, settlement, supersession, or explicit underdetermination.</td>
+<td>Belief revision closure; convention adoption.</td>
+<td>Supersedable, not terminal.</td>
+</tr>
+<tr>
+<td>Stage trajectory</td>
+<td>The sequence of round stages across the whole statement trajectory.</td>
+<td>State-path classification.</td>
+<td>Process summary.</td>
+</tr>
+<tr>
+<td>Type trajectory</td>
+<td>The sequence of Type I/II/III classifications restricted to contestation-stage rounds.</td>
+<td>Disagreement trajectory.</td>
+<td>Type-dependent.</td>
+</tr>
+<tr>
+<td>Type I disagreement</td>
+<td>Different context windows over accessible records.</td>
+<td>Information-set asymmetry.</td>
+<td>Data-resolvable in principle; resource-relative in practice.</td>
+</tr>
+<tr>
+<td>Type II disagreement</td>
+<td>Different compression functions or frames over shared records.</td>
+<td>Prior, partition, model, or frame divergence.</td>
+<td>Frame-resolvable in principle; resource-relative in practice.</td>
+</tr>
+<tr>
+<td>Type III disagreement</td>
+<td>Disputed content lies outside the surviving record.</td>
+<td>Historical underdetermination; provenance failure.</td>
+<td>Absolute / informational.</td>
+</tr>
+<tr>
+<td>Self-disagreement / diagonal case</td>
+<td>Disagreement between a later and earlier time slice of one trajectory, <code>O(t+1)</code> versus <code>O(t)</code>.</td>
+<td>Diachronic belief revision; self-inquiry.</td>
+<td>Type/stage-dependent.</td>
+</tr>
+<tr>
+<td>Type descent</td>
+<td>Within a truthful, recorded contestation stretch, Type I components tend to resolve before Type II, exposing any Type III residue.</td>
+<td>Inquiry convergence pattern; provisional P4.</td>
+<td>Open/provisional; can fail under adversarial moves or frame churn.</td>
+</tr>
+<tr>
+<td>Stage ordering / P4'</td>
+<td>Formation precedes later stages by definition; broader movement toward consolidation is conjectural because consolidation can be superseded.</td>
+<td>Inquiry lifecycle hypothesis.</td>
+<td>Open/provisional.</td>
+</tr>
+<tr>
+<td>Termination / bottoming-out</td>
+<td>A contestation reaches a point where further evidence and frame moves no longer change the residual disagreement.</td>
+<td>Underdetermined closure; stopping criterion.</td>
+<td>Absolute when the floor is Type III.</td>
+</tr>
+<tr>
+<td>Supersession</td>
+<td>Revision by adding a new version and recording what it replaces, rather than silently editing history.</td>
+<td>Append-only provenance; belief revision ledger.</td>
+<td>Process rule.</td>
+</tr>
+<tr>
+<td>Sequential multi-observer realization</td>
+<td>Multiple parties act on one shared round sequence via <code>p: N -&gt; P</code>; each move updates the common trajectory.</td>
+<td>Interleaved dialogue; shared ledger.</td>
+<td>Process rule.</td>
+</tr>
+<tr>
+<td>Parallel-branch realization</td>
+<td>Parties advance on independent branches and later reconcile. This is representable but not the repository workflow.</td>
+<td>Branch/fork workflow.</td>
+<td>Not the active operational model.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/glossary.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

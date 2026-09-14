@@ -1,0 +1,69 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "INQUIRY",
+    "description": "Rules for agents consuming or participating in this bundle.",
+    "level": null,
+    "path": "agent-contract.md",
+    "round": 13,
+    "supersedes": "agent-contract.md@r8",
+    "title": "Agent contract",
+    "type": "Policy"
+  },
+  "frontmatter": {
+    "description": "Rules for agents consuming or participating in this bundle.",
+    "fc-axis": "INQUIRY",
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "agent-contract.md@r13",
+    "timestamp": "2026-08-16",
+    "title": "Agent contract",
+    "type": "Policy"
+  },
+  "frontmatter_raw": "type: Policy\ntitle: Agent contract\ndescription: Rules for agents consuming or participating in this bundle.\nfc-axis: INQUIRY\nfc-status: open\nfc-round: 20\nfc-supersedes: agent-contract.md@r13\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": null
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "554628470c4a2ec04427597e35b1749a1b61720e3fcc7fee7a2151d68c54dc29",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "9b3047f87377ad1b28f975681228b27c4d13ac3cd8b3653934136596ace1a99f",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "8f56d5e07a96b51cc8d32e6d6fc7cb48f49b37e749434ea2060728e8f2212140"
+  },
+  "represented_artifact": {
+    "artifact_type": "Policy",
+    "description": "Rules for agents consuming or participating in this bundle.",
+    "html_path": "agent-contract.html",
+    "metadata_path": "metadata/agent-contract.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "artifact",
+    "source_path": "agent-contract.md",
+    "title": "Agent contract"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "agent-contract.md@r13"
+  }
+}

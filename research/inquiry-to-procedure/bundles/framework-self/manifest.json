@@ -1,0 +1,703 @@
+{
+  "bundle": "framework-self",
+  "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+  "bundle_round": 19,
+  "highest_round": 19,
+  "source_repo_round": 22,
+  "fc_status": "open",
+  "files": [
+    {
+      "path": "agent-contract.md",
+      "sha256": "9b3047f87377ad1b28f975681228b27c4d13ac3cd8b3653934136596ace1a99f"
+    },
+    {
+      "path": "answer.md",
+      "sha256": "bfc5cf0dae4ed0855c3d5ca4e842eabb7982eb92db0c9d37cd6292ca70acaa72"
+    },
+    {
+      "path": "index.md",
+      "sha256": "27b0534ce64712ed62390d162c0cc10167dfad285ba00334f5a329dfa88bcf64"
+    },
+    {
+      "path": "inquiry/index.md",
+      "sha256": "4e3ca59d1d37bf5db93f11c2e958efdd457fd14fe95484afca5e15f351a6f796"
+    },
+    {
+      "path": "inquiry/round-0001.md",
+      "sha256": "5ceac9aa37f1a8b737c56ad06ccff3fe34e1e37568bcad850d166d7507760265"
+    },
+    {
+      "path": "inquiry/round-0002.md",
+      "sha256": "4566f500566103992a49704d9bec44a731df1b76856e6849d9b4b7953ee078fe"
+    },
+    {
+      "path": "inquiry/round-0003.md",
+      "sha256": "9064614b2140ac58933451b87caa0e44056858098c8ef230042322f7e48d68dc"
+    },
+    {
+      "path": "inquiry/round-0004.md",
+      "sha256": "08a65f50d18b6a30c86e556e98c64956b2a7097d234fb35a154c491f8801e895"
+    },
+    {
+      "path": "inquiry/round-0005.md",
+      "sha256": "d593cd54b7368aefe8fcd3ae73e875c7cb120827f76ab48fb21862611ed6e358"
+    },
+    {
+      "path": "inquiry/round-0006.md",
+      "sha256": "b1d42e964fddc7a73487c34e326af4e7bcc20e0b4d6f157f0a440ed716c5f3e5"
+    },
+    {
+      "path": "inquiry/round-0007.md",
+      "sha256": "e4786f7b2dbe3d335dee93d90f2ac5d0dd86fb73a209f1f75f889786e8702ed4"
+    },
+    {
+      "path": "inquiry/round-0008.md",
+      "sha256": "7dce3b86c3e17156a7c06d3270d6511d277af439b3fad7a1ae38c0e06a8d6d88"
+    },
+    {
+      "path": "inquiry/round-0009.md",
+      "sha256": "7fbb95218425d0beb9a4706f8354e4bac044fc8632262cccb72e85266342033d"
+    },
+    {
+      "path": "inquiry/round-0010.md",
+      "sha256": "41ef173580c64e1c5b00f785a382396f557af8d58245c1a478962e623f966998"
+    },
+    {
+      "path": "inquiry/round-0011.md",
+      "sha256": "f835265728a95930e68aec60467e74729fab6946960c85f23631c860ca8e0ae0"
+    },
+    {
+      "path": "inquiry/round-0012.md",
+      "sha256": "f35778baaccc0b5a96ac5ee0a4e7b72857e9154789029e527ebc65ad0d51c145"
+    },
+    {
+      "path": "inquiry/round-0013.md",
+      "sha256": "09aa4a6f96b8248db7ed99833ec71189dea894a92443cb19d94f0bf043a6b702"
+    },
+    {
+      "path": "inquiry/round-0014.md",
+      "sha256": "7290dd71c0e12e775f3c65fbfa8403fee2fbbca0cc673f6344275a17517649dd"
+    },
+    {
+      "path": "inquiry/round-0015.md",
+      "sha256": "f051445ec613213e657587ee3f2bbaa390bae3eadac33315b42fdff529058d17"
+    },
+    {
+      "path": "inquiry/round-0016.md",
+      "sha256": "326ddc2a91013e71eafc4a9d984eb8960fae7f455d627657b47f72edf2675e16"
+    },
+    {
+      "path": "inquiry/round-0017.md",
+      "sha256": "3495bc76160cd955c2aaf53c3b0ec4d429b3eb8fcf1c4d164b65c7715fcac582"
+    },
+    {
+      "path": "inquiry/round-0018.md",
+      "sha256": "cb1724f5c2255beaea39c639e5ba2e36189f98577b4fb43ca37c143e30c43a8f"
+    },
+    {
+      "path": "inquiry/round-0019.md",
+      "sha256": "ed51a6fef03f997d4d561380593866755e4aa1cad432f7f90ceb4df198345e26"
+    },
+    {
+      "path": "log.md",
+      "sha256": "88c46c55807fd978bff0e6130da6592b24039506c5444103999deafae7e254ae"
+    },
+    {
+      "path": "pf/formal.md",
+      "sha256": "355fa77b37595807324fc645c85a99534ef74c5a06ac8ea4a48ca89e11a6ff42"
+    },
+    {
+      "path": "pf/full-context.md",
+      "sha256": "dea8fb78b83b147ae07b71c1403b7bb4c7cfb3b2ac193046c89e25e6c98e741a"
+    },
+    {
+      "path": "pf/index.md",
+      "sha256": "eef2d01cfec40f1a92f8dfca7cf5f767e25fa61f1179e4915179c76a0845b7b6"
+    },
+    {
+      "path": "pf/overview.md",
+      "sha256": "2afb0e09b5c72654d1c166f2af3eaeea02bedb830c3e1b9ec248daf1215caa3b"
+    },
+    {
+      "path": "r/full-results.md",
+      "sha256": "492cc5767a5421fa6e84ba467ee22f368497ffd4f8048803b85c32edb34d07ea"
+    },
+    {
+      "path": "r/index.md",
+      "sha256": "1d99335fc2d771c1ea81b270e325707b24df57e5c90d310bb0c360a68013bff1"
+    },
+    {
+      "path": "r/metrics-rounds-0001-0013.csv",
+      "sha256": "07ceef60452a6ca2b9af23caad4e17fb438093948f1aedeb06a20cd758e806aa"
+    },
+    {
+      "path": "r/overview.md",
+      "sha256": "117b8ff548c886665ec204b63ba5c15c8c50065584b5adb7493dde3db8421e44"
+    },
+    {
+      "path": "r/results.md",
+      "sha256": "29879181e918a9d3157943ec08b96f58a3d2b377a92f50f5bb79d8a7e8bb4b7c"
+    },
+    {
+      "path": "r/retrospective-round-classification.csv",
+      "sha256": "3cb0dc4d40b54aaf9626778829aa419f438218413b3236a3fa57956179656044"
+    },
+    {
+      "path": "reproduction/code.md",
+      "sha256": "23dc0bb666b4201638bded7ac5b0f3d798c257a24326b7f8f5b1ce9975e78509"
+    },
+    {
+      "path": "reproduction/data.md",
+      "sha256": "3157e26480fd309ef2e58a41946b89942377b6e5420c06288e4da24063f661c0"
+    },
+    {
+      "path": "reproduction/environment.md",
+      "sha256": "7a04586a4281ee42da382051b474688f56b0b212ef5413f08a4a5ef376b3a2a6"
+    },
+    {
+      "path": "reproduction/index.md",
+      "sha256": "8355339eeaf7b4f073b6231cbf9e8474a830ef00c0c81ede13f0e0bb30cc4abe"
+    },
+    {
+      "path": "s/foundations/ait-compression.md",
+      "sha256": "d0ec62076bc5b87bab6eabc9cdd4243e3150da11aadc54e41d08df231ae77ef1"
+    },
+    {
+      "path": "s/foundations/analytic-historiography.md",
+      "sha256": "b2bee4f048a6f06d44cbf3e3abaaaf747b9610f9e680e114c34e05a256238216"
+    },
+    {
+      "path": "s/foundations/argumentation-theory.md",
+      "sha256": "84df5016db1de8d49fe5c5564ec01a19a55ac7b545c95a3b916418c5e337726b"
+    },
+    {
+      "path": "s/foundations/aumann-agreement.md",
+      "sha256": "69f31ab9a1683f8be609d59632facf2fe5588d3719859de968c2e99e96f8c139"
+    },
+    {
+      "path": "s/foundations/bayesian-agm-belief-revision.md",
+      "sha256": "fc19bb0d68392e9a67c0ebc3449bae3fa944095785afcd3bb88b95bf5979349f"
+    },
+    {
+      "path": "s/foundations/coarse-graining-statmech.md",
+      "sha256": "16dbb6cecc037e48d0713d34652fbbd1671e9827438de9e7166dd53a4ee37178"
+    },
+    {
+      "path": "s/foundations/index.md",
+      "sha256": "94e1864a1f490980a22d5a7c48b9e7fa329000edced1b16836d8299e81f045aa"
+    },
+    {
+      "path": "s/foundations/peirce-inquiry.md",
+      "sha256": "8aaae7ad9289218ae67f0332e5c2fdb94eba6dc9bc03b0405f3ccc66c0296b7f"
+    },
+    {
+      "path": "s/foundations/provenance-reproducibility.md",
+      "sha256": "765071247d23fb74c62c10130bd4105ea3f6ed2de3a27848e620bc5dcb059ede"
+    },
+    {
+      "path": "s/foundations/quine-duhem.md",
+      "sha256": "5c867835a59cadbfbafa1f645abb9743860165355df94b4c9d13d399d17bd729"
+    },
+    {
+      "path": "s/foundations/second-order-cybernetics.md",
+      "sha256": "58eb6d16afc518eafbe669b6c51327895f177b94a2190b4d699f49c5200c04eb"
+    },
+    {
+      "path": "s/foundations/simon-bounded-rationality.md",
+      "sha256": "fdd523970616a602ac2f27ff79b2ee9e1e78c86c2c88e997bdaf80cb2474e0b0"
+    },
+    {
+      "path": "s/foundations/wolfram-observer-theory.md",
+      "sha256": "ce675e0c6cd4c565364493d60f164afd4718055d9989782580ea694744242d03"
+    },
+    {
+      "path": "s/index.md",
+      "sha256": "58e931e7ec2375bd3e44555ac0313aaf6b0210dda99ed7c8d1722b6ade3ed919"
+    },
+    {
+      "path": "s/method.md",
+      "sha256": "834d0eb91a15d797c7527119cf4d6517262480390403821587b5ed8f31a7f3ca"
+    },
+    {
+      "path": "s/overview.md",
+      "sha256": "0f458edd9923c90b4bcb6e79caba356c4876debe7a671aca1d4c00a57f402f6d"
+    },
+    {
+      "path": "s/specification.md",
+      "sha256": "e6e8fdcc7113513d79041222a5a56ee6c3b01f7c2c68a254ec985ed61e4409d3"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "date": "2026-07-16",
+      "party": "codex",
+      "move": "evidence",
+      "stage": null,
+      "type_at_round": "resolved",
+      "status": "open",
+      "summary": "Initial creation of the framework self-description pilot bundle.",
+      "record_path": "inquiry/round-0001.md"
+    },
+    {
+      "round": 2,
+      "date": "2026-07-16",
+      "party": "codex",
+      "move": "evidence",
+      "stage": null,
+      "type_at_round": "resolved",
+      "status": "open",
+      "summary": "Added a static HTML rendering path for manual inspection of the bundle.",
+      "record_path": "inquiry/round-0002.md"
+    },
+    {
+      "round": 3,
+      "date": "2026-07-16",
+      "party": "claude",
+      "move": "objection",
+      "stage": null,
+      "type_at_round": "II",
+      "status": "open",
+      "summary": "Claude Code validates the self-bundle and HTML renderer against docs/framework_v2.md section 3; fixes two mechanical defects, records two judgment differences and two spec gaps for human reconciliation.",
+      "record_path": "inquiry/round-0003.md"
+    },
+    {
+      "round": 4,
+      "date": "2026-07-19",
+      "party": "claude",
+      "move": "frame-change",
+      "stage": "consolidation",
+      "type_at_round": "resolved",
+      "status": "open",
+      "summary": "docs/framework_v3.md supersedes v2; disagreement (contestation) is now one of five stages of a general statement trajectory; sequential multi-observer realization and canonical-state rule formalized.",
+      "record_path": "inquiry/round-0004.md"
+    },
+    {
+      "round": 5,
+      "date": "2026-07-19",
+      "party": "claude",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": "resolved",
+      "status": "open",
+      "summary": "okf-fc gains a zip-portable self-contained render mode, a manifest recording function, and a deterministic bundle-structure SVG/HTML visualization; no bundle concept file content changed.",
+      "record_path": "inquiry/round-0005.md"
+    },
+    {
+      "round": 6,
+      "date": "2026-07-19",
+      "party": "claude",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": "resolved",
+      "status": "open",
+      "summary": "okf-fc gains publish/catalog/evolution-visualization commands; bundles/framework-self published as the first real snapshot into the new ../okf-bundle-snapshots viewer repository.",
+      "record_path": "inquiry/round-0006.md"
+    },
+    {
+      "round": 7,
+      "date": "2026-07-19",
+      "party": "codex",
+      "move": "objection",
+      "stage": "critique",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Audited stubs, current-source correspondence, and foundation citations; clarified stub status, superseded stale v2-current bundle pages, and added reference links to literature anchors.",
+      "record_path": "inquiry/round-0007.md"
+    },
+    {
+      "round": 8,
+      "date": "2026-07-20",
+      "party": "codex",
+      "move": "frame-change",
+      "stage": "consolidation",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.",
+      "record_path": "inquiry/round-0008.md"
+    },
+    {
+      "round": 9,
+      "date": "2026-07-20",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Metadata repair: quoted round-0008 description frontmatter so YAML parsing preserves its fc-round and snapshot/catalog generation sees bundle round 8.",
+      "record_path": "inquiry/round-0009.md"
+    },
+    {
+      "round": 10,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.",
+      "record_path": "inquiry/round-0010.md"
+    },
+    {
+      "round": 11,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.",
+      "record_path": "inquiry/round-0011.md"
+    },
+    {
+      "round": 12,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.",
+      "record_path": "inquiry/round-0012.md"
+    },
+    {
+      "round": 13,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 4 okf-fc generator, atomic round append, and validator completed; framework-self metadata aligned for validation demonstration.",
+      "record_path": "inquiry/round-0013.md"
+    },
+    {
+      "round": 14,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.",
+      "record_path": "inquiry/round-0014.md"
+    },
+    {
+      "round": 15,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.",
+      "record_path": "inquiry/round-0015.md"
+    },
+    {
+      "round": 16,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Framework-self-only Step 7 retrospective case-study pilot completed; external validation cases remain deferred.",
+      "record_path": "inquiry/round-0016.md"
+    },
+    {
+      "round": 17,
+      "date": "2026-07-21",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 8 adversarial limitations analysis completed; framework status remains open and provisional.",
+      "record_path": "inquiry/round-0017.md"
+    },
+    {
+      "round": 18,
+      "date": "2026-07-23",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 1 literature positioning repaired so Wolfram observer theory is sourced, separated from project translations/extensions, and represented as a dedicated framework-self foundation concept.",
+      "record_path": "inquiry/round-0018.md"
+    },
+    {
+      "round": 19,
+      "date": "2026-07-23",
+      "party": "codex",
+      "move": "evidence",
+      "stage": "enrichment",
+      "type_at_round": null,
+      "status": "open",
+      "summary": "Step 3 specification repaired so every future bundle must disclose the Wolfram observer-theory foundation as formal analogy with separated attribution.",
+      "record_path": "inquiry/round-0019.md"
+    }
+  ],
+  "concepts": [
+    {
+      "path": "agent-contract.md",
+      "type": "Policy",
+      "title": "Agent contract",
+      "description": "Rules for agents consuming or participating in this bundle.",
+      "level": null,
+      "axis": "INQUIRY",
+      "round": 13,
+      "supersedes": "agent-contract.md@r8"
+    },
+    {
+      "path": "answer.md",
+      "type": "Finding",
+      "title": "The project in plain language",
+      "description": "A short explanation of the observer-disagreement-framework project.",
+      "level": 0,
+      "axis": "R",
+      "round": 4,
+      "supersedes": "answer.md@r1"
+    },
+    {
+      "path": "pf/formal.md",
+      "type": "Finding",
+      "title": "Retrospective case-study reconstruction problem",
+      "description": "Formal target for reconstructing the repository's own statement trajectory.",
+      "level": 2,
+      "axis": "PF",
+      "round": 16,
+      "supersedes": "pf/formal.md@r11"
+    },
+    {
+      "path": "pf/full-context.md",
+      "type": "Finding",
+      "title": "Framework-self longitudinal case context",
+      "description": "Source context and scope boundary for the framework-self-only Step 7 pilot.",
+      "level": 3,
+      "axis": "PF",
+      "round": 16,
+      "supersedes": "pf/full-context.md@r1"
+    },
+    {
+      "path": "pf/overview.md",
+      "type": "Finding",
+      "title": "The problem in plain terms",
+      "description": "How a statement evolves over recorded rounds, of which disagreement is one stage.",
+      "level": 1,
+      "axis": "PF",
+      "round": 4,
+      "supersedes": "pf/overview.md@r1"
+    },
+    {
+      "path": "r/full-results.md",
+      "type": "Finding",
+      "title": "Framework-self measurements and retrospective classifications",
+      "description": "Reproducible Step 5 measurements, Step 6 observations, Step 7 pilot classifications, and Step 8 limitations boundary.",
+      "level": 3,
+      "axis": "R",
+      "round": 17,
+      "supersedes": "r/full-results.md@r16"
+    },
+    {
+      "path": "r/overview.md",
+      "type": "Finding",
+      "title": "Current status",
+      "description": "Plain-language status of the project, limitations, and this pilot bundle.",
+      "level": 1,
+      "axis": "R",
+      "round": 17,
+      "supersedes": "r/overview.md@r7"
+    },
+    {
+      "path": "r/results.md",
+      "type": "Finding",
+      "title": "Itemized current state",
+      "description": "Current project state, framework-self-only pilot findings, and Step 8 limitations status.",
+      "level": 2,
+      "axis": "R",
+      "round": 17,
+      "supersedes": "r/results.md@r16"
+    },
+    {
+      "path": "reproduction/code.md",
+      "type": "Runbook",
+      "title": "Code and regeneration",
+      "description": "Repository pin and regeneration instructions for the framework-self pilot bundle.",
+      "level": 2,
+      "axis": "REPRO",
+      "round": 16,
+      "supersedes": "reproduction/code.md@r13"
+    },
+    {
+      "path": "reproduction/data.md",
+      "type": "Runbook",
+      "title": "Source documents and checksums",
+      "description": "Source records used for the current framework-self case-study pilot.",
+      "level": 2,
+      "axis": "REPRO",
+      "round": 16,
+      "supersedes": "reproduction/data.md@r13"
+    },
+    {
+      "path": "reproduction/environment.md",
+      "type": "Runbook",
+      "title": "Tooling environment",
+      "description": "Concrete Python package environment for Step 4 generator, append, and validator tooling.",
+      "level": 3,
+      "axis": "REPRO",
+      "round": 13,
+      "supersedes": null
+    },
+    {
+      "path": "s/foundations/ait-compression.md",
+      "type": "Concept",
+      "title": "Algorithmic information theory and compression",
+      "description": "Understanding as compression through Kolmogorov complexity and MDL.",
+      "level": 2,
+      "axis": "S",
+      "round": 18,
+      "supersedes": "s/foundations/ait-compression.md@r13"
+    },
+    {
+      "path": "s/foundations/analytic-historiography.md",
+      "type": "Concept",
+      "title": "Analytic historiography",
+      "description": "Retrospective description and narrative structure in historical explanation.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/analytic-historiography.md@r7"
+    },
+    {
+      "path": "s/foundations/argumentation-theory.md",
+      "type": "Concept",
+      "title": "Argumentation theory",
+      "description": "Formal accounts of attack, defense, acceptance, and dialogue.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/argumentation-theory.md@r10"
+    },
+    {
+      "path": "s/foundations/aumann-agreement.md",
+      "type": "Concept",
+      "title": "Aumann agreement",
+      "description": "Common priors and common knowledge as a benchmark for disagreement.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/aumann-agreement.md@r7"
+    },
+    {
+      "path": "s/foundations/bayesian-agm-belief-revision.md",
+      "type": "Concept",
+      "title": "Bayesian updating and AGM belief revision",
+      "description": "Formal models of belief change across evidence and revision.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/bayesian-agm-belief-revision.md@r7"
+    },
+    {
+      "path": "s/foundations/coarse-graining-statmech.md",
+      "type": "Concept",
+      "title": "Coarse-graining in statistical mechanics",
+      "description": "Macrostates as equivalence classes over microstates.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/coarse-graining-statmech.md@r7"
+    },
+    {
+      "path": "s/foundations/peirce-inquiry.md",
+      "type": "Concept",
+      "title": "Peirce inquiry",
+      "description": "Doubt, inquiry, and belief fixation as a temporal process.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/peirce-inquiry.md@r7"
+    },
+    {
+      "path": "s/foundations/provenance-reproducibility.md",
+      "type": "Concept",
+      "title": "Provenance and reproducibility",
+      "description": "Engineering practices for preserving records and making results re-derivable.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/provenance-reproducibility.md@r7"
+    },
+    {
+      "path": "s/foundations/quine-duhem.md",
+      "type": "Concept",
+      "title": "Quine-Duhem underdetermination",
+      "description": "Evidence can underdetermine which theory or auxiliary assumption is responsible.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/quine-duhem.md@r7"
+    },
+    {
+      "path": "s/foundations/second-order-cybernetics.md",
+      "type": "Concept",
+      "title": "Second-order cybernetics",
+      "description": "The observer as part of the observed system.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/second-order-cybernetics.md@r7"
+    },
+    {
+      "path": "s/foundations/simon-bounded-rationality.md",
+      "type": "Concept",
+      "title": "Simon bounded rationality",
+      "description": "Satisficing and cognitive limits as constraints on observer behavior.",
+      "level": 2,
+      "axis": "S",
+      "round": 13,
+      "supersedes": "s/foundations/simon-bounded-rationality.md@r7"
+    },
+    {
+      "path": "s/foundations/wolfram-observer-theory.md",
+      "type": "Concept",
+      "title": "Wolfram observer theory",
+      "description": "Cross-cutting computational-observer foundation used as a formal analogy, separated from this project's translations and extensions.",
+      "level": 2,
+      "axis": "S",
+      "round": 19,
+      "supersedes": "s/foundations/wolfram-observer-theory.md@r18"
+    },
+    {
+      "path": "s/method.md",
+      "type": "Finding",
+      "title": "Retrospective case-study method",
+      "description": "Method used to classify and analyze the framework-self trajectory without rewriting history.",
+      "level": 2,
+      "axis": "S",
+      "round": 18,
+      "supersedes": "s/method.md@r16"
+    },
+    {
+      "path": "s/overview.md",
+      "type": "Finding",
+      "title": "The framework in one paragraph",
+      "description": "Bounded observers, statement trajectories, stages, disagreement types, and OKF bundles.",
+      "level": 1,
+      "axis": "S",
+      "round": 18,
+      "supersedes": "s/overview.md@r4"
+    },
+    {
+      "path": "s/specification.md",
+      "type": "Finding",
+      "title": "Bundle specification pointer",
+      "description": "Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.",
+      "level": 3,
+      "axis": "S",
+      "round": 19,
+      "supersedes": "s/specification.md@r12"
+    }
+  ]
+}

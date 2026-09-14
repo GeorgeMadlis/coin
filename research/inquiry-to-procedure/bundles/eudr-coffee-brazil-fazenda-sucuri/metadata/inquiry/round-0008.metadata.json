@@ -1,0 +1,66 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "date": "2026-09-11",
+    "fc-round": 8,
+    "fc-stage": "enrichment",
+    "fc-touches": "answer.md, index.md, bundle.json, pf/formal.md, pf/full-context.md, s/overview.md, s/data-sources.md, s/modeling.md, s/gsp-mapping.md, s/specification.md, s/report-structure.md, r/overview.md, r/results.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/index.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md, fazenda_sucuri_contact_sheet_guide.html, log.md, inquiry/index.md",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "gsp-counterpart": "single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24",
+    "gsp-provenance": "pinned-not-reproduced",
+    "gsp-verdict-class": "possible_relevant_deforestation",
+    "move": "enrichment",
+    "party": "codex",
+    "title": "Round 8 - FDP/JRC morphology and threshold sensitivity",
+    "type": "InquiryRound"
+  },
+  "frontmatter_raw": "type: InquiryRound\ntitle: \"Round 8 - FDP/JRC morphology and threshold sensitivity\"\nfc-round: 8\nfc-stage: enrichment\ndate: 2026-09-11\nparty: codex\nmove: enrichment\ngsp-aoi: fazenda_sucuri_screening_aoi\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced\ngsp-counterpart: single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24\nfc-touches: \"answer.md, index.md, bundle.json, pf/formal.md, pf/full-context.md, s/overview.md, s/data-sources.md, s/modeling.md, s/gsp-mapping.md, s/specification.md, s/report-structure.md, r/overview.md, r/results.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/index.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md, fazenda_sucuri_contact_sheet_guide.html, log.md, inquiry/index.md\"",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "enrichment",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-09-11"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "02a78fc86f543f8c1d121b8a34918267a757246822d8990c7c5ae0be801a8c5a",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "12fcb71dc23c54d0461d5b2c9e4c5a9d590f2bc96479f807237f3483a5b635f5"
+  },
+  "represented_artifact": {
+    "artifact_type": "InquiryRound",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "inquiry/round-0008.html",
+    "metadata_path": "metadata/inquiry/round-0008.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0008.md",
+    "title": "Round 8 - FDP/JRC morphology and threshold sensitivity"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "inquiry/round-0008.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

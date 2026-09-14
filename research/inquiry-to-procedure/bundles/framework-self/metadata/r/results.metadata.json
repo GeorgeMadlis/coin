@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "R",
+    "description": "Current project state, framework-self-only pilot findings, and Step 8 limitations status.",
+    "level": 2,
+    "path": "r/results.md",
+    "round": 17,
+    "supersedes": "r/results.md@r16",
+    "title": "Itemized current state",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "Current project state, framework-self-only pilot findings, Step 8 limits, and round 20 observer audit.",
+    "fc-axis": "R",
+    "fc-level": 2,
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "r/results.md@r17",
+    "timestamp": "2026-08-16",
+    "title": "Itemized current state",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: Itemized current state\ndescription: Current project state, framework-self-only pilot findings, Step 8 limits, and round 20 observer audit.\nfc-level: 2\nfc-axis: R\nfc-status: open\nfc-round: 20\nfc-supersedes: r/results.md@r17\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "R",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "45e629bf6490a71e213668b948a699008e72cf098df64c4d3b6aafc52f2f72cf",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "29879181e918a9d3157943ec08b96f58a3d2b377a92f50f5bb79d8a7e8bb4b7c",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "0d80027cd925c3380c5e1d2e21af1270d48db269823f2746b3a0491b085a974d"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "Current project state, framework-self-only pilot findings, Step 8 limits, and round 20 observer audit.",
+    "html_path": "r/results.html",
+    "metadata_path": "metadata/r/results.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "result",
+    "source_path": "r/results.md",
+    "title": "Itemized current state"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "r/results.md@r17"
+  }
+}

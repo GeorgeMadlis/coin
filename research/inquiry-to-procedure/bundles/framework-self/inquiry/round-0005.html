@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round 5: self-contained snapshot renderer and structure visualization</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / inquiry / round-0005</nav>
+<h1>Round 5: self-contained snapshot renderer and structure visualization</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>okf-fc gains a zip-portable self-contained render mode, a manifest recording function, and a deterministic bundle-structure SVG/HTML visualization; no bundle concept file content changed.</dd><dt>fc-axis</dt><dd><span class="badge axis-inquiry">INQUIRY</span></dd><dt>fc-move</dt><dd>evidence</dd><dt>fc-party</dt><dd>claude</dd><dt>fc-round</dt><dd>5</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-touches</dt><dd></dd><dt>fc-type-at-round</dt><dd>resolved</dd><dt>timestamp</dt><dd>2026-07-19</dd><dt>title</dt><dd>Round 5: self-contained snapshot renderer and structure visualization</dd><dt>type</dt><dd>Event</dd></dl></section>
+<article class="content"><h1 id="move">Move</h1>
+<p>Infrastructure round, mirroring round-0002: evidence added to the bundle's tooling rather than
+its content. <code>docs/framework_v3.md</code> §3.7 (Canonical state and derived artifacts) states that
+rendered/exported artifacts are derived, commit-pinned copies of the committed HEAD; this round
+makes one such artifact — the self-contained snapshot — actually zip-portable, which the
+existing renderer (as of round-0003) was not: <code>_rewrite_href</code>'s round-3 fix correctly resolves
+out-of-bundle links (e.g. into <code>docs/framework_v2.md</code>) against the real filesystem, but the
+resulting href still points at that real filesystem location, which breaks the moment the
+rendered output is copied or zipped and opened somewhere else. <code>bundles/README.md</code>'s existing
+<code>_site/</code> inspection flow is unaffected: this round's constraint was that the default
+(non-self-contained) render output must stay byte-identical unless a test proves it wrong, and
+no such test was introduced.</p>
+<h1 id="evidence-added">Evidence added</h1>
+<ul>
+<li><code>tools/src/okf_fc/render.py</code> gains <code>self_contained: bool</code> on <code>render_bundle</code>. Every relative
+  link target resolving to a real file outside the bundle root is now vendored into the output
+  under <code>_refs/&lt;repo-relative-path&gt;</code> (rendered through the same page template for Markdown,
+  wrapped in a minimal <code>&lt;pre&gt;</code> page for other textual extensions, copied verbatim for binaries)
+  and the link rewritten to the vendored copy, one level deep — links inside a vendored page
+  that would require vendoring a second time are left as unresolved spans (the existing
+  round-3 convention) rather than recursing. <code>render_bundle</code> also gains <code>write_manifest</code> (writes
+  <code>manifest.json</code>: every bundle source file's SHA256, the source repo's <code>git rev-parse HEAD</code>
+  or <code>"unknown"</code>, and the bundle's current highest round/<code>fc-status</code> read from its
+  <code>inquiry/round-*.md</code> frontmatter) and <code>create_snapshot_zip</code> (a deterministic zip: fixed
+  per-entry timestamps and a fixed <code>create_system</code>, so identical input trees produce
+  byte-identical archives).</li>
+<li>New <code>tools/src/okf_fc/structure_viz.py</code>: <code>render_structure</code> writes <code>structure.svg</code> and
+  <code>structure.html</code> (the same SVG embedded inline) at a snapshot's root — a deterministic
+  columnar diagram (no external renderer, no randomness) of the bundle's concept files, grouped
+  by axis (Root, PF, S, R, REPRO, INQUIRY, inferred from the top-level path segment) and stacked
+  by <code>fc-level</code>, with solid edges for the markdown link graph, dashed for <code>fc-supersedes</code>, and
+  dotted for <code>fc-touches</code> (restricted to entries naming an existing concept file, per the
+  fc-touches SPEC-GAP recorded in <code>inquiry/round-0003.md</code>). Each node links to its rendered page.</li>
+<li><code>tools/src/okf_fc/cli.py</code>: <code>okf-fc render</code> gains <code>--self-contained</code>; new <code>okf-fc snapshot
+  &lt;bundle_dir&gt; -o &lt;out_dir&gt; [--zip &lt;zipfile&gt;]</code> composes self-contained render + structure
+  visualization + manifest + optional deterministic zip.</li>
+<li>Verified against this bundle: <code>okf-fc render bundles/framework-self</code> (no flags) reproduces the
+  committed <code>_site/</code> byte-for-byte (diff empty). <code>okf-fc snapshot bundles/framework-self -o
+  &lt;tmp&gt; --zip &lt;tmp&gt;.zip</code> run twice produces byte-identical <code>manifest.json</code>, <code>structure.svg</code>, and
+  zip archives; the zip, unzipped to a fresh directory with no relation to this checkout, opens
+  <code>reproduction/data.html</code> and <code>reproduction/code.html</code> via <code>file://</code> and both pinned links to
+  <code>docs/framework_v2.md</code> resolve to a working local copy at <code>_refs/docs/framework_v2.html</code>.</li>
+<li><code>tools/tests/test_render.py</code> gains three tests (out-of-bundle Markdown link vendored with a
+  working relative href; non-Markdown textual target wrapped in a <code>&lt;pre&gt;</code> page; self-contained
+  double-render byte-identity). New <code>tools/tests/test_snapshot.py</code> covers the manifest's file
+  list/SHA256/round-state fields, zip byte-identity across two builds, and the structure SVG's
+  node count and a known link edge, also checked for byte-identity across two builds. Full suite
+  (14 tests) passes.</li>
+<li><code>bundles/README.md</code> — one paragraph added documenting <code>okf-fc snapshot</code>, the zip-portability
+  contract, and the structure visualization; not a bundle concept file, so no <code>fc-supersedes</code>
+  entry, ledgered here per "No Silent Edits."</li>
+</ul>
+<h1 id="effect-on-state">Effect on state</h1>
+<p>Context window: added the requirement (stated directly, not contested) that the inspection
+artifact be a zip-portable, <code>file://</code>-safe snapshot, plus a structure visualization as a
+required deliverable.</p>
+<p>Frame: unchanged for bundle content. The renderer's frame gains a second output mode
+(self-contained vendoring) alongside the existing real-filesystem-linking mode from round 3;
+the default mode's behavior and output are untouched.</p>
+<h1 id="resulting-revisions">Resulting revisions</h1>
+<p>None to bundle concept files — this round adds tooling (<code>tools/src/okf_fc/render.py</code>,
+<code>tools/src/okf_fc/structure_viz.py</code>, <code>tools/src/okf_fc/cli.py</code>, their tests) and one paragraph
+to <code>bundles/README.md</code>, none of which are bundle concepts subject to <code>fc-supersedes</code>. <code>fc-touches</code>
+is therefore empty per the convention proposed in <code>inquiry/round-0003.md</code>'s SPEC-GAP finding
+(touches to non-concept, out-of-bundle, or generated files belong in this prose, not in
+<code>fc-touches</code>).</p>
+<h1 id="classification-rationale">Classification rationale</h1>
+<p>This is an <strong>evidence</strong> move about inspection infrastructure, mirroring round-0002 exactly: it
+adds tooling capability without revising any bundle claim or adjudicating a disagreement, so it
+carries no live counter-position and is not contestation. Unlike round-0002 (pre-<code>fc-stage</code>, left
+unclassified until back-assigned as enrichment in <code>inquiry/index.md</code>), this round sets
+<code>fc-stage: enrichment</code> directly at authoring time, per <code>docs/framework_v3.md</code> §2.2: it adds
+capability to the record (a new, more robust derived-artifact mode) with no standing rival
+position to resolve.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0005.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

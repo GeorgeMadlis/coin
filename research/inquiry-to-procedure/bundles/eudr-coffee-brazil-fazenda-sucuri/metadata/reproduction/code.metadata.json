@@ -1,0 +1,60 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "REPRO",
+    "fc-round": 8,
+    "fc-supersedes": "reproduction/code.md@round-0007",
+    "gsp-counterpart": "single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24",
+    "title": "Counterpart code",
+    "type": "Runbook"
+  },
+  "frontmatter_raw": "type: Runbook\ntitle: \"Counterpart code\"\nfc-axis: REPRO\nfc-round: 8\nfc-supersedes: \"reproduction/code.md@round-0007\"\ngsp-counterpart: single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "REPRO",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "8d3f9b0fca95828bcb0e8b238a1ba5bc57eb58121d2509947c27c238e58e543b",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "5870fb06b105b577a7349738fbe942faf501a2552f82394ada84dce610f775c3"
+  },
+  "represented_artifact": {
+    "artifact_type": "Runbook",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "reproduction/code.html",
+    "metadata_path": "metadata/reproduction/code.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "reproduction",
+    "source_path": "reproduction/code.md",
+    "title": "Counterpart code"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "reproduction/code.html"
+  },
+  "supersession": {
+    "supersedes": "reproduction/code.md@round-0007"
+  }
+}

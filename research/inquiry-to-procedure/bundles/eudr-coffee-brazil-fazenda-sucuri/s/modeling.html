@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Decision rules - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>s/modeling.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="../inquiry/index.html">inquiry/index.md</a><a href="../inquiry/round-0001.html">inquiry/round-0001.md</a><a href="../inquiry/round-0002.html">inquiry/round-0002.md</a><a href="../inquiry/round-0003.html">inquiry/round-0003.md</a><a href="../inquiry/round-0004.html">inquiry/round-0004.md</a><a href="../inquiry/round-0005.html">inquiry/round-0005.md</a><a href="../inquiry/round-0006.html">inquiry/round-0006.md</a><a href="../inquiry/round-0007.html">inquiry/round-0007.md</a><a href="../inquiry/round-0008.html">inquiry/round-0008.md</a><a href="../inquiry/round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="data-sources.html">s/data-sources.md</a><a href="gsp-mapping.html">s/gsp-mapping.md</a><a href="index.html">s/index.md</a><a class="active" href="modeling.html">s/modeling.md</a><a href="overview.html">s/overview.md</a><a href="report-structure.html">s/report-structure.md</a><a href="specification.html">s/specification.md</a><a href="task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>Method</dd><dt>title</dt><dd>Decision rules</dd><dt>fc-level</dt><dd>2</dd><dt>fc-axis</dt><dd>S</dd><dt>fc-round</dt><dd>8</dd><dt>fc-supersedes</dt><dd>s/modeling.md@round-0006</dd></dl></details>
+<h1>Decision rules</h1>
+<p>The counterpart report marks the AOI <code>human_review_required</code> when post-2020 baseline-forest loss is detected with commodity-relevant evidence. For the current round, the OKF verdict class is <code>possible_relevant_deforestation</code> because:</p>
+<ul><li>JRC-baseline post-2020 loss is 23.77 ha.</li><li>Current configured coffee evidence covers 482.28 ha.</li><li>Current coffee and post-2020 baseline loss overlap by 5.14 ha.</li><li>New post-baseline coffee and post-2020 baseline loss overlap by 1.17 ha.</li></ul>
+<p>The temporal commodity-mask rule for this round is:</p>
+<ul><li>baseline coffee = coffee plantations in 2020;</li><li>current coffee = latest observed coffee (2024 for this bundle) OR baseline coffee, unless an</li></ul>
+<p>explicit clearing/removal evidence layer proves baseline coffee was cleared;</p>
+<ul><li>new coffee since baseline = latest observed coffee (2024) AND NOT baseline coffee.</li></ul>
+<p>The two-source evidence is not collapsed into a single undifferentiated commodity mask:</p>
+<table><thead><tr><th>evidentiary strength</th><th>new coffee area</th><th>post-2020 loss/new coffee overlap</th></tr></thead><tbody>
+</tbody></table>
+<p>|---|---:|---:|</p>
+<table><thead><tr><th>FDP new coffee</th><th>225.29 ha</th><th>1.17 ha</th></tr></thead><tbody>
+<tr><td>FDP-only new coffee</td><td>224.86 ha</td><td>1.17 ha, as source-specific conversion</td></tr>
+<tr><td>MapBiomas new coffee</td><td>1.04 ha</td><td>0.0 ha</td></tr>
+<tr><td>MapBiomas-only new coffee</td><td>0.61 ha</td><td>0.0 ha</td></tr>
+<tr><td>FDP and MapBiomas agreement</td><td>0.43 ha</td><td>0.0 ha</td></tr>
+</tbody></table>
+<p>This distinction is why the verdict is a human-review screening flag rather than a stronger source-agreement conversion claim.</p>
+<p>Round 8 adds a task-specific FDP/JRC diagnostic distinction that is not globalized to the parent method:</p>
+<ul><li><code>JRC2020 AND FDP2024</code> is spatial co-location between the JRC 2020 forest mask and the current FDP</li></ul>
+<p>coffee-probability mask.</p>
+<ul><li><code>JRC2020 AND (FDP2024 minus FDP2020)</code> is spatial co-location between JRC 2020 forest and pixels</li></ul>
+<p>newly admitted by FDP since the 2020 baseline year at the same probability threshold.</p>
+<p>Simple <code>JRC2020 AND FDP2024</code> co-location is insufficient to infer post-2020 conversion because it does not distinguish persistent/baseline coffee, threshold artifacts, boundary/corridor effects, or post-2020 establishment. The threshold sensitivity views use 0.025, 0.05, 0.10, 0.20, and 0.25; 0.025 is a permissive 2.5% model-probability diagnostic threshold, not verified parcel ground truth. The morphology evidence is interpretive screening evidence and cannot independently establish EUDR non-compliance or causation.</p>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/s/modeling.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

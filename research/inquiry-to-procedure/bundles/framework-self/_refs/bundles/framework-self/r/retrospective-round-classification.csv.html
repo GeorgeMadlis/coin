@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bundles/framework-self/r/retrospective-round-classification.csv</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../../../index.html">Bundle root</a> / _refs / bundles / framework-self / r / retrospective-round-classification.csv</nav>
+<h1>bundles/framework-self/r/retrospective-round-classification.csv</h1>
+<article class="content"><pre>round,date,party,move_recorded,stage_contemporary,stage_retrospective,stage_source,stage_rule_citation,type_contemporary,type_retrospective,type_source,type_rule_citation,confidence,record_ref,commit_or_manifest_ref,notes
+1,2026-07-16,codex,evidence,,formation,retrospective,&quot;docs/framework_v3.md section 2.2: formation is the first emitted statement round&quot;,resolved,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0001.md,a1fc43c,&quot;Initial bundle creation from docs/framework_v2.md; no fc-stage was recorded contemporaneously.&quot;
+2,2026-07-16,codex,evidence,,enrichment,retrospective,&quot;docs/framework_v3.md section 2.2: later evidence without a rival position is enrichment&quot;,resolved,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0002.md,3d9f217,&quot;HTML inspection renderer added; no content claim revised and no rival position recorded.&quot;
+3,2026-07-16,claude,objection,,contestation,retrospective,&quot;docs/framework_v3.md section 2.2: objection with maintained findings against the current state is contestation&quot;,II,II,contemporary_plus_retrospective,&quot;docs/framework_v3.md section 2.4 and round-0003 Classification rationale: mechanical Type I defects resolved and Type II residue left open&quot;,medium,inquiry/round-0003.md,284ffec,&quot;The round body is mixed: it fixes Type I mechanical issues while recording open Type II judgment/specification residue.&quot;
+4,2026-07-19,claude,frame-change,consolidation,consolidation,contemporary,&quot;docs/framework_v3.md section 2.2: adopted frame-change without a standing rival is consolidation&quot;,resolved,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0004.md,975206a,&quot;The legacy type value resolved is preserved in the round file but excluded from the retrospective type trajectory.&quot;
+5,2026-07-19,claude,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: later evidence/tooling addition without a rival position is enrichment&quot;,resolved,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0005.md,6537fab,&quot;The legacy type value resolved is preserved in the round file but excluded from the retrospective type trajectory.&quot;
+6,2026-07-19,claude,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: later evidence/tooling addition without a rival position is enrichment&quot;,resolved,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0006.md,&quot;../okf-bundle-snapshots/framework-self/2026-07-19-r0006-0445f09/manifest.json&quot;,&quot;The legacy type value resolved is preserved in the round file but excluded from the retrospective type trajectory.&quot;
+7,2026-07-19,codex,objection,critique,critique,contemporary,&quot;docs/framework_v3.md section 2.2: objection used as audit/probe without a maintained rival position is critique&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0007.md,&quot;../okf-bundle-snapshots/framework-self/2026-07-19-r0007-c332330/manifest.json&quot;,&quot;Structure and reference audit revised current concepts without opening a live rival framework.&quot;
+8,2026-07-20,codex,frame-change,consolidation,consolidation,contemporary,&quot;docs/framework_v3.md section 2.2: adopted frame-change without a standing rival is consolidation&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0008.md,25c9066,&quot;Round-scope convention adopted: repository rounds and bundle rounds are distinct.&quot;
+9,2026-07-20,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: later evidence/metadata repair without a rival position is enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0009.md,&quot;../okf-bundle-snapshots/framework-self/2026-07-20-r0009-43c1962/manifest.json&quot;,&quot;Metadata repair made round 8 parseable for generated manifests and catalogs.&quot;
+10,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: literature context added without a rival position is enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0010.md,ea51694,&quot;Step 1 related-work positioning enriched the self-description.&quot;
+11,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: formal definitions added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0011.md,84db34c,&quot;Step 2 formal core enriched the self-description and superseded method/formal/result concepts.&quot;
+12,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: specification detail added without a rival position is enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0012.md,77d24b3,&quot;Step 3 made provisional bundle conventions normative.&quot;
+13,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: tooling and validation evidence added without a rival position is enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0013.md,f8bbf75,&quot;Step 4 made generator, append, and validator tooling executable.&quot;
+14,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: metric definitions and measurements added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0014.md,8f8bd5d,&quot;Step 5 measured rounds 1-13 and excluded round 14 from that target.&quot;
+15,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: prediction designs and worked observations added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0015.md,a2687fc,&quot;Step 6 computed exploratory observations over rounds 1-14.&quot;
+16,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: retrospective case-study evidence added without a rival position is enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0016.md,ef6770c,&quot;Step 7 added the framework-self retrospective case-study pilot.&quot;
+17,2026-07-21,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: limitations and falsification criteria added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0017.md,c7bf11b,&quot;Step 8 added adversarial limitations and falsifiability assessment.&quot;
+18,2026-07-23,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: source coverage and attribution boundaries added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0018.md,b5e2699,&quot;Step 1 Wolfram foundation repair added primary sources and a dedicated foundation concept.&quot;
+19,2026-07-23,codex,evidence,enrichment,enrichment,contemporary,&quot;docs/framework_v3.md section 2.2: specification requirements added without a rival position are enrichment&quot;,,not_applicable,retrospective,&quot;spec/SPEC.md section 5.2: fc-type-at-round is allowed only on contestation rounds&quot;,high,inquiry/round-0019.md,&quot;NOT AVAILABLE until merge&quot;,&quot;Step 3 specification repair requires mandatory Wolfram foundation disclosure for future bundles.&quot;
+</pre>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../../../metadata/_refs/bundles/framework-self/r/retrospective-round-classification.csv.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

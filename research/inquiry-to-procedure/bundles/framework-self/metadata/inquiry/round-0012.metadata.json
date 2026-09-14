@@ -1,0 +1,65 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "codex",
+    "fc-round": 12,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [
+      "s/specification.md"
+    ],
+    "timestamp": "2026-07-21",
+    "title": "Round 12: OKF bundle specification completed",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 12: OKF bundle specification completed\"\ndescription: Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.\nfc-axis: INQUIRY\nfc-round: 12\nfc-move: evidence\nfc-stage: enrichment\nfc-party: codex\nfc-touches: [s/specification.md]\nfc-status: open\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 12,
+    "move": "evidence",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "8f680301dae128af6acfd713fe26eb09da5229a2e22ab10ddfa94c5dc14aed90",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "f35778baaccc0b5a96ac5ee0a4e7b72857e9154789029e527ebc65ad0d51c145",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "f35778baaccc0b5a96ac5ee0a4e7b72857e9154789029e527ebc65ad0d51c145"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.",
+    "html_path": "inquiry/round-0012.html",
+    "metadata_path": "metadata/inquiry/round-0012.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0012.md",
+    "title": "Round 12: OKF bundle specification completed"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "aoi_id": "fazenda_sucuri_screening_aoi",
+  "bundle_id": "eudr-coffee-brazil-fazenda-sucuri",
+  "commodity": "coffee",
+  "counterpart_repository": "single-earth/eudr-dmi-gil",
+  "country": "Brazil",
+  "country_code": "BR",
+  "evidence_handoff": "/Users/server/projects/eudr-dmi-gil/out/okf_handoffs/eudr-coffee-brazil-fazenda-sucuri.json",
+  "execution_engine": "local-pinned-raster",
+  "method_engine": "gee",
+  "parent_bundle": "eudr-gee",
+  "profile": "okf-gsp",
+  "purpose": "eudr",
+  "region": "Minas Gerais",
+  "schema_version": "okf-gsp-task-bundle-v1"
+}

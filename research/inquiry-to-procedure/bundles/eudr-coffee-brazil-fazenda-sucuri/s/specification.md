@@ -3,32 +3,22 @@ type: Method
 title: "Exact configuration"
 fc-level: 3
 fc-axis: S
-fc-round: 7
-fc-supersedes: "s/specification.md@round-0006"
+fc-round: 8
+fc-supersedes: "s/specification.md@round-0007"
 gsp-engine: gee
 ---
 # Exact configuration
 
-Counterpart commit: `GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47`.
+Counterpart commit: `single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24`.
 
-Evidence bundle id: `fazenda_sucuri_screening_aoi_evidence_freeze_20260812T121500Z`.
+Evidence bundle id: `fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z`.
 
-Generation command is recorded verbatim in `../reproduction/source-evidence.json`. It uses:
+Generation command is recorded verbatim in `../reproduction/source-evidence.json`:
 
-- `--aoi-id fazenda_sucuri_screening_aoi`
-- `--out-format both`
-- `--enable-hansen-post-2020-loss`
-- Hansen tile directory for the legacy branch:
-  `/private/tmp/fazenda_sucuri_hansen_tiles`
-- JRC GFC2020 V3 raster: `out/fazenda_sucuri_screening_aoi_inputs/jrc_gfc2020_v3.tif`
-- Hansen lossyear raster: `out/fazenda_sucuri_screening_aoi_inputs/hansen_lossyear_2025_v1_13.tif`
-- Hansen treecover2000 raster: `out/fazenda_sucuri_screening_aoi_inputs/hansen_treecover2000_2025_v1_13.tif`
-- commodity config: `out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json`
-- Sentinel-2 baseline/recent rasters and scene diagnostics JSON.
+`python -m eudr_dmi_gil.reports.cli --aoi-id fazenda_sucuri_screening_aoi --commodity-config out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json --analysis-target-crs EPSG:6933 --analysis-target-resolution-m 10`
 
-The canonical report records `EUDR_DMI_GENERATED_AT_UTC=2026-08-12T12:15:00Z` and
-`EUDR_DMI_GIT_COMMIT=ebb74d93889b7114c629230d198ebd662044bc47`. Round 7 is regenerated from this
-clean counterpart commit; the refreshed handoff records `counterpart_dirty: false`.
+Round 8 is regenerated from this clean counterpart commit; the refreshed handoff records
+`counterpart_dirty: false`.
 
 Round 2 fixes the Sentinel-2 visual-context acquisition path: baseline/recent visual rasters are
 seasonal masked median composites and acquisition now fails if either visual raster has less than
@@ -61,3 +51,13 @@ artifacts, root manifest hash
 `a481ea836ad47bd5d4fc56c68f0191d58b24637d27674aafaeea8d5389b927de`, report PDF hash
 `e5c8da5dcf11afc2fae68129b59fa5c8c0fc48029df2ba528ba9c92a0666c87d`, and page-4 regional PNG hash
 `3742da15bb7b15efe4ddf56de2cca55e66eead71f814056f45a4ca6a7b40eca1`.
+
+Round 8 adds the task-specific FDP/JRC morphology and threshold sensitivity diagnostic to the
+Fazenda Sucuri evidence package without changing the canonical PDF structure. The handoff verifies
+117 artifacts, root manifest hash
+`a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e`, report PDF hash
+`dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7`, and 12 report pages. The
+diagnostic thresholds are 0.025, 0.05, 0.10, 0.20, and 0.25; 0.025 is a permissive 2.5% FDP
+model-probability diagnostic threshold and is not treated as ground truth. The regenerated contact
+sheet retains the established 3 by 4, 12-page structure and records output PDF hash
+`a68592de13ec8879bac692aadad04f153e758c762bf494821b8a205925670f77`.

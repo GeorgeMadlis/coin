@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "docs/framework_v3.md supersedes v2; disagreement (contestation) is now one of five stages of a general statement trajectory; sequential multi-observer realization and canonical-state rule formalized.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "frame-change",
+    "fc-party": "claude",
+    "fc-round": 4,
+    "fc-stage": "consolidation",
+    "fc-status": "open",
+    "fc-touches": [
+      "answer.md",
+      "pf/overview.md",
+      "s/overview.md",
+      "inquiry/index.md",
+      "log.md"
+    ],
+    "fc-type-at-round": "resolved",
+    "timestamp": "2026-07-19",
+    "title": "Round 4: scope widened from observer disagreement to statement evolution",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 4: scope widened from observer disagreement to statement evolution\"\ndescription: docs/framework_v3.md supersedes v2; disagreement (contestation) is now one of five stages of a general statement trajectory; sequential multi-observer realization and canonical-state rule formalized.\nfc-axis: INQUIRY\nfc-round: 4\nfc-move: frame-change\nfc-stage: consolidation\nfc-party: claude\nfc-type-at-round: resolved\nfc-touches: [answer.md, pf/overview.md, s/overview.md, inquiry/index.md, log.md]\nfc-status: open\ntimestamp: 2026-07-19",
+  "inquiry": {
+    "bundle_round_for_page": 4,
+    "move": "frame-change",
+    "party": "claude",
+    "stage": "consolidation",
+    "timestamp_or_date": "2026-07-19"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "20d84c982d22460f6c1b919ca44ddcb05e6ffa32bfb5a54bc617ac87ada7440a",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "08a65f50d18b6a30c86e556e98c64956b2a7097d234fb35a154c491f8801e895",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "08a65f50d18b6a30c86e556e98c64956b2a7097d234fb35a154c491f8801e895"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "docs/framework_v3.md supersedes v2; disagreement (contestation) is now one of five stages of a general statement trajectory; sequential multi-observer realization and canonical-state rule formalized.",
+    "html_path": "inquiry/round-0004.html",
+    "metadata_path": "metadata/inquiry/round-0004.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0004.md",
+    "title": "Round 4: scope widened from observer disagreement to statement evolution"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

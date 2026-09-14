@@ -1,0 +1,58 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "REPRO",
+    "fc-round": 1,
+    "title": "Lineage",
+    "type": "Runbook"
+  },
+  "frontmatter_raw": "type: Runbook\ntitle: \"Lineage\"\nfc-axis: REPRO\nfc-round: 1",
+  "inquiry": {
+    "bundle_round_for_page": 1,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "REPRO",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "b0dd9a28225f9510a978c65dbf1f77e21f9b22b542de0a4bf88a2c4ac50ac7e6",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "04e57ca4b790a91db46313a6dcf7a6595fa6aaa7139247d3975802052b4bb448"
+  },
+  "represented_artifact": {
+    "artifact_type": "Runbook",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "reproduction/lineage.html",
+    "metadata_path": "metadata/reproduction/lineage.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "reproduction",
+    "source_path": "reproduction/lineage.md",
+    "title": "Lineage"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "reproduction/lineage.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

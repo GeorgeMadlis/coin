@@ -1,0 +1,61 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "S",
+    "fc-level": 2,
+    "fc-round": 8,
+    "fc-supersedes": "s/data-sources.md@round-0001",
+    "gsp-engine": "gee",
+    "title": "Dataset registry",
+    "type": "Method"
+  },
+  "frontmatter_raw": "type: Method\ntitle: \"Dataset registry\"\nfc-level: 2\nfc-axis: S\nfc-round: 8\nfc-supersedes: \"s/data-sources.md@round-0001\"\ngsp-engine: gee",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "c050ced045092e7dd5ff4b4fc7da1c8f6b73db6d988018eaa2bc748ea4256f6d",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "a0576185ea5deb634de392680734f8d25a013723af0eae21ae4718de8e1d603b"
+  },
+  "represented_artifact": {
+    "artifact_type": "Method",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "s/data-sources.html",
+    "metadata_path": "metadata/s/data-sources.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/data-sources.md",
+    "title": "Dataset registry"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "s/data-sources.html"
+  },
+  "supersession": {
+    "supersedes": "s/data-sources.md@round-0001"
+  }
+}

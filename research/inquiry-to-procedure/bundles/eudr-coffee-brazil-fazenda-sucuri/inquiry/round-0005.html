@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Round 5 - canonical Hansen-flag handoff hygiene - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>inquiry/round-0005.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="index.html">inquiry/index.md</a><a href="round-0001.html">inquiry/round-0001.md</a><a href="round-0002.html">inquiry/round-0002.md</a><a href="round-0003.html">inquiry/round-0003.md</a><a href="round-0004.html">inquiry/round-0004.md</a><a class="active" href="round-0005.html">inquiry/round-0005.md</a><a href="round-0006.html">inquiry/round-0006.md</a><a href="round-0007.html">inquiry/round-0007.md</a><a href="round-0008.html">inquiry/round-0008.md</a><a href="round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>InquiryRound</dd><dt>title</dt><dd>Round 5 - canonical Hansen-flag handoff hygiene</dd><dt>fc-round</dt><dd>5</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>date</dt><dd>2026-08-12</dd><dt>party</dt><dd>codex</dd><dt>move</dt><dd>fix</dd><dt>gsp-aoi</dt><dd>fazenda_sucuri_screening_aoi</dd><dt>gsp-verdict-class</dt><dd>possible_relevant_deforestation</dd><dt>gsp-provenance</dt><dd>pinned-not-reproduced</dd><dt>gsp-counterpart</dt><dd>single-earth/eudr-dmi-gil@80192bcdbde9329f1a64a60901a52a11d5fcfca8</dd></dl></details>
+<h1>Round 5 - canonical Hansen-flag handoff hygiene</h1>
+<p>This round addresses the still-relevant review gaps after the Fazenda Sucuri bundle had already been formed.</p>
+<ul><li>The counterpart regression-test fix was committed as</li></ul>
+<p><code>80192bcdbde9329f1a64a60901a52a11d5fcfca8</code>; the focused regression suite <code>.venv/bin/python -m pytest tests/test_generate_okf_gsp_handoff.py tests/test_brazil_coffee_report_pdf_structure.py</code> reported 24 passed.</p>
+<ul><li>The evidence bundle was regenerated through the canonical</li></ul>
+<p><code>python -m eudr_dmi_gil.reports.cli</code> entry point with <code>--enable-hansen-post-2020-loss</code> recorded literally in the handoff command.</p>
+<ul><li>The refreshed handoff records <code>counterpart_dirty: false</code>, 59 artifacts, manifest hash</li></ul>
+<p><code>a4663ba4659e2689462f522e2f2fff3d97dcbe25a34d7bf17ba3d61986b4a446</code>, and report PDF hash <code>1ca879da2898941971f07ed6c369b2a245556d7814cacc110c27b0bb3cbd4d83</code>; page count remains 12.</p>
+<ul><li>The derived contact sheet was rebuilt from that report; metadata records output hash</li></ul>
+<p><code>de3afe470566e411b5cc824dd50de3980922c5d273dfbf0cac7ea478d65414a3</code>.</p>
+<ul><li>PF now records the AOI as an approximate screening polygon, not a cadastral farm boundary.</li></ul>
+<p>Supersedes ledger for current concept files:</p>
+<ul><li><code>pf/full-context.md@round-0001</code></li><li><code>s/overview.md@round-0001</code></li><li><code>s/gsp-mapping.md@round-0001</code></li><li><code>s/specification.md@round-0004</code></li><li><code>r/artifact-inventory.md@round-0004</code></li><li><code>r/report-page-audit.md@round-0004</code></li><li><code>reproduction/code.md@round-0004</code></li><li><code>reproduction/data.md@round-0004</code></li></ul>
+<p>Verdict class remains <code>possible_relevant_deforestation</code>: the report metrics are still small but nonzero for source-specific coffee/loss overlap, with no both-source-agreement overlap. Provenance remains <code>pinned-not-reproduced</code> because no independent rerun-for-determinism check was completed in this round.</p>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0005.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

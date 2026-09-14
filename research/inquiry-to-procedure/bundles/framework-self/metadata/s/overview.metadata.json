@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Bounded observers, statement trajectories, stages, disagreement types, and OKF bundles.",
+    "level": 1,
+    "path": "s/overview.md",
+    "round": 18,
+    "supersedes": "s/overview.md@r4",
+    "title": "The framework in one paragraph",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "Bounded observers, statement trajectories, stages, disagreement types, and OKF bundles.",
+    "fc-axis": "S",
+    "fc-level": 1,
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "s/overview.md@r18",
+    "timestamp": "2026-08-16",
+    "title": "The framework in one paragraph",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: The framework in one paragraph\ndescription: Bounded observers, statement trajectories, stages, disagreement types, and OKF bundles.\nfc-level: 1\nfc-axis: S\nfc-status: open\nfc-round: 20\nfc-supersedes: s/overview.md@r18\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 1
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "f5e59c0f1da2cc51d32abdac37af7d4b7bc3ba0f840d02a91b786082a1af5be3",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "0f458edd9923c90b4bcb6e79caba356c4876debe7a671aca1d4c00a57f402f6d",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "95d4bcbafdb4ef7c957b1da912781fb397ca307b5805e822d0db50ed8709bc11"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "Bounded observers, statement trajectories, stages, disagreement types, and OKF bundles.",
+    "html_path": "s/overview.html",
+    "metadata_path": "metadata/s/overview.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/overview.md",
+    "title": "The framework in one paragraph"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/overview.md@r18"
+  }
+}

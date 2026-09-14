@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.",
+    "level": 3,
+    "path": "s/specification.md",
+    "round": 19,
+    "supersedes": "s/specification.md@r12",
+    "title": "Bundle specification pointer",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.",
+    "fc-axis": "S",
+    "fc-irreducibility": "none",
+    "fc-level": 3,
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "s/specification.md@r19",
+    "timestamp": "2026-08-16",
+    "title": "Bundle specification pointer",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: Bundle specification pointer\ndescription: Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.\nfc-level: 3\nfc-axis: S\nfc-irreducibility: none\nfc-status: open\nfc-round: 20\nfc-supersedes: s/specification.md@r19\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 3
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "e925ddc816a9c3917201cc184bc25f7e207ada956a955c8bdbe269654183dc8d",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "e6e8fdcc7113513d79041222a5a56ee6c3b01f7c2c68a254ec985ed61e4409d3",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "8b20f415c2e23cb7fa2d06c427215fa90da5cc75830473aa845a960baf1e0ee6"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "Points to the current repository OKF-FC profile and mandatory Wolfram foundation requirement.",
+    "html_path": "s/specification.html",
+    "metadata_path": "metadata/s/specification.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/specification.md",
+    "title": "Bundle specification pointer"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/specification.md@r19"
+  }
+}

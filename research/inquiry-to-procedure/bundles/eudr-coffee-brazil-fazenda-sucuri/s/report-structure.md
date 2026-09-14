@@ -2,7 +2,8 @@
 type: Method
 title: "Report structure"
 fc-axis: S
-fc-round: 1
+fc-round: 8
+fc-supersedes: "s/report-structure.md@round-0001"
 ---
 # Report structure
 
@@ -23,7 +24,8 @@ The pinned canonical report has 12 pages:
 | 11 | Deterministic Artifacts |
 | 12 | Appendix |
 
-The HTML report also contains the two-situation section, the Sentinel-2 diagnostics table, and the
-expanded interactive map overlays. Empty per-AOI layers are omitted and recorded; here, the
-both-source-agreement conversion overlay is omitted because the source mask has no renderable
+The PDF report remains 12 pages. The HTML report also contains the two-situation section, the
+Sentinel-2 diagnostics table, the expanded interactive map overlays, and the round-8 FDP/JRC Coffee
+Morphology And Threshold Sensitivity section. Empty per-AOI layers are omitted and recorded; here,
+the both-source-agreement conversion overlay is omitted because the source mask has no renderable
 features.

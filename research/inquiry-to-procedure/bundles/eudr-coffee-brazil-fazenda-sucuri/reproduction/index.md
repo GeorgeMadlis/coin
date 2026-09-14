@@ -5,9 +5,10 @@
 - [data.md](data.md) - asset pins and checksums.
 - [environment.md](environment.md) - runtime.
 - [lineage.md](lineage.md) - why this bundle imports no legacy lineage.
-
-The source bundle's machine-readable manifest, GeoJSON masks, contact sheet PDF, generated PDF, and
-canonical `report.html` are intentionally omitted from this public COIN copy.
+- [source-evidence.json](source-evidence.json) - machine-readable evidence manifest for this task.
+- [fazenda_sucuri_screening_aoi_contact_sheet.pdf](fazenda_sucuri_screening_aoi_contact_sheet.pdf) -
+  derived, non-evidentiary 12-page contact sheet of the pinned `report.pdf`; see its
+  [metadata](fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json).
 
 The counterpart, evidence bundle, and report artifacts referenced here live in
 `GeorgeMadlis/eudr-dmi-gil`'s `audit/evidence/**`; this source bundle records hashes and paths
@@ -21,6 +22,11 @@ package lacked `fazenda_sucuri_contact_sheet_guide.html`.
 
 Round 7 supersedes snapshot `2026-08-12-r0006-b969a23` because page 4 still showed a missing
 regional-overview image. The regenerated report/contact sheet are pinned to the round-7 handoff.
+
+Round 8 supersedes the round-7 evidence package with the 2026-09-11 clean handoff at
+`single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24`. The refreshed report/contact
+sheet are pinned to the round-8 handoff and add the FDP/JRC morphology and threshold sensitivity
+artifacts while preserving the 12-page PDF and 3 by 4 contact-sheet structure.
 
 Expected publish command:
 

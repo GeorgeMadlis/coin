@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Round 8 - FDP/JRC morphology and threshold sensitivity - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>inquiry/round-0008.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="index.html">inquiry/index.md</a><a href="round-0001.html">inquiry/round-0001.md</a><a href="round-0002.html">inquiry/round-0002.md</a><a href="round-0003.html">inquiry/round-0003.md</a><a href="round-0004.html">inquiry/round-0004.md</a><a href="round-0005.html">inquiry/round-0005.md</a><a href="round-0006.html">inquiry/round-0006.md</a><a href="round-0007.html">inquiry/round-0007.md</a><a class="active" href="round-0008.html">inquiry/round-0008.md</a><a href="round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>InquiryRound</dd><dt>title</dt><dd>Round 8 - FDP/JRC morphology and threshold sensitivity</dd><dt>fc-round</dt><dd>8</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>date</dt><dd>2026-09-11</dd><dt>party</dt><dd>codex</dd><dt>move</dt><dd>enrichment</dd><dt>gsp-aoi</dt><dd>fazenda_sucuri_screening_aoi</dd><dt>gsp-verdict-class</dt><dd>possible_relevant_deforestation</dd><dt>gsp-provenance</dt><dd>pinned-not-reproduced</dd><dt>gsp-counterpart</dt><dd>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</dd><dt>fc-touches</dt><dd>answer.md, index.md, bundle.json, pf/formal.md, pf/full-context.md, s/overview.md, s/data-sources.md, s/modeling.md, s/gsp-mapping.md, s/specification.md, s/report-structure.md, r/overview.md, r/results.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/index.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md, fazenda_sucuri_contact_sheet_guide.html, log.md, inquiry/index.md</dd></dl></details>
+<h1>Round 8 - FDP/JRC morphology and threshold sensitivity</h1>
+<p>Scope classification: task-specific enrichment only. The authoritative counterpart gained reusable machinery, but this handoff records Fazenda-Sucuri-specific interpretation and threshold diagnostics. It does not change the parent <code>eudr-gee</code> method to require 0.025/0.05/0.10/0.20/0.25 diagnostics, nor does it globalize this AOI&#x27;s shape interpretation.</p>
+<p>Why this analysis was added:</p>
+<ul><li>Visual inspection showed that JRC 2020 forest often forms narrow elongated corridors while FDP</li></ul>
+<p>coffee forms broader agricultural units.</p>
+<ul><li>Simple <code>JRC2020 AND FDP2024</code> co-location is insufficient to infer post-2020 conversion because</li></ul>
+<p>it can include persistent/baseline coffee, boundary/corridor effects, and low-probability threshold artifacts.</p>
+<ul><li>The diagnostic therefore separates <code>JRC2020 AND FDP2024</code> from</li></ul>
+<p><code>JRC2020 AND (FDP2024 minus FDP2020)</code>.</p>
+<p>Verified handoff:</p>
+<ul><li>Counterpart repository: <code>single-earth/eudr-dmi-gil</code>.</li><li>Counterpart commit: <code>d68e7ebbcc99fdff75742452538b241a382feb24</code>.</li><li><code>counterpart_dirty: false</code>.</li><li>Evidence bundle id: <code>fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z</code>.</li><li>Root manifest SHA256: <code>a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e</code>.</li><li>Report PDF SHA256: <code>dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7</code>.</li><li>Report page count: 12.</li><li>Verified artifact count: 117; required artifact count: 12.</li><li>FDP asset/version: <code>projects/forestdatapartnership/assets/coffee/model_2026a</code>, version <code>2026a</code>.</li><li>Threshold metrics CSV SHA256: <code>6c0d1790d09b115ba229c804b6551ef8402d4e339e1778f7ecf9a3b1a911dc39</code>.</li><li>Morphology diagnostics JSON SHA256:</li></ul>
+<p><code>94f8627832221dd95d7779604a67a7b5817ee717669251036df496c0df8260e7</code>.</p>
+<p>The framework&#x27;s <code>tools.okf_gsp.verify_evidence_handoff</code> was run against the handoff and verified the clean counterpart flag, root manifest hash, every manifest-declared artifact hash/size, report PDF hash, and 12-page PDF count.</p>
+<p>Threshold sensitivity:</p>
+<table><thead><tr><th>threshold</th><th>FDP 2020 coffee</th><th>FDP 2024 coffee</th><th>FDP new coffee</th><th>JRC2020 AND FDP2024</th><th>JRC2020 AND FDP new coffee</th></tr></thead><tbody>
+</tbody></table>
+<p>|---:|---:|---:|---:|---:|---:|</p>
+<table><thead><tr><th>0.025</th><th>256.99 ha</th><th>358.74 ha</th><th>225.29 ha</th><th>35.68 ha</th><th>17.25 ha</th></tr></thead><tbody>
+<tr><td>0.05</td><td>234.00 ha</td><td>307.80 ha</td><td>198.95 ha</td><td>25.19 ha</td><td>14.66 ha</td></tr>
+<tr><td>0.10</td><td>209.85 ha</td><td>245.38 ha</td><td>162.01 ha</td><td>15.81 ha</td><td>11.06 ha</td></tr>
+<tr><td>0.20</td><td>183.09 ha</td><td>179.28 ha</td><td>117.71 ha</td><td>9.04 ha</td><td>6.97 ha</td></tr>
+<tr><td>0.25</td><td>173.33 ha</td><td>158.60 ha</td><td>104.32 ha</td><td>7.23 ha</td><td>5.67 ha</td></tr>
+</tbody></table>
+<p>The 0.025 threshold is a permissive 2.5% FDP model-probability diagnostic threshold, not verified parcel ground truth. <code>JRC2020 AND FDP new coffee</code> contracts from 17.25 ha at 0.025 to 5.67 ha at 0.25, a 67.1% decrease.</p>
+<p>Shape and morphology:</p>
+<ul><li>At 0.025, <code>JRC2020 AND FDP2024</code> totals 35.68 ha in 142 components; median component area is</li></ul>
+<p>0.05 ha, max component area is 3.85 ha, boundary-adjacency fraction is 0.440303, and median bounding-box elongation is 1.500000.</p>
+<ul><li>At 0.025, <code>JRC2020 AND FDP new coffee</code> totals 17.25 ha in 150 components; median component area</li></ul>
+<p>is 0.03 ha, max component area is 2.14 ha, boundary-adjacency fraction is 0.540290, and median bounding-box elongation is 1.444444.</p>
+<ul><li>At 0.25, <code>JRC2020 AND FDP new coffee</code> totals 5.67 ha in 64 components; median component area is</li></ul>
+<p>0.03 ha, max component area is 1.09 ha, boundary-adjacency fraction is 0.608466, and median bounding-box elongation is 1.291667.</p>
+<p>The report.html conclusion is: &quot;The morphology is mixed or inconclusive from shape metrics alone.&quot; The recorded interpretation is therefore threshold-sensitive and morphology-inconclusive. It has some boundary/corridor-like signals, but not enough from shape metrics alone to reclassify the evidence as a confirmed broad/persistent forest-to-coffee transition.</p>
+<p>Verdict effect:</p>
+<p>The verdict remains <code>possible_relevant_deforestation</code> / <code>pinned-not-reproduced</code>. The richer morphology analysis changes the evidentiary interpretation/detail but not the verdict. Positive overlap remains candidate/manual-review evidence and is not confirmed deforestation, confirmed conversion, illegality, EUDR non-compliance, or causation.</p>
+<p>Contact-sheet effect:</p>
+<p>The canonical report PDF remains 12 pages. The contact sheet was regenerated from the new <code>report.pdf</code> using <code>tools/pdf_contact_sheet.py</code> without changing the tool or adding a thirteenth report page. The metadata records the unchanged structure: 3 columns, 4 rows, 14 pt margin, 4 pt gutter, and source <code>page_count: 12</code>. Contact-sheet PDF SHA256: <code>a68592de13ec8879bac692aadad04f153e758c762bf494821b8a205925670f77</code>.</p>
+<p>Source authenticity:</p>
+<p>Round 8 preserves the chain provider observation -&gt; acquired record -&gt; checksum-pinned artifact -&gt; computation -&gt; interpretation. Hash verification proves the acquired artifacts match the pinned handoff/manifest; it does not prove that the remote FDP provider record is semantically correct. The metadata records the FDP asset id and local raster checksum but no separate provider-side task receipt.</p>
+<p>Supersedes ledger for current concept files:</p>
+<ul><li><code>answer.md@round-0006</code></li><li><code>pf/formal.md@round-0006</code></li><li><code>pf/full-context.md@round-0005</code></li><li><code>s/overview.md@round-0007</code></li><li><code>s/data-sources.md@round-0001</code></li><li><code>s/modeling.md@round-0006</code></li><li><code>s/gsp-mapping.md@round-0007</code></li><li><code>s/specification.md@round-0007</code></li><li><code>s/report-structure.md@round-0001</code></li><li><code>r/overview.md@round-0006</code></li><li><code>r/results.md@round-0006</code></li><li><code>r/report-page-audit.md@round-0007</code></li><li><code>r/artifact-inventory.md@round-0007</code></li><li><code>reproduction/code.md@round-0007</code></li><li><code>reproduction/data.md@round-0007</code></li></ul>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0008.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

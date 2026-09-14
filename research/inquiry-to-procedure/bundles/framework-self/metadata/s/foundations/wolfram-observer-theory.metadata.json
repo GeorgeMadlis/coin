@@ -1,0 +1,77 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Cross-cutting computational-observer foundation used as a formal analogy, separated from this project's translations and extensions.",
+    "level": 2,
+    "path": "s/foundations/wolfram-observer-theory.md",
+    "round": 19,
+    "supersedes": "s/foundations/wolfram-observer-theory.md@r18",
+    "title": "Wolfram observer theory",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Cross-cutting computational-observer foundation used as a formal analogy, separated from this project's translations and extensions.",
+    "fc-axis": "S",
+    "fc-foundation": "wolfram-observer-theory",
+    "fc-foundation-bundle-additions": "",
+    "fc-foundation-role": "formal-analogy",
+    "fc-foundation-source-registry-version": "none",
+    "fc-foundation-template-modified": false,
+    "fc-foundation-template-version": "1.0.1",
+    "fc-group": "framework-foundation",
+    "fc-level": 2,
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/wolfram-observer-theory.md@r19",
+    "timestamp": "2026-08-16",
+    "title": "Wolfram observer theory",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Wolfram observer theory\ndescription: Cross-cutting computational-observer foundation used as a formal analogy, separated from this project's translations and extensions.\nfc-level: 2\nfc-axis: S\nfc-group: framework-foundation\nfc-foundation: wolfram-observer-theory\nfc-foundation-role: formal-analogy\nfc-foundation-template-version: \"1.0.1\"\nfc-foundation-template-modified: false\nfc-foundation-bundle-additions:\n  - framework-self uses the foundation to classify its own observer vocabulary and specification rules.\nfc-foundation-source-registry-version: none\nfc-status: open\nfc-round: 20\nfc-supersedes: s/foundations/wolfram-observer-theory.md@r19\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "e032bc4b36bbf7630767f5b60ec05cde8880264728d99978b081a66f294789a4",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "ce675e0c6cd4c565364493d60f164afd4718055d9989782580ea694744242d03",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "3cb28fe764531c9c0144482863d8bb6aa331aa7464a9692193b89e7bc22bee3e"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Cross-cutting computational-observer foundation used as a formal analogy, separated from this project's translations and extensions.",
+    "html_path": "s/foundations/wolfram-observer-theory.html",
+    "metadata_path": "metadata/s/foundations/wolfram-observer-theory.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/wolfram-observer-theory.md",
+    "title": "Wolfram observer theory"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/wolfram-observer-theory.md@r19"
+  }
+}

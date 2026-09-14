@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Fazenda Sucuri - Local Bundle Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f6f4;
+      --panel: #ffffff;
+      --panel-alt: #f8faf8;
+      --text: #18231d;
+      --muted: #5d6d63;
+      --line: #d7e1da;
+      --accent: #126b47;
+      --accent-soft: #e2f3e9;
+      --code: #eef2ef;
+      --shadow: 0 10px 30px rgba(20, 50, 33, .08);
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101713;
+        --panel: #18211c;
+        --panel-alt: #141c17;
+        --text: #eef6f0;
+        --muted: #aec0b4;
+        --line: #334239;
+        --accent: #82d7ad;
+        --accent-soft: #213d2f;
+        --code: #222d26;
+        --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .page { width: min(1180px, calc(100% - 30px)); margin: 0 auto; padding: 28px 0 56px; }
+    .hero, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero { padding: clamp(24px, 5vw, 48px); }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: .11em; font-size: .76rem; }
+    h1 { margin: 0; max-width: 960px; font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.05; letter-spacing: -.035em; }
+    .lead { max-width: 900px; margin: 18px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+    .badge { border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; background: var(--panel-alt); font-size: .82rem; font-weight: 700; }
+    section { margin-top: 28px; }
+    h2 { margin: 0 0 8px; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.02em; }
+    .section-note { margin: 0 0 14px; color: var(--muted); }
+    .notice { margin-top: 18px; padding: 16px 18px; border: 1px solid var(--line); border-left: 5px solid var(--accent); border-radius: 10px; background: var(--panel-alt); }
+    .notice strong { display: block; margin-bottom: 5px; }
+    code, .path { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    code { background: var(--code); border-radius: 5px; padding: .08rem .28rem; }
+    .quick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .quick-link {
+      display: block; padding: 17px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+      color: inherit; text-decoration: none; box-shadow: var(--shadow); transition: transform .15s ease, border-color .15s ease;
+    }
+    .quick-link:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .quick-link strong { display: block; margin-bottom: 5px; }
+    .quick-link span { color: var(--muted); font-size: .88rem; }
+    .path { display: block; margin-top: 10px; padding: 4px 7px; background: var(--code); border-radius: 6px; overflow-wrap: anywhere; font-size: .72rem; }
+    .panel { padding: 18px; }
+    .pages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .page-card { padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-alt); }
+    .page-num { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 850; margin-bottom: 7px; }
+    .page-card strong { display: block; }
+    .page-card p { margin: 4px 0 0; color: var(--muted); font-size: .86rem; }
+    .toolbar { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 13px; }
+    .search { flex: 1 1 340px; min-width: 230px; padding: 11px 13px; border-radius: 9px; border: 1px solid var(--line); background: var(--panel-alt); color: var(--text); font: inherit; }
+    .count { color: var(--muted); font-size: .88rem; }
+    .group { margin-top: 18px; }
+    .group:first-of-type { margin-top: 0; }
+    .group h3 { margin: 0 0 8px; font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .artifact-list { display: grid; gap: 8px; }
+    .artifact {
+      display: grid; grid-template-columns: minmax(210px, .75fr) minmax(250px, 1.25fr) auto; gap: 12px; align-items: center;
+      padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-alt);
+    }
+    .artifact[hidden] { display: none; }
+    .artifact-name { font-weight: 800; }
+    .artifact-desc { color: var(--muted); font-size: .9rem; }
+    .artifact-actions { display: flex; gap: 7px; flex-wrap: wrap; justify-content: end; }
+    .btn {
+      appearance: none; border: 1px solid var(--line); background: var(--panel); color: var(--accent); border-radius: 8px;
+      padding: 7px 10px; text-decoration: none; font: inherit; font-weight: 750; font-size: .82rem; cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); }
+    details { border: 1px solid var(--line); border-radius: 10px; background: var(--panel-alt); }
+    summary { cursor: pointer; padding: 13px 15px; font-weight: 800; }
+    details > div { padding: 0 15px 15px; color: var(--muted); }
+    pre { margin: 10px 0 0; padding: 13px; border-radius: 8px; background: var(--code); color: var(--text); overflow: auto; }
+    footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    .toast { position: fixed; right: 18px; bottom: 18px; z-index: 10; background: var(--text); color: var(--bg); padding: 10px 13px; border-radius: 9px; opacity: 0; transform: translateY(8px); pointer-events: none; transition: .18s ease; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    @media (max-width: 920px) {
+      .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .artifact { grid-template-columns: 1fr; }
+      .artifact-actions { justify-content: start; }
+    }
+    @media (max-width: 560px) {
+      .quick-grid, .pages { grid-template-columns: 1fr; }
+      .page { width: min(100% - 20px, 1180px); }
+    }
+  
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <p class="eyebrow">Portable local bundle guide</p>
+    <h1>Fazenda Sucuri evidence package</h1>
+    <p class="lead">
+      This page explains <code>reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf</code>
+      and provides direct relative links to the bundle's HTML and JSON artifacts. It is designed
+      to be opened directly from the unzipped bundle root without a local web server.
+    </p>
+    <div class="badge-row">
+      <span class="badge">No sandbox URLs</span>
+      <span class="badge">No iframe or PDF embedding</span>
+      <span class="badge">No fetch/XMLHttpRequest</span>
+      <span class="badge">No external libraries</span>
+    </div>
+    <div class="notice">
+      <strong>Why this version avoids permission prompts</strong>
+      Browsers may restrict an HTML page from automatically reading neighboring local files. This guide does not attempt to read them.
+      Every artifact opens only after you click a normal relative link. The search and copy-path controls operate solely on text already present in this page.
+    </div>
+  </header>
+
+  <section aria-labelledby="start-title">
+    <h2 id="start-title">Start here</h2>
+    <p class="section-note">These are the principal entry points for visual, human-readable, and machine-readable inspection.</p>
+    <div class="quick-grid">
+      <a class="quick-link" href="reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf" target="_blank">
+        <strong>Open the contact sheet PDF</strong>
+        <span>One-page overview of the 12-page canonical report.</span>
+        <span class="path">reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf</span>
+      </a>
+      <a class="quick-link" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html" target="_blank">
+        <strong>Open report.html</strong>
+        <span>Canonical interactive human-readable report.</span>
+        <span class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html</span>
+      </a>
+      <a class="quick-link" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json" target="_blank">
+        <strong>Open report.json</strong>
+        <span>Canonical machine-readable report model.</span>
+        <span class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json</span>
+      </a>
+      <a class="quick-link" href="evidence-package/artifact-index.html" target="_blank">
+        <strong>Open the artifact index</strong>
+        <span>Package-wide navigation and evidence artifact links.</span>
+        <span class="path">evidence-package/artifact-index.html</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-title">
+    <h2 id="contact-title">What the contact sheet represents</h2>
+    <p class="section-note">
+      The contact sheet is a derived visual index. It compresses the canonical 12-page PDF into a single page for rapid inspection;
+      it is not the source of the report's metrics or conclusions. Use the canonical HTML and JSON files above for detailed inspection.
+    </p>
+    <div class="panel pages">
+      <article class="page-card"><span class="page-num">1</span><strong>Cover and AOI</strong><p>Report identity, commodity, geography, date, and overview imagery.</p>
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="metadata/fazenda_sucuri_contact_sheet_guide.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+      <article class="page-card"><span class="page-num">2</span><strong>Executive summary</strong><p>High-level evidence status, headline metrics, and review boundary.</p></article>
+      <article class="page-card"><span class="page-num">3</span><strong>Assessment workflow</strong><p>Baseline, change, commodity, and intersection logic used by the screening report.</p></article>
+      <article class="page-card"><span class="page-num">4</span><strong>Regional context</strong><p>AOI placement in Minas Gerais and surrounding land context.</p></article>
+      <article class="page-card"><span class="page-num">5</span><strong>2020 forest baseline</strong><p>JRC GFC2020 baseline evidence and mapped forest area.</p></article>
+      <article class="page-card"><span class="page-num">6</span><strong>Post-2020 loss</strong><p>Hansen loss evidence, coffee overlap, and intersection metrics.</p></article>
+      <article class="page-card"><span class="page-num">7</span><strong>Satellite evidence</strong><p>Corrected before/after Sentinel-2 panels and AOI boundary.</p></article>
+      <article class="page-card"><span class="page-num">8</span><strong>Interpretation</strong><p>Evidence detected, gaps, review needs, and legal-outcome boundary.</p></article>
+      <article class="page-card"><span class="page-num">9</span><strong>Data and methods</strong><p>Datasets, processing method, spatial resolution, and temporal scope.</p></article>
+      <article class="page-card"><span class="page-num">10</span><strong>Audit trail</strong><p>Run metadata, cutoff, end year, CRS, software, and integrity references.</p></article>
+      <article class="page-card"><span class="page-num">11</span><strong>Deterministic artifacts</strong><p>Lists report.json, report.html, report.pdf, metrics.csv, manifest, and evidence images.</p></article>
+      <article class="page-card"><span class="page-num">12</span><strong>Appendix</strong><p>References, limitations, evidence gaps, schema, and methodology version.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="artifacts-title">
+    <h2 id="artifacts-title">Local artifact links</h2>
+    <p class="section-note">
+      Filter by filename, role, or topic. "Open" uses a plain relative link. "Copy path" copies only the relative path text.
+    </p>
+    <div class="panel">
+      <div class="toolbar">
+        <input id="artifactSearch" class="search" type="search" placeholder="Filter artifacts, e.g. coffee, loss, provenance, JSON..." aria-label="Filter artifact links">
+        <span id="artifactCount" class="count"></span>
+      </div>
+
+      <div class="group">
+        <h3>Canonical report files</h3>
+        <div class="artifact-list">
+          <article class="artifact" data-search="report html canonical human readable interactive">
+            <div><div class="artifact-name">report.html</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html</div></div>
+            <div class="artifact-desc">Canonical human-readable report explicitly listed on report page 11.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="report json canonical machine readable source model">
+            <div><div class="artifact-name">report.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json</div></div>
+            <div class="artifact-desc">Canonical machine-readable report model explicitly listed on report page 11.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="report pdf canonical full twelve page">
+            <div><div class="artifact-name">report.pdf</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf</div></div>
+            <div class="artifact-desc">Canonical full 12-page PDF from which the contact sheet is derived.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="contact sheet pdf reproduction visual overview twelve pages">
+            <div><div class="artifact-name">fazenda_sucuri_screening_aoi_contact_sheet.pdf</div><div class="path">reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf</div></div>
+            <div class="artifact-desc">One-page visual overview of the canonical PDF.</div>
+            <div class="artifact-actions"><a class="btn" href="reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf" target="_blank">Open</a><button class="btn copy" data-copy="reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf">Copy path</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Package navigation and AOI summaries</h3>
+        <div class="artifact-list">
+          <article class="artifact" data-search="artifact index html package navigation browser">
+            <div><div class="artifact-name">artifact-index.html</div><div class="path">evidence-package/artifact-index.html</div></div>
+            <div class="artifact-desc">Package-wide artifact browser.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/artifact-index.html" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/artifact-index.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="aoi report wrapper html fazenda sucuri navigation">
+            <div><div class="artifact-name">fazenda_sucuri_screening_aoi.html</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.html</div></div>
+            <div class="artifact-desc">AOI-level HTML wrapper with report navigation.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.html" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="aoi summary json methodology output evidence registry fazenda sucuri">
+            <div><div class="artifact-name">fazenda_sucuri_screening_aoi.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.json</div></div>
+            <div class="artifact-desc">Structured AOI summary, methodology, outputs, and evidence registry.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi.json">Copy path</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Dataset and processing evidence</h3>
+        <div class="artifact-list">
+          <article class="artifact" data-search="sentinel satellite before after evidence png corrected visual panel">
+            <div><div class="artifact-name">06_before_after.png</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/06_before_after.png</div></div>
+            <div class="artifact-desc">Corrected Sentinel-2 before/after visual panel for the AOI.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/06_before_after.png" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/06_before_after.png">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="leaflet aoi satellite evidence map html overlays">
+            <div><div class="artifact-name">01c_aoi_satellite_map.html</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01c_aoi_satellite_map.html</div></div>
+            <div class="artifact-desc">Interactive AOI evidence map with rendered overlay toggles.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01c_aoi_satellite_map.html" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01c_aoi_satellite_map.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="metrics csv report deterministic measurements">
+            <div><div class="artifact-name">metrics.csv</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/metrics.csv</div></div>
+            <div class="artifact-desc">Deterministic tabular metrics emitted beside the canonical report.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/metrics.csv" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/metrics.csv">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="aoi config hash json geometry hash provenance">
+            <div><div class="artifact-name">aoi_config_hash.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/aoi_config_hash.json</div></div>
+            <div class="artifact-desc">Stored AOI GeoJSON/config hash emitted by the report generator.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/aoi_config_hash.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/aoi_config_hash.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="jrc gfc2020 hansen post 2020 loss summary json baseline 2021 2025">
+            <div><div class="artifact-name">jrc_post2020_loss_2021_2025_summary.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_2021_2025_summary.json</div></div>
+            <div class="artifact-desc">Forest-baseline and post-2020 loss summary metrics.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_2021_2025_summary.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_2021_2025_summary.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="jrc gfc2020 post 2020 loss debug json diagnostics">
+            <div><div class="artifact-name">jrc_post2020_loss_debug.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_debug.json</div></div>
+            <div class="artifact-desc">Baseline/loss-processing diagnostics.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_debug.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_debug.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="maa amet forest area crosscheck json pipeline record">
+            <div><div class="artifact-name">maaamet_forest_area_crosscheck.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.json</div></div>
+            <div class="artifact-desc">Cross-check record included by the report pipeline.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.json">Copy path</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>FDP/JRC morphology and threshold diagnostics</h3>
+        <div class="artifact-list">
+          <article class="artifact" data-search="fdp jrc morphology diagnostics json threshold sensitivity shape boundary adjacency">
+            <div><div class="artifact-name">fdp_jrc_morphology_diagnostics.json</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json</div></div>
+            <div class="artifact-desc">Machine-readable morphology metrics, threshold rows, grid parameters, and interpretation.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="fdp jrc threshold metrics csv sensitivity 0025 005 010 020 025">
+            <div><div class="artifact-name">fdp_jrc_threshold_metrics.csv</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_threshold_metrics.csv</div></div>
+            <div class="artifact-desc">Threshold area table for FDP coffee, FDP new coffee, and JRC/FDP overlaps.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_threshold_metrics.csv" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_threshold_metrics.csv">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="morphology current overlap composite png jrc2020 fdp2024 0025">
+            <div><div class="artifact-name">morphology_current_overlap_composite_t0025.png</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_current_overlap_composite_t0025.png</div></div>
+            <div class="artifact-desc">Composite view of JRC 2020 forest against current FDP coffee at threshold 0.025.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_current_overlap_composite_t0025.png" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_current_overlap_composite_t0025.png">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="morphology new overlap composite png jrc2020 fdp new coffee 0025">
+            <div><div class="artifact-name">morphology_new_overlap_composite_t0025.png</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_new_overlap_composite_t0025.png</div></div>
+            <div class="artifact-desc">Composite view of JRC 2020 forest against FDP new coffee at threshold 0.025.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_new_overlap_composite_t0025.png" target="_blank">Open</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_new_overlap_composite_t0025.png">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="jrc2020 fdp new coffee threshold png t0025 t0050 t0100 t0200 t0250">
+            <div><div class="artifact-name">JRC2020 AND FDP new coffee PNG set</div><div class="path">evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/</div></div>
+            <div class="artifact-desc">Open the artifact index for the full five-threshold PNG set and individual hashes.</div>
+            <div class="artifact-actions"><a class="btn" href="evidence-package/artifact-index.html" target="_blank">Open index</a><button class="btn copy" data-copy="evidence-package/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/">Copy path</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Accuracy, audit, and provenance</h3>
+        <div class="artifact-list">
+          <article class="artifact" data-search="artifact inventory html audit roles classification">
+            <div><div class="artifact-name">artifact-inventory.html</div><div class="path">r/artifact-inventory.html</div></div>
+            <div class="artifact-desc">Inventory and role classification for bundle artifacts.</div>
+            <div class="artifact-actions"><a class="btn" href="r/artifact-inventory.html" target="_blank">Open</a><button class="btn copy" data-copy="r/artifact-inventory.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="report page audit html page by page canonical">
+            <div><div class="artifact-name">report-page-audit.html</div><div class="path">r/report-page-audit.html</div></div>
+            <div class="artifact-desc">Page-by-page audit of the canonical report.</div>
+            <div class="artifact-actions"><a class="btn" href="r/report-page-audit.html" target="_blank">Open</a><button class="btn copy" data-copy="r/report-page-audit.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="source evidence json pinned reproduction provenance commit checksum">
+            <div><div class="artifact-name">source-evidence.json</div><div class="path">reproduction/source-evidence.json</div></div>
+            <div class="artifact-desc">Pinned source and reproduction-evidence record.</div>
+            <div class="artifact-actions"><a class="btn" href="reproduction/source-evidence.json" target="_blank">Open</a><button class="btn copy" data-copy="reproduction/source-evidence.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="contact sheet metadata json hash renderer layout 3 by 4">
+            <div><div class="artifact-name">fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json</div><div class="path">reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json</div></div>
+            <div class="artifact-desc">Contact-sheet source PDF, hashes, renderer, and layout metadata.</div>
+            <div class="artifact-actions"><a class="btn" href="reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json" target="_blank">Open</a><button class="btn copy" data-copy="reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="lineage html evidence provenance source derived artifact">
+            <div><div class="artifact-name">lineage.html</div><div class="path">reproduction/lineage.html</div></div>
+            <div class="artifact-desc">Source-to-derived-artifact lineage.</div>
+            <div class="artifact-actions"><a class="btn" href="reproduction/lineage.html" target="_blank">Open</a><button class="btn copy" data-copy="reproduction/lineage.html">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="bundle json metadata identity aoi commodity counterpart">
+            <div><div class="artifact-name">bundle.json</div><div class="path">bundle.json</div></div>
+            <div class="artifact-desc">Bundle identity, AOI, commodity, and counterpart metadata.</div>
+            <div class="artifact-actions"><a class="btn" href="bundle.json" target="_blank">Open</a><button class="btn copy" data-copy="bundle.json">Copy path</button></div>
+          </article>
+          <article class="artifact" data-search="manifest json snapshot hashes metadata integrity">
+            <div><div class="artifact-name">manifest.json</div><div class="path">manifest.json</div></div>
+            <div class="artifact-desc">Snapshot file hashes and metadata.</div>
+            <div class="artifact-actions"><a class="btn" href="manifest.json" target="_blank">Open</a><button class="btn copy" data-copy="manifest.json">Copy path</button></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="placement-title">
+    <h2 id="placement-title">Placement and use</h2>
+    <details open>
+      <summary>Place this file in the unzipped bundle root</summary>
+      <div>
+        The guide must sit alongside <code>index.html</code>, <code>bundle.json</code>, and the
+        <code>evidence-package/</code>, <code>reproduction/</code>, <code>r/</code>, and <code>s/</code> folders.
+        Then open the guide by double-clicking it.
+        <pre>unzipped-bundle/
+  fazenda_sucuri_contact_sheet_guide.html  &lt;-- place here
+  index.html
+  bundle.json
+  manifest.json
+  evidence-package/
+  reproduction/
+  r/
+  s/</pre>
+      </div>
+    </details>
+    <details>
+      <summary>Browser behavior</summary>
+      <div>
+        The page itself does not request broad folder access. Clicking an artifact link asks the browser to open that specific neighboring file.
+        A browser may display JSON as plain text or download it, depending on browser settings. Both behaviors preserve access to the file without a local server.
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    Local companion page for the <code>eudr-coffee-brazil-fazenda-sucuri</code> bundle. It does not alter, reproduce, or supersede the canonical evidence artifacts.
+  </footer>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  const search = document.getElementById('artifactSearch');
+  const artifacts = Array.from(document.querySelectorAll('.artifact'));
+  const count = document.getElementById('artifactCount');
+  const toast = document.getElementById('toast');
+
+  function updateCount() {
+    const visible = artifacts.filter(item => !item.hidden).length;
+    count.textContent = visible + ' of ' + artifacts.length + ' artifacts shown';
+  }
+
+  search.addEventListener('input', function () {
+    const query = search.value.trim().toLowerCase();
+    artifacts.forEach(function (item) {
+      const text = (item.textContent + ' ' + (item.dataset.search || '')).toLowerCase();
+      item.hidden = query && !text.includes(query);
+    });
+    updateCount();
+  });
+
+  document.querySelectorAll('.copy').forEach(function (button) {
+    button.addEventListener('click', async function () {
+      const value = button.dataset.copy;
+      try {
+        await navigator.clipboard.writeText(value);
+        toast.textContent = 'Relative path copied';
+      } catch (error) {
+        const input = document.createElement('textarea');
+        input.value = value;
+        input.setAttribute('readonly', '');
+        input.style.position = 'fixed';
+        input.style.opacity = '0';
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        input.remove();
+        toast.textContent = 'Relative path copied';
+      }
+      toast.classList.add('show');
+      window.setTimeout(() => toast.classList.remove('show'), 1500);
+    });
+  });
+
+  updateCount();
+})();
+</script>
+</body>
+</html>

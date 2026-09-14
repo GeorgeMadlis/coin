@@ -1,0 +1,66 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "codex",
+    "fc-round": 15,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [
+      "r/results.md",
+      "r/full-results.md"
+    ],
+    "timestamp": "2026-07-21",
+    "title": "Round 15: derived predictions completed",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 15: derived predictions completed\"\ndescription: Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.\nfc-axis: INQUIRY\nfc-round: 15\nfc-move: evidence\nfc-stage: enrichment\nfc-party: codex\nfc-touches: [r/results.md, r/full-results.md]\nfc-status: open\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 15,
+    "move": "evidence",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "3d81fe4653e8b76003c39d8692d7ab35631a1ee69b40c7b6a604e8a8f650ad59",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "f051445ec613213e657587ee3f2bbaa390bae3eadac33315b42fdff529058d17",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "f051445ec613213e657587ee3f2bbaa390bae3eadac33315b42fdff529058d17"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.",
+    "html_path": "inquiry/round-0015.html",
+    "metadata_path": "metadata/inquiry/round-0015.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0015.md",
+    "title": "Round 15: derived predictions completed"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

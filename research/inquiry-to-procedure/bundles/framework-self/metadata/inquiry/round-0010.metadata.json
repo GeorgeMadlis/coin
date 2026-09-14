@@ -1,0 +1,65 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "codex",
+    "fc-round": 10,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [
+      "s/foundations/argumentation-theory.md"
+    ],
+    "timestamp": "2026-07-21",
+    "title": "Round 10: literature positioning completed",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 10: literature positioning completed\"\ndescription: Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.\nfc-axis: INQUIRY\nfc-round: 10\nfc-move: evidence\nfc-stage: enrichment\nfc-party: codex\nfc-touches: [s/foundations/argumentation-theory.md]\nfc-status: open\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 10,
+    "move": "evidence",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "159bace16535aad7776433a60ef93cce83c5b92dac0068bb4a6faad315868834",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "41ef173580c64e1c5b00f785a382396f557af8d58245c1a478962e623f966998",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "41ef173580c64e1c5b00f785a382396f557af8d58245c1a478962e623f966998"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.",
+    "html_path": "inquiry/round-0010.html",
+    "metadata_path": "metadata/inquiry/round-0010.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0010.md",
+    "title": "Round 10: literature positioning completed"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

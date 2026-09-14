@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="index.html">Bundle root</a> / log</nav>
+<h1>Log</h1>
+<article class="content"><table>
+<thead>
+<tr>
+<th>date</th>
+<th style="text-align: right;">round</th>
+<th>party</th>
+<th>move</th>
+<th>summary</th>
+<th>ref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">1</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Pilot: framework self-description bundle created.</td>
+<td>inquiry/round-0001.md</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">2</td>
+<td>codex</td>
+<td>evidence</td>
+<td>HTML rendering added for visual inspection.</td>
+<td>inquiry/round-0002.md</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">3</td>
+<td>claude</td>
+<td>objection</td>
+<td>Second-observer validation: fixed renderer link-resolution bug and unfilled pin placeholder; recorded Type II/SPEC-GAP findings, unresolved.</td>
+<td>inquiry/round-0003.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">4</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>Scope widened to statement evolution (docs/framework_v3.md supersedes v2); disagreement is now the contestation stage of a five-stage trajectory; answer.md, pf/overview.md, s/overview.md superseded.</td>
+<td>inquiry/round-0004.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">5</td>
+<td>claude</td>
+<td>evidence</td>
+<td>Self-contained zip-portable snapshot render mode added to okf-fc (_refs/ link vendoring), plus manifest.json and a deterministic structure.svg/structure.html bundle-structure visualization. No bundle concept content changed.</td>
+<td>inquiry/round-0005.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">6</td>
+<td>claude</td>
+<td>evidence</td>
+<td>okf-fc gains publish/catalog/evolution-visualization commands; bundle published as the first snapshot into the new ../okf-bundle-snapshots viewer repository. No bundle concept content changed.</td>
+<td>inquiry/round-0006.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">7</td>
+<td>codex</td>
+<td>objection</td>
+<td>Structure/reference audit: clarified intentional stubs, superseded stale v2-current bundle pages, and added reference links to foundation anchors.</td>
+<td>inquiry/round-0007.md</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">8</td>
+<td>codex</td>
+<td>frame-change</td>
+<td>Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.</td>
+<td>inquiry/round-0008.md</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">9</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Metadata repair: quoted round-0008 description frontmatter so YAML parsing preserves its fc-round and snapshot/catalog generation sees bundle round 8.</td>
+<td>inquiry/round-0009.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">10</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.</td>
+<td>inquiry/round-0010.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">11</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.</td>
+<td>inquiry/round-0011.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">12</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.</td>
+<td>inquiry/round-0012.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">13</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 4 okf-fc generator, atomic round append, and validator completed; framework-self metadata aligned for validation demonstration.</td>
+<td>inquiry/round-0013.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">14</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.</td>
+<td>inquiry/round-0014.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">15</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.</td>
+<td>inquiry/round-0015.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Framework-self-only Step 7 retrospective longitudinal case-study pilot completed; external validation cases remain deferred.</td>
+<td>inquiry/round-0016.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">17</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 8 adversarial limitations and falsifiability assessment completed; framework status remains open and provisional.</td>
+<td>inquiry/round-0017.md</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">18</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 Wolfram foundation repaired: primary Wolfram sources added, project translations/extensions separated, and dedicated framework-self Wolfram foundation concept created.</td>
+<td>inquiry/round-0018.md</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">19</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 specification repaired: every future bundle must disclose the Wolfram observer-theory foundation as formal analogy with separated attribution and validator-visible guardrails.</td>
+<td>inquiry/round-0019.md</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="metadata/log.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {},
+  "frontmatter_raw": "NOT AVAILABLE in this committed COIN copy",
+  "inquiry": {
+    "bundle_round_for_page": "NOT AVAILABLE in this committed COIN copy",
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "REPRODUCTION",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "2a82f07d2d8bdb03a19d6c4297152e796bc9ac1688ed4ebec194a57a90d5a03e",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "8355339eeaf7b4f073b6231cbf9e8474a830ef00c0c81ede13f0e0bb30cc4abe",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "8355339eeaf7b4f073b6231cbf9e8474a830ef00c0c81ede13f0e0bb30cc4abe"
+  },
+  "represented_artifact": {
+    "artifact_type": "Index",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "reproduction/index.html",
+    "metadata_path": "metadata/reproduction/index.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "reproduction",
+    "source_path": "reproduction/index.md",
+    "title": "reproduction/index.html"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inquiry</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / inquiry / index</nav>
+<h1>Inquiry</h1>
+<article class="content"><h1 id="inquiry">Inquiry</h1>
+<p>Current <code>fc-status</code>: open.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">round</th>
+<th>date</th>
+<th>party</th>
+<th>move</th>
+<th>stage</th>
+<th>summary</th>
+<th>record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>2026-07-16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>formation</td>
+<td>Pilot bundle initialized from the v2 framework document.</td>
+<td><a href="round-0001.html">round-0001.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>2026-07-16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>HTML rendering added for visual inspection.</td>
+<td><a href="round-0002.html">round-0002.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>2026-07-16</td>
+<td>claude</td>
+<td>objection</td>
+<td>contestation</td>
+<td>Second-observer validation: fixed a renderer link-resolution bug and an unfilled provenance placeholder; recorded two Type II labeling differences and two spec gaps, unresolved.</td>
+<td><a href="round-0003.html">round-0003.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>consolidation</td>
+<td>Scope widened from observer disagreement to statement evolution: <code>docs/framework_v3.md</code> supersedes v2; disagreement is now the contestation stage of a five-stage statement trajectory. <code>answer.md</code>, <code>pf/overview.md</code>, <code>s/overview.md</code> superseded.</td>
+<td><a href="round-0004.html">round-0004.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Infrastructure round, mirroring round 2: <code>okf-fc</code> gains a self-contained, zip-portable snapshot render mode (<code>_refs/</code> link vendoring, one level deep), a <code>manifest.json</code> recording function, and a deterministic <code>structure.svg</code>/<code>structure.html</code> bundle-structure visualization. No bundle concept file content changed.</td>
+<td><a href="round-0005.html">round-0005.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Infrastructure round, mirroring rounds 2 and 5: <code>okf-fc</code> gains <code>publish</code>/<code>catalog</code>/evolution-visualization commands; <code>bundles/framework-self</code> published as the first real snapshot into the new <code>../okf-bundle-snapshots</code> viewer repository. No bundle concept file content changed.</td>
+<td><a href="round-0006.html">round-0006.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>2026-07-19</td>
+<td>codex</td>
+<td>objection</td>
+<td>critique</td>
+<td>Repository structure and reference audit: clarified intentional stubs, superseded stale v2-current bundle pages, and added reference links to foundation anchors.</td>
+<td><a href="round-0007.html">round-0007.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>2026-07-20</td>
+<td>codex</td>
+<td>frame-change</td>
+<td>consolidation</td>
+<td>Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.</td>
+<td><a href="round-0008.html">round-0008.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>2026-07-20</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Metadata repair: quoted round-0008 description frontmatter so YAML parsing preserves its <code>fc-round</code> and snapshot/catalog generation sees bundle round 8.</td>
+<td><a href="round-0009.html">round-0009.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.</td>
+<td><a href="round-0010.html">round-0010.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.</td>
+<td><a href="round-0011.html">round-0011.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.</td>
+<td><a href="round-0012.html">round-0012.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 4 okf-fc generator, atomic round append, and validator completed; framework-self metadata aligned for validation demonstration.</td>
+<td><a href="round-0013.html">round-0013.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.</td>
+<td><a href="round-0014.html">round-0014.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.</td>
+<td><a href="round-0015.html">round-0015.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Framework-self-only Step 7 retrospective longitudinal case-study pilot completed; external validation cases remain deferred.</td>
+<td><a href="round-0016.html">round-0016.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 8 adversarial limitations and falsifiability assessment completed; framework status remains open and provisional.</td>
+<td><a href="round-0017.html">round-0017.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>2026-07-23</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 1 Wolfram foundation repaired: primary Wolfram sources added, project translations/extensions separated, and a dedicated framework-self Wolfram foundation concept created.</td>
+<td><a href="round-0018.html">round-0018.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>2026-07-23</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 3 specification repaired: every future bundle must disclose the Wolfram observer-theory foundation as formal analogy with separated attribution.</td>
+<td><a href="round-0019.html">round-0019.md</a></td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-stage</code> was introduced in round 4 (per <code>docs/framework_v3.md</code> §3.4) and back-assigned above for rounds 1-3 to keep this summary complete; the round files themselves are append-only and were not edited (rounds 1-3 predate <code>fc-stage</code> and record it only here, in this index, per the "optional for pre-v3 rounds" rule).</p>
+<p><strong>Stage trajectory:</strong> r1: formation — bundle created from the v2 document, no claim yet contested; r2: enrichment — derived inspection site added, no content claim revised; r3: contestation — Type I mechanical defects (renderer bug, unfilled pin) found and resolved, exposing a Type II residue (axis-tagging choices, fc-touches/fc-irreducibility spec gaps) left open for human reconciliation; r4: consolidation — frame widened from observer disagreement to statement evolution, adopted outright (no rival frame contested), superseding the concept files whose text asserted the old scope as the whole scope; r5: enrichment — a zip-portable self-contained snapshot mode, manifest, and structure visualization added to the renderer, no content claim revised; r6: enrichment — a publish command, metadata catalog, and evolution visualization added, and this bundle published as the first snapshot into a new viewer repository, no content claim revised; r7: critique — structure/link audit found stale current-status pages and unlinked reference anchors, then superseded current concept pages without opening a rival framework position; r8: consolidation — round-scope policy adopted for this bundle, making repo rounds and bundle rounds explicit and requiring snapshot/catalog metadata to preserve both; r9: enrichment — metadata repair makes round 8 parseable by generated snapshot/catalog tooling; r10: enrichment — Step 1 related-work positioning adds verified literature context, bounds novelty claims, and widens argumentation coverage to dialogue-game modes beyond adversarial contestation; r11: enrichment — Step 2 formal core adds static and dynamic formal definitions, explicit stage/type separation, and proposition-status analysis without opening a live counter-position; r12: enrichment — Step 3 OKF-FC bundle specification turns the provisional bundle conventions into a normative profile and supersedes the self-bundle's specification pointer; r13: enrichment — Step 4 makes generator, append, and validator requirements executable and aligns current metadata for validation demonstration; r14: enrichment — Step 5 defines observer-distance and trajectory metrics, then records a reproducible framework-self measurement demonstration over rounds 1-13 with missing values visible; r15: enrichment — Step 6 defines falsifiable derived predictions and records exploratory framework-self prediction calculations without treating them as validation; r16: enrichment — Step 7 framework-self-only retrospective case-study pilot adds classification and case-study analysis while leaving external validation cases deferred; r17: enrichment — Step 8 adds adversarial limitations, stage-taxonomy stress tests, and a falsification registry while keeping the framework open and provisional; r18: enrichment — Step 1 Wolfram foundation repair adds primary Wolfram sources, separates direct source concepts from project translations/extensions, and creates the dedicated framework-self Wolfram foundation concept; r19: enrichment — Step 3 specification repair makes the Wolfram foundation page mandatory for future full and lightweight bundles, requires source-map attribution classes and analogy guardrails, and supersedes the framework-self specification and Wolfram foundation pages.</p>
+<p><strong>Type trajectory</strong> (the contestation-stage restriction of the above): r3 only — Type I mechanical defects resolved, exposing an unresolved Type II residue. Rounds 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, and 19 are not contestation-stage and carry no type.</p>
+<p>The current retrospective table is <a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">r/retrospective-round-classification.csv</a>. It distinguishes contemporary metadata from later inference and cites the rule used for each inferred stage or type applicability decision.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/index.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

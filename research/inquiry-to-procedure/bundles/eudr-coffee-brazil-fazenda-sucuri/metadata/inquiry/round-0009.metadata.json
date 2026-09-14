@@ -1,0 +1,64 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "INQUIRY",
+    "fc-level": 3,
+    "fc-move": "fix",
+    "fc-party": "codex",
+    "fc-round": 9,
+    "fc-stage": "consolidation",
+    "fc-status": "open",
+    "fc-touches": "",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "type": "Round"
+  },
+  "frontmatter_raw": "type: Round\nfc-level: 3\nfc-axis: INQUIRY\nfc-round: 9\nfc-move: fix\nfc-stage: consolidation\nfc-party: codex\nfc-status: open\nfc-touches:\n  - index.md\n  - log.md\n  - inquiry/index.md\ngsp-aoi: \"fazenda_sucuri_screening_aoi\"",
+  "inquiry": {
+    "bundle_round_for_page": 9,
+    "move": "fix",
+    "party": "codex",
+    "stage": "consolidation",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": 3
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "aea4f0d526b512ecf5272337f826a09350d5908d60e339d79abce0ce396308e5",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "fb540392c488a3adb78af7a6a2a0648043da08fe146b2a197950240d1a15d670"
+  },
+  "represented_artifact": {
+    "artifact_type": "Round",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "inquiry/round-0009.html",
+    "metadata_path": "metadata/inquiry/round-0009.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0009.md",
+    "title": "inquiry/round-0009.html"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "inquiry/round-0009.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

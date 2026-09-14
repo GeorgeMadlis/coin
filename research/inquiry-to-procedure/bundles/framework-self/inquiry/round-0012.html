@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round 12: OKF bundle specification completed</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / inquiry / round-0012</nav>
+<h1>Round 12: OKF bundle specification completed</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.</dd><dt>fc-axis</dt><dd><span class="badge axis-inquiry">INQUIRY</span></dd><dt>fc-move</dt><dd>evidence</dd><dt>fc-party</dt><dd>codex</dd><dt>fc-round</dt><dd>12</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-touches</dt><dd>s/specification.md</dd><dt>timestamp</dt><dd>2026-07-21</dd><dt>title</dt><dd>Round 12: OKF bundle specification completed</dd><dt>type</dt><dd>Event</dd></dl></section>
+<article class="content"><h1 id="move">Move</h1>
+<p>Step 3's repository-level OKF bundle specification deliverable is now filled
+in <code>spec/SPEC.md</code>. The document targets upstream OKF v0.1 Draft, namespaces
+project-specific metadata with <code>fc-</code>, defines the full and lightweight profiles,
+states round and supersession rules, separates repository rounds from bundle
+rounds, and gives validation behavior for fatal errors, warnings, and advisory
+quality checks.</p>
+<h1 id="evidence-added">Evidence added</h1>
+<p>The specification consolidates the provisional bundle conventions from
+<code>docs/framework_v3.md</code>, the terminology from <code>docs/glossary.md</code>, the formal
+round/stage model from <code>docs/formal-core.md</code>, the ledger distinction from
+<code>docs/round-ledgers.md</code>, and the current <code>framework-self</code> bundle state. The
+upstream OKF source checked for this round is GoogleCloudPlatform
+<code>knowledge-catalog/okf/SPEC.md</code> at commit
+<code>d44368c15e38e7c92481c5992e4f9b5b421a801d</code>.</p>
+<h1 id="effect-on-state">Effect on state</h1>
+<p>Context window: added a normative, implementable specification for the
+repository's OKF fact-checking and statement-evolution bundles, including field
+types, allowed values, applicability, profile rules, and validation outcomes.</p>
+<p>Frame: unchanged. The framework still treats bundles as the recording function
+for statement trajectories; this round makes the previously provisional bundle
+format explicit enough for Step 4 tooling.</p>
+<h1 id="resulting-revisions">Resulting revisions</h1>
+<ul>
+<li><code>spec/SPEC.md</code> - Step 3 stub replaced with the OKF-FC profile specification.</li>
+<li><code>s/specification.md</code> - supersedes <code>s/specification.md@r8</code> so the
+  framework-self bundle points to <code>spec/SPEC.md</code> rather than the provisional
+  framework sections.</li>
+</ul>
+<h1 id="classification-rationale">Classification rationale</h1>
+<p>This is an enrichment-stage evidence round: it adds a normative specification
+and updates the self-bundle pointer without opening a live counter-position.
+<code>fc-type-at-round</code> is intentionally omitted because the round is not
+contestation-stage.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0012.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

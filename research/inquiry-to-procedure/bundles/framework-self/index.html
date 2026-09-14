@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Framework Self-Description Bundle</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="index.html">Bundle root</a></nav>
+<h1>Framework Self-Description Bundle</h1>
+<article class="content"><h1 id="framework-self-description-bundle">Framework Self-Description Bundle</h1>
+<p>This bundle describes the observer-disagreement-framework project itself, in layers of increasing detail. Start at the level that matches your question, then descend only when you need more resolution.</p>
+<h2 id="level-map">Level map</h2>
+<ul>
+<li><a href="answer.html">answer.md</a> - L0: a compact layman's answer describing what the project is.</li>
+<li><a href="pf/overview.html">PF: problem</a> - What problem the framework tries to solve.</li>
+<li><a href="s/overview.html">S: framework</a> - What model, method, and literature anchors it uses.</li>
+<li><a href="r/overview.html">R: status</a> - What exists now and what remains open.</li>
+<li><a href="reproduction/index.html">Reproduction</a> - How this bundle can be re-derived from its source documents.</li>
+<li><a href="inquiry/index.html">Inquiry</a> - How this bundle evolved and how future rounds should be recorded.</li>
+</ul>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="metadata/index.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<section class="panel"><h2>Files</h2>
+<div class="file-tree">
+<ul><li><a href="agent-contract.html">agent-contract.md</a></li><li><a href="answer.html">answer.md</a></li><li><a href="index.html">index.md</a></li><li><details open><summary>inquiry</summary><ul><li><a href="inquiry/index.html">inquiry/index.md</a></li><li><a href="inquiry/round-0001.html">inquiry/round-0001.md</a></li><li><a href="inquiry/round-0002.html">inquiry/round-0002.md</a></li><li><a href="inquiry/round-0003.html">inquiry/round-0003.md</a></li><li><a href="inquiry/round-0004.html">inquiry/round-0004.md</a></li><li><a href="inquiry/round-0005.html">inquiry/round-0005.md</a></li><li><a href="inquiry/round-0006.html">inquiry/round-0006.md</a></li><li><a href="inquiry/round-0007.html">inquiry/round-0007.md</a></li><li><a href="inquiry/round-0008.html">inquiry/round-0008.md</a></li><li><a href="inquiry/round-0009.html">inquiry/round-0009.md</a></li><li><a href="inquiry/round-0010.html">inquiry/round-0010.md</a></li><li><a href="inquiry/round-0011.html">inquiry/round-0011.md</a></li><li><a href="inquiry/round-0012.html">inquiry/round-0012.md</a></li><li><a href="inquiry/round-0013.html">inquiry/round-0013.md</a></li><li><a href="inquiry/round-0014.html">inquiry/round-0014.md</a></li><li><a href="inquiry/round-0015.html">inquiry/round-0015.md</a></li><li><a href="inquiry/round-0016.html">inquiry/round-0016.md</a></li><li><a href="inquiry/round-0017.html">inquiry/round-0017.md</a></li><li><a href="inquiry/round-0018.html">inquiry/round-0018.md</a></li><li><a href="inquiry/round-0019.html">inquiry/round-0019.md</a></li></ul></details></li><li><a href="log.html">log.md</a></li><li><details open><summary>pf</summary><ul><li><a href="pf/formal.html">pf/formal.md</a></li><li><a href="pf/full-context.html">pf/full-context.md</a></li><li><a href="pf/index.html">pf/index.md</a></li><li><a href="pf/overview.html">pf/overview.md</a></li></ul></details></li><li><details open><summary>r</summary><ul><li><a href="r/full-results.html">r/full-results.md</a></li><li><a href="r/index.html">r/index.md</a></li><li><a href="r/overview.html">r/overview.md</a></li><li><a href="r/results.html">r/results.md</a></li></ul></details></li><li><details open><summary>reproduction</summary><ul><li><a href="reproduction/code.html">reproduction/code.md</a></li><li><a href="reproduction/data.html">reproduction/data.md</a></li><li><a href="reproduction/environment.html">reproduction/environment.md</a></li><li><a href="reproduction/index.html">reproduction/index.md</a></li></ul></details></li><li><details open><summary>s</summary><ul><li><details open><summary>foundations</summary><ul><li><a href="s/foundations/ait-compression.html">s/foundations/ait-compression.md</a></li><li><a href="s/foundations/analytic-historiography.html">s/foundations/analytic-historiography.md</a></li><li><a href="s/foundations/argumentation-theory.html">s/foundations/argumentation-theory.md</a></li><li><a href="s/foundations/aumann-agreement.html">s/foundations/aumann-agreement.md</a></li><li><a href="s/foundations/bayesian-agm-belief-revision.html">s/foundations/bayesian-agm-belief-revision.md</a></li><li><a href="s/foundations/coarse-graining-statmech.html">s/foundations/coarse-graining-statmech.md</a></li><li><a href="s/foundations/index.html">s/foundations/index.md</a></li><li><a href="s/foundations/peirce-inquiry.html">s/foundations/peirce-inquiry.md</a></li><li><a href="s/foundations/provenance-reproducibility.html">s/foundations/provenance-reproducibility.md</a></li><li><a href="s/foundations/quine-duhem.html">s/foundations/quine-duhem.md</a></li><li><a href="s/foundations/second-order-cybernetics.html">s/foundations/second-order-cybernetics.md</a></li><li><a href="s/foundations/simon-bounded-rationality.html">s/foundations/simon-bounded-rationality.md</a></li><li><a href="s/foundations/wolfram-observer-theory.html">s/foundations/wolfram-observer-theory.md</a></li></ul></details></li><li><a href="s/index.html">s/index.md</a></li><li><a href="s/method.html">s/method.md</a></li><li><a href="s/overview.html">s/overview.md</a></li><li><a href="s/specification.html">s/specification.md</a></li></ul></details></li></ul>
+</div></section>
+<section class="panel"><h2>Concepts</h2>
+<table><thead><tr><th>path</th><th>type</th><th>level</th><th>axis</th><th>status</th></tr></thead><tbody><tr><td><a href="agent-contract.html">agent-contract.md</a></td><td>Policy</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="answer.html">answer.md</a></td><td>Finding</td><td><span class="badge level-0">L0</span></td><td><span class="badge axis-r">R</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="index.html">index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="inquiry/index.html">inquiry/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="inquiry/round-0001.html">inquiry/round-0001.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0002.html">inquiry/round-0002.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0003.html">inquiry/round-0003.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0004.html">inquiry/round-0004.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0005.html">inquiry/round-0005.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0006.html">inquiry/round-0006.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0007.html">inquiry/round-0007.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0008.html">inquiry/round-0008.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0009.html">inquiry/round-0009.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0010.html">inquiry/round-0010.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0011.html">inquiry/round-0011.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0012.html">inquiry/round-0012.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0013.html">inquiry/round-0013.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0014.html">inquiry/round-0014.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0015.html">inquiry/round-0015.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0016.html">inquiry/round-0016.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0017.html">inquiry/round-0017.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0018.html">inquiry/round-0018.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="inquiry/round-0019.html">inquiry/round-0019.md</a></td><td>Event</td><td></td><td><span class="badge axis-inquiry">INQUIRY</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="log.html">log.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="pf/formal.html">pf/formal.md</a></td><td>Finding</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-pf">PF</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="pf/full-context.html">pf/full-context.md</a></td><td>Finding</td><td><span class="badge level-3">L3</span></td><td><span class="badge axis-pf">PF</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="pf/index.html">pf/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="pf/overview.html">pf/overview.md</a></td><td>Finding</td><td><span class="badge level-1">L1</span></td><td><span class="badge axis-pf">PF</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="r/full-results.html">r/full-results.md</a></td><td>Finding</td><td><span class="badge level-3">L3</span></td><td><span class="badge axis-r">R</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="r/index.html">r/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="r/overview.html">r/overview.md</a></td><td>Finding</td><td><span class="badge level-1">L1</span></td><td><span class="badge axis-r">R</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="r/results.html">r/results.md</a></td><td>Finding</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-r">R</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="reproduction/code.html">reproduction/code.md</a></td><td>Runbook</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-repro">REPRO</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="reproduction/data.html">reproduction/data.md</a></td><td>Runbook</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-repro">REPRO</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="reproduction/environment.html">reproduction/environment.md</a></td><td>Runbook</td><td><span class="badge level-3">L3</span></td><td><span class="badge axis-repro">REPRO</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="reproduction/index.html">reproduction/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="s/foundations/ait-compression.html">s/foundations/ait-compression.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/analytic-historiography.html">s/foundations/analytic-historiography.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/argumentation-theory.html">s/foundations/argumentation-theory.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/aumann-agreement.html">s/foundations/aumann-agreement.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/bayesian-agm-belief-revision.html">s/foundations/bayesian-agm-belief-revision.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/coarse-graining-statmech.html">s/foundations/coarse-graining-statmech.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/index.html">s/foundations/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="s/foundations/peirce-inquiry.html">s/foundations/peirce-inquiry.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/provenance-reproducibility.html">s/foundations/provenance-reproducibility.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/quine-duhem.html">s/foundations/quine-duhem.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/second-order-cybernetics.html">s/foundations/second-order-cybernetics.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/simon-bounded-rationality.html">s/foundations/simon-bounded-rationality.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/foundations/wolfram-observer-theory.html">s/foundations/wolfram-observer-theory.md</a></td><td>Concept</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/index.html">s/index.md</a></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="s/method.html">s/method.md</a></td><td>Finding</td><td><span class="badge level-2">L2</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/overview.html">s/overview.md</a></td><td>Finding</td><td><span class="badge level-1">L1</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr><tr><td><a href="s/specification.html">s/specification.md</a></td><td>Finding</td><td><span class="badge level-3">L3</span></td><td><span class="badge axis-s">S</span></td><td><span class="badge status-open">open</span></td></tr></tbody></table>
+</section>
+<section class="panel"><h2>Bundle Log</h2>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th style="text-align: right;">round</th>
+<th>party</th>
+<th>move</th>
+<th>summary</th>
+<th>ref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">1</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Pilot: framework self-description bundle created.</td>
+<td>inquiry/round-0001.md</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">2</td>
+<td>codex</td>
+<td>evidence</td>
+<td>HTML rendering added for visual inspection.</td>
+<td>inquiry/round-0002.md</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">3</td>
+<td>claude</td>
+<td>objection</td>
+<td>Second-observer validation: fixed renderer link-resolution bug and unfilled pin placeholder; recorded Type II/SPEC-GAP findings, unresolved.</td>
+<td>inquiry/round-0003.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">4</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>Scope widened to statement evolution (docs/framework_v3.md supersedes v2); disagreement is now the contestation stage of a five-stage trajectory; answer.md, pf/overview.md, s/overview.md superseded.</td>
+<td>inquiry/round-0004.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">5</td>
+<td>claude</td>
+<td>evidence</td>
+<td>Self-contained zip-portable snapshot render mode added to okf-fc (_refs/ link vendoring), plus manifest.json and a deterministic structure.svg/structure.html bundle-structure visualization. No bundle concept content changed.</td>
+<td>inquiry/round-0005.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">6</td>
+<td>claude</td>
+<td>evidence</td>
+<td>okf-fc gains publish/catalog/evolution-visualization commands; bundle published as the first snapshot into the new ../okf-bundle-snapshots viewer repository. No bundle concept content changed.</td>
+<td>inquiry/round-0006.md</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">7</td>
+<td>codex</td>
+<td>objection</td>
+<td>Structure/reference audit: clarified intentional stubs, superseded stale v2-current bundle pages, and added reference links to foundation anchors.</td>
+<td>inquiry/round-0007.md</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">8</td>
+<td>codex</td>
+<td>frame-change</td>
+<td>Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.</td>
+<td>inquiry/round-0008.md</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">9</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Metadata repair: quoted round-0008 description frontmatter so YAML parsing preserves its fc-round and snapshot/catalog generation sees bundle round 8.</td>
+<td>inquiry/round-0009.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">10</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.</td>
+<td>inquiry/round-0010.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">11</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.</td>
+<td>inquiry/round-0011.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">12</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.</td>
+<td>inquiry/round-0012.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">13</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 4 okf-fc generator, atomic round append, and validator completed; framework-self metadata aligned for validation demonstration.</td>
+<td>inquiry/round-0013.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">14</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.</td>
+<td>inquiry/round-0014.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">15</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.</td>
+<td>inquiry/round-0015.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Framework-self-only Step 7 retrospective longitudinal case-study pilot completed; external validation cases remain deferred.</td>
+<td>inquiry/round-0016.md</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">17</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 8 adversarial limitations and falsifiability assessment completed; framework status remains open and provisional.</td>
+<td>inquiry/round-0017.md</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">18</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 Wolfram foundation repaired: primary Wolfram sources added, project translations/extensions separated, and dedicated framework-self Wolfram foundation concept created.</td>
+<td>inquiry/round-0018.md</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">19</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 specification repaired: every future bundle must disclose the Wolfram observer-theory foundation as formal analogy with separated attribution and validator-visible guardrails.</td>
+<td>inquiry/round-0019.md</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="panel"><h2>Inquiry Rounds</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">round</th>
+<th>date</th>
+<th>party</th>
+<th>move</th>
+<th>stage</th>
+<th>summary</th>
+<th>record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>2026-07-16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>formation</td>
+<td>Pilot bundle initialized from the v2 framework document.</td>
+<td><a href="inquiry/round-0001.html">round-0001.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>2026-07-16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>HTML rendering added for visual inspection.</td>
+<td><a href="inquiry/round-0002.html">round-0002.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>2026-07-16</td>
+<td>claude</td>
+<td>objection</td>
+<td>contestation</td>
+<td>Second-observer validation: fixed a renderer link-resolution bug and an unfilled provenance placeholder; recorded two Type II labeling differences and two spec gaps, unresolved.</td>
+<td><a href="inquiry/round-0003.html">round-0003.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>consolidation</td>
+<td>Scope widened from observer disagreement to statement evolution: <code>docs/framework_v3.md</code> supersedes v2; disagreement is now the contestation stage of a five-stage statement trajectory. <code>answer.md</code>, <code>pf/overview.md</code>, <code>s/overview.md</code> superseded.</td>
+<td><a href="inquiry/round-0004.html">round-0004.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Infrastructure round, mirroring round 2: <code>okf-fc</code> gains a self-contained, zip-portable snapshot render mode (<code>_refs/</code> link vendoring, one level deep), a <code>manifest.json</code> recording function, and a deterministic <code>structure.svg</code>/<code>structure.html</code> bundle-structure visualization. No bundle concept file content changed.</td>
+<td><a href="inquiry/round-0005.html">round-0005.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>2026-07-19</td>
+<td>claude</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Infrastructure round, mirroring rounds 2 and 5: <code>okf-fc</code> gains <code>publish</code>/<code>catalog</code>/evolution-visualization commands; <code>bundles/framework-self</code> published as the first real snapshot into the new <code>../okf-bundle-snapshots</code> viewer repository. No bundle concept file content changed.</td>
+<td><a href="inquiry/round-0006.html">round-0006.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>2026-07-19</td>
+<td>codex</td>
+<td>objection</td>
+<td>critique</td>
+<td>Repository structure and reference audit: clarified intentional stubs, superseded stale v2-current bundle pages, and added reference links to foundation anchors.</td>
+<td><a href="inquiry/round-0007.html">round-0007.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>2026-07-20</td>
+<td>codex</td>
+<td>frame-change</td>
+<td>consolidation</td>
+<td>Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.</td>
+<td><a href="inquiry/round-0008.html">round-0008.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>2026-07-20</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Metadata repair: quoted round-0008 description frontmatter so YAML parsing preserves its <code>fc-round</code> and snapshot/catalog generation sees bundle round 8.</td>
+<td><a href="inquiry/round-0009.html">round-0009.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 1 literature positioning completed; novelty claims bounded against verified adjacent work and dialogue-game coverage widened beyond adversarial argument.</td>
+<td><a href="inquiry/round-0010.html">round-0010.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.</td>
+<td><a href="inquiry/round-0011.html">round-0011.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 3 OKF-FC bundle specification completed; provisional bundle conventions made normative and validation-ready.</td>
+<td><a href="inquiry/round-0012.html">round-0012.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 4 okf-fc generator, atomic round append, and validator completed; framework-self metadata aligned for validation demonstration.</td>
+<td><a href="inquiry/round-0013.html">round-0013.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.</td>
+<td><a href="inquiry/round-0014.html">round-0014.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 6 derived predictions completed; framework-self exploratory prediction observations recorded with explicit small-sample limits.</td>
+<td><a href="inquiry/round-0015.html">round-0015.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Framework-self-only Step 7 retrospective longitudinal case-study pilot completed; external validation cases remain deferred.</td>
+<td><a href="inquiry/round-0016.html">round-0016.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>2026-07-21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 8 adversarial limitations and falsifiability assessment completed; framework status remains open and provisional.</td>
+<td><a href="inquiry/round-0017.html">round-0017.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>2026-07-23</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 1 Wolfram foundation repaired: primary Wolfram sources added, project translations/extensions separated, and a dedicated framework-self Wolfram foundation concept created.</td>
+<td><a href="inquiry/round-0018.html">round-0018.md</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>2026-07-23</td>
+<td>codex</td>
+<td>evidence</td>
+<td>enrichment</td>
+<td>Step 3 specification repaired: every future bundle must disclose the Wolfram observer-theory foundation as formal analogy with separated attribution.</td>
+<td><a href="inquiry/round-0019.html">round-0019.md</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

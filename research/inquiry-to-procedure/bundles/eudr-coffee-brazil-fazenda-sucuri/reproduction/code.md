@@ -2,13 +2,13 @@
 type: Runbook
 title: "Counterpart code"
 fc-axis: REPRO
-fc-round: 7
-fc-supersedes: "reproduction/code.md@round-0006"
-gsp-counterpart: GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47
+fc-round: 8
+fc-supersedes: "reproduction/code.md@round-0007"
+gsp-counterpart: single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24
 ---
 # GS-Tools counterpart
 
-Counterpart: `GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47`.
+Counterpart: `single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24`.
 
 The authoritative run command is recorded in `source-evidence.json:generation_command`. It generated
 the report, commodity differencing, Sentinel diagnostics, evidence PNGs, HTML, PDF, manifest, and
@@ -37,3 +37,13 @@ an offline regional-overview fallback in `report_model.py`, marks `regional_over
 in the handoff writer, and adds a focused regression test. Focused counterpart tests passed:
 `.venv/bin/python -m pytest tests/test_canonical_report_model.py::test_regional_overview_falls_back_to_local_recent_raster tests/test_generate_okf_gsp_handoff.py`
 reported 4 passed.
+
+Round 8 uses the handoff generated from `single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24`.
+That counterpart commit adds the Fazenda Sucuri FDP/JRC morphology and threshold sensitivity
+diagnostic artifacts. The handoff generation command is:
+
+`python -m eudr_dmi_gil.reports.cli --aoi-id fazenda_sucuri_screening_aoi --commodity-config out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json --analysis-target-crs EPSG:6933 --analysis-target-resolution-m 10`
+
+The repository verifier (`tools.okf_gsp.verify_evidence_handoff`) passed against the handoff:
+counterpart dirty flag false, root manifest hash matched, all 117 manifest artifacts hashed, and
+`report.pdf` page count was 12.

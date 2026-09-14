@@ -1,0 +1,68 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "frame-change",
+    "fc-party": "codex",
+    "fc-round": 8,
+    "fc-stage": "consolidation",
+    "fc-status": "open",
+    "fc-touches": [
+      "agent-contract.md",
+      "s/specification.md",
+      "reproduction/code.md",
+      "reproduction/data.md"
+    ],
+    "timestamp": "2026-07-20",
+    "title": "Round 8: repository and bundle round scopes clarified",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 8: repository and bundle round scopes clarified\"\ndescription: \"Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.\"\nfc-axis: INQUIRY\nfc-round: 8\nfc-move: frame-change\nfc-stage: consolidation\nfc-party: codex\nfc-touches: [agent-contract.md, s/specification.md, reproduction/code.md, reproduction/data.md]\nfc-status: open\ntimestamp: 2026-07-20",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "frame-change",
+    "party": "codex",
+    "stage": "consolidation",
+    "timestamp_or_date": "2026-07-20"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "51322fd451fd66b67dbccd76aaf7fee517f936869adaf3dc938ca5eaaeac8990",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "7dce3b86c3e17156a7c06d3270d6511d277af439b3fad7a1ae38c0e06a8d6d88",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "7dce3b86c3e17156a7c06d3270d6511d277af439b3fad7a1ae38c0e06a8d6d88"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Round-scope policy clarified: repository rounds and bundle rounds are separate counters; manifests/catalogs record both; snapshots remain named by bundle round.",
+    "html_path": "inquiry/round-0008.html",
+    "metadata_path": "metadata/inquiry/round-0008.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0008.md",
+    "title": "Round 8: repository and bundle round scopes clarified"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derived predictions</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / predictions</nav>
+<h1>Derived predictions</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 6 falsifiable predictions derived from the formal core and operational metrics.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-21</dd><dt>title</dt><dd>Derived predictions</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h1 id="derived-predictions">Derived Predictions</h1>
+<p>This document fills the Step 6 deliverable. It converts the formal core in
+<a href="formal-core.html">formal-core.md</a> and the measurement layer in
+<a href="metrics.html">metrics.md</a> into explicit predictions with null hypotheses,
+rival explanations, measurement plans, and falsification conditions.</p>
+<p>Status note: these are test designs and open hypotheses, not validated
+results. The <code>framework-self</code> bundle is used below only as a worked coding
+example and as a one-bundle measurement demonstration. It cannot confirm any
+population-level prediction.</p>
+<h2 id="1-test-discipline">1. Test Discipline</h2>
+<p>The predictions use named metrics from <code>docs/metrics.md</code>:</p>
+<ul>
+<li>Observer-distance metrics: <code>OD-1</code> predicted-continuation divergence, <code>OD-2</code>
+  forced-classification disagreement rate, <code>OD-3</code> description-length
+  asymmetry, <code>OD-4</code> provenance completeness, <code>OD-5</code> recoverability of
+  surviving record <code>R</code>, and <code>OD-6</code> deepest common disclosure level.</li>
+<li>Contestation-type metrics: <code>TT-1</code> type descent rate, <code>TT-2</code> type stalls,
+  <code>TT-3</code> type reversals, and <code>TT-4</code> type oscillations.</li>
+<li>Stage-trajectory metrics: <code>ST-1</code> stage-transition rate, <code>ST-2</code> time to first
+  contestation, <code>ST-3</code> contestation round count, <code>ST-4</code> time or rounds to
+  consolidation, <code>ST-5</code> post-consolidation supersession rate, <code>ST-6</code>
+  re-litigation rate, <code>ST-7</code> evidence added per round, <code>ST-8</code> frame-change
+  frequency, and <code>ST-9</code> observer or agent handoff frequency.</li>
+</ul>
+<p>Confirmatory tests require preregistered inclusion criteria, type/stage coding
+rules, metric definitions, and analysis plans before outcomes are measured.
+Exploratory tests may refine codebooks, identify failure modes, and generate
+effect-size estimates, but must not be reported as validation.</p>
+<p>The phrase "Type I", "Type II", or "Type III" is never evidence by itself. A
+prediction is supported only by independently coded records, interventions,
+and measured outcomes. This matters most for Prediction 6: type descent is
+part of the framework's vocabulary, so descent cannot be treated as automatic
+or proven by labeling rounds after the fact.</p>
+<h2 id="2-required-predictions">2. Required Predictions</h2>
+<h3 id="prediction-1-raw-data-helps-type-i-more-than-type-ii">Prediction 1: Raw Data Helps Type I More Than Type II</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Type I disagreement is caused by different context windows over accessible records; Type II disagreement persists after relevant records are shared because frames or compression functions differ.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A dispute component over one stable question <code>Q</code>, measured before and after a raw-data equalization intervention.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Diagnosed component type before intervention (<code>I</code>, <code>II</code>, or mixed); presence, depth, and timing of raw-data sharing; <code>OD-4</code> and <code>OD-5</code> scores confirming that the shared material was present in <code>R</code> and recoverable.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td>Change in <code>OD-2</code>; change in verdict agreement; contestation closure or persistence measured by <code>ST-3</code>, <code>ST-4</code>, and <code>TT-2</code>; evidence intensity measured by <code>ST-7</code>.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Raw-data sharing should reduce <code>OD-2</code> and shorten contestation more reliably for Type I components than for Type II components. Type II cases may change only after a frame move, translation, or convention.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Raw-data sharing has the same effect on Type I and Type II components, or no measurable effect on either after baseline difficulty is controlled.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Type labels may be wrong; the shared data may include an implicit frame; parties may converge from social pressure; the Type I sample may contain easier questions; data equalization may also train parties in a shared codebook.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>The disputed question is stable; at least two parties or time slices record pre-intervention outputs; raw data or source records are actually shared; pre/post labels use the same codebook; type coding is independent of the measured outcome.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>No live counter-position; data intervention also changes the decision rule without separate coding; missing pre-intervention labels; strategic or coerced agreement; Type III cases where the required raw data is absent from <code>R</code>.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>For a confirmatory test, at least dozens of independently coded Type I and Type II components, with enough cases per stratum to estimate different pre/post effects. A pilot may use fewer but must report wide uncertainty.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Freeze a pre-sharing label set; compute <code>OD-2</code> before and after sharing; record <code>ST-7</code> evidence moves; score <code>OD-4</code> and <code>OD-5</code>; model change in <code>OD-2</code> by type with case and domain controls.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Question difficulty, party expertise, unequal time spent, label imbalance, codebook quality, hidden frame training, resource limits, and mixed subclaims.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Type I components show a materially larger drop in <code>OD-2</code> and faster closure after raw-data sharing than Type II components, while Type II cases close mainly when <code>ST-8</code> frame-change or explicit translation is present.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Type I and Type II components improve at similar rates after raw-data sharing, or Type I components remain stalled despite high <code>OD-4</code> and <code>OD-5</code> with no residual frame or provenance issue.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Across well-coded cases, raw-data sharing reliably resolves Type II disagreements without any frame translation, adopted convention, or third frame, and does not preferentially resolve Type I disagreements.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Confirmatory when type coding and sharing interventions are preregistered; exploratory for historical cases reconstructed after outcomes are known.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-2-persistence-tracks-compression-scheme-distance">Prediction 2: Persistence Tracks Compression-Scheme Distance</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>After information equalization, persistent disagreement is driven more by distance between compression schemes than by remaining information asymmetry.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A post-equalization dispute component where parties have access to the same relevant record subset.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Compression-scheme distance proxies: <code>OD-3</code>, <code>OD-6</code>, frame-codebook distance, and <code>ST-8</code>; information-asymmetry controls: <code>OD-4</code>, <code>OD-5</code>, and documented context differences.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td>Persistence duration, measured by <code>ST-3</code>, <code>ST-4</code>, <code>TT-2</code>, and continued <code>OD-2</code> after equalization.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Higher frame or compression distance predicts longer persistence after <code>OD-4</code> and <code>OD-5</code> are high and context windows are equalized. Information asymmetry should predict persistence mainly before equalization.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Persistence is unrelated to compression-scheme distance once information access is controlled, or information asymmetry remains the stronger predictor throughout.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Description length may measure verbosity rather than compression; frame distance may be coded from the disagreement outcome; parties may have hidden information gaps; high-stakes disputes may persist for non-epistemic reasons.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>Shared record access is documented; frame or codebook features are measured before final outcome; the disputed question remains stable; parties produce comparable outputs.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>No evidence equalization attempt; provenance gaps that make Type III plausible; unmeasured private evidence; disputes dominated by incentives, identity, or strategic non-cooperation.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Multiple domains and enough post-equalization cases to separate frame-distance effects from provenance and difficulty, preferably with independent coders for <code>OD-3</code> and <code>OD-6</code>.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Score <code>OD-4</code> and <code>OD-5</code>; compute or code <code>OD-3</code> and <code>OD-6</code>; measure persistence with <code>ST-3</code>/<code>ST-4</code>; estimate whether compression proxies predict persistence after information controls.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Domain expertise, task ambiguity, adjudicator frame, language, output format, shared training material, and party power.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Among high-provenance, equalized cases, larger <code>OD-3</code> or lower <code>OD-6</code> predicts more contestation rounds and longer time to consolidation.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Compression-distance proxies are unstable or fail to predict persistence once domain and case difficulty are included.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Persistent disagreement is consistently explained by newly discovered information gaps, and frame-distance proxies add no predictive value after repeated equalization in well-recorded cases.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Confirmatory only with preregistered frame-distance coding; exploratory when frame distance is inferred from narrative records.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-3-frame-level-convergence-requires-frame-work">Prediction 3: Frame-Level Convergence Requires Frame Work</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Type II convergence requires translation between frames, adoption of one frame, or construction of a jointly accepted third frame. More raw data alone is not enough.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A Type II contestation stretch over one question after relevant data access is equalized.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Presence of frame translation, unilateral adoption, or third-frame construction; <code>ST-8</code> frame-change; <code>OD-6</code> level of shared description; raw evidence moves measured by <code>ST-7</code>.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td>Convergence in <code>OD-2</code>, resolution marker in <code>fc-type-at-round</code>, consolidation measured by <code>ST-4</code>, and post-consolidation stability measured by <code>ST-5</code>.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Convergence should follow explicit frame work more often than additional data-only moves. Third-frame or translation rounds should raise <code>OD-6</code> and reduce <code>OD-2</code>.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Type II convergence is equally likely without frame translation, adoption, or third-frame construction.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>The case may have been Type I all along; translation may be recorded after convergence rather than causing it; one party may defer to authority; a hidden adjudication rule may settle the dispute.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>Type II diagnosis is independently justified; relevant data is shared or recoverable; frame move is timestamped before measured convergence; outputs are comparable.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>Type III underdetermination; raw-data intervention and frame adoption occur in the same unseparated round; no live counter-position; coerced or administrative closure without interpretive convergence.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Type II contestation stretches with enough frame-work and no-frame-work cases to compare closure rates, ideally across several domains.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Code rounds for translation, adoption, or third-frame construction; compute <code>OD-2</code> and <code>OD-6</code> before and after; compare <code>ST-4</code> and <code>ST-5</code> outcomes to data-only stretches.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Authority gradients, settlement incentives, vague consolidation criteria, mixed Type I/II components, and retrospective frame coding.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Type II cases converge mainly after recorded frame work, while data-only rounds increase <code>ST-7</code> without comparable drops in <code>OD-2</code>.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Many Type II cases converge during data-only rounds, but inspection shows unrecorded or implicit frame work may have occurred.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Independently confirmed Type II cases routinely converge from additional raw data alone, with no detectable translation, adoption, third frame, authority closure, or type miscoding.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Confirmatory when frame-work categories and convergence metrics are specified in advance; exploratory when applied to historical narratives.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-4-irreproducibility-splits-into-cost-limited-and-provenance-limited-populations">Prediction 4: Irreproducibility Splits Into Cost-Limited And Provenance-Limited Populations</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Some irreproducible claims are computationally blocked but fully specified, while others are factually blocked because provenance or inputs are absent. These populations should respond differently to added resources.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A scientific or computational claim with a recorded reproduction attempt.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Irreproducibility class: cost-limited/computational versus provenance-limited/factual or mixed; <code>OD-4</code>; <code>OD-5</code>; added resources such as compute, time, access, or expertise.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td>Reproduction success, recoverability level <code>OD-5</code>, convergence in <code>OD-2</code>, closure time <code>ST-4</code>, and residual underdetermination status.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Cost-limited cases improve with resources when code, data, and environment are pinned. Provenance-limited cases remain underdetermined until missing records or recorder specifications are recovered, not merely until more compute is spent.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Added resources have the same effect on cost-limited and provenance-limited irreproducible claims.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Reproduction teams differ in skill; cost estimates may be wrong; provenance gaps may be irrelevant; proprietary access may look like provenance loss but be reversible with permissions.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>Claim has a clear target output; reproduction attempt records code/data/environment/provenance; blockers are classified before resource escalation; outcomes are timestamped.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>No definite reproduction target; unpinned sources; legal or ethical barriers that prevent any test; claims where failure means the original claim is false rather than irreproducible.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>A stratified set of irreproducible claims across computational and empirical domains, with repeated resource escalation or documented attempts. Step 7's climate reproduction pilot can supply only an initial case.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Score <code>OD-4</code> and <code>OD-5</code>; classify blockers as computational, factual, mixed, or unknown; add resources in documented increments; measure changes in reproduction status and disagreement.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Software decay, hardware nondeterminism, ambiguous target metrics, data licensing, undocumented preprocessing, and changing scientific standards.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Computational blockers move from <code>OD-5</code> level 2 or 3 toward level 4 under resources, while factual blockers remain unresolved without provenance recovery.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>The two populations cannot be reliably distinguished, or many provenance-limited cases resolve with compute alone because the missing fields were not actually needed.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Provenance-limited cases resolve at the same rate as cost-limited cases under resource increases without any new provenance, or fully specified cost-limited cases fail to improve despite adequate resources.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Exploratory until blocker classification is reliable; confirmatory after preregistered reproduction protocols exist.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-5-thin-records-make-disagreement-more-persistent-and-frame-dependent">Prediction 5: Thin Records Make Disagreement More Persistent And Frame-Dependent</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Thinly recorded events leave more content outside <code>R</code>, making disputes more persistent and more dependent on observers' frames.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A dispute over an event or claim with a scored surviving record.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Record thickness: <code>OD-4</code>, <code>OD-5</code>, number and depth of disclosure levels, source density, and missing recorder-specification fields.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td>Persistence by <code>ST-3</code>/<code>ST-4</code>; frame dependence by <code>OD-3</code>, <code>OD-6</code>, <code>ST-8</code>, post-equalization <code>OD-2</code>, and Type III classifications.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Lower <code>OD-4</code>/<code>OD-5</code> predicts more persistent disagreement, lower deepest common disclosure level, more frame-change rounds, and more Type III or underdetermined closures.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Record thickness is unrelated to persistence or frame dependence.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Thin records may concern simpler low-stakes events; well-recorded events may be more complex; later documentation may be produced because a dispute was already persistent.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>A defined target claim; a pre-outcome provenance checklist; comparable cases or matched controls; recorded disagreement outcomes.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>Events with no live dispute; cases where records are intentionally inaccessible but not absent; disputes dominated by normative preferences rather than claims about the event stream.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Matched thin-record and thick-record disputes across similar domains, or within-domain cases with varying provenance completeness.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Score <code>OD-4</code>/<code>OD-5</code>; code missing recorder fields; measure persistence and frame dependence; compare matched cases or model outcomes with domain controls.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Event complexity, public salience, incentives to litigate, record quality rather than quantity, archival bias, and retrospective documentation.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Thin records show longer contestation, lower <code>OD-6</code>, more <code>ST-8</code> frame moves, and more underdetermined outcomes than matched thick records.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Record thickness predicts persistence only before domain complexity controls, or provenance checklists are too coarse to detect relevant missingness.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Well-matched thin and thick records show no persistence or frame-dependence difference, and thin records do not produce more Type III or underdetermined residues.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Confirmatory with preregistered record-thickness scoring and matched cases; exploratory for archival case studies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-6-contestation-stretches-tend-toward-type-i-type-ii-type-iii-descent">Prediction 6: Contestation Stretches Tend Toward Type I -&gt; Type II -&gt; Type III Descent</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Under truthful moves, adequate recording, stable claim scope, and fair opportunity to add evidence and frames, contestation tends to resolve accessible context gaps before frame gaps, and frame gaps before irrecoverable record residues.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A contestation stretch: adjacent contestation-stage rounds over one stable question, possibly separated by non-contestation rounds only if the live counter-position remains continuous.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Round position in the contestation stretch; type depth; truthfulness and recording-discipline indicators; classification assumptions; evidence and frame moves (<code>ST-7</code>, <code>ST-8</code>).</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td><code>TT-1</code> type descent rate, <code>TT-2</code> stalls, <code>TT-3</code> reversals, <code>TT-4</code> oscillations, and eventual <code>fc-status</code> closure.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>The modal resolution order is Type I before Type II before Type III. Violations should predict untruthful moves, strategic behavior, mixed claims, unstable coding, or misclassification.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Type transitions in recorded contestation stretches show no downward/deeper ordering, or reversals and oscillations are as common as descent after coding and claim-scope controls.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Coders may impose the framework vocabulary after the fact; mixed subclaims may mimic descent; early Type I labels may be easier to see; records may omit adversarial moves; later Type III labels may reflect fatigue.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>At least two contestation rounds; stable question or decomposed subclaims; independent type rationales; recorded evidence/frame moves; truthfulness and classification assumptions stated before testing descent.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>Single contestation round; no live counter-position; knowingly adversarial or satirical records unless testing boundary failure; unresolved mixed claims that cannot be decomposed; type labels added only from the expected sequence.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Multiple contestation stretches with at least two type-coded contestation rounds each. A confirmatory test needs enough transitions to estimate descent, stall, reversal, and oscillation rates with uncertainty.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Independently code type per contestation round from evidence, not from sequence order; compute <code>TT-1</code> through <code>TT-4</code>; audit violations for truthfulness, recording, and classification assumptions; compare to a random or no-order baseline.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Post-hoc coding, uneven round granularity, mixed claims, intervention timing, party incentives, label drift, hidden off-record negotiation, and selective publication of orderly cases.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Positive <code>TT-1</code> is common in truthful, well-recorded, single-claim stretches, and deviations are explained by preregistered boundary conditions or miscoding.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Descent appears only when coders know the expected order, or many well-recorded stretches stall or reverse without clear boundary-condition explanations.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Well-recorded, truthful, non-adversarial, independently coded contestation stretches regularly resolve Type II before Type I, return from Type III to Type I without new records, or oscillate in ways not attributable to mixed claims or misclassification.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Confirmatory only with independent per-round coding blinded to sequence where possible; exploratory for existing bundles whose types were coded retrospectively.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-7-documented-single-party-trajectories-re-litigate-less">Prediction 7: Documented Single-Party Trajectories Re-Litigate Less</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>Bundle discipline preserves what was settled, why it was settled, and what superseded it, so a single party should reopen settled points less often than in comparable undocumented inquiries.</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A single-party inquiry trajectory of comparable depth, task type, and duration.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Documentation regime: full OKF-FC bundle, lightweight ledger, ordinary notes/chat/git history, or undocumented memory-based inquiry; <code>OD-5</code> recoverability of the trajectory record.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td><code>ST-6</code> re-litigation rate; repeated contestation over settled issues; time lost to reconstructing prior reasoning; post-consolidation supersession with and without new evidence (<code>ST-5</code>).</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Full bundle discipline should produce lower <code>ST-6</code> than undocumented or weakly documented inquiries of comparable depth. Supersessions may still occur, but should cite new evidence, frame rationale, or explicit correction rather than merely replay old grounds.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Documentation regime has no relationship to re-litigation after trajectory depth and task difficulty are controlled.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>More disciplined users may re-litigate less regardless of bundles; documented inquiries may be more complex; undocumented inquiries may abandon disputes rather than re-litigate; issue-id coding may favor bundles.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>Single-party or diagonal trajectory; stable issue identifiers or reconstructable issue map; comparable task depth; post-consolidation period observable.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>Multi-party disputes where social dynamics dominate; no consolidation events; no way to identify repeated issues; deliberate red-team repetitions.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Matched documented and undocumented single-party trajectories, ideally from the same person or team across similar task types, with independent issue coding.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>Assign issue ids; identify consolidation rounds; code later reopenings with or without new evidence/frame rationale; compute <code>ST-6</code> and <code>ST-5</code>; compare by documentation regime with task controls.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>User discipline, task complexity, external interruptions, memory aids outside the bundle, issue granularity, and selective retention of documented cases.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Full-profile bundles have lower <code>ST-6</code> than comparable undocumented chains, while later supersessions mostly cite new evidence, corrected provenance, or explicit frame changes.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>Re-litigation is low in both documented and undocumented chains, or bundle issue coding is too subjective to compare.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Bundle-disciplined single-party trajectories show equal or higher same-ground re-litigation than comparable undocumented inquiries, despite stable issue ids and comparable task complexity.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Exploratory until stable issue-id coding is demonstrated; confirmatory after matched samples and re-litigation criteria are preregistered.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction-8-critique-before-first-contestation-predicts-shorter-more-stable-trajectories">Prediction 8: Critique Before First Contestation Predicts Shorter, More Stable Trajectories</h3>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlying proposition</td>
+<td>A critique stage before first contestation exposes frame weaknesses early, so later contestation should require fewer rounds, reach consolidation faster, and be superseded less often afterward. This tests the conjectural P4'(b) subclaim, not the definitional P4'(a).</td>
+</tr>
+<tr>
+<td>Unit of analysis</td>
+<td>A statement trajectory with a formation round and either a first contestation round or right-censored no-contestation status.</td>
+</tr>
+<tr>
+<td>Independent variables</td>
+<td>Binary pre-contestation critique indicator: whether at least one <code>fc-stage: critique</code> round occurs after formation and before first contestation; number and depth of critique rounds; retrospective versus original stage classification.</td>
+</tr>
+<tr>
+<td>Dependent variables</td>
+<td><code>ST-3</code> contestation round count before next consolidation, <code>ST-4</code> rounds/time from first contestation to consolidation, and <code>ST-5</code> post-consolidation supersession rate. Secondary: <code>ST-6</code> re-litigation.</td>
+</tr>
+<tr>
+<td>Expected direction</td>
+<td>Trajectories with critique before first contestation should have fewer contestation rounds, faster consolidation, and lower post-consolidation supersession than trajectories entering contestation directly from formation or enrichment.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>Pre-contestation critique has no relationship to contestation length, consolidation time, or post-consolidation supersession after task complexity and documentation quality are controlled.</td>
+</tr>
+<tr>
+<td>Rival explanations</td>
+<td>Easier cases may permit critique before contestation; retrospective stage classification may create a false pattern; critique quality matters more than presence; early critique may delay first contestation without improving later stability.</td>
+</tr>
+<tr>
+<td>Inclusion criteria</td>
+<td>Formation round identified; stage sequence available; first contestation identified or explicitly unobserved; consolidation and supersession rules stable; post-consolidation observation window recorded.</td>
+</tr>
+<tr>
+<td>Exclusion criteria</td>
+<td>No stage records; stage labels assigned only after knowing outcomes without uncertainty marks; trajectories with no possible contestation opportunity; consolidation absent unless handled as censored in the analysis.</td>
+</tr>
+<tr>
+<td>Required sample</td>
+<td>Multiple statement trajectories in both groups, with enough post-consolidation follow-up to estimate supersession. The framework-self bundle alone has one trajectory and belongs only to the no-pre-critique group.</td>
+</tr>
+<tr>
+<td>Measurement method</td>
+<td>For each trajectory, compute <code>precrit = any(stage(t) == critique for formation &lt; t &lt; first_contestation)</code>. If no contestation occurs, record as censored or analyze separately. Then compute contestation rounds before next consolidation, rounds/time to consolidation, and post-consolidation supersession share. Record whether stages were original frontmatter or retrospective classifications.</td>
+</tr>
+<tr>
+<td>Possible confounders</td>
+<td>Retrospective coding, small samples, varying statement scope, task difficulty, party handoffs (<code>ST-9</code>), documentation maturity, and different follow-up windows after consolidation.</td>
+</tr>
+<tr>
+<td>Result that would support it</td>
+<td>Across comparable trajectories, the pre-critique group has lower <code>ST-3</code>, lower <code>ST-4</code>, and lower <code>ST-5</code>, with the effect persisting after controls and sensitivity checks excluding retrospective labels.</td>
+</tr>
+<tr>
+<td>Result that would weaken it</td>
+<td>The association appears only in retrospectively classified stages, disappears after task controls, or lowers contestation rounds while increasing post-consolidation supersession.</td>
+</tr>
+<tr>
+<td>Result that would falsify or force reformulation</td>
+<td>Preregistered, well-recorded trajectories with pre-contestation critique consistently show equal or longer contestation stretches and equal or higher post-consolidation supersession than direct-entry trajectories.</td>
+</tr>
+<tr>
+<td>Confirmatory or exploratory</td>
+<td>Exploratory for <code>framework-self</code>; confirmatory only in a multi-trajectory sample with preregistered stage coding and a small-sample/censoring plan.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-framework-self-test-designs">3. Framework-Self Test Designs</h2>
+<h3 id="31-worked-coding-example">3.1 Worked Coding Example</h3>
+<p>The <code>framework-self</code> bundle can demonstrate how prediction coding works, not
+whether the predictions are true.</p>
+<p>Worked example: bundle round 3 (<code>bundles/framework-self/inquiry/round-0003.md</code>)
+is the first and only contestation-stage round in the current trajectory. The
+round file predates <code>fc-stage</code>, so the stage is a retrospective classification
+recorded in <code>bundles/framework-self/inquiry/index.md</code>. The round contains:</p>
+<ul>
+<li>Type I mechanical defects: a renderer link-resolution bug and an unfilled
+  pinned-commit placeholder, both resolved by supplying or correcting
+  accessible records.</li>
+<li>Type II residues: labeling choices and specification gaps that remained open
+  because the parties used different permissible conventions.</li>
+</ul>
+<p>Coding for Prediction 1:</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>Round 3 subcomponents, not the whole bundle.</td>
+</tr>
+<tr>
+<td>Type I component</td>
+<td>Mechanical link and pin defects.</td>
+</tr>
+<tr>
+<td>Type II component</td>
+<td>Axis-label and specification-convention differences.</td>
+</tr>
+<tr>
+<td>Intervention</td>
+<td>Supply missing/corrected accessible information and code fix for Type I; no frame adoption for Type II in round 3.</td>
+</tr>
+<tr>
+<td>Observed bundle-local result</td>
+<td>Type I defects were resolved; Type II residues remained open until later specification/consolidation work.</td>
+</tr>
+<tr>
+<td>Metric connection</td>
+<td><code>ST-7</code> evidence was added; <code>ST-8</code> frame/convention work appeared later; <code>TT-*</code> sequence metrics are <code>NOT MEASURABLE</code> because there is only one contestation round.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Exploratory coding example only. It does not validate Prediction 1 because the components were not independently sampled, randomized, or measured with pre/post <code>OD-2</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-exploratory-application-measurable-from-current-rounds">3.2 Exploratory Application Measurable From Current Rounds</h3>
+<p>The measurable target here is <code>framework-self</code> bundle rounds 1-14, the state
+available before the Step 6 round is appended. Values are computed from the
+stage sequence in <code>inquiry/index.md</code> and current concept frontmatter. Rounds
+1-3 use retrospective stage classifications because their round files predate
+<code>fc-stage</code>.</p>
+<table>
+<thead>
+<tr>
+<th>observation</th>
+<th style="text-align: right;">value</th>
+<th>relevant predictions</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage sequence</td>
+<td style="text-align: right;">r1 formation; r2 enrichment; r3 contestation; r4 consolidation; r5-r6 enrichment; r7 critique; r8 consolidation; r9-r14 enrichment</td>
+<td>P8</td>
+<td>Computed bundle-local description.</td>
+</tr>
+<tr>
+<td>First contestation</td>
+<td style="text-align: right;">r3</td>
+<td>P6, P8</td>
+<td>Retrospectively classified.</td>
+</tr>
+<tr>
+<td>Contestation rounds</td>
+<td style="text-align: right;">1</td>
+<td>P6, P8</td>
+<td>Too few for type-descent metrics.</td>
+</tr>
+<tr>
+<td>Type trajectory</td>
+<td style="text-align: right;">r3 only, recorded as Type II after Type I defects were resolved</td>
+<td>P6</td>
+<td><code>TT-1</code> through <code>TT-4</code> are <code>NOT MEASURABLE</code>.</td>
+</tr>
+<tr>
+<td>Any critique before first contestation</td>
+<td style="text-align: right;">False</td>
+<td>P8</td>
+<td>No comparison group; cannot estimate effect.</td>
+</tr>
+<tr>
+<td>Contestation rounds from first contestation to next consolidation</td>
+<td style="text-align: right;">1</td>
+<td>P8</td>
+<td>Computed as count of contestation rounds in r3 through before r4.</td>
+</tr>
+<tr>
+<td>Rounds from first contestation to next consolidation</td>
+<td style="text-align: right;">1</td>
+<td>P8, <code>ST-4</code></td>
+<td>Computed as r4 minus r3.</td>
+</tr>
+<tr>
+<td>Post-first-consolidation rounds</td>
+<td style="text-align: right;">10</td>
+<td>P8, <code>ST-5</code></td>
+<td>Rounds r5-r14.</td>
+</tr>
+<tr>
+<td>Post-first-consolidation supersession rounds</td>
+<td style="text-align: right;">5/10 = 0.5000</td>
+<td>P8, <code>ST-5</code></td>
+<td>Current-file metadata only; supersession rounds are r7, r11, r12, r13, and r14.</td>
+</tr>
+<tr>
+<td>Current superseded concepts after first consolidation</td>
+<td style="text-align: right;">19</td>
+<td>P8, <code>ST-5</code></td>
+<td>Current-file metadata only; git-history lineage not re-expanded.</td>
+</tr>
+</tbody>
+</table>
+<p>These observations are not validation. The bundle has one trajectory, one
+contestation round, one post-first-contestation consolidation, no
+pre-contestation critique, and retrospective stage labels for the earliest
+rounds. It supplies no counterfactual group in which critique preceded first
+contestation.</p>
+<h3 id="33-prediction-8-calculation-design">3.3 Prediction 8 Calculation Design</h3>
+<p>For each statement trajectory <code>b</code>:</p>
+<ol>
+<li>Let <code>F_b</code> be the formation round.</li>
+<li>Let <code>C_b</code> be the first contestation round after formation. If no
+   contestation occurs, mark the trajectory <code>NO_CONTESTATION</code> and analyze it
+   separately or as right-censored.</li>
+<li>Compute <code>precrit_b = 1</code> if any round <code>t</code> satisfies
+   <code>F_b &lt; t &lt; C_b</code> and <code>stage(t) = critique</code>; otherwise <code>0</code>.</li>
+<li>Let <code>G_b</code> be the first consolidation round after <code>C_b</code>. If none exists,
+   mark <code>ST-4 = NOT_OBSERVED</code> and treat the trajectory as censored.</li>
+<li>Compute <code>contestation_count_b</code> as the number of contestation rounds from
+   <code>C_b</code> through the round before <code>G_b</code>.</li>
+<li>Compute <code>rounds_to_consolidation_b = G_b - C_b</code>, plus calendar time when
+   timestamps are available.</li>
+<li>Compute <code>post_consolidation_supersession_rate_b</code> as the share of observed
+   rounds after <code>G_b</code> that supersede a current concept, with a sensitivity
+   check using concept counts rather than round counts.</li>
+<li>Record whether each stage label was original frontmatter or retrospective
+   classification. Run sensitivity checks excluding trajectories whose
+   grouping depends on retrospective labels.</li>
+</ol>
+<p>Applied to <code>framework-self</code> rounds 1-14:</p>
+<table>
+<thead>
+<tr>
+<th>variable</th>
+<th style="text-align: right;">value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_b</code></td>
+<td style="text-align: right;">r1</td>
+</tr>
+<tr>
+<td><code>C_b</code></td>
+<td style="text-align: right;">r3</td>
+</tr>
+<tr>
+<td><code>precrit_b</code></td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>G_b</code></td>
+<td style="text-align: right;">r4</td>
+</tr>
+<tr>
+<td><code>contestation_count_b</code></td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>rounds_to_consolidation_b</code></td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>post_consolidation_supersession_rate_b</code></td>
+<td style="text-align: right;">5/10 = 0.5000</td>
+</tr>
+<tr>
+<td>grouping caveat</td>
+<td style="text-align: right;"><code>C_b</code> uses retrospective stage classification; <code>precrit_b = 0</code> is clear under both frontmatter absence and index classification.</td>
+</tr>
+<tr>
+<td>sample caveat</td>
+<td style="text-align: right;">One trajectory, no pre-critique group, no inference.</td>
+</tr>
+</tbody>
+</table>
+<p>The small sample is not a nuisance detail; it is the core limitation. With one
+trajectory, any numeric result is a worked calculation, not an estimate of a
+population relationship.</p>
+<h3 id="34-predictions-not-testable-with-framework-self-alone">3.4 Predictions Not Testable With Framework-Self Alone</h3>
+<table>
+<thead>
+<tr>
+<th>prediction</th>
+<th>framework-self status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 raw data reduces Type I more than Type II</td>
+<td>Only a component-level coding example exists; no independent pre/post <code>OD-2</code>, no random or matched intervention, and no sample.</td>
+</tr>
+<tr>
+<td>P2 persistence tracks compression distance</td>
+<td>No paired post-equalization observer outputs or independent compression-distance coding.</td>
+</tr>
+<tr>
+<td>P3 frame convergence requires frame work</td>
+<td>Later frame/specification work is visible, but there is no sample of Type II stretches with and without frame work.</td>
+</tr>
+<tr>
+<td>P4 cost-limited vs provenance-limited irreproducibility</td>
+<td>The bundle is not a reproduction attempt for a scientific claim.</td>
+</tr>
+<tr>
+<td>P5 thin records produce persistent frame-dependent disagreement</td>
+<td>Only one trajectory; no thin/thick record comparison.</td>
+</tr>
+<tr>
+<td>P6 type descent</td>
+<td><code>TT-1</code> through <code>TT-4</code> are <code>NOT MEASURABLE</code> because there is only one contestation round.</td>
+</tr>
+<tr>
+<td>P7 documented single-party chains re-litigate less</td>
+<td>No matched undocumented inquiry and no stable issue-id re-litigation coding.</td>
+</tr>
+<tr>
+<td>P8 critique before first contestation</td>
+<td>Calculation is possible for the one trajectory, but it belongs only to the no-pre-critique group and cannot estimate the prediction.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-reporting-rules-for-later-work">4. Reporting Rules For Later Work</h2>
+<p>Later case studies and working-paper sections should report these predictions
+with four separations intact:</p>
+<ol>
+<li>Metric availability is not a result. <code>NOT MEASURABLE</code> values are evidence
+   about the record, not evidence for or against a proposition.</li>
+<li>Exploratory observations may motivate a refined codebook, but cannot be
+   described as confirmation.</li>
+<li>Retrospective stage and type classifications must be marked and sensitivity
+   checked.</li>
+<li>A falsifying result should reformulate the proposition or boundary
+   conditions, not be absorbed by relabeling a case after the fact.</li>
+</ol>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/predictions.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>
