@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / _refs / log</nav>
+<h1>Log</h1>
+<article class="content"><!-- Append-only ledger. Format: | date | round | party | move | summary | ref | -->
+
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th style="text-align: right;">round</th>
+<th>party</th>
+<th>move</th>
+<th>summary</th>
+<th>ref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">0</td>
+<td>codex</td>
+<td>scaffold</td>
+<td>Step -1 repository scaffold.</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">1</td>
+<td>codex</td>
+<td>step-draft</td>
+<td>Pilot: framework self-description bundle created.</td>
+<td>codex/pilot-self-bundle</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">2</td>
+<td>codex</td>
+<td>step-draft</td>
+<td>Pilot: HTML renderer added; framework-self site committed.</td>
+<td>codex/pilot-html-renderer</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">3</td>
+<td>claude</td>
+<td>step-draft</td>
+<td>Pilot: validation of self-bundle and renderer (round 3); fixed renderer link bug and pin placeholder; Type II/SPEC-GAP findings left for reconciliation.</td>
+<td>claude/pilot-validation</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">4</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>Dual-agent fusion workflow retired; sequential single-agent workflow adopted; agents act as distinct sequential observers.</td>
+<td>work/retire-fusion-workflow</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">5</td>
+<td>claude</td>
+<td>frame-change</td>
+<td>Scope widened from observer disagreement to statement evolution: docs/framework_v3.md supersedes v2 (disagreement is now the contestation stage of a five-stage trajectory: formation, enrichment, critique, contestation, consolidation); framework-self bundle round 4 records the change.</td>
+<td>work/scope-statement-evolution</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">6</td>
+<td>claude</td>
+<td>evidence</td>
+<td>okf-fc gains a self-contained, zip-portable snapshot render mode plus a manifest.json recording function and a deterministic bundle-structure visualization (structure.svg/structure.html); framework-self bundle round 5 records the change.</td>
+<td>work/snapshot-render</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">7</td>
+<td>claude</td>
+<td>evidence</td>
+<td>okf-fc gains publish/catalog/evolution-visualization commands; framework-self bundle round 6 records the change. First snapshot published to the new viewer repository ../okf-bundle-snapshots (initial content commit 864f11471d492315196c563f506633c23453f2df, after its scaffold commit 38496d0), pinned to this repo's commit 0445f090d532.</td>
+<td>work/publish-catalog</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td style="text-align: right;">8</td>
+<td>codex</td>
+<td>objection</td>
+<td>Repository structure/reference audit: intentional stubs now point to their governing prompts; framework-self stale v2-current pages superseded; foundation anchors now include reference links.</td>
+<td>work/docs-structure-audit</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">9</td>
+<td>codex</td>
+<td>frame-change</td>
+<td>Round-scope policy clarified: root log.md records repo_round, bundle inquiry/log files record bundle_round; okf-fc manifests/catalogs now record both, and framework-self bundle round 8 records the change.</td>
+<td>work/round-scope-ledgers</td>
+</tr>
+<tr>
+<td>2026-07-20</td>
+<td style="text-align: right;">10</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Metadata repair for framework-self round 8: quoted YAML description frontmatter and added a regression check so publish/catalog generation sees committed bundle rounds.</td>
+<td>work/round-metadata-repair</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">11</td>
+<td>codex</td>
+<td>clarification</td>
+<td>Step 0 glossary stub filled at interim level with scope commitments, bundle-glossary policy, frontmatter metadata meanings, axis/path abbreviations, formal-symbol definitions, and terminology seed; repository audit and README updated to distinguish the filled glossary from remaining stubs; temporary digest.txt removed and ignored.</td>
+<td>work/clarify-glossary</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">12</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 literature positioning completed in docs/related-work.md; framework-self bundle round 10 records verified adjacent-work mapping, bounded novelty claims, dialogue-game correction to the argumentation foundation page, and status updates for filled Step 0/1 deliverables.</td>
+<td>work/step-1-related-work</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">13</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 2 formal core completed in docs/formal-core.md; framework-self bundle round 11 records the static/dynamic formalization, stage/type separation, and sharpened P1-P5/P4' proposition statuses.</td>
+<td>work/step-2-formal-core</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">14</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 OKF-FC bundle specification completed in spec/SPEC.md; framework-self bundle round 12 supersedes its provisional specification pointer and records the normative profile, full/lightweight profiles, and validation contract.</td>
+<td>work/step-3-okf-spec</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">15</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 4 okf-fc generator, atomic round append, and validator completed under tools/; framework-self bundle round 13 records the validation demonstration and metadata migration boundary.</td>
+<td>work/step-4-generator-validator</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">16</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 5 observer-distance metrics completed in docs/metrics.md; framework-self bundle round 14 records reproducible pilot measurements with explicit missing values.</td>
+<td>work/step-5-metrics</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">17</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 6 derived predictions completed in docs/predictions.md; framework-self bundle round 15 records exploratory prediction calculations with explicit small-sample limits; README status updated to match current filled/stub deliverables.</td>
+<td>work/step-6-predictions</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">18</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 7 framework-self-only longitudinal case-study pilot completed; retrospective round classification and case-study account added while four external validation case stubs remain deferred.</td>
+<td>work/step-7-framework-self-case-study</td>
+</tr>
+<tr>
+<td>2026-07-21</td>
+<td style="text-align: right;">19</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 8 limitations and falsifiability completed in docs/limitations.md; framework-self bundle round 17 records adversarial failure conditions while keeping the framework open and externally unvalidated.</td>
+<td>work/step-8-limitations</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">20</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 1 Wolfram foundation repaired in docs/related-work.md and docs/framework_v3.md; framework-self bundle round 18 adds the dedicated Wolfram observer-theory foundation concept and separates source concepts from project translations/extensions.</td>
+<td>work/wolfram-foundation-step-1</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">21</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 3 specification repaired in spec/SPEC.md; framework-self bundle round 19 requires every future bundle to disclose the Wolfram observer-theory foundation as formal analogy with separated attribution, source policy, and validator guardrails.</td>
+<td>work/spec-wolfram-foundation</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td style="text-align: right;">22</td>
+<td>codex</td>
+<td>evidence</td>
+<td>Step 4 Wolfram foundation generator/validator tooling completed under tools/; canonical template 1.0.0 emits mandatory foundation pages, validates separated attribution and relevance, and treats supersession as node lineage in structure visualization.</td>
+<td>work/generate-validate-wolfram-foundation</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/_refs/log.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

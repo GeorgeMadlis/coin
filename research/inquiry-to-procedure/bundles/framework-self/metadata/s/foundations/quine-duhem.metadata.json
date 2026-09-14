@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Evidence can underdetermine which theory or auxiliary assumption is responsible.",
+    "level": 2,
+    "path": "s/foundations/quine-duhem.md",
+    "round": 13,
+    "supersedes": "s/foundations/quine-duhem.md@r7",
+    "title": "Quine-Duhem underdetermination",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Evidence can underdetermine which theory or auxiliary assumption is responsible.",
+    "fc-axis": "S",
+    "fc-group": "C",
+    "fc-level": 2,
+    "fc-round": 13,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/quine-duhem.md@r7",
+    "timestamp": "2026-07-21",
+    "title": "Quine-Duhem underdetermination",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Quine-Duhem underdetermination\ndescription: Evidence can underdetermine which theory or auxiliary assumption is responsible.\nfc-level: 2\nfc-axis: S\nfc-group: C\nfc-status: open\nfc-round: 13\nfc-supersedes: s/foundations/quine-duhem.md@r7\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 13,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "f52e472acb31e5a9a6587d99a83e270e9b704408ef64f552c767c71acba5740d",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "5c867835a59cadbfbafa1f645abb9743860165355df94b4c9d13d399d17bd729",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "5c867835a59cadbfbafa1f645abb9743860165355df94b4c9d13d399d17bd729"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Evidence can underdetermine which theory or auxiliary assumption is responsible.",
+    "html_path": "s/foundations/quine-duhem.html",
+    "metadata_path": "metadata/s/foundations/quine-duhem.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/quine-duhem.md",
+    "title": "Quine-Duhem underdetermination"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/quine-duhem.md@r7"
+  }
+}

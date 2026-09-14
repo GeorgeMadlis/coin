@@ -6,8 +6,7 @@ fc-round: 1
 ---
 # Task scope
 
-The authoritative structured scope is recorded in the source bundle's `bundle.json`; that JSON file
-is intentionally omitted from this public COIN copy.
+The authoritative structured scope is `../bundle.json`.
 
 | dimension | value |
 |---|---|

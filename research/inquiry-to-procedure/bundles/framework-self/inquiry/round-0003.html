@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round 3: second-observer validation of rounds 1-2</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / inquiry / round-0003</nav>
+<h1>Round 3: second-observer validation of rounds 1-2</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Claude Code validates the self-bundle and HTML renderer against docs/framework_v2.md section 3; fixes two mechanical defects, records two judgment differences and two spec gaps for human reconciliation.</dd><dt>fc-axis</dt><dd><span class="badge axis-inquiry">INQUIRY</span></dd><dt>fc-move</dt><dd>objection</dd><dt>fc-party</dt><dd>claude</dd><dt>fc-round</dt><dd>3</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-touches</dt><dd>reproduction/code.md</dd><dt>fc-type-at-round</dt><dd>II</dd><dt>timestamp</dt><dd>2026-07-16</dd><dt>title</dt><dd>Round 3: second-observer validation of rounds 1-2</dd><dt>type</dt><dd>Event</dd></dl></section>
+<article class="content"><h1 id="move">Move</h1>
+<p>Structural validation of <code>bundles/framework-self/</code> and <code>tools/src/okf_fc/render.py</code> against the provisional bundle spec in <code>docs/framework_v2.md</code> section 3, run programmatically (tree conformance, frontmatter parsing, link resolution, provenance hashing, ledger append-only-ness, renderer determinism) rather than by inspection. Two objective (SPEC-MECH) defects were found and fixed by supersession; two labeling choices are recorded as JUDGMENT (Type II) differences and left untouched; two spec silences are recorded as SPEC-GAP with proposed conventions.</p>
+<p>Process note, corrected after checking the remote (my first pass judged this from a stale unfetched local <code>main</code> and got it wrong): <code>main</code> does contain both pilots' content, but not via "two merged PRs" as the task assumed. Round 1's self-bundle content was never its own PR — <code>codex/pilot-self-bundle</code> never diverged from <code>main</code>; that content shipped as part of <code>a1fc43c "Initial observer disagreement framework"</code>, pushed directly to <code>main</code> with no PR (repo bootstrap), per <code>reproduction/code.md</code>'s own note about predating git init. Round 2's renderer content merged via the repo's one and only PR, <code>#1</code> (<code>codex/pilot-html-renderer</code> -&gt; <code>main</code>, merge commit <code>d699396</code>). This branch is based on <code>codex/pilot-html-renderer</code>'s tip (<code>3d9f217</code>), whose tree is byte-identical to <code>origin/main</code>'s (confirmed via <code>git diff origin/main 3d9f217</code>), so branching point is not in question.</p>
+<h1 id="evidence-added">Evidence added</h1>
+<ul>
+<li>Recomputed <code>sha256sum docs/framework_v2.md</code>: <code>c5240cdfcf1f22948f9ece4d1b778195415e64c83c56737e385773bf50102de8</code> — matches the hash already recorded in <code>reproduction/data.md</code> and <code>inquiry/round-0001.md</code>. No provenance defect there.</li>
+<li><code>git diff a1fc43c -- bundles/climate-repro-pilot bundles/eudr-estonia-aoi bundles/historical-type-iii bundles/self-inquiry-eudr-docs</code> is empty: the four Step-7 stub READMEs are untouched.</li>
+<li>All 30 relative <code>.md</code> links in the bundle source resolve on the filesystem (checked programmatically); tree matches the specified layout exactly (no missing/extra files outside <code>_site/</code>); all mandated frontmatter keys (<code>fc-level</code>, <code>fc-axis</code>, <code>fc-round</code> on axis concept files; <code>fc-group</code> on all 11 foundations files; <code>type: Event</code>, <code>fc-move</code>, <code>fc-party</code>, <code>fc-type-at-round</code>, <code>fc-touches</code>, <code>fc-status</code> on round files) are present and parse; root and bundle <code>log.md</code> are append-only (verified via <code>git log -p</code>, round 0's line is byte-identical across both commits that touch the file).</li>
+<li>Renderer bug (SPEC-MECH, fixed): <code>_rewrite_href</code> in <code>tools/src/okf_fc/render.py</code> could not resolve relative <code>.md</code> links that escape the bundle root — exactly the links section 3 requires into <code>docs/framework_v2.md</code> (e.g. <code>reproduction/data.md</code>'s <code>[docs/framework_v2.md](../../../docs/framework_v2.md)</code>). It left such hrefs byte-for-byte unchanged and marked them <code>⚠ unresolved</code>, even though the target exists. Unchanged is wrong regardless: the rendered page lives one directory level deeper (under <code>_site/</code>) than the source markdown file, so the correct href needs one more <code>../</code> than the source. Confirmed broken in the committed <code>_site/</code> in 6 files / 8 link instances: <code>r/results.html</code>, <code>inquiry/round-0001.html</code>, <code>s/specification.html</code> (×2), <code>reproduction/data.html</code>, <code>reproduction/code.html</code>, <code>pf/full-context.html</code> (×2) — each resolving to <code>bundles/docs/framework_v2.md</code> (nonexistent) instead of <code>docs/framework_v2.md</code>.
+  PR #1's description states this was intentional: "Out-of-bundle Markdown references... are left as written and marked with the visible unresolved indicator so inspection stays honest without failing the render." I still classify this SPEC-MECH, not JUDGMENT, for two reasons: (1) the task's Phase-1 Links check is explicit and unconditional — "every relative .md link in the bundle resolves (including links into docs/framework_v2.md)... unresolved -&gt; SPEC-MECH" — leaving no room for an intentional-unresolved exception; (2) the stated rationale doesn't actually hold even on its own terms — "left as written" implies the link stays clickable-if-unflagged, but it was never clickable from the rendered page's actual location (off by one directory), so the design didn't achieve "honest inspection," it produced a warning label on top of a link that was simply wrong.</li>
+<li>Fix: <code>_rewrite_href</code> now falls back to real-filesystem resolution for any <code>.md</code> target outside the bundle's own concept set, and computes the rewritten href relative to the <em>actual</em> rendered-page location rather than assuming it matches the source location. Verified: regenerating <code>bundles/framework-self/_site/</code> now produces zero <code>⚠ unresolved</code> spans, <code>reproduction/data.html</code> links to <code>../../../../docs/framework_v2.md</code> which resolves on disk, running the documented regen command (<code>okf-fc render bundles/framework-self</code>, no <code>--out</code>) twice in a row is byte-identical, and the diff against the previously-committed <code>_site/</code> touches exactly the 6 affected files. Added a regression test, <code>test_link_escaping_bundle_to_an_existing_file_resolves_correctly</code>, to <code>tools/tests/test_render.py</code>; full suite (8 tests) passes.</li>
+<li>Placeholder bug (SPEC-MECH, fixed): <code>reproduction/code.md</code>'s pinned-commit field was still the literal placeholder <code>PINNED-AT-MERGE: &lt;fill on merge&gt;</code>. Filled with <code>a1fc43cc83a6f223843f8318f2f92886b6769eb5</code> — not a <code>codex/pilot-self-bundle</code> merge commit (none exists; see Move above), but the actual commit that introduced this bundle content, which is the closest honest referent.</li>
+</ul>
+<h1 id="effect-on-state">Effect on state</h1>
+<p>Context window: added the actual git history of this repository (branch topology, per-file first-introducing commit) to what round 1-2 assumed (a linear "two merged PRs" history).</p>
+<p>Frame: unchanged for bundle content; the renderer's link-resolution frame was corrected from "only resolve links inside the bundle's own file set" to "resolve any relative <code>.md</code> link against the real filesystem, adjusting for output nesting depth."</p>
+<h1 id="resulting-revisions">Resulting revisions</h1>
+<ul>
+<li><code>tools/src/okf_fc/render.py</code> — <code>_rewrite_href</code> (and its callers <code>_rewrite_links</code>, <code>_markdown_to_html</code>, <code>_render_page</code>, <code>_render_site_index</code>, <code>render_bundle</code>) now thread <code>bundle</code> and <code>out</code> absolute paths through so out-of-bundle links can be resolved and rewritten correctly. Not a bundle concept file, so no <code>fc-supersedes</code> entry; ledgered here in prose per the "No Silent Edits" rule.</li>
+<li><code>tools/tests/test_render.py</code> — added <code>test_link_escaping_bundle_to_an_existing_file_resolves_correctly</code>.</li>
+<li><code>bundles/framework-self/_site/{r/results,inquiry/round-0001,s/specification,reproduction/data,reproduction/code,pf/full-context}.html</code> — regenerated; these are derived files, not source concepts, so likewise no <code>fc-supersedes</code>.</li>
+<li><code>reproduction/code.md</code> — <code>fc-supersedes: reproduction/code.md@r1</code>; <code>fc-round</code> bumped 1 -&gt; 3; pinned-commit placeholder filled as described above.</li>
+</ul>
+<h1 id="classification-rationale">Classification rationale</h1>
+<p>The two fixed items are Type I in nature: mechanical/data defects (a wrong relative path computation; an unfilled placeholder) resolvable by correcting the mechanism or supplying the missing data, with no framing dispute involved — now resolved. What remains open after this round is Type II: two labeling choices where Codex's frontmatter tagging is spec-permitted but I would have tagged differently (see Findings below), and two points where the spec itself is silent and each agent would need to invent a convention (also below). Per the task's finding-class discipline, JUDGMENT and SPEC-GAP items are recorded, not fixed — unilaterally resolving them would erase the dual-observer signal this repository exists to collect. <code>fc-status: open</code> because those items are unresolved pending human reconciliation.</p>
+<h1 id="findings">Findings</h1>
+<h2 id="judgment-type-ii-not-fixed">JUDGMENT (Type II — not fixed)</h2>
+<ol>
+<li><strong><code>agent-contract.md</code> frontmatter axis.</strong> Codex did: tagged <code>fc-axis: INQUIRY</code>. I would: omit <code>fc-axis</code> entirely, since <code>agent-contract.md</code> is a bundle-level policy file alongside <code>index.md</code>/<code>answer.md</code>/<code>log.md</code> (section 3.2's top-level tier), not itself a concept on the PF/S/R/REPRO/INQUIRY axes that 3.3's template defines. Why it matters: minor — doesn't break the Phase-1 checks, but could mislead an agent doing axis-based routing per the contract's own Consumption rule ("a question about revisions asks for INQUIRY" — <code>agent-contract.md</code> isn't a revision record).</li>
+<li><strong><code>answer.md</code> frontmatter axis.</strong> Codex did: tagged <code>fc-axis: R</code>. I would: omit <code>fc-axis</code>, since <code>answer.md</code> is explicitly the cross-axis L0 root ("links to axes" per 3.2), not confined to Results. Why it matters: cosmetic; doesn't affect navigation, since <code>agent-contract.md</code>'s Consumption rule already routes "broad question -&gt; L0/L1" to <code>answer.md</code> by file identity, not by frontmatter.</li>
+</ol>
+<h2 id="spec-gap-not-fixed-proposed-convention-for-specspecmd-step-3">SPEC-GAP (not fixed — proposed convention for <code>spec/SPEC.md</code>, Step 3)</h2>
+<ol>
+<li><strong><code>fc-touches</code> scope.</strong> <code>inquiry/round-0002.md</code>'s <code>fc-touches</code> lists <code>_site/ (generated)</code> and <code>bundles/README.md</code> alongside what round-0001.md uses as bundle-relative concept paths. Section 3.4 shows <code>fc-touches</code> as a list of bundle concept-file paths ("concepts updated in consequence") but doesn't define behavior for touches outside the bundle or to non-concept generated output. I did not edit <code>round-0002.md</code> — round files are append-only history, not concept files subject to supersession, and rewriting one after the fact would itself violate the ledger-discipline this validation is checking for. Proposed convention: <code>fc-touches</code> values must be bundle-relative paths to existing concept files only; touches to files outside the bundle or to generated/derived output belong in prose under "Effect on state," not in <code>fc-touches</code>.</li>
+<li><strong><code>fc-irreducibility</code> mandate scope.</strong> Section 3.3's worked example lists <code>fc-irreducibility</code> on every PF/S/R/REPRO concept file, but the task's restated Phase-1 checklist for this validation only mandates <code>fc-level</code>, <code>fc-axis</code>, <code>fc-status</code>, <code>fc-round</code> "where the spec mandates them" — and <code>fc-status</code> itself is a round-file/inquiry-level field per 3.4, not a concept-file field per 3.3's own template. In this bundle only <code>s/specification.md</code> sets <code>fc-irreducibility</code> (to <code>none</code>); the other ~24 concept files omit it. I did not add values to the other files: most of this bundle's claims are explicitly "not yet proven" (see <code>r/results.md</code>), so there is no established result yet to classify as computationally vs. factually irreducible, and inventing a classification would risk exactly the kind of unfounded content addition the SPEC-CONTENT class exists to catch. Proposed convention: <code>fc-irreducibility</code> is mandatory only once a concept file states a result or claim that could plausibly be re-derived (i.e., is a candidate for the P4/P5 machinery), not on every concept file unconditionally.</li>
+</ol>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0003.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

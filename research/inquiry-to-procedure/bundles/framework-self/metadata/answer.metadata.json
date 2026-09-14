@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "R",
+    "description": "A short explanation of the observer-disagreement-framework project.",
+    "level": 0,
+    "path": "answer.md",
+    "round": 4,
+    "supersedes": "answer.md@r1",
+    "title": "The project in plain language",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "A short explanation of the observer-disagreement-framework project.",
+    "fc-axis": "R",
+    "fc-level": 0,
+    "fc-round": 20,
+    "fc-status": "open",
+    "fc-supersedes": "answer.md@r4",
+    "timestamp": "2026-08-16",
+    "title": "The project in plain language",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: The project in plain language\ndescription: A short explanation of the observer-disagreement-framework project.\nfc-level: 0\nfc-axis: R\nfc-status: open\nfc-round: 20\nfc-supersedes: answer.md@r4\ntimestamp: 2026-08-16",
+  "inquiry": {
+    "bundle_round_for_page": 20,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-08-16"
+  },
+  "progressive_disclosure": {
+    "axis": "R",
+    "level": 0
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "7f3315601b719f9f60470a48a5ba428378dd979063fd122b34cda3f40083bc2a",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "bfc5cf0dae4ed0855c3d5ca4e842eabb7982eb92db0c9d37cd6292ca70acaa72",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "d5c0eb1e6451f03c9ce7db17bb59d48a8c670eba7de412094679952d9b5d7ba3"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "A short explanation of the observer-disagreement-framework project.",
+    "html_path": "answer.html",
+    "metadata_path": "metadata/answer.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "artifact",
+    "source_path": "answer.md",
+    "title": "The project in plain language"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "answer.md@r4"
+  }
+}

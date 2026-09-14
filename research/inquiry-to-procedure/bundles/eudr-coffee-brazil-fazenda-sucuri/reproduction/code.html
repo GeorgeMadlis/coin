@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Counterpart code - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>reproduction/code.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="../inquiry/index.html">inquiry/index.md</a><a href="../inquiry/round-0001.html">inquiry/round-0001.md</a><a href="../inquiry/round-0002.html">inquiry/round-0002.md</a><a href="../inquiry/round-0003.html">inquiry/round-0003.md</a><a href="../inquiry/round-0004.html">inquiry/round-0004.md</a><a href="../inquiry/round-0005.html">inquiry/round-0005.md</a><a href="../inquiry/round-0006.html">inquiry/round-0006.md</a><a href="../inquiry/round-0007.html">inquiry/round-0007.md</a><a href="../inquiry/round-0008.html">inquiry/round-0008.md</a><a href="../inquiry/round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a class="active" href="code.html">reproduction/code.md</a><a href="data.html">reproduction/data.md</a><a href="environment.html">reproduction/environment.md</a><a href="gee-auth.html">reproduction/gee-auth.md</a><a href="index.html">reproduction/index.md</a><a href="lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>Runbook</dd><dt>title</dt><dd>Counterpart code</dd><dt>fc-axis</dt><dd>REPRO</dd><dt>fc-round</dt><dd>8</dd><dt>fc-supersedes</dt><dd>reproduction/code.md@round-0007</dd><dt>gsp-counterpart</dt><dd>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</dd></dl></details>
+<h1>GS-Tools counterpart</h1>
+<p>Counterpart: <code>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</code>.</p>
+<p>The authoritative run command is recorded in <code>source-evidence.json:generation_command</code>. It generated the report, commodity differencing, Sentinel diagnostics, evidence PNGs, HTML, PDF, manifest, and AOI config hash in one combined canonical CLI run. Round 5 records the literal <code>--enable-hansen-post-2020-loss</code> flag in that command.</p>
+<p>Round 2 additionally commits <code>tmp/acquire_fazenda_sucuri_inputs.py</code> changes that prevent a least-cloudy single-scene Sentinel-2 image with partial spatial coverage from being frozen as visual context.</p>
+<p>Round 4 regenerated the evidence after committing the AOI admin label and report HTML/PDF rendering changes in the counterpart repository. The refreshed handoff records <code>counterpart_dirty: false</code>.</p>
+<p>Round 5 first committed the focused counterpart regression-test repair <code>80192bcdbde9329f1a64a60901a52a11d5fcfca8</code>, then regenerated the Fazenda Sucuri handoff from that clean tree. Focused counterpart regression tests passed: <code>.venv/bin/python -m pytest tests/test_generate_okf_gsp_handoff.py tests/test_brazil_coffee_report_pdf_structure.py</code> reported 24 passed.</p>
+<p>Round 6 regenerated from <code>GeorgeMadlis/eudr-dmi-gil@e46d9a4c833c22805dc17e50315fd814e25043a0</code>, which includes the coffee temporal-mask correction. The same focused counterpart regression suite reported 24 passed before the evidence refresh.</p>
+<p>Round 7 committed <code>GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47</code>, which adds an offline regional-overview fallback in <code>report_model.py</code>, marks <code>regional_overview_png</code> required in the handoff writer, and adds a focused regression test. Focused counterpart tests passed: <code>.venv/bin/python -m pytest tests/test_canonical_report_model.py::test_regional_overview_falls_back_to_local_recent_raster tests/test_generate_okf_gsp_handoff.py</code> reported 4 passed.</p>
+<p>Round 8 uses the handoff generated from <code>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</code>. That counterpart commit adds the Fazenda Sucuri FDP/JRC morphology and threshold sensitivity diagnostic artifacts. The handoff generation command is:</p>
+<p><code>python -m eudr_dmi_gil.reports.cli --aoi-id fazenda_sucuri_screening_aoi --commodity-config out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json --analysis-target-crs EPSG:6933 --analysis-target-resolution-m 10</code></p>
+<p>The repository verifier (<code>tools.okf_gsp.verify_evidence_handoff</code>) passed against the handoff: counterpart dirty flag false, root manifest hash matched, all 117 manifest artifacts hashed, and <code>report.pdf</code> page count was 12.</p>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/reproduction/code.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

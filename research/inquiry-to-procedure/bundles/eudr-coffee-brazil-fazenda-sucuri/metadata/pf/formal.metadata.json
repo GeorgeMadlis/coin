@@ -1,0 +1,61 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "PF",
+    "fc-level": 2,
+    "fc-round": 8,
+    "fc-supersedes": "pf/formal.md@round-0006",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "title": "Formal claim",
+    "type": "Claim"
+  },
+  "frontmatter_raw": "type: Claim\ntitle: \"Formal claim\"\nfc-level: 2\nfc-axis: PF\nfc-round: 8\nfc-supersedes: \"pf/formal.md@round-0006\"\ngsp-aoi: fazenda_sucuri_screening_aoi",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "PF",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "61db6c030ff4652379c92d3c4c9ae1e31eeecad0856d48ae978f9ef239cdf01d",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "8f51a62518addb2f233f5a44e7ef30f8db51580402035e59bb4a43d5458ed086"
+  },
+  "represented_artifact": {
+    "artifact_type": "Claim",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "pf/formal.html",
+    "metadata_path": "metadata/pf/formal.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "problem-framing",
+    "source_path": "pf/formal.md",
+    "title": "Formal claim"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "pf/formal.html"
+  },
+  "supersession": {
+    "supersedes": "pf/formal.md@round-0006"
+  }
+}

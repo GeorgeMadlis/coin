@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OKF fact-checking and statement-evolution bundle specification</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / spec / SPEC</nav>
+<h1>OKF fact-checking and statement-evolution bundle specification</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Normative profile for repository OKF fact-checking bundles and statement trajectories.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>OKF fact-checking and statement-evolution bundle specification</dd><dt>type</dt><dd>Specification</dd></dl></section>
+<article class="content"><h1 id="okf-fact-checking-bundle-specification">OKF Fact-Checking Bundle Specification</h1>
+<p>Version: <code>observer-disagreement-framework OKF-FC profile 0.1.1</code>.</p>
+<p>Upstream target: Open Knowledge Format (OKF) <code>Version 0.1 - Draft</code>, checked
+against <code>GoogleCloudPlatform/knowledge-catalog/okf/SPEC.md</code> at upstream commit
+<code>d44368c15e38e7c92481c5992e4f9b5b421a801d</code> on 2026-07-21. Version 0.1.1 adds
+the mandatory Wolfram observer-theory foundation disclosure for all future
+bundles. This profile is a stricter, project-specific OKF v0.1 profile. OKF
+permits producer-defined frontmatter keys and requires consumers to tolerate
+unknown keys and broken cross-links; every project-specific key defined here is
+namespaced with <code>fc-</code> to avoid future upstream-key collisions.</p>
+<p>This document is normative for fact-checking and statement-evolution bundles in
+this repository. It is implementable without reading the design discussion in
+<code>docs/framework_v3.md</code>, though that document remains the theoretical rationale.</p>
+<h2 id="1-normative-language">1. Normative Language</h2>
+<p>The words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT,
+RECOMMENDED, MAY, and OPTIONAL are normative and have their ordinary
+specification meanings:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MUST / REQUIRED / SHALL</td>
+<td>A conforming full-profile or lightweight-profile bundle is invalid if it violates the rule.</td>
+</tr>
+<tr>
+<td>MUST NOT / SHALL NOT</td>
+<td>A conforming bundle is invalid if it performs the forbidden action.</td>
+</tr>
+<tr>
+<td>SHOULD / RECOMMENDED</td>
+<td>A conforming bundle may violate the rule only with an explicit reason recorded in the relevant concept or round. Validators report violations as warnings.</td>
+</tr>
+<tr>
+<td>SHOULD NOT / NOT RECOMMENDED</td>
+<td>A bundle may do this only with recorded rationale. Validators report occurrences as warnings.</td>
+</tr>
+<tr>
+<td>MAY / OPTIONAL</td>
+<td>The behavior is permitted and may be absent without validation impact unless another rule makes it applicable.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-bundle-identity-and-profiles">2. Bundle Identity and Profiles</h2>
+<p>An OKF-FC bundle is a directory describing one fact-checking, reproduction, or
+statement-evolution problem. Its concept identity is the path of each Markdown
+file relative to the bundle root, without the <code>.md</code> suffix, following OKF v0.1.</p>
+<p>Two profiles are defined.</p>
+<h3 id="21-full-profile">2.1 Full Profile</h3>
+<p>The full profile is REQUIRED for contested, high-stakes, long-running, or
+research-relevant trajectories. It MUST include:</p>
+<ul>
+<li>the PF, S, R, REPRO, and INQUIRY axes;</li>
+<li><code>log.md</code>;</li>
+<li><code>inquiry/index.md</code>;</li>
+<li>one <code>inquiry/round-NNNN.md</code> file for every bundle round;</li>
+<li>append-only supersession metadata on every revised current concept;</li>
+<li>enough pinned reproduction metadata to re-derive or explicitly mark the
+  result as unreproducible.</li>
+</ul>
+<h3 id="22-lightweight-ledger-only-profile">2.2 Lightweight Ledger-Only Profile</h3>
+<p>The lightweight profile MAY be used for low-stakes trajectories where
+per-round files would add cost disproportionate to risk. It MUST include:</p>
+<ul>
+<li><code>index.md</code>, <code>answer.md</code>, <code>log.md</code>, and at least one PF, S, R, or REPRO
+  concept file needed to understand the current state;</li>
+<li>a <code>log.md</code> ledger row for every bundle round;</li>
+<li>all concept frontmatter fields required by this specification;</li>
+<li><code>fc-stage</code> in each ledger row or ledger row prose for every v3-or-later
+  round;</li>
+<li><code>fc-type-at-round</code> only for ledger rows whose stage is contestation.</li>
+</ul>
+<p>The lightweight profile MUST NOT use <code>fc-type-at-round</code> for non-contestation
+rounds. It MAY omit <code>inquiry/round-NNNN.md</code> files and <code>inquiry/index.md</code>.</p>
+<h3 id="23-upgrade-path">2.3 Upgrade Path</h3>
+<p>A lightweight bundle may be upgraded to the full profile by a new recorded
+bundle round. The upgrading round MUST:</p>
+<ol>
+<li>create <code>inquiry/index.md</code>;</li>
+<li>create one <code>inquiry/round-NNNN.md</code> file for the upgrading round;</li>
+<li>either backfill earlier per-round files from the ledger or explicitly mark
+   earlier files <code>NOT AVAILABLE</code>;</li>
+<li>preserve all original ledger rows and round numbers;</li>
+<li>mark any inferred backfilled field <code>UNVERIFIED</code>;</li>
+<li>update current concepts with <code>fc-round</code> equal to the upgrade round only when
+   their content or metadata materially changes.</li>
+</ol>
+<p>Backfilling MUST NOT invent evidence, checksums, parties, classifications, or
+commit pins. A validator treats missing historical full-profile round files as
+warnings after an upgrade if the upgrading round documents why they are not
+available.</p>
+<h2 id="3-directory-layout">3. Directory Layout</h2>
+<p>The full-profile layout is:</p>
+<pre><code class="language-text">&lt;bundle-id&gt;/
+|-- index.md
+|-- answer.md
+|-- agent-contract.md
+|-- log.md
+|-- pf/
+|   |-- index.md
+|   |-- overview.md
+|   |-- formal.md
+|   `-- full-context.md
+|-- s/
+|   |-- index.md
+|   |-- overview.md
+|   |-- method.md
+|   `-- specification.md
+|-- r/
+|   |-- index.md
+|   |-- overview.md
+|   |-- results.md
+|   `-- full-results.md
+|-- reproduction/
+|   |-- index.md
+|   |-- code.md
+|   |-- data.md
+|   `-- environment.md
+`-- inquiry/
+    |-- index.md
+    |-- round-0001.md
+    |-- round-0002.md
+    `-- ...
+</code></pre>
+<p>Required files for the full profile: <code>index.md</code>, <code>answer.md</code>,
+<code>agent-contract.md</code>, <code>log.md</code>, every axis <code>index.md</code>, at least one non-index
+concept in each PF/S/R/REPRO axis, <code>inquiry/index.md</code>, and all contiguous
+round files from <code>round-0001.md</code> through the current bundle round.</p>
+<p>Optional files: additional concept files under any axis, deeper subdirectories,
+<code>r/full-results.md</code> and <code>reproduction/environment.md</code> when there are no full
+results or runnable environment facts yet, and derived artifact directories
+such as <code>_site/</code>. Optional omissions MUST be visible in the relevant axis index
+or current status when they affect interpretation.</p>
+<p>Reserved OKF filenames: <code>index.md</code> and <code>log.md</code> have no frontmatter. All other
+<code>.md</code> files are concept documents and MUST have parseable YAML frontmatter with
+a non-empty <code>type</code>.</p>
+<h2 id="4-axes-and-disclosure-levels">4. Axes and Disclosure Levels</h2>
+<h3 id="41-axes">4.1 Axes</h3>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Path</th>
+<th>Purpose</th>
+<th>Required in full profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PF</td>
+<td><code>pf/</code></td>
+<td>Problem formulation: claim, scope, definitions, and question boundaries.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>S</td>
+<td><code>s/</code></td>
+<td>Solution/method: algorithm, frame, assumptions, specification, and conventions.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>R</td>
+<td><code>r/</code> and <code>answer.md</code></td>
+<td>Results: current answer, verdict, uncertainty, and status.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>REPRO</td>
+<td><code>reproduction/</code></td>
+<td>Reproduction: code, data, environment, commands, provenance, source commits, checksums.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>INQUIRY</td>
+<td><code>inquiry/</code>, <code>log.md</code>, <code>agent-contract.md</code></td>
+<td>Statement trajectory: rounds, moves, stages, parties, supersession, ledger.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-levels-l0-l3">4.2 Levels L0-L3</h3>
+<p><code>fc-level</code> uses integers, not strings:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Level</th>
+<th>Meaning</th>
+<th>Typical location</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td>L0: complete compressed answer for a lay reader.</td>
+<td><code>answer.md</code></td>
+<td>Required for root answer.</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>L1: plain overview.</td>
+<td><code>*/overview.md</code></td>
+<td>Recommended for PF/S/R.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>L2: method, formal, result, or reproduction detail.</td>
+<td><code>pf/formal.md</code>, <code>s/method.md</code>, <code>r/results.md</code>, <code>reproduction/*.md</code></td>
+<td>Recommended.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>L3: full context, exact specification, per-item detail, edge cases.</td>
+<td><code>*/full-*.md</code>, <code>s/specification.md</code></td>
+<td>Optional unless required by the bundle problem.</td>
+</tr>
+</tbody>
+</table>
+<p>Each current deeper level MUST refine rather than contradict the current
+shallower level. If deeper work finds a contradiction, the fix is a new round
+and supersession, never a silent edit.</p>
+<h2 id="5-required-frontmatter-fields">5. Required Frontmatter Fields</h2>
+<p>All non-reserved <code>.md</code> files MUST contain parseable YAML frontmatter. Unknown
+frontmatter keys are allowed by OKF, but project keys MUST use the <code>fc-</code>
+namespace unless they are upstream OKF keys (<code>type</code>, <code>title</code>, <code>description</code>,
+<code>resource</code>, <code>tags</code>, <code>timestamp</code>).</p>
+<h3 id="51-shared-fields">5.1 Shared Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Allowed values</th>
+<th>Applicability</th>
+<th>Validation behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>non-empty string</td>
+<td>Descriptive OKF type, e.g. <code>Finding</code>, <code>Runbook</code>, <code>Event</code>, <code>Policy</code>, <code>Specification</code></td>
+<td>Required on every concept file</td>
+<td>Fatal if absent, empty, or frontmatter malformed</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>string</td>
+<td>Any concise display title</td>
+<td>Recommended on every concept</td>
+<td>Warning if absent</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>One-sentence summary</td>
+<td>Recommended on every concept</td>
+<td>Warning if absent</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>ISO 8601 date or datetime string</td>
+<td>e.g. <code>2026-07-21</code></td>
+<td>Recommended on current concepts and required on round files</td>
+<td>Warning on concepts if absent; fatal on v3-or-later round files</td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td>URI or path string</td>
+<td>Pinned URI, bundle-relative path, or repository-relative path</td>
+<td>Optional; required when the concept describes an external asset</td>
+<td>Warning if unpinned when external evidence is cited</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>YAML list of strings</td>
+<td>Producer-defined</td>
+<td>Optional</td>
+<td>Advisory if malformed but parseable YAML may already fail earlier</td>
+</tr>
+<tr>
+<td><code>fc-axis</code></td>
+<td>string</td>
+<td><code>PF</code>, <code>S</code>, <code>R</code>, <code>REPRO</code>, <code>INQUIRY</code></td>
+<td>Required on every concept except reserved <code>index.md</code> and <code>log.md</code></td>
+<td>Fatal if absent or not one of the allowed values</td>
+</tr>
+<tr>
+<td><code>fc-level</code></td>
+<td>integer</td>
+<td><code>0</code>, <code>1</code>, <code>2</code>, <code>3</code></td>
+<td>Required on PF/S/R/REPRO concepts and <code>answer.md</code>; forbidden on round files unless a bundle documents a special view</td>
+<td>Fatal if absent where required or outside range; warning if present on a round file</td>
+</tr>
+<tr>
+<td><code>fc-status</code></td>
+<td>string</td>
+<td><code>open</code>, <code>resolved</code>, <code>underdetermined</code>, <code>superseded</code></td>
+<td>Required on current concepts and round files</td>
+<td>Fatal if absent or outside set; advisory if a current index says a different status</td>
+</tr>
+<tr>
+<td><code>fc-round</code></td>
+<td>integer</td>
+<td>positive bundle-local integer</td>
+<td>Required on all current concepts and round files</td>
+<td>Fatal if absent, non-integer, less than 1, or confused with a repository round</td>
+</tr>
+<tr>
+<td><code>fc-irreducibility</code></td>
+<td>string</td>
+<td><code>none</code>, <code>computational</code>, <code>factual</code>, <code>mixed</code>, <code>unknown</code></td>
+<td>Required when a concept asserts a reproduction obstacle, underdetermined closure, or irreducibility classification; recommended on REPRO concepts; optional elsewhere</td>
+<td>Fatal if malformed or absent where an irreducibility claim is made; warning if a REPRO concept omits it; warning if <code>unknown</code> lacks rationale</td>
+</tr>
+<tr>
+<td><code>fc-supersedes</code></td>
+<td>string or YAML list of strings</td>
+<td><code>&lt;concept-path&gt;.md@r&lt;bundle_round&gt;</code></td>
+<td>Required when a concept materially revises a prior current version; absent otherwise</td>
+<td>Fatal if malformed; fatal for duplicate supersession of the same prior concept in current state; warning if referenced prior version cannot be found in git history</td>
+</tr>
+<tr>
+<td><code>fc-touches</code></td>
+<td>YAML list of paths</td>
+<td>Bundle-relative concept paths</td>
+<td>Required on round files; optional elsewhere</td>
+<td>Fatal if absent on v3-or-later round files; warning for unresolved paths</td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-status: superseded</code> MAY be used in archived explicit files if a bundle keeps
+old versions in the tree. The normal repository practice is to preserve old
+versions in Git history and keep only the current concept file at the path.</p>
+<h3 id="52-round-fields">5.2 Round Fields</h3>
+<p>Round files are <code>inquiry/round-NNNN.md</code> in the full profile. Lightweight
+profile ledger rows MUST carry equivalent data in table columns or prose.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Allowed values</th>
+<th>Applicability</th>
+<th>Validation behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fc-move</code></td>
+<td>string</td>
+<td><code>question</code>, <code>objection</code>, <code>evidence</code>, <code>frame-change</code>, <code>convention</code>, <code>verdict-revision</code></td>
+<td>Required on every v3-or-later round</td>
+<td>Fatal if absent or malformed</td>
+</tr>
+<tr>
+<td><code>fc-stage</code></td>
+<td>string</td>
+<td><code>formation</code>, <code>enrichment</code>, <code>critique</code>, <code>contestation</code>, <code>consolidation</code></td>
+<td>Required on every round opened under v3 or later; optional-tolerated on pre-v3 round files</td>
+<td>Fatal if absent on v3-or-later round; warning if absent on pre-v3 round</td>
+</tr>
+<tr>
+<td><code>fc-party</code></td>
+<td>string</td>
+<td>Stable party id; see party identity</td>
+<td>Required on every round</td>
+<td>Fatal if absent or empty</td>
+</tr>
+<tr>
+<td><code>fc-type-at-round</code></td>
+<td>string</td>
+<td><code>I</code>, <code>II</code>, <code>III</code>, <code>resolved</code></td>
+<td>Required only when <code>fc-stage: contestation</code>; forbidden otherwise</td>
+<td>Fatal if absent on contestation; fatal if present on non-contestation</td>
+</tr>
+<tr>
+<td><code>fc-touches</code></td>
+<td>YAML list of paths</td>
+<td>Paths touched by the round, or <code>[]</code></td>
+<td>Required on every round</td>
+<td>Fatal if absent; warning for unresolved paths</td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-type-at-round</code> is forbidden when <code>fc-stage</code> is <code>formation</code>,
+<code>enrichment</code>, <code>critique</code>, or <code>consolidation</code> because there is no live
+counter-position to classify. This is a fatal validation error, not a style
+warning.</p>
+<h2 id="6-stages-moves-and-types">6. Stages, Moves, and Types</h2>
+<p><code>fc-stage</code> classifies the lifecycle role of the round. <code>fc-move</code> records the
+operational action. The same move can realize different stages.</p>
+<table>
+<thead>
+<tr>
+<th><code>fc-move</code></th>
+<th>Permitted <code>fc-stage</code> values</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>evidence</code></td>
+<td><code>formation</code>, <code>enrichment</code>, <code>contestation</code></td>
+<td>Formation only for first emission; enrichment when adding support/context without rival position; contestation when evidence is offered against a standing rival position.</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td><code>enrichment</code>, <code>critique</code></td>
+<td>Enrichment when filling missing context; critique when probing the frame or assumptions without maintaining a rival claim.</td>
+</tr>
+<tr>
+<td><code>objection</code></td>
+<td><code>critique</code>, <code>contestation</code></td>
+<td>Critique when no rival position remains standing; contestation when a counter-position is maintained.</td>
+</tr>
+<tr>
+<td><code>frame-change</code></td>
+<td><code>contestation</code>, <code>consolidation</code></td>
+<td>Contestation when a divergent frame is asserted; consolidation when a frame is adopted as settlement.</td>
+</tr>
+<tr>
+<td><code>convention</code></td>
+<td><code>consolidation</code></td>
+<td>Convention adoption is consolidation.</td>
+</tr>
+<tr>
+<td><code>verdict-revision</code></td>
+<td><code>consolidation</code></td>
+<td>Verdict revision is consolidation.</td>
+</tr>
+</tbody>
+</table>
+<p>Validators MUST reject unlisted move/stage pairs as fatal errors unless the
+round explicitly marks the pairing <code>UNVERIFIED</code> and predates this specification;
+that grandfathering is a warning, not a license for new rounds.</p>
+<p>Contestation types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+<th>Closure behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>I</code></td>
+<td>Context-window divergence over accessible records.</td>
+<td>Data sharing may resolve it.</td>
+</tr>
+<tr>
+<td><code>II</code></td>
+<td>Frame or compression-function divergence over shared records.</td>
+<td>Translation or adopted convention may resolve it.</td>
+</tr>
+<tr>
+<td><code>III</code></td>
+<td>Needed content is absent from the surviving record.</td>
+<td>Must be marked underdetermined or convention-resolved; more data or frames cannot restore absent facts.</td>
+</tr>
+<tr>
+<td><code>resolved</code></td>
+<td>A formerly live contestation has been resolved in this contestation round.</td>
+<td>The round must state what resolved and what, if anything, remains open.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-party-identity">7. Party Identity</h2>
+<p>A party is the observer or agent responsible for a round. <code>fc-party</code> MUST be a
+stable, lower-case identifier such as <code>codex</code>, <code>claude</code>, <code>human</code>, <code>reviewer-a</code>,
+or an organization id. It MUST NOT encode transient branch names, chat ids, or
+private memory. If a human acts through an agent, the recorded party SHOULD
+distinguish the actor when material, for example <code>human</code> for explicit human
+content and <code>codex</code> for agent-authored implementation or classification.</p>
+<p>Proxy observers that only consume the bundle do not become parties. A
+participating observer becomes a party when it adds evidence, asks an inquiry
+extending question, raises an objection, changes a frame, adopts a convention,
+revises a verdict, or edits concepts as part of a recorded move.</p>
+<h2 id="8-repository-rounds-and-bundle-rounds">8. Repository Rounds and Bundle Rounds</h2>
+<p>Repository rounds and bundle rounds are separate counters.</p>
+<table>
+<thead>
+<tr>
+<th>Counter</th>
+<th>Location</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo_round</code></td>
+<td>root <code>log.md</code></td>
+<td>Every merged repository change.</td>
+</tr>
+<tr>
+<td><code>bundle_round</code></td>
+<td><code>bundles/&lt;id&gt;/log.md</code> and <code>bundles/&lt;id&gt;/inquiry/round-NNNN.md</code></td>
+<td>Moves in one bundle's statement trajectory.</td>
+</tr>
+</tbody>
+</table>
+<p><code>fc-round</code> in a bundle concept or round file is always the bundle round, never
+the repository round. Root <code>log.md</code> rows use the repository round in their
+<code>round</code> column. Snapshot names use the bundle round. Snapshot manifests and
+catalog rows MUST record the source repository round separately when available.</p>
+<p>The next round number MUST be computed from HEAD of <code>main</code> at the time the work
+starts. Agents MUST NOT hard-code numbers from prompts, digests, exported
+HTML, or prior conversations.</p>
+<h2 id="9-current-version-resolution">9. Current-Version Resolution</h2>
+<p>The current version of a concept is the file at its path in the committed HEAD
+of <code>main</code>, interpreted with its frontmatter and any <code>fc-supersedes</code> pointer.
+Git history preserves prior text unless a bundle explicitly stores old versions
+as separate archived concepts.</p>
+<p>If multiple files claim to be the current version of the same concept, a
+validator MUST report a fatal inconsistent-current-concepts error unless one is
+clearly marked <code>fc-status: superseded</code> and excluded from the current index.</p>
+<p>Current bundle status is resolved from:</p>
+<ol>
+<li><code>answer.md</code> for the compressed current answer;</li>
+<li>axis concepts for current PF/S/R/REPRO state;</li>
+<li><code>inquiry/index.md</code> and bundle <code>log.md</code> for trajectory history;</li>
+<li>Git history only for recovering superseded prior versions.</li>
+</ol>
+<h2 id="10-append-only-round-rules">10. Append-Only Round Rules</h2>
+<p>Full-profile round files MUST be contiguous: <code>round-0001.md</code>,
+<code>round-0002.md</code>, and so on, with no gaps through the current bundle round.
+They MUST NOT be renumbered, deleted, or rewritten after merge except by an
+explicit later repository change that records the repair as a new round and
+explains the reason.</p>
+<p>Every material change to a bundle's self-description or claim state MUST append
+the next bundle round, update bundle <code>log.md</code>, and update <code>inquiry/index.md</code>.
+Infrastructure-only changes that do not materially change a bundle MAY skip a
+bundle round, but they still receive a repository round when merged.</p>
+<p>Lightweight-profile ledgers MUST preserve the same append-only numbering even
+without per-round files.</p>
+<h2 id="11-supersession-rules">11. Supersession Rules</h2>
+<p>Supersession is append-only revision of current concepts.</p>
+<ul>
+<li>A concept that materially revises an earlier current concept MUST set
+  <code>fc-round</code> to the current bundle round and <code>fc-supersedes</code> to the replaced
+  concept and round, e.g. <code>s/specification.md@r8</code>.</li>
+<li>A round that causes supersession MUST list the touched concepts in
+  <code>fc-touches</code> and describe the revision under <code># Resulting revisions</code>.</li>
+<li>A prior concept SHOULD be superseded by exactly one successor in the current
+  line of descent. Duplicate supersession of the same prior version is fatal
+  unless the round states that one successor was itself superseded and no
+  longer current.</li>
+<li>Consolidation is not terminal. A consolidated concept MAY be superseded by a
+  later critique, contestation, enrichment, or consolidation round.</li>
+<li>Silent edits to current concepts are forbidden when the edit changes meaning,
+  status, evidence, method, verdict, or classification.</li>
+</ul>
+<h2 id="12-underdetermined-closure-and-evidence-notation">12. Underdetermined Closure and Evidence Notation</h2>
+<p>A contestation bottoms out when the residual disagreement is invariant under
+available evidence moves and frame moves because the needed content is absent
+from the surviving record. A bundle MUST mark this state explicitly:</p>
+<ul>
+<li>use <code>fc-status: underdetermined</code> on the relevant current concept or round;</li>
+<li>use <code>fc-irreducibility: factual</code> or <code>mixed</code>;</li>
+<li>state what is absent from the surviving record;</li>
+<li>avoid language implying empirical proof beyond the surviving record.</li>
+</ul>
+<p>Notation requirements:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PROVISIONAL</code></td>
+<td>A claim is proposed but may be sharpened by later rounds.</td>
+<td>Advisory if overused on current verdicts.</td>
+</tr>
+<tr>
+<td><code>UNVERIFIED</code></td>
+<td>The bundle has not checked the claim or source.</td>
+<td>Warning when used for required reproduction pins.</td>
+</tr>
+<tr>
+<td><code>NOT MEASURABLE</code></td>
+<td>The desired measurement cannot be computed from available data or method.</td>
+<td>Must include reason.</td>
+</tr>
+<tr>
+<td><code>NOT AVAILABLE</code></td>
+<td>The information, artifact, checksum, or commit is unavailable to the bundle.</td>
+<td>Must include reason and irreducibility classification.</td>
+</tr>
+</tbody>
+</table>
+<p>Bundles MUST NOT invent references, empirical results, checksums,
+classifications, measurements, or source commits. Missing evidence is recorded
+as missing evidence, not filled by plausible prose.</p>
+<h2 id="13-canonical-state-and-derived-artifacts">13. Canonical State and Derived Artifacts</h2>
+<p>The committed HEAD of <code>main</code> is the canonical current state. A branch, working
+tree, rendered <code>_site/</code>, exported zip, catalog, visualization, or published
+snapshot is not canonical unless it records the exact source commit and that
+commit is the relevant HEAD under inspection.</p>
+<p>Derived artifacts MUST:</p>
+<ul>
+<li>record <code>source_commit</code> as a full Git commit hash;</li>
+<li>record <code>source_repo_round</code> when published or cataloged after merge;</li>
+<li>record <code>bundle_round</code> from the bundle ledger;</li>
+<li>record checksums for packaged files or provide a manifest whose own checksum
+  is recorded by the publishing process;</li>
+<li>be considered stale when source HEAD changes past <code>source_commit</code>;</li>
+<li>be regenerated by documented commands rather than manually edited.</li>
+</ul>
+<p>During an unmerged PR, a new source-commit pin for artifacts generated from the
+future merge commit is <code>NOT AVAILABLE</code>. Do not fabricate it. A renderer may
+still update local inspection HTML from the working tree, but that HTML is
+working-tree derived until a committed/published artifact pins a source commit.</p>
+<h2 id="14-source-commits-checksums-and-external-evidence">14. Source Commits, Checksums, and External Evidence</h2>
+<p>REPRO concepts MUST pin:</p>
+<ul>
+<li>repository URLs and exact commits for code;</li>
+<li>dataset versions, access dates, and checksums for data when checksums are
+  available;</li>
+<li>commands, environments, lockfiles, or explicit <code>NOT AVAILABLE</code> labels for
+  reproduction conditions;</li>
+<li>source document checksums when source documents are treated as inputs.</li>
+</ul>
+<p>An external citation that supports a material result SHOULD be a stable primary
+source or original scholarly work. If an external source is unpinned, the
+bundle MUST mark the evidence <code>UNVERIFIED</code> or explain why pinning is not
+available. Unpinned external evidence is a validation warning; unpinned
+REPRO evidence for a current result is fatal unless explicitly marked
+<code>NOT AVAILABLE</code> with factual or computational irreducibility rationale.</p>
+<h2 id="15-wolfram-observer-theory-foundation">15. Wolfram Observer-Theory Foundation</h2>
+<p>Every bundle generated under the full observer-disagreement and
+statement-evolution framework MUST contain a Wolfram observer-theory foundation
+concept at exactly:</p>
+<pre><code class="language-text">s/foundations/wolfram-observer-theory.md
+</code></pre>
+<p>This page is mandatory for both full-profile and lightweight-profile bundles.
+No bundle may omit it by pointing only to an external Wolfram source, to a
+repository-level document, or to another foundation page. In particular,
+<code>s/foundations/ait-compression.md</code>,
+<code>s/foundations/coarse-graining-statmech.md</code>, and
+<code>s/foundations/second-order-cybernetics.md</code> MUST NOT be treated as substitutes
+for <code>s/foundations/wolfram-observer-theory.md</code>.</p>
+<p>The required claim is narrow: the framework uses identified Wolfram
+computational concepts as a formal analogy for bounded observers,
+coarse-graining, irreducibility, and computational possibility. A conforming
+bundle MUST NOT imply that Wolfram's fundamental-physics program is empirically
+established, or that the social, institutional, scientific, or historical
+subject matter of the bundle literally instantiates Wolfram-model physics.</p>
+<h3 id="151-required-foundation-frontmatter">15.1 Required Foundation Frontmatter</h3>
+<p>The Wolfram foundation page MUST include at least this frontmatter:</p>
+<pre><code class="language-yaml">---
+type: Concept
+title: Wolfram observer theory
+description: Cross-cutting observer-theory foundation used as a formal analogy.
+fc-level: 2
+fc-axis: S
+fc-foundation: wolfram-observer-theory
+fc-foundation-role: formal-analogy
+fc-foundation-template-version: &quot;1.0.0&quot;
+fc-foundation-template-modified: false
+fc-foundation-bundle-additions: []
+fc-foundation-source-registry-version: none
+fc-status: open
+fc-round: 1
+timestamp: 2026-07-23
+---
+</code></pre>
+<p>All project-specific metadata on this page MUST use the <code>fc-</code> namespace.
+<code>fc-foundation-template-version</code> records the canonical template version used by
+generator tooling. <code>fc-foundation-template-modified</code> records whether the
+generic foundation text was changed. <code>fc-foundation-bundle-additions</code> records
+bundle-specific additions, either as a YAML list or a concise scalar summary.
+<code>fc-foundation-source-registry-version</code> records the source-registry version
+when a registry exists; otherwise it MUST be <code>none</code> or <code>NOT ADOPTED</code>.</p>
+<h3 id="152-required-sections">15.2 Required Sections</h3>
+<p>The page MUST contain these top-level sections in this order:</p>
+<pre><code class="language-text">## Role in this framework
+## Directly sourced Wolfram concepts
+## Formal translations made by this project
+## Project extensions not derived from Wolfram
+## Non-claims and limitations
+## Source map
+## Relevance to this bundle
+</code></pre>
+<p><code>Relevance to this bundle</code> MUST be bundle-specific. It MUST identify which
+observer concepts the bundle actually uses: for example context windows,
+compression/framing functions, observer trajectories, ruliad/rulial-space
+analogy, computational irreducibility, or provenance/recording-function
+extensions. Generic boilerplate alone is non-conformant.</p>
+<h3 id="153-attribution-classes">15.3 Attribution Classes</h3>
+<p>Every row in the <code>Source map</code> table MUST use exactly one of these attribution
+classes:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>direct Wolfram concept</code></td>
+<td>The source claim is made in an identified Wolfram primary source.</td>
+</tr>
+<tr>
+<td><code>project translation</code></td>
+<td>The project maps a direct or adjacent source concept into its own formal notation or bundle discipline.</td>
+</tr>
+<tr>
+<td><code>project extension</code></td>
+<td>The project introduces a claim, taxonomy, notation, or practice that is not derived from Wolfram.</td>
+</tr>
+<tr>
+<td><code>independent comparison</code></td>
+<td>A non-Wolfram source is used to compare, contextualize, criticize, or formalize related ideas.</td>
+</tr>
+<tr>
+<td><code>provisional inference</code></td>
+<td>The bundle makes a tentative inference from sources and marks the uncertainty explicitly.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="154-minimum-source-policy">15.4 Minimum Source Policy</h3>
+<p>The foundation page MUST follow this source policy:</p>
+<ul>
+<li>A YouTube transcript MAY be supplementary but MUST NOT be the sole source.</li>
+<li>Source attribution MUST include stable bibliographic identity: DOI, arXiv
+  identifier, ISBN plus chapter/section, or a dated canonical publication page.</li>
+<li>At least one source MUST support computational irreducibility.</li>
+<li>At least one source MUST support computational boundedness and observer
+  coarse-graining/equivalencing.</li>
+<li>At least one source MUST support ruliad or rulial-space terminology whenever
+  that terminology appears.</li>
+<li>Independent commentary MUST be distinguished from Wolfram primary sources.</li>
+<li>Direct quotation is OPTIONAL and SHOULD be avoided unless exact wording is
+  needed.</li>
+<li>Inaccessible or uncertain attribution MUST be marked <code>UNVERIFIED</code>, not
+  silently inferred.</li>
+</ul>
+<h3 id="155-analogy-guardrails">15.5 Analogy Guardrails</h3>
+<p>A conforming page MUST explicitly state all of the following:</p>
+<ul>
+<li>The framework does not identify human disagreement or statement evolution
+  literally with Wolfram-model physics.</li>
+<li>No measured rulial metric between human observers is asserted.</li>
+<li>The validity of the bundle does not depend on acceptance of Wolfram's
+  fundamental-physics program.</li>
+<li>Factual irreducibility, the recording function <code>r</code>, the surviving-record
+  model <code>R = r(E)</code>, the disagreement taxonomy, the stage taxonomy, and the OKF
+  round/supersession/provenance discipline are project extensions.</li>
+</ul>
+<h3 id="156-full-and-lightweight-profiles">15.6 Full and Lightweight Profiles</h3>
+<p>A full-profile bundle MUST use the complete canonical foundation template and
+then add bundle-specific relevance. A lightweight or ledger-only bundle MAY
+use shorter prose, but it MUST still include:</p>
+<ul>
+<li>the required frontmatter;</li>
+<li>the formal-analogy disclaimer and all analogy guardrails;</li>
+<li>the required attribution-class separation;</li>
+<li>a minimum source map satisfying section 15.4;</li>
+<li>a bundle-specific <code>Relevance to this bundle</code> section.</li>
+</ul>
+<p>There is no lightweight-profile exemption allowing omission of the foundation
+page.</p>
+<h3 id="157-canonical-template-and-drift-control">15.7 Canonical Template and Drift Control</h3>
+<p>Generator tooling MUST emit <code>s/foundations/wolfram-observer-theory.md</code> from a
+versioned canonical template. A generated or migrated page MUST record:</p>
+<ul>
+<li><code>fc-foundation-template-version</code>;</li>
+<li>whether generic foundation text was modified via
+  <code>fc-foundation-template-modified</code>;</li>
+<li>bundle-specific additions via <code>fc-foundation-bundle-additions</code>;</li>
+<li>source registry version via <code>fc-foundation-source-registry-version</code>, if a
+  source registry is adopted.</li>
+</ul>
+<p>Validators SHOULD warn when a page records <code>fc-foundation-template-modified:
+true</code> without explaining the modification in frontmatter or prose. Validators
+MUST reject missing required foundation frontmatter, missing required sections,
+invalid attribution classes, absence of the mandatory source-map support, a
+YouTube transcript as the sole citation, attempts to substitute AIT/coarse
+graining/second-order cybernetics for the Wolfram page, and generic relevance
+text with no bundle-specific observer concepts.</p>
+<p>Historical bundles are not silently rewritten. Existing bundles migrate by a
+recorded bundle round that adds or supersedes the foundation page, updates the
+bundle ledger, and states what historical material is superseded. Validators
+MAY warn on pre-0.1.1 bundles that lack the page, but future generated bundles
+and post-migration current bundles MUST satisfy this section.</p>
+<h2 id="16-internal-links">16. Internal Links</h2>
+<p>OKF v0.1 requires consumers to tolerate broken links. Therefore unresolved
+internal links are warnings, not fatal errors, when the link is otherwise
+well-formed Markdown and the target may be not-yet-written knowledge.</p>
+<p>Broken links become fatal only when:</p>
+<ul>
+<li>the link target is required by a current <code>fc-supersedes</code> pointer;</li>
+<li>the link target is required by <code>fc-touches</code> for a v3-or-later round;</li>
+<li>the link claims to pin required reproduction evidence and no fallback label is
+  present.</li>
+</ul>
+<h2 id="17-agent-behavior">17. Agent Behavior</h2>
+<h3 id="171-proxy-observer">17.1 Proxy Observer</h3>
+<p>A proxy observer consumes a bundle without extending its trajectory. It MUST:</p>
+<ol>
+<li>start from <code>index.md</code> or <code>answer.md</code>;</li>
+<li>classify the user question by level and axis;</li>
+<li>descend only as deep as the question requires;</li>
+<li>answer from the concept file used and cite the path;</li>
+<li>offer deeper inspection only when useful.</li>
+</ol>
+<p>It MUST NOT answer deeper than asked, because that imposes its own
+coarse-graining, and MUST NOT answer shallower than required, because that
+loses information the user requested.</p>
+<h3 id="172-participating-observer">17.2 Participating Observer</h3>
+<p>A participating observer extends the bundle. It MUST:</p>
+<ol>
+<li>compute the next bundle round from HEAD;</li>
+<li>record the move in the next round file or lightweight ledger row;</li>
+<li>classify <code>fc-move</code> and <code>fc-stage</code>;</li>
+<li>include <code>fc-type-at-round</code> only if <code>fc-stage: contestation</code>;</li>
+<li>record <code>fc-party</code>;</li>
+<li>apply concept revisions through supersession;</li>
+<li>update bundle <code>log.md</code> and <code>inquiry/index.md</code>;</li>
+<li>update root <code>log.md</code> using the next repository round when the PR merges;</li>
+<li>preserve missing or uncertain evidence with explicit labels rather than
+   invention.</li>
+</ol>
+<h2 id="18-round-record-body-schema">18. Round Record Body Schema</h2>
+<p>Full-profile round files MUST contain these top-level sections in this order:</p>
+<pre><code class="language-text"># Move
+# Evidence added
+# Effect on state
+# Resulting revisions
+# Classification rationale
+</code></pre>
+<p><code># Move</code> records the question, objection, evidence, frame-change, convention,
+or verdict revision, either verbatim or by pinned link. <code># Evidence added</code>
+lists links, checksums, source commits, and missing-evidence labels. <code># Effect
+on state</code> states changes to the context window <code>C(t)</code> and frame <code>f(t)</code>.
+<code># Resulting revisions</code> lists superseded concepts or says no concept content
+changed. <code># Classification rationale</code> explains the stage and, for contestation
+only, the type.</p>
+<h2 id="19-validation-contract">19. Validation Contract</h2>
+<p>Validators MUST separate fatal errors, warnings, and advisory quality checks.</p>
+<h3 id="191-fatal-validation-errors">19.1 Fatal Validation Errors</h3>
+<ul>
+<li>malformed YAML frontmatter on a concept file;</li>
+<li>missing or empty <code>type</code>;</li>
+<li>missing required <code>fc-axis</code>, <code>fc-level</code>, <code>fc-status</code>, <code>fc-round</code>, or
+  applicable <code>fc-irreducibility</code>;</li>
+<li><code>fc-stage</code> absent on v3-or-later rounds;</li>
+<li>malformed <code>fc-stage</code> or <code>fc-move</code>;</li>
+<li>unlisted <code>fc-move</code>/<code>fc-stage</code> pair on a new round;</li>
+<li><code>fc-type-at-round</code> present when stage is not contestation;</li>
+<li><code>fc-type-at-round</code> absent when stage is contestation;</li>
+<li>round numbering gaps or duplicate round numbers;</li>
+<li>duplicate current concepts for the same concept identity;</li>
+<li>malformed <code>fc-supersedes</code>;</li>
+<li>duplicate supersession of the same prior concept in the current line;</li>
+<li>inconsistent current concepts where no file is clearly superseded;</li>
+<li>required reproduction code/data lacks a commit, checksum, or explicit
+  <code>NOT AVAILABLE</code> rationale;</li>
+<li>a derived artifact claims to be pinned but lacks <code>source_commit</code>;</li>
+<li>required <code>fc-touches</code> or <code>fc-supersedes</code> target is unresolved;</li>
+<li><code>s/foundations/wolfram-observer-theory.md</code> is missing from a future generated
+  or post-migration bundle;</li>
+<li>another foundation page or an external link is used as a substitute for the
+  mandatory Wolfram foundation page;</li>
+<li>required Wolfram foundation frontmatter, sections, attribution classes, or
+  source-map support are missing;</li>
+<li>a YouTube transcript is the sole source for the Wolfram foundation page;</li>
+<li>the Wolfram foundation page omits the formal-analogy guardrails or lacks
+  bundle-specific relevance.</li>
+</ul>
+<h3 id="192-warnings">19.2 Warnings</h3>
+<ul>
+<li>unresolved ordinary internal links;</li>
+<li>stale generated artifacts whose <code>source_commit</code> differs from current HEAD;</li>
+<li>unpinned external evidence not required for a current result;</li>
+<li><code>UNVERIFIED</code>, <code>NOT MEASURABLE</code>, or <code>NOT AVAILABLE</code> without adequate prose
+  rationale;</li>
+<li>absent <code>title</code> or <code>description</code>;</li>
+<li>absent <code>fc-stage</code> on pre-v3 historical round files;</li>
+<li>optional full-profile files omitted without an axis-index note;</li>
+<li>lightweight profile used for a high-stakes or contested trajectory without
+  rationale.</li>
+</ul>
+<h3 id="193-advisory-quality-checks">19.3 Advisory Quality Checks</h3>
+<ul>
+<li>shallow levels are too terse to answer their intended reader;</li>
+<li>deeper levels repeat rather than refine;</li>
+<li>stage rationale is conclusory;</li>
+<li>contestation type rationale does not identify context, frame, or missing
+  record;</li>
+<li>party identity is too vague for later attribution;</li>
+<li>source citations prefer secondary summaries where primary sources are
+  available;</li>
+<li>provisional labels remain on old current concepts without follow-up.</li>
+</ul>
+<h2 id="20-worked-examples-from-bundlesframework-self">20. Worked Examples from <code>bundles/framework-self/</code></h2>
+<p>These examples use only <code>bundles/framework-self/</code>. They are compact excerpts,
+not complete file copies. Current HEAD before this Step 3 specification repair
+has repository round 20 and framework-self bundle round 18; this PR adds
+framework-self bundle round 19 and is expected to append repository round 21
+when merged.</p>
+<h3 id="201-root-answer">20.1 Root Answer</h3>
+<pre><code class="language-yaml">---
+type: Finding
+title: The project in plain language
+description: A short explanation of the observer-disagreement-framework project.
+fc-level: 0
+fc-axis: R
+fc-status: open
+fc-round: 4
+fc-supersedes: answer.md@r1
+timestamp: 2026-07-19
+---
+</code></pre>
+<p>Body summary: the project models statement trajectories and uses bundles to
+record the question, answer, evidence, method, and every later revision.</p>
+<h3 id="202-pf-concept">20.2 PF Concept</h3>
+<pre><code class="language-yaml">---
+type: Finding
+title: Statement trajectories, stages, and disagreement types
+description: Compact pointer to the completed Step 2 formal core.
+fc-level: 2
+fc-axis: PF
+fc-status: open
+fc-round: 11
+fc-supersedes: pf/formal.md@r7
+timestamp: 2026-07-21
+---
+</code></pre>
+<p>Body summary: <code>docs/formal-core.md</code> defines <code>E -&gt; r -&gt; R -&gt; O_i -&gt; y_i</code>,
+rounds, stages, and the contestation-only type trajectory.</p>
+<h3 id="203-s-concept">20.3 S Concept</h3>
+<pre><code class="language-yaml">---
+type: Finding
+title: Method summary
+description: Current method summary after completion of the Step 2 formal core.
+fc-level: 2
+fc-axis: S
+fc-status: open
+fc-round: 11
+fc-supersedes: s/method.md@r7
+timestamp: 2026-07-21
+---
+</code></pre>
+<p>Body summary: the method models interpretation as bounded compression over a
+surviving record and records every material move with stage, party, and
+supersession links.</p>
+<h3 id="204-r-result">20.4 R Result</h3>
+<pre><code class="language-yaml">---
+type: Finding
+title: Itemized current state
+description: What exists, what is open, and what this pilot adds.
+fc-level: 2
+fc-axis: R
+fc-status: open
+fc-round: 11
+fc-supersedes: r/results.md@r7
+timestamp: 2026-07-21
+---
+</code></pre>
+<p>Body summary: Step 0, Step 1, and Step 2 are filled at interim level; later
+step deliverables remain stubs until their own step PRs.</p>
+<h3 id="205-reproduction-record">20.5 Reproduction Record</h3>
+<pre><code class="language-yaml">---
+type: Runbook
+title: Code and regeneration
+description: Repository pin and regeneration note for this pilot bundle.
+fc-level: 2
+fc-axis: REPRO
+fc-status: open
+fc-round: 8
+fc-supersedes: reproduction/code.md@r7
+timestamp: 2026-07-20
+---
+</code></pre>
+<p>Body summary: the initial bundle pin is
+<code>a1fc43cc83a6f223843f8318f2f92886b6769eb5</code>; current rendered <code>_site/</code> output
+is derived and should be regenerated from source edits.</p>
+<h3 id="206-agent-contract">20.6 Agent Contract</h3>
+<pre><code class="language-yaml">---
+type: Policy
+title: Agent contract
+description: Rules for agents consuming or participating in this bundle.
+fc-axis: INQUIRY
+fc-round: 8
+fc-supersedes: agent-contract.md@r1
+timestamp: 2026-07-20
+---
+</code></pre>
+<p>Body summary: consuming agents answer from the needed level and axis;
+participating agents open a round, classify stage and contestation type when
+applicable, supersede concepts, and update ledgers.</p>
+<h3 id="207-inquiry-round">20.7 Inquiry Round</h3>
+<pre><code class="language-yaml">---
+type: Event
+title: &quot;Round 11: formal core completed&quot;
+description: Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.
+fc-axis: INQUIRY
+fc-round: 11
+fc-move: evidence
+fc-stage: enrichment
+fc-party: codex
+fc-touches: [pf/formal.md, s/method.md, r/results.md]
+fc-status: open
+timestamp: 2026-07-21
+---
+</code></pre>
+<p><code>fc-type-at-round</code> is absent because round 11 is enrichment, not contestation.</p>
+<h3 id="208-superseding-concept">20.8 Superseding Concept</h3>
+<p>This Step 3 specification repair supersedes the prior specification pointer:</p>
+<pre><code class="language-yaml">---
+type: Finding
+title: Bundle specification pointer
+description: Points to the current OKF-FC profile and Wolfram foundation requirement.
+fc-level: 3
+fc-axis: S
+fc-irreducibility: none
+fc-status: open
+fc-round: 19
+fc-supersedes: s/specification.md@r12
+timestamp: 2026-07-23
+---
+</code></pre>
+<p>Body summary: <code>spec/SPEC.md</code> is now the normative bundle specification; the
+framework sections remain rationale and history. Version 0.1.1 requires the
+dedicated Wolfram foundation page for future bundles.</p>
+<h3 id="209-derived-artifact-manifest-entry">20.9 Derived-Artifact Manifest Entry</h3>
+<p>For an unmerged Step 3 specification branch, a future merge commit cannot yet
+be pinned:</p>
+<pre><code class="language-yaml">artifact: bundles/framework-self/_site
+profile: working-tree-render
+bundle_round: 19
+source_repo_round: 21
+source_commit: NOT AVAILABLE until the PR is merged
+checksum: NOT AVAILABLE for working-tree render
+status: PROVISIONAL
+command: okf-fc render bundles/framework-self
+</code></pre>
+<p>A published post-merge snapshot MUST replace <code>NOT AVAILABLE</code> with the actual
+full source commit and artifact checksums.</p>
+<h3 id="2010-complete-wolfram-foundation-example">20.10 Complete Wolfram Foundation Example</h3>
+<pre><code class="language-markdown">---
+type: Concept
+title: Wolfram observer theory
+description: Cross-cutting computational-observer foundation used as a formal analogy for this bundle.
+fc-level: 2
+fc-axis: S
+fc-foundation: wolfram-observer-theory
+fc-foundation-role: formal-analogy
+fc-foundation-template-version: &quot;1.0.0&quot;
+fc-foundation-template-modified: false
+fc-foundation-bundle-additions:
+  - framework-self uses the foundation to classify its own observer vocabulary.
+fc-foundation-source-registry-version: none
+fc-status: open
+fc-round: 19
+timestamp: 2026-07-23
+---
+
+## Role in this framework
+
+This bundle uses Wolfram observer theory as a formal analogy for bounded
+observers that equivalence complex states into reduced descriptions.
+
+## Directly sourced Wolfram concepts
+
+Computational irreducibility, bounded observers, observer coarse-graining,
+observer persistence, the ruliad, rulial space, and multiway histories are
+treated as Wolfram-source concepts when attributed to stable Wolfram sources.
+
+## Formal translations made by this project
+
+`O_i = (C_i, f_i)`, context windows over `R`, compression/framing functions,
+interpretations `f_i(R cap C_i)`, frame-difference as rulial-space analogy,
+and statement trajectories are project translations.
+
+## Project extensions not derived from Wolfram
+
+The recording function `r`, `R = r(E)`, factual irreducibility, the Type
+I/II/III taxonomy, the five-stage taxonomy, and OKF round/supersession
+discipline are project extensions.
+
+## Non-claims and limitations
+
+The bundle does not identify human disagreement literally with Wolfram-model
+physics, asserts no measured rulial metric between human observers, and does
+not depend on acceptance of Wolfram's fundamental-physics program.
+
+## Source map
+
+| Bundle concept or claim | Source identity | Attribution class | Notes |
+|---|---|---|---|
+| Computational irreducibility | Wolfram, *A New Kind of Science*, ISBN 1-57955-008-8, Chapter 12 section 6 | direct Wolfram concept | Supports shortcut-limit vocabulary. |
+| Bounded observer coarse-graining | Wolfram, &quot;Observer Theory,&quot; Stephen Wolfram Writings, 2023-12-11, DOI 10.31855/afd076b9-7b8 | direct Wolfram concept | Supports observer equivalencing/boundedness. |
+| Ruliad/rulial terminology | Wolfram, &quot;Exploring Rulial Space,&quot; arXiv:2101.10907 | direct Wolfram concept | Required when rulial terminology appears. |
+| `O_i = (C_i, f_i)` | `docs/framework_v3.md` section 2.1 | project translation | Not Wolfram notation. |
+| Recording function `r` and factual irreducibility | `docs/framework_v3.md` sections 2.1 and 2.3 | project extension | Added by this project. |
+| Ruliology comparison | Rickles, Elshatlawy, and Arsiwalla, arXiv:2308.16068 | independent comparison | Commentary, not Wolfram primary source. |
+
+## Relevance to this bundle
+
+The framework-self bundle uses bounded observers, context windows, compression
+functions, observer trajectories, and dialogic irreducibility to describe the
+framework's own rounds. It also uses the project extensions `r`, `R = r(E)`,
+stage taxonomy, disagreement taxonomy, and OKF ledger discipline to keep its
+own statement trajectory inspectable.
+</code></pre>
+<h3 id="2011-correct-source-map-example">20.11 Correct Source Map Example</h3>
+<pre><code class="language-markdown">| Bundle concept or claim | Source identity | Attribution class | Notes |
+|---|---|---|---|
+| Computational irreducibility | Wolfram, *A New Kind of Science*, ISBN 1-57955-008-8, Chapter 12 section 6 | direct Wolfram concept | Stable bibliographic identity; not a transcript. |
+| Context window `C_i` | `docs/formal-core.md` section 2.4 | project translation | Project notation over surviving records. |
+| Factual irreducibility | `docs/framework_v3.md` section 2.3 | project extension | Not attributed to Wolfram. |
+</code></pre>
+<h3 id="2012-non-conformant-ait-substitute-example">20.12 Non-Conformant AIT Substitute Example</h3>
+<pre><code class="language-text">ERROR: s/foundations/wolfram-observer-theory.md is absent.
+ERROR: s/foundations/ait-compression.md cannot satisfy the mandatory Wolfram
+foundation requirement, even if it discusses compression.
+</code></pre>
+<h3 id="2013-lightweight-foundation-example">20.13 Lightweight Foundation Example</h3>
+<pre><code class="language-markdown">---
+type: Concept
+title: Wolfram observer theory
+description: Lightweight formal-analogy disclosure for a ledger-only bundle.
+fc-level: 2
+fc-axis: S
+fc-foundation: wolfram-observer-theory
+fc-foundation-role: formal-analogy
+fc-foundation-template-version: &quot;1.0.0&quot;
+fc-foundation-template-modified: false
+fc-foundation-bundle-additions:
+  - uses context windows and compression functions only
+fc-foundation-source-registry-version: none
+fc-status: open
+fc-round: 1
+timestamp: 2026-07-23
+---
+
+## Role in this framework
+
+This ledger-only bundle uses Wolfram observer theory only as a formal analogy
+for bounded observers compressing records.
+
+## Directly sourced Wolfram concepts
+
+Computational irreducibility and bounded observer coarse-graining.
+
+## Formal translations made by this project
+
+Context windows `C_i` and compression functions `f_i` over the surviving record.
+
+## Project extensions not derived from Wolfram
+
+The recording function `r`, factual irreducibility, the taxonomies, and the OKF
+ledger are project extensions.
+
+## Non-claims and limitations
+
+No literal Wolfram-model physics, measured human rulial metric, or dependency
+on Wolfram's physics program is asserted.
+
+## Source map
+
+| Bundle concept or claim | Source identity | Attribution class | Notes |
+|---|---|---|---|
+| Computational irreducibility | Wolfram, *A New Kind of Science*, ISBN 1-57955-008-8, Chapter 12 section 6 | direct Wolfram concept | Required support. |
+| Bounded observer coarse-graining | Wolfram, &quot;Observer Theory,&quot; 2023-12-11, DOI 10.31855/afd076b9-7b8 | direct Wolfram concept | Required support. |
+| `C_i`, `f_i` | `docs/formal-core.md` section 2.4 | project translation | Bundle notation. |
+
+## Relevance to this bundle
+
+This lightweight bundle uses only context-window and frame/compression
+vocabulary to explain why two ledger rows may interpret the same retained
+record differently.
+</code></pre>
+<h3 id="2014-validator-error-example">20.14 Validator Error Example</h3>
+<pre><code class="language-text">FATAL WOLFRAM_FOUNDATION_MISSING:
+  missing s/foundations/wolfram-observer-theory.md
+FATAL WOLFRAM_SOURCE_POLICY:
+  YouTube transcript is the sole cited source
+FATAL WOLFRAM_ATTRIBUTION_CLASS:
+  source-map row uses &quot;established counterpart&quot;; expected one of
+  direct Wolfram concept, project translation, project extension,
+  independent comparison, provisional inference
+FATAL WOLFRAM_RELEVANCE_GENERIC:
+  Relevance to this bundle does not name bundle-used observer concepts
+</code></pre>
+<h2 id="21-conformance-summary">21. Conformance Summary</h2>
+<p>A full-profile OKF-FC bundle is conformant when it is OKF v0.1 conformant and
+also satisfies this profile's directory, frontmatter, stage/type, round,
+supersession, reproduction, Wolfram foundation, canonical-state, and validation
+requirements.</p>
+<p>A lightweight-profile OKF-FC bundle is conformant when it is OKF v0.1
+conformant, declares or clearly follows the ledger-only profile, preserves
+append-only round semantics, records stages in the ledger, forbids
+non-contestation type classifications, includes the mandatory Wolfram
+formal-analogy foundation page, and can be upgraded without renumbering or
+invented evidence.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/spec/SPEC.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

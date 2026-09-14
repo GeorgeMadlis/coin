@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round 6: publish command, metadata catalog, and evolution visualization</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / inquiry / round-0006</nav>
+<h1>Round 6: publish command, metadata catalog, and evolution visualization</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>okf-fc gains publish/catalog/evolution-visualization commands; bundles/framework-self published as the first real snapshot into the new ../okf-bundle-snapshots viewer repository.</dd><dt>fc-axis</dt><dd><span class="badge axis-inquiry">INQUIRY</span></dd><dt>fc-move</dt><dd>evidence</dd><dt>fc-party</dt><dd>claude</dd><dt>fc-round</dt><dd>6</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-touches</dt><dd></dd><dt>fc-type-at-round</dt><dd>resolved</dd><dt>timestamp</dt><dd>2026-07-19</dd><dt>title</dt><dd>Round 6: publish command, metadata catalog, and evolution visualization</dd><dt>type</dt><dd>Event</dd></dl></section>
+<article class="content"><h1 id="move">Move</h1>
+<p>Infrastructure round, mirroring round-0002 and round-0005: evidence added to tooling and to the
+project's derived-artifact record, not to bundle content. <code>docs/framework_v3.md</code> §3.7 calls for
+derived artifacts (rendered HTML, exported zips, cross-bundle catalogs) to be commit-pinned; this
+round is the first to populate a durable, human-facing archive of those artifacts, rather than a
+throwaway local <code>_site/</code>/snapshot directory: a new sibling repository, <code>../okf-bundle-snapshots</code>,
+versions published snapshots, a searchable SQLite metadata catalog, and per-bundle evolution
+visualizations.</p>
+<h1 id="evidence-added">Evidence added</h1>
+<ul>
+<li>New <code>../okf-bundle-snapshots</code> repository (ordinary git repo, <code>main</code> branch): scaffolded with a
+  <code>README.md</code> (purpose, the <code>file://</code> usage contract, the repo layout, and two rules -- snapshots
+  are append-only; the repo holds only okf-fc-generated artifacts, never hand-authored sources or
+  Python) and a <code>.gitattributes</code> marking <code>*.html</code>/<code>*.svg</code> as text and <code>*.zip</code>/<code>catalog.db</code> as
+  binary.</li>
+<li><code>tools/src/okf_fc/render.py</code>: <code>write_manifest</code> now also extracts, from the frontmatter already
+  parsed for every markdown file, a <code>rounds</code> list (one entry per <code>inquiry/round-*.md</code>: round,
+  date, party, move, stage, type-at-round, status, summary, record path -- backfilled from the
+  bundle's own <code>log.md</code> table where a frontmatter field is absent) and a <code>concepts</code> list (one
+  entry per remaining concept file carrying a <code>type</code> key: path, type, title, description, level,
+  axis, round, supersedes). This makes <code>manifest.json</code> self-sufficient for catalog rebuilding: no
+  source-repository access is needed to reconstruct the catalog from snapshots already on disk.</li>
+<li>New <code>tools/src/okf_fc/catalog.py</code>: a stdlib-<code>sqlite3</code> metadata catalog, <code>&lt;dest&gt;/catalog.db</code>
+  (tables <code>bundles</code>, <code>snapshots</code>, <code>rounds</code>, <code>concepts</code>) plus the same content as a flat, sorted
+  <code>catalog.json</code>. <code>rebuild(dest)</code> scans every <code>&lt;bundle-id&gt;/&lt;snapshot&gt;/manifest.json</code> under <code>dest</code>
+  and regenerates the catalog, each bundle's <code>index.html</code> (snapshot table + embedded evolution
+  graph), and the top-level <code>index.html</code> (all bundles, latest snapshot, catalog links) from
+  scratch every time -- there is no separate incremental-upsert path, so <code>okf-fc publish</code> and
+  <code>okf-fc catalog rebuild</code> cannot drift apart. <code>okf-fc catalog query</code> runs read-only <code>SELECT</code>
+  statements only (refusing anything else) against <code>catalog.db</code>; <code>okf-fc catalog show
+  &lt;bundle-id&gt;</code> prints a bundle's metadata and round table.</li>
+<li>New <code>tools/src/okf_fc/evolution_viz.py</code>: a deterministic, dependency-free SVG
+  (<code>evolution.svg</code>, embedded inline in the per-bundle <code>index.html</code>) with one horizontal swimlane
+  per party, in first-appearance order, so the sequential multi-observer realization
+  (<code>docs/framework_v3.md</code> §2.2) is visible directly; one node per round, colored by <code>fc-stage</code>
+  and labelled with <code>fc-move</code> (contestation rounds additionally show <code>fc-type-at-round</code>); a
+  supersession marker on any round at which a concept's <code>fc-supersedes</code> was set; and, below the
+  lanes, a stage-trajectory strip plus a type-trajectory strip restricted to contestation rounds.
+  Every round node links to that round's rendered page in the newest snapshot.</li>
+<li>New <code>tools/src/okf_fc/publish.py</code>: <code>okf-fc publish &lt;bundle_dir&gt; --dest &lt;snapshots_repo&gt;</code>
+  renders a self-contained snapshot + structure visualization + manifest into
+  <code>&lt;dest&gt;/&lt;bundle-id&gt;/&lt;date&gt;-r&lt;NNNN&gt;-&lt;shorthash&gt;/</code> (round = the bundle's highest inquiry round;
+  shorthash = the source repo's <code>HEAD</code>), zips it deterministically, and calls the same
+  <code>catalog.rebuild</code> used by <code>okf-fc catalog rebuild</code>. Refuses to run against a dirty git worktree
+  unless <code>--allow-dirty</code> is passed (<code>docs/agent-guide.md</code>'s Canonical-State Rule: only committed
+  HEAD is publishable; an unpinned snapshot is a future Type III dispute about its own
+  provenance), and refuses to overwrite an existing snapshot directory or zip. Does not commit in
+  the destination repo -- it prints the <code>git add</code>/<code>git commit</code> commands to run there.</li>
+<li><code>bundles/framework-self</code> published as the first real snapshot into <code>../okf-bundle-snapshots</code>
+  at this round's commit, committed there as the repository's initial content commit (after the
+  scaffold commit); see the root <code>log.md</code> line for this round for the pinned commit hash of that
+  repository.</li>
+<li>New <code>tools/tests/test_publish.py</code>, <code>test_catalog.py</code>, <code>test_evolution_viz.py</code>: dirty-worktree
+  refusal; publishing twice leaves the first snapshot and zip byte-for-byte untouched while the
+  indexes and catalog come to reflect the newer one; <code>catalog rebuild</code> reproduces <code>catalog.json</code>
+  byte-identically across repeated runs with no source changes; the <code>rounds</code> table matches the
+  bundle's <code>inquiry/round-*.md</code> frontmatter exactly; <code>evolution.svg</code> has one node per round, one
+  lane per distinct party, and is byte-identical across runs; <code>catalog query</code> rejects
+  non-<code>SELECT</code> SQL. Full suite passes (31 tests: 16 pre-existing + 15 new).</li>
+</ul>
+<h1 id="effect-on-state">Effect on state</h1>
+<p>Context window: added the requirement (stated directly, not contested) that published snapshots
+accumulate in a durable, queryable, human-facing archive outside this repository, with a
+metadata catalog and an evolution visualization as required deliverables.</p>
+<p>Frame: unchanged for bundle content. <code>okf-fc</code> gains a fourth output surface (publish + catalog +
+evolution) alongside render/snapshot; the existing render/snapshot code paths and their tests are
+untouched.</p>
+<h1 id="resulting-revisions">Resulting revisions</h1>
+<p>None to bundle concept files -- this round adds tooling
+(<code>tools/src/okf_fc/{catalog,evolution_viz,publish}.py</code>, <code>render.py</code>'s manifest extension,
+<code>cli.py</code>'s new subcommands, and their tests), one section to <code>bundles/README.md</code>, and the new
+<code>../okf-bundle-snapshots</code> sibling repository, none of which are bundle concepts subject to
+<code>fc-supersedes</code>. <code>fc-touches</code> is therefore empty, per the convention from
+<code>inquiry/round-0003.md</code>'s SPEC-GAP finding (touches to non-concept, out-of-bundle, or generated
+files belong in this prose, not in <code>fc-touches</code>).</p>
+<h1 id="classification-rationale">Classification rationale</h1>
+<p>An <strong>evidence</strong> move about inspection/archival infrastructure, mirroring round-0002 and
+round-0005 exactly: it adds capability (a durable, queryable, cross-session archive and its
+metadata catalog) with no standing rival position to resolve, so it carries no live
+counter-position and is not contestation. <code>fc-stage: enrichment</code> per <code>docs/framework_v3.md</code> §2.2.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0006.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

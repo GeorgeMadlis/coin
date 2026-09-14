@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "PF",
+    "description": "Formal target for reconstructing the repository's own statement trajectory.",
+    "level": 2,
+    "path": "pf/formal.md",
+    "round": 16,
+    "supersedes": "pf/formal.md@r11",
+    "title": "Retrospective case-study reconstruction problem",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "Formal target for reconstructing the repository's own statement trajectory.",
+    "fc-axis": "PF",
+    "fc-level": 2,
+    "fc-round": 16,
+    "fc-status": "open",
+    "fc-supersedes": "pf/formal.md@r11",
+    "timestamp": "2026-07-21",
+    "title": "Retrospective case-study reconstruction problem",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: Retrospective case-study reconstruction problem\ndescription: Formal target for reconstructing the repository's own statement trajectory.\nfc-level: 2\nfc-axis: PF\nfc-status: open\nfc-round: 16\nfc-supersedes: pf/formal.md@r11\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 16,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "PF",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "e50219d7a2af8264e2cc0b6891975e8699e7c2dc57d074582453e21beec96edb",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "355fa77b37595807324fc645c85a99534ef74c5a06ac8ea4a48ca89e11a6ff42",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "355fa77b37595807324fc645c85a99534ef74c5a06ac8ea4a48ca89e11a6ff42"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "Formal target for reconstructing the repository's own statement trajectory.",
+    "html_path": "pf/formal.html",
+    "metadata_path": "metadata/pf/formal.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "problem-framing",
+    "source_path": "pf/formal.md",
+    "title": "Retrospective case-study reconstruction problem"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "pf/formal.md@r11"
+  }
+}

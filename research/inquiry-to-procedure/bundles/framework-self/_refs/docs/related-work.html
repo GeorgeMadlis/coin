@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literature positioning</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / related-work</nav>
+<h1>Literature positioning</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 1 comparison of the statement-evolution framework against Wolfram observer theory and adjacent scholarly/provenance traditions.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Literature positioning</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h1 id="literature-positioning">Literature Positioning</h1>
+<p>This Step 1 document positions the statement-evolution framework against
+Wolfram observer theory and adjacent literatures. It separates four kinds of
+claim:</p>
+<ul>
+<li><strong>Direct source concept:</strong> a claim made in an identified source.</li>
+<li><strong>Project translation:</strong> this repository's formalization of a source concept.</li>
+<li><strong>Project extension:</strong> a claim or device introduced by this project.</li>
+<li><strong>Established counterpart:</strong> an adjacent literature that explains part of the
+  same problem space.</li>
+</ul>
+<p>The YouTube interview transcript cited in earlier drafts remains supplementary.
+It is not the evidentiary foundation for Wolfram-derived claims.</p>
+<h2 id="comparison-matrix">Comparison Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Literature family</th>
+<th>Central concept</th>
+<th>What it explains</th>
+<th>What it does not explain</th>
+<th>Regime, stage, and type</th>
+<th>Relationship</th>
+<th>Source quality and limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wolfram observer theory</td>
+<td>Computationally bounded observers equivalence complex states into reduced impressions; observers sample bounded regions of the ruliad/rulial space.</td>
+<td>Why an observer's perceived reality can be a coarse-grained, computationally reducible slice of a richer computational process; why computational irreducibility blocks shortcut prediction; why persistence and locality matter for shared experience.</td>
+<td>It does not validate this project's human-disagreement model, <code>r</code>, <code>R = r(E)</code>, Type I/II/III taxonomy, stage taxonomy, or OKF discipline.</td>
+<td>Cross-cutting: static, sequential, multi-observer, and single-observer analogies; most relevant to Type II and dialogic irreducibility; indirect support for stages as trajectories.</td>
+<td>Formal analogy and motivating foundation.</td>
+<td>Primary Wolfram sources are authoritative for what Wolfram proposes, not independent validation of the physics program; independent commentary is still limited and often preprint-level.</td>
+</tr>
+<tr>
+<td>Aumann agreement</td>
+<td>Common-prior Bayesian agents with common knowledge cannot agree to disagree about posteriors.</td>
+<td>Ideal static agreement conditions and the significance of failed common-prior/common-knowledge assumptions.</td>
+<td>Bounded computation, frame translation cost, lossy recording, and inquiry rounds.</td>
+<td>Static contestation; Type I/II analogues.</td>
+<td>Established counterpart.</td>
+<td>Peer-reviewed theorem; narrow ideal assumptions.</td>
+</tr>
+<tr>
+<td>Simon bounded rationality</td>
+<td>Agents search and satisfice under limited information and computation.</td>
+<td>Why real observers use finite search, heuristics, and good-enough decisions.</td>
+<td>It does not give a provenance model, statement-stage ledger, or Type III absent-record limit.</td>
+<td>All regimes and stages; Type I/II pressure.</td>
+<td>Inheritance/established counterpart.</td>
+<td>Peer-reviewed social-science foundation; not a specific formal model of disagreement records.</td>
+</tr>
+<tr>
+<td>Algorithmic information theory and MDL</td>
+<td>Complexity and model choice through shortest descriptions.</td>
+<td>Compression-as-understanding and description-length comparison.</td>
+<td>Multiple observers, social inquiry, frame politics, and records lost before present inquiry.</td>
+<td>Static and sequential modelling; strongest for Type II.</td>
+<td>Established counterpart for compression.</td>
+<td>Mathematical/statistical foundation; should not be conflated with Wolfram observer theory.</td>
+</tr>
+<tr>
+<td>Statistical-mechanical coarse-graining</td>
+<td>Many microstates are grouped into macrostates by an equivalence relation.</td>
+<td>How an observer or model can ignore details while preserving selected macroscopic variables.</td>
+<td>Historical record loss, dialogue moves, and provenance governance.</td>
+<td>Static Type II; analogy for frame/stage changes.</td>
+<td>Formal analogy/established counterpart.</td>
+<td>Mature physics tradition; analogy does not make social frames physical macrostates.</td>
+</tr>
+<tr>
+<td>Second-order cybernetics</td>
+<td>The observer is inside the system of observation.</td>
+<td>Reflexive observation and the impossibility of a neutral outside observer.</td>
+<td>Computational irreducibility, source pinning, and absent-record taxonomy.</td>
+<td>Static and sequential; especially critique and Type II.</td>
+<td>Established counterpart.</td>
+<td>Established conceptual literature; often less operational than the bundle discipline here.</td>
+</tr>
+<tr>
+<td>Bayesian updating and AGM belief revision</td>
+<td>Beliefs update by conditioning or revise/contract under rationality postulates.</td>
+<td>Sequential state change under evidence or inconsistency.</td>
+<td>Bounded frame translation, public supersession files, and Type III as absent from <code>R</code>.</td>
+<td>Sequential single- and multi-observer inquiry; enrichment, critique, consolidation; Types I/II.</td>
+<td>Established counterpart.</td>
+<td>Strong formal literatures; idealized and often silent about archival loss.</td>
+</tr>
+<tr>
+<td>Peircean inquiry</td>
+<td>Inquiry moves from doubt toward settled belief.</td>
+<td>Temporal inquiry, self-correction, and the role of doubt.</td>
+<td>Exact round metadata, computational boundedness, Type I/II/III, and reproducible bundles.</td>
+<td>Sequential inquiry; critique and consolidation especially.</td>
+<td>Established counterpart.</td>
+<td>Foundational philosophical source; not a file-level protocol.</td>
+</tr>
+<tr>
+<td>Argumentation theory and dialogue games</td>
+<td>Attack/acceptability relations and rule-governed dialogue types.</td>
+<td>Contestation, critique, persuasion, inquiry, information seeking, deliberation, and commitment changes.</td>
+<td>The <code>E -&gt; r -&gt; R -&gt; f</code> access model and absent-record irreducibility.</td>
+<td>Sequential multi-observer; all stages via dialogue games; Types I/II mainly.</td>
+<td>Established counterpart.</td>
+<td>Mature literature; non-adversarial moves are inherited, not novel.</td>
+</tr>
+<tr>
+<td>Quine-Duhem underdetermination</td>
+<td>Evidence tests webs of theory and auxiliary assumptions.</td>
+<td>Why multiple theory-plus-auxiliary packages can survive evidence.</td>
+<td>It does not separate costly frame translation from information absent in <code>R</code>.</td>
+<td>Static and sequential critique/contestation/consolidation; Types II/III.</td>
+<td>Established counterpart.</td>
+<td>Foundational philosophy of science; Type III is this project's narrower operationalization.</td>
+</tr>
+<tr>
+<td>Analytic historiography</td>
+<td>Historical description is retrospective and narratively organized.</td>
+<td>Why surviving traces can support multiple later narratives.</td>
+<td>A computational observer model and a method for declaring absent-record floors.</td>
+<td>Sequential and static historical interpretation; Types II/III.</td>
+<td>Established counterpart.</td>
+<td>Established philosophical/historiographic context; not a reproducibility protocol.</td>
+</tr>
+<tr>
+<td>Provenance, reproducibility, W3C PROV, FAIR</td>
+<td>Entities, activities, agents, metadata, identifiers, provenance, and reuse conditions.</td>
+<td>How to make records traceable and reusable.</td>
+<td>Observer disagreement, frame translation, and statement-stage dynamics.</td>
+<td>All regimes; enrichment and consolidation; prevents Type I/III disputes.</td>
+<td>Operational counterpart/inheritance.</td>
+<td>Standards and best-practice literature; does not by itself supply the theory.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wolfram-observer-theory">Wolfram Observer Theory</h2>
+<p><strong>Central concept.</strong> Wolfram's observer theory treats observation as a process
+that takes complex states of the world and equivalences them into a reduced
+representation usable by a finite observer. His account connects observers to
+computational boundedness, computational irreducibility, pockets of
+computational reducibility, observer persistence through time, and sampling of
+the ruliad/rulial space.</p>
+<p><strong>Directly sourced Wolfram concepts.</strong> The following are attributed to Wolfram
+sources: computational irreducibility in <em>A New Kind of Science</em> Chapter 12,
+section 6; the ruliad as the entangled limit of all possible computations in
+"The Concept of the Ruliad"; rulial space and rulial multiway graphs in
+"Exploring Rulial Space"; observers equivalencing states, extracting reduced
+representations, and seeking pockets of reducibility in "Observer Theory";
+observer boundedness and the Second Law link in "Computational Foundations for
+the Second Law of Thermodynamics"; observer persistence, multiway histories,
+and stepwise time in "Observer Theory" and "On the Nature of Time"; and the
+broader implications of NKS, ruliology, and observer-relative sampling in
+"Twenty Years Later."</p>
+<p><strong>Project translations.</strong> This project translates those ideas into the formal
+observer <code>O_i = (C_i, f_i)</code>, where <code>C_i</code> is a context window over the surviving
+record and <code>f_i</code> is a computationally bounded framing/compression function. It
+also translates observer sampling into <code>f_i(R intersect C_i)</code>, interprets frame
+difference as analogous to separation in rulial space, treats a statement
+trajectory as a path through interpretive states, and uses dialogic
+irreducibility as an analogy to computational irreducibility applied to inquiry
+rounds.</p>
+<p><strong>Project extensions.</strong> The recording function <code>r</code>, the surviving record
+<code>R = r(E)</code>, factual irreducibility, the Type I/II/III disagreement taxonomy, the
+five-stage statement-trajectory taxonomy, stage/type descent, propositions
+P1-P5 and P4', and OKF round/supersession/provenance discipline are project
+extensions. They may be motivated by Wolfram vocabulary, but they are not
+claims found in Wolfram's sources.</p>
+<p><strong>What it explains.</strong> Wolfram's framework gives this project a cross-cutting
+computational analogy: observers are finite reducers of a richer process; what
+they perceive depends on bounded equivalencing; different observers may sample
+or occupy nearby/different parts of computational possibility; irreducible
+processes cannot generally be shortcut; and observers persist along trajectories
+that sample only boundedly simple features.</p>
+<p><strong>What it does not explain.</strong> It does not establish that human disagreement is
+literally a physical process in the Wolfram model. It does not give a measured
+physical rulial distance between interpretive frames. It does not make the
+empirical truth of Wolfram's fundamental-physics program necessary for this
+framework. It does not replace bounded rationality, belief revision, social
+inquiry, argumentation, historiography, or provenance standards.</p>
+<p><strong>Regime, stage, and type.</strong> The relationship is cross-cutting. Static
+contestation maps most directly to different bounded equivalencing functions
+over a shared or partly shared record. Sequential inquiry maps to an observer
+trajectory through states. Type II frame divergence is closest to the analogy;
+Type I is only partly covered because this project defines it through accessible
+record windows; Type III is a project extension because it depends on loss at
+<code>r</code>, before present observers reason.</p>
+<p><strong>Source quality and limitations.</strong> Wolfram's own writings and arXiv paper are
+primary sources for Wolfram's claims. Rickles, Elshatlawy, and Arsiwalla provide
+independent philosophical context for ruliology, and Elshatlawy, Rickles,
+Arsiwalla, and Blum provide a later generalized-observer formalization. These independent
+papers are currently arXiv preprints in this repository's citation context, and
+they do not by themselves validate this project's extensions.</p>
+<h2 id="aumann-agreement">Aumann Agreement</h2>
+<p><strong>Central concept.</strong> Aumann's agreement theorem shows that Bayesian agents with
+a common prior cannot have common knowledge of different posterior probabilities.</p>
+<p><strong>What it explains.</strong> It explains why persistent disagreement is impossible
+under strong ideal agreement conditions, making it a benchmark for static
+contestation.</p>
+<p><strong>What it does not explain.</strong> It does not model bounded computation, lossy
+archives, the cost of translating frames, or a public sequence of revisions.</p>
+<p><strong>Regime, stage, and type.</strong> Static contestation; closest to Type I information
+partition differences and Type II prior/model differences. It does not cover
+formation, enrichment, critique, or consolidation as stages.</p>
+<p><strong>Relationship.</strong> Established counterpart. The framework relaxes Aumann's ideal
+conditions and asks what failed: shared data, shared frame, or surviving record.</p>
+<p><strong>Source quality and limits.</strong> Peer-reviewed mathematical result with high
+source quality; narrow assumptions limit direct application to human or AI
+inquiry.</p>
+<h2 id="simon-bounded-rationality">Simon Bounded Rationality</h2>
+<p><strong>Central concept.</strong> Simon models agents as limited in information, search, and
+computational capacity; they satisfice rather than optimize globally.</p>
+<p><strong>What it explains.</strong> It explains why observers simplify and make finite,
+resource-relative decisions.</p>
+<p><strong>What it does not explain.</strong> It does not give this project's two-stage
+<code>E -&gt; r -&gt; R -&gt; f</code> model, Type III absent-record limit, or OKF file discipline.</p>
+<p><strong>Regime, stage, and type.</strong> All regimes and stages; especially Type I/II,
+where information and frame limits are resource-relative.</p>
+<p><strong>Relationship.</strong> Inheritance and established counterpart. The project uses
+boundedness as a premise and specializes it as compression over surviving
+records.</p>
+<p><strong>Source quality and limits.</strong> Peer-reviewed economics/decision-theory
+foundation; not a provenance or disagreement taxonomy.</p>
+<h2 id="algorithmic-information-theory-and-mdl">Algorithmic Information Theory and MDL</h2>
+<p><strong>Central concept.</strong> Kolmogorov complexity and MDL connect explanation and
+model choice to compressed descriptions.</p>
+<p><strong>What it explains.</strong> It gives a mathematical counterpart for compression and
+description-length asymmetry.</p>
+<p><strong>What it does not explain.</strong> It does not by itself model observers as social
+participants, dialogue rounds, or facts lost before present analysis.</p>
+<p><strong>Regime, stage, and type.</strong> Static and sequential modelling; strongest for
+Type II frame/compression divergence. It can be applied to all stages only
+after this project adds the stage vocabulary.</p>
+<p><strong>Relationship.</strong> Established counterpart. It supports the compression side of
+<code>f</code>, but it is not Wolfram observer theory.</p>
+<p><strong>Source quality and limits.</strong> Strong mathematical and statistical source
+quality; the framework must not overclaim novelty for compression itself.</p>
+<h2 id="statistical-mechanical-coarse-graining">Statistical-Mechanical Coarse-Graining</h2>
+<p><strong>Central concept.</strong> Coarse-graining groups many microstates into macrostates
+according to selected variables or equivalence relations.</p>
+<p><strong>What it explains.</strong> It explains how detailed differences can be ignored while
+preserving a higher-level pattern.</p>
+<p><strong>What it does not explain.</strong> It does not explain historical absence from a
+surviving record, public round ledgers, or argument/inquiry moves.</p>
+<p><strong>Regime, stage, and type.</strong> Static Type II; a formal analogy for how frames
+map many record states into one interpretation.</p>
+<p><strong>Relationship.</strong> Established counterpart and formal analogy.</p>
+<p><strong>Source quality and limits.</strong> Mature physics tradition; the analogy does not
+make interpretive frames physically measured macrostates.</p>
+<h2 id="second-order-cybernetics">Second-Order Cybernetics</h2>
+<p><strong>Central concept.</strong> Observation includes the observer; the observer cannot be
+treated as an external neutral mirror.</p>
+<p><strong>What it explains.</strong> It explains reflexive observation and the recursive fact
+that inquiry changes the situation it observes.</p>
+<p><strong>What it does not explain.</strong> It does not supply computational irreducibility,
+Type I/II/III, or commit-pinned artifacts.</p>
+<p><strong>Regime, stage, and type.</strong> Static and sequential; critique and Type II are
+especially close because they test frames and observer positions.</p>
+<p><strong>Relationship.</strong> Established counterpart. The framework operationalizes
+second-order observation through round records and provenance.</p>
+<p><strong>Source quality and limits.</strong> Established but heterogeneous literature; less
+formal and less file-operational than this project's bundle rules.</p>
+<h2 id="bayesian-updating-and-agm-belief-revision">Bayesian Updating and AGM Belief Revision</h2>
+<p><strong>Central concept.</strong> Bayesian updating changes degrees of belief by
+conditioning on evidence under a model; AGM formalizes contraction and revision
+of belief sets.</p>
+<p><strong>What it explains.</strong> These traditions explain sequential changes in belief
+when evidence arrives or inconsistency is confronted.</p>
+<p><strong>What it does not explain.</strong> They do not normally distinguish frame translation
+cost from facts absent in <code>R</code>, and they do not require public supersession
+files.</p>
+<p><strong>Regime, stage, and type.</strong> Sequential single-observer and multi-observer
+inquiry; enrichment, critique, and consolidation; Types I and II.</p>
+<p><strong>Relationship.</strong> Established counterpart. Bundle supersession is an
+operational record of belief revision, not a replacement for its formal theory.</p>
+<p><strong>Source quality and limits.</strong> Strong formal literatures; assumptions often
+idealize away bounded computation, social dialogue, and archival loss.</p>
+<h2 id="peircean-inquiry">Peircean Inquiry</h2>
+<p><strong>Central concept.</strong> Peirce treats inquiry as arising from doubt and moving
+toward fixed belief.</p>
+<p><strong>What it explains.</strong> It explains inquiry as a temporal and self-corrective
+process, not merely a static clash.</p>
+<p><strong>What it does not explain.</strong> It does not define computational observers,
+context windows, absent-record floors, or OKF bundle metadata.</p>
+<p><strong>Regime, stage, and type.</strong> Sequential single-observer and social inquiry;
+especially critique and consolidation. Type I/II map loosely to evidence and
+method changes; Type III is this project's extension.</p>
+<p><strong>Relationship.</strong> Established counterpart for statement trajectories.</p>
+<p><strong>Source quality and limits.</strong> Foundational philosophical source; not an
+engineering protocol or formal disagreement taxonomy.</p>
+<h2 id="argumentation-theory-and-dialogue-games">Argumentation Theory and Dialogue Games</h2>
+<p><strong>Central concept.</strong> Dung-style argumentation models attacks and acceptability;
+dialogue-game work models rule-governed exchanges including persuasion,
+inquiry, information-seeking, deliberation, negotiation, and other dialogue
+types.</p>
+<p><strong>What it explains.</strong> It explains contestation, critique, and non-adversarial
+dialogue moves. Dialogue-game literature already prevents the framework from
+claiming novelty for having enrichment or inquiry-like moves.</p>
+<p><strong>What it does not explain.</strong> It does not supply the <code>E -&gt; r -&gt; R -&gt; f</code> model,
+Wolfram-derived bounded-observer analogy, or Type III as record absence.</p>
+<p><strong>Regime, stage, and type.</strong> Sequential multi-observer inquiry and, by analogy,
+single-observer self-dialogue. It covers all five stages most directly among
+the established literatures; Types I/II are natural, Type III needs provenance.</p>
+<p><strong>Relationship.</strong> Established counterpart and inheritance for move/stage
+structure.</p>
+<p><strong>Source quality and limits.</strong> Mature formal and informal literature; the
+framework's contribution is integration with bounded compression and
+append-only provenance, not dialogue structure alone.</p>
+<h2 id="quine-duhem-underdetermination">Quine-Duhem Underdetermination</h2>
+<p><strong>Central concept.</strong> Evidence confronts a web of theory and auxiliary
+assumptions rather than isolated claims.</p>
+<p><strong>What it explains.</strong> It explains why multiple theory-plus-auxiliary packages
+can remain compatible with the same evidence.</p>
+<p><strong>What it does not explain.</strong> It does not separate three operational cases:
+missing context within an accessible record, frame divergence over a shared
+record, and facts absent from the surviving record.</p>
+<p><strong>Regime, stage, and type.</strong> Static and sequential critique, contestation, and
+consolidation; Type II and Type III.</p>
+<p><strong>Relationship.</strong> Established counterpart. This project's narrower Type III is
+an operational absent-record subtype of underdetermination.</p>
+<p><strong>Source quality and limits.</strong> Foundational philosophy of science; not a
+round-ledger protocol and not a computational-boundedness theory by itself.</p>
+<h2 id="analytic-historiography">Analytic Historiography</h2>
+<p><strong>Central concept.</strong> Historical statements are retrospective and organized by
+narrative description over surviving traces.</p>
+<p><strong>What it explains.</strong> It explains why the same historical traces can support
+different later descriptions and why later events can change historical
+description.</p>
+<p><strong>What it does not explain.</strong> It does not provide a computable observer model,
+frame-distance proxy, or reproducibility axis.</p>
+<p><strong>Regime, stage, and type.</strong> Static and sequential historical inquiry; critique,
+contestation, and consolidation; Types II and III.</p>
+<p><strong>Relationship.</strong> Established counterpart. The framework translates narrative
+organization into compression over <code>R</code>.</p>
+<p><strong>Source quality and limits.</strong> Established philosophical/historiographic
+context; less directly formal than the project's bundle machinery.</p>
+<h2 id="provenance-reproducibility-w3c-prov-and-fair">Provenance, Reproducibility, W3C PROV, and FAIR</h2>
+<p><strong>Central concept.</strong> Provenance standards and FAIR principles preserve
+entities, activities, agents, identifiers, metadata, derivations, and reuse
+conditions.</p>
+<p><strong>What it explains.</strong> It explains how to make records traceable, reusable, and
+auditable by later observers.</p>
+<p><strong>What it does not explain.</strong> It does not by itself explain observer frames,
+computational irreducibility, or dialogue-stage movement.</p>
+<p><strong>Regime, stage, and type.</strong> All regimes and stages; especially enrichment and
+consolidation. It resolves or prevents many Type I disputes and blocks future
+Type III disputes about the trajectory's own history.</p>
+<p><strong>Relationship.</strong> Operational inheritance. OKF bundle discipline is the
+project's use of provenance practice as a recording function.</p>
+<p><strong>Source quality and limits.</strong> W3C PROV and FAIR are high-quality standards or
+best-practice sources; they are not validation of the theoretical framework.</p>
+<h2 id="cross-cutting-assessment">Cross-Cutting Assessment</h2>
+<h3 id="what-is-inherited">What Is Inherited</h3>
+<p>The framework inherits bounded agency from Simon, compression counterparts from
+AIT/MDL, equivalence-class analogies from statistical mechanics,
+observer-dependence from second-order cybernetics, underdetermination from
+Quine-Duhem and historiography, provenance practice from W3C PROV and FAIR,
+sequential belief change from Bayesian and AGM traditions, inquiry movement
+from Peirce, and dialogue/move structure from argumentation theory.</p>
+<h3 id="what-is-translated-from-wolfram">What Is Translated from Wolfram</h3>
+<p>The framework translates selected Wolfram structures into a computational
+epistemic model: bounded observers become <code>O_i = (C_i, f_i)</code>; equivalencing and
+coarse-graining become <code>f_i</code>; observer sampling becomes interpretation over
+<code>R intersect C_i</code>; rulial-space separation becomes an analogy for frame
+difference; paths through computational possibility motivate statement
+trajectories; and computational irreducibility motivates dialogic
+irreducibility.</p>
+<p>These are translations. They are not claims that Wolfram defines this project's
+formal variables, taxonomies, or bundle protocol.</p>
+<h3 id="what-is-added">What Is Added</h3>
+<p>This project adds the combination of:</p>
+<ol>
+<li>a two-stage access model, <code>E -&gt; r -&gt; R -&gt; f -&gt; interpretation</code>;</li>
+<li>a recording function <code>r</code> and surviving record <code>R = r(E)</code>;</li>
+<li>factual irreducibility as an absent-record limit distinct from
+   computational irreducibility;</li>
+<li>a stage-classified statement trajectory broader than disagreement;</li>
+<li>a contestation-only Type I/II/III taxonomy;</li>
+<li>sequential multi-observer inquiry implemented as one interleaved round
+   sequence;</li>
+<li>single-observer inquiry as a diagonal case over time slices;</li>
+<li>explicit, append-only OKF bundle discipline for the trajectory itself.</li>
+</ol>
+<h2 id="novelty-statement">Novelty Statement</h2>
+<p>The restrained novelty claim is that this project integrates bounded observer
+compression, lossy recording, stage-classified inquiry, and provenance-preserving
+bundle discipline into a single operational framework for statement
+trajectories. It has not proved P1-P5 or P4'. It has not validated the framework
+on external case studies. Its strongest current contribution is a structured
+synthesis and a reproducible file-level workflow for testing the synthesis.</p>
+<p>The novelty claim would fail if a prior source is found that already combines
+bounded observers as compression functions over a surviving record; a lossy
+recording function separating absent facts from present cognitive limits; a
+taxonomy equivalent to Type I/II/III with Type III defined by absence from the
+record; staged trajectories covering enrichment, critique, contestation, and
+consolidation; sequential multi-observer and diagonal single-observer cases in
+one round sequence; and an append-only, provenance-pinned bundle protocol.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Carlos E. Alchourron, Peter Gardenfors, and David Makinson, "On the Logic of Theory Change: Partial Meet Contraction and Revision Functions," <em>Journal of Symbolic Logic</em> 50(2), 1985, 510-530. DOI: <a href="https://doi.org/10.2307/2274239">10.2307/2274239</a>.</li>
+<li>F. R. Ankersmit, <em>Narrative Logic: A Semantic Analysis of the Historian's Language</em>, Martinus Nijhoff, 1983. Bibliographic record: <a href="https://books.google.com/books/about/Narrative_Logic_A_Semantic_Analysis_of_t.html?id=_qBmAAAAMAAJ">Google Books</a>.</li>
+<li>Robert J. Aumann, "Agreeing to Disagree," <em>The Annals of Statistics</em> 4(6), 1976, 1236-1239. DOI: <a href="https://doi.org/10.1214/aos/1176343654">10.1214/aos/1176343654</a>.</li>
+<li>Thomas Bayes, "An Essay towards Solving a Problem in the Doctrine of Chances," <em>Philosophical Transactions</em> 53, 1763. DOI: <a href="https://doi.org/10.1098/rstl.1763.0053">10.1098/rstl.1763.0053</a>.</li>
+<li>Ludwig Boltzmann, "On the Relationship between the Second Fundamental Theorem of the Mechanical Theory of Heat and Probability Calculations Regarding the Conditions for Thermal Equilibrium," 1877; English translation in <em>Entropy</em> 17(4), 2015, 1971-2009. DOI: <a href="https://doi.org/10.3390/e17041971">10.3390/e17041971</a>.</li>
+<li>Arthur C. Danto, <em>Analytical Philosophy of History</em>, Cambridge University Press, 1965. Bibliographic record: <a href="https://philpapers.org/rec/DANAPO-22">PhilPapers</a>.</li>
+<li>Phan Minh Dung, "On the Acceptability of Arguments and its Fundamental Role in Nonmonotonic Reasoning, Logic Programming and n-Person Games," <em>Artificial Intelligence</em> 77(2), 1995, 321-357. DOI: <a href="https://doi.org/10.1016/0004-3702(94)00041-X">10.1016/0004-3702(94)00041-X</a>.</li>
+<li>Pierre Duhem, <em>La theorie physique: son objet et sa structure</em>, Chevalier &amp; Riviere, 1906. Public scan: <a href="https://archive.org/details/latheoriephysiq00duhegoog">Internet Archive</a>.</li>
+<li>Hatem Elshatlawy, Dean Rickles, Xerxes D. Arsiwalla, and Alexander Blum, "Towards a Generalized Theory of Observers," arXiv:2504.16225, 2025. DOI: <a href="https://doi.org/10.48550/arXiv.2504.16225">10.48550/arXiv.2504.16225</a>.</li>
+<li>Heinz von Foerster, <em>Cybernetics of Cybernetics</em>, 1974. Catalog record: <a href="https://search.worldcat.org/title/11596627">WorldCat</a>.</li>
+<li>Heinz von Foerster, <em>Understanding Understanding: Essays on Cybernetics and Cognition</em>, Springer, 2003. DOI: <a href="https://doi.org/10.1007/b97451">10.1007/b97451</a>.</li>
+<li>C. L. Hamblin, "Mathematical Models of Dialogue," <em>Theoria</em> 37(2), 1971, 130-155. DOI: <a href="https://doi.org/10.1111/j.1755-2567.1971.tb00065.x">10.1111/j.1755-2567.1971.tb00065.x</a>.</li>
+<li>A. N. Kolmogorov, "Three approaches to the definition of the concept 'quantity of information'," <em>Problems of Information Transmission</em> 1(1), 1965, 3-11. Bibliographic record: <a href="https://www.mathnet.ru/eng/ppi68">Math-Net.Ru</a>.</li>
+<li>Niklas Luhmann, <em>Soziale Systeme: Grundriss einer allgemeinen Theorie</em>, Suhrkamp, 1984. Catalog record: <a href="https://katalog.bibliothek.kit.edu/bib/74894">KIT Library</a>.</li>
+<li>Luc Moreau and Paolo Missier, eds., "PROV-DM: The PROV Data Model," W3C Recommendation, 30 April 2013. <a href="https://www.w3.org/TR/prov-dm/">W3C</a>.</li>
+<li>Charles S. Peirce, "The Fixation of Belief," <em>Popular Science Monthly</em> 12, 1877. Text: <a href="https://www.peirce.org/writings/p107.html">peirce.org</a>.</li>
+<li>W. V. O. Quine, "Two Dogmas of Empiricism," <em>The Philosophical Review</em> 60(1), 1951, 20-43. DOI: <a href="https://doi.org/10.2307/2266637">10.2307/2266637</a>.</li>
+<li>Dean Rickles, Hatem Elshatlawy, and Xerxes D. Arsiwalla, "Ruliology: Linking Computation, Observers and Physical Law," arXiv:2308.16068, 2023. DOI: <a href="https://doi.org/10.48550/arXiv.2308.16068">10.48550/arXiv.2308.16068</a>.</li>
+<li>Jorma Rissanen, "Modeling by Shortest Data Description," <em>Automatica</em> 14(5), 1978, 465-471. DOI: <a href="https://doi.org/10.1016/0005-1098(78)90005-5">10.1016/0005-1098(78)90005-5</a>.</li>
+<li>Herbert A. Simon, "A Behavioral Model of Rational Choice," <em>The Quarterly Journal of Economics</em> 69(1), 1955, 99-118. DOI: <a href="https://doi.org/10.2307/1884852">10.2307/1884852</a>.</li>
+<li>Douglas N. Walton and Erik C. W. Krabbe, <em>Commitment in Dialogue: Basic Concepts of Interpersonal Reasoning</em>, State University of New York Press, 1995. Bibliographic record: <a href="https://research.rug.nl/en/publications/icommitment-in-dialoguei-ibasic-concepts-of-interpersonal-reasoni/">University of Groningen</a>.</li>
+<li>Mark D. Wilkinson et al., "The FAIR Guiding Principles for scientific data management and stewardship," <em>Scientific Data</em> 3, 2016. DOI: <a href="https://doi.org/10.1038/sdata.2016.18">10.1038/sdata.2016.18</a>.</li>
+<li>Stephen Wolfram, <em>A New Kind of Science</em>, Wolfram Media, 2002, Chapter 12, section 6 "Computational Irreducibility." Online: <a href="https://www.wolframscience.com/nks/chap-12--the-principle-of-computational-equivalence/">WolframScience</a>.</li>
+<li>Stephen Wolfram, "Exploring Rulial Space: The Case of Turing Machines," arXiv:2101.10907, 2021. DOI: <a href="https://doi.org/10.48550/arXiv.2101.10907">10.48550/arXiv.2101.10907</a>.</li>
+<li>Stephen Wolfram, "The Concept of the Ruliad," <em>Stephen Wolfram Writings</em>, 10 November 2021. <a href="https://writings.stephenwolfram.com/2021/11/the-concept-of-the-ruliad./">Wolfram Writings</a>.</li>
+<li>Stephen Wolfram, "Twenty Years Later: The Surprising Greater Implications of A New Kind of Science," <em>Stephen Wolfram Writings</em>, 16 May 2022. DOI: <a href="https://doi.org/10.31855/ff94a37f-c25">10.31855/ff94a37f-c25</a>.</li>
+<li>Stephen Wolfram, "Computational Foundations for the Second Law of Thermodynamics," <em>Stephen Wolfram Writings</em>, 3 February 2023. <a href="https://writings.stephenwolfram.com/2023/02/computational-foundations-for-the-second-law-of-thermodynamics/">Wolfram Writings</a>.</li>
+<li>Stephen Wolfram, "Observer Theory," <em>Stephen Wolfram Writings</em>, 11 December 2023. DOI: <a href="https://doi.org/10.31855/afd076b9-7b8">10.31855/afd076b9-7b8</a>.</li>
+<li>Stephen Wolfram, "On the Nature of Time," <em>Stephen Wolfram Writings</em>, 8 October 2024. DOI: <a href="https://doi.org/10.31855/f77ca8d0-17d">10.31855/f77ca8d0-17d</a>.</li>
+<li>Wolfram Physics Project, "Physics Project Publications &amp; Related Research." <a href="https://www.wolframphysics.org/technical-documents/">Technical documents index</a>.</li>
+<li>Google Cloud, "Introducing the Open Knowledge Format," 12 June 2026, and GoogleCloudPlatform <code>knowledge-catalog</code> <code>okf/SPEC.md</code>, Version 0.1 draft. Announcement: <a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing">Google Cloud Blog</a>; spec: <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md">GitHub</a>.</li>
+</ul>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/related-work.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

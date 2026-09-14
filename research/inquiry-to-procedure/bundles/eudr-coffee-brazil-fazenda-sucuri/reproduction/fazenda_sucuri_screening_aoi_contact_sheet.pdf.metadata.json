@@ -1,0 +1,24 @@
+{
+  "artifact_type": "derived_pdf_contact_sheet",
+  "evidence_role": "non-evidentiary-convenience-artifact",
+  "layout": {
+    "columns": 3,
+    "embedded_thumbnail_max_long_edge_px": 1200,
+    "gutter_pt": 4,
+    "margin_pt": 14,
+    "page_count": 12,
+    "page_format": "A2-width-content-aspect-height",
+    "page_height_pt": 2217.5042616649284,
+    "page_width_pt": 1190.5511811023623,
+    "rows": 4
+  },
+  "output_pdf": "bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf",
+  "output_pdf_sha256": "a68592de13ec8879bac692aadad04f153e758c762bf494821b8a205925670f77",
+  "renderer": "tools/pdf_contact_sheet.py",
+  "source_bundle_id": "fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z",
+  "source_manifest_sha256": "a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e",
+  "source_pdf": "/Users/server/projects/eudr-dmi-gil/audit/evidence/2026-09-11/fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z/reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf",
+  "source_pdf_sha256": "dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7",
+  "source_report_pdf_sha256": "dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7",
+  "visual_acceptance_requirement": "bundles/eudr-gee/inquiry/round-0015.md"
+}

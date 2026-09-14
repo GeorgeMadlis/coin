@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observer-distance metrics</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / metrics</nav>
+<h1>Observer-distance metrics</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 5 operational metrics for observer distance and statement-trajectory behavior.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-21</dd><dt>title</dt><dd>Observer-distance metrics</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h1 id="observer-distance-metrics">Observer-Distance Metrics</h1>
+<p>This document fills the Step 5 deliverable. It defines measurable proxies for
+observer distance and trajectory behavior in the statement-evolution framework.
+It separates four things that should not be collapsed:</p>
+<ol>
+<li><strong>Mathematical definitions:</strong> quantities over observers, records, rounds,
+   stages, types, descriptions, and provenance fields.</li>
+<li><strong>Measurement protocols:</strong> reproducible procedures that turn a recorded
+   bundle or experiment into values.</li>
+<li><strong>Repository-derived measurements:</strong> values computed from recorded files in
+   <code>bundles/framework-self/</code>.</li>
+<li><strong>Speculative hypotheses:</strong> expected relationships to P1-P5 and P4' in
+   <a href="framework_v3.html">docs/framework_v3.md</a>, not established empirical results.</li>
+</ol>
+<p>Status note: the metrics are operational proposals. They do not validate the
+framework by themselves. A single self-referential trajectory demonstrates that
+measurements can be recorded and reproduced; it is not evidence that the
+framework's general propositions hold.</p>
+<h2 id="1-measurement-vocabulary">1. Measurement Vocabulary</h2>
+<p>Let <code>R</code> be the surviving record, <code>O_i = (C_i, f_i)</code> an observer, and
+<code>y_i = f_i(R cap C_i)</code> the observer's interpretation. Let a statement
+trajectory have rounds <code>t = 1..n</code>, stage sequence <code>s_t</code>, and contestation-only
+type sequence <code>k_t</code> for rounds where <code>s_t = contestation</code>.</p>
+<p>For static cross-sections, metrics compare two or more observers at one time.
+For multi-observer trajectories, they compare parties in one interleaved round
+sequence. For diagonal trajectories, they compare time slices of one observer
+or one bundle state to its earlier state.</p>
+<p>The word "distance" is always proxy language. None of the metrics measures a
+literal location in Wolfram's rulial space. Each proxy can reproduce the
+evaluator's own frame if the evaluator chooses labels, encodings, disclosure
+levels, or scoring rules that favor its preferred compression function.</p>
+<h2 id="2-metric-families">2. Metric Families</h2>
+<p>The table below gives the required fields for every metric: formal or
+operational definition, unit and range, required inputs, measurement procedure,
+missing-data treatment, interpretation, confounders, failure modes, expected
+relationship to the framework propositions, falsification use, and trajectory
+applicability.</p>
+<h3 id="21-observer-distance-proxies">2.1 Observer-Distance Proxies</h3>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>metric</th>
+<th>definition</th>
+<th>unit and range</th>
+<th>required inputs</th>
+<th>measurement procedure</th>
+<th>missing data</th>
+<th>interpretation</th>
+<th>confounders</th>
+<th>failure modes</th>
+<th>expected relationship</th>
+<th>falsification use</th>
+<th>applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OD-1</td>
+<td>Predicted-continuation divergence</td>
+<td>Distance between observers' probability distributions or ranked predictions over the next <code>h</code> events in a shared stream: e.g. Jensen-Shannon divergence for distributions, Kendall distance for rankings, or Brier-score difference after outcomes are known.</td>
+<td>Normalized score in <code>[0, 1]</code> where 0 means identical predictions under the chosen scoring rule.</td>
+<td>Same event prefix, recorded predictions by each observer, horizon <code>h</code>, scoring rule, and later outcomes when scoring accuracy.</td>
+<td>Freeze the common prefix, collect predictions before later rounds, normalize output vocabulary, compute divergence, then optionally score against realized continuations.</td>
+<td><code>NOT MEASURABLE</code> unless predictions are timestamped before outcomes and use comparable output vocabularies.</td>
+<td>Large divergence suggests different frames, priors, or context windows even before explicit disagreement appears.</td>
+<td>Prediction formats, horizon choice, calibration skill, strategic prediction, and output vocabulary.</td>
+<td>Observers may agree on predictions while disagreeing on meaning; or may diverge because one prediction task was underspecified.</td>
+<td>P5 predicts genuine trajectories often cannot be shortcut. Strong repeated ability to predict convergence and future rounds without running them would weaken P5.</td>
+<td>Static, multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>OD-2</td>
+<td>Forced-classification disagreement rate</td>
+<td>Fraction of shared items on which observers assign different labels under a forced shared codebook.</td>
+<td>Rate in <code>[0, 1]</code>; optionally Cohen's kappa or Krippendorff's alpha.</td>
+<td>Shared item set, codebook, at least two independent labels per item, adjudication policy.</td>
+<td>Give all observers the same items and label options; compute pairwise disagreement and, if useful, chance-corrected agreement.</td>
+<td><code>NOT MEASURABLE</code> if labels are not independent, items differ, or the codebook was changed mid-run without versioning.</td>
+<td>High rate after data sharing suggests frame or category divergence.</td>
+<td>Bad codebook, ambiguous items, label imbalance, training effects, and social pressure.</td>
+<td>Forced labels can hide disagreement by forcing incompatible frames into one codebook.</td>
+<td>If raw-data sharing repeatedly reduces disagreement to near zero, Type I is supported. If disagreement persists under shared items and stable labels, Type I-only explanations are weakened.</td>
+<td>Static, multi-observer, diagonal if one observer re-labels later without seeing prior labels.</td>
+<td></td>
+</tr>
+<tr>
+<td>OD-3</td>
+<td>Description-length asymmetry</td>
+<td>Difference or ratio between lengths of observers' descriptions of the same record under a fixed encoding and task: <code>abs(L_i - L_j)</code> or <code>max(L_i,L_j)/min(L_i,L_j)</code>.</td>
+<td>Tokens, bytes, words, compressed bytes, or ratio <code>&gt;= 1</code>.</td>
+<td>Same prompt/task, same source record, encoding rule, observer outputs.</td>
+<td>Freeze representation, collect descriptions, compute length, optionally compress with a declared compressor and settings.</td>
+<td><code>NOT MEASURABLE</code> if the source prompt, encoding, or output constraints differ. Mark units and representation explicitly.</td>
+<td>Asymmetry may indicate that one frame treats the record as simpler or more natural than another.</td>
+<td>Language, verbosity norms, compression algorithm, prompt wording, audience, and task scope.</td>
+<td>Length can measure style rather than explanatory compression.</td>
+<td>If frame distance is claimed but all representation-stable description and classification measures show no divergence across many cases, the Type II diagnosis is weakened.</td>
+<td>Static, multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>OD-4</td>
+<td>Provenance completeness of <code>R</code></td>
+<td>Fraction or checklist of required provenance fields present for deciding a target claim: source identity, version, timestamp, chain of custody, transformation steps, environment, checksums, and recorder specification.</td>
+<td>Component score in <code>[0, 1]</code>, plus named missing fields.</td>
+<td>Target claim, required provenance schema, surviving records, reproduction axis or equivalent metadata.</td>
+<td>Define the claim-specific provenance checklist before scoring; mark each component present, absent, partial, or not applicable; report score and missing fields.</td>
+<td>Missing components are visible as <code>NOT AVAILABLE</code>, <code>UNVERIFIED</code>, or <code>NOT MEASURABLE</code>; do not impute.</td>
+<td>Low completeness raises risk that an apparent Type II frame dispute is actually Type III underdetermination. High completeness can rule out some Type III paths for the recorded claim.</td>
+<td>Checklist design, false confidence in metadata, irrelevant provenance fields, and inaccessible external systems.</td>
+<td>A high score can still miss the one absent fact that matters; a low score does not prove Type III.</td>
+<td>P3 predicts lost recorder specifications cause Type III to be misclassified as Type II. If low provenance never predicts persistence or underdetermination across cases, P3 is weakened.</td>
+<td>Static, multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>OD-5</td>
+<td>Recoverability of surviving record <code>R</code></td>
+<td>Ability of a later observer to retrieve, verify, and rerun or re-derive the record needed by the current claim.</td>
+<td>Ordered levels: 0 absent, 1 cited but unpinned, 2 pinned but not re-runnable, 3 re-runnable with cost limits, 4 fully re-derived in current environment.</td>
+<td>Source links, commits, checksums, data versions, environment, commands, access permissions.</td>
+<td>Attempt retrieval and verification from a fresh environment; record the highest achieved level and the blocking reason.</td>
+<td>Use <code>NOT AVAILABLE</code> for absent sources, <code>UNVERIFIED</code> for unchecked pins, and <code>computational</code> vs <code>factual</code> irreducibility labels for blockers.</td>
+<td>Higher recoverability should reduce future Type I and Type III disputes about the trajectory's own history.</td>
+<td>Permissions, bit rot, proprietary data, cost, environment drift, and stale derived artifacts.</td>
+<td>A successful rerun may only reproduce the recorded computation, not the historical event being studied.</td>
+<td>If recoverable records still generate Type III disputes about facts supposedly pinned by the record, the checklist or Type III diagnosis is wrong.</td>
+<td>Static, multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>OD-6</td>
+<td>Deepest common disclosure level</td>
+<td>Deepest level <code>L</code> in <code>{0,1,2,3}</code> at which observers' accounts are equivalent before diverging.</td>
+<td>Level 0-3, or <code>none</code>, plus axis. Higher means more shared detail before divergence.</td>
+<td>Levelled accounts by observer or party, equivalence criterion, axis map.</td>
+<td>Compare accounts at L0, then L1, L2, and L3; record the deepest level still equivalent and the first divergent level.</td>
+<td><code>NOT MEASURABLE</code> without parallel level-specific accounts or a declared equivalence criterion.</td>
+<td>Divergence at shallower levels signals broader frame or verdict disagreement; divergence only at deeper levels localizes dispute.</td>
+<td>Level design, summarizer bias, unequal detail, and weak equivalence rules.</td>
+<td>If shallow summaries are forced to agree, DCL can overstate agreement.</td>
+<td>If DCL does not help distinguish Type I, II, and III localization over many recorded disputes, the bundle-localization claim is weakened.</td>
+<td>Static, multi-observer, diagonal.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-contestation-type-trajectory-metrics">2.2 Contestation-Type Trajectory Metrics</h3>
+<p>Type metrics apply only to contestation-stage rounds. They must not be mixed
+with stage metrics.</p>
+<p>For numeric type ordering, use <code>I = 1</code>, <code>II = 2</code>, <code>III = 3</code>, and omit
+<code>resolved</code> from descent calculations except as a closure marker. This ordering
+is not a value judgment; it encodes the framework's proposed descent from
+context-window gaps to frame gaps to absent-record residues.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>metric</th>
+<th>definition</th>
+<th>unit and range</th>
+<th>required inputs</th>
+<th>measurement procedure</th>
+<th>missing data</th>
+<th>interpretation</th>
+<th>confounders</th>
+<th>failure modes</th>
+<th>expected relationship</th>
+<th>falsification use</th>
+<th>applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TT-1</td>
+<td>Type descent rate</td>
+<td>Mean positive change in type depth per adjacent contestation round, or count of <code>I-&gt;II</code>, <code>II-&gt;III</code>, <code>I-&gt;III</code> transitions divided by contestation transitions.</td>
+<td>Rate in <code>[0, 1]</code> for transition share; depth change in <code>{0,1,2}</code> per transition.</td>
+<td>At least two contestation rounds with <code>fc-type-at-round</code>.</td>
+<td>Extract contestation rounds, map types to depth, count transitions where depth increases.</td>
+<td><code>NOT MEASURABLE</code> with fewer than two contestation rounds or inferred types lacking rationale.</td>
+<td>Positive descent is consistent with Type I components resolving before Type II and Type III residues.</td>
+<td>Coarse labels, mixed-type rounds, adversarial moves, and changing classification standards.</td>
+<td>Labels may be post-hoc rationalizations rather than measured type movement.</td>
+<td>Many truthful, recorded contestations that move upward or never expose deeper residues would weaken P4.</td>
+<td>Multi-observer, diagonal contestation stretches.</td>
+<td></td>
+</tr>
+<tr>
+<td>TT-2</td>
+<td>Type stalls</td>
+<td>Adjacent contestation transitions where type depth is unchanged while evidence or frame moves continue.</td>
+<td>Count and share of contestation transitions.</td>
+<td>Contestation type sequence and evidence/frame move markers.</td>
+<td>Count repeated type labels across adjacent contestation rounds with non-empty moves.</td>
+<td><code>NOT MEASURABLE</code> with fewer than two contestation rounds.</td>
+<td>A stall can mean genuine difficulty, insufficient resources, or misclassification.</td>
+<td>Long-running hard Type II translation, strategic delay, evidence flooding.</td>
+<td>A stall is not by itself proof of Type III.</td>
+<td>Under continued evidence sharing, a persistent Type I stall should trigger misclassification review per P3.</td>
+<td>Multi-observer, diagonal contestation stretches.</td>
+<td></td>
+</tr>
+<tr>
+<td>TT-3</td>
+<td>Type reversals</td>
+<td>Adjacent contestation transitions where type depth decreases, e.g. <code>III-&gt;II</code> or <code>II-&gt;I</code>.</td>
+<td>Count and share of contestation transitions.</td>
+<td>Contestation type sequence.</td>
+<td>Map type depth and count negative adjacent changes.</td>
+<td><code>NOT MEASURABLE</code> with fewer than two contestation rounds.</td>
+<td>Reversal may reveal newly discovered records, earlier over-classification, or non-monotone/adversarial moves.</td>
+<td>Later evidence can legitimately re-open Type I components; type labels may mix subclaims.</td>
+<td>Treating every reversal as failure ignores multi-component disputes.</td>
+<td>Frequent reversals under truthful, recorded, single-claim contestations would weaken a monotone P4 reading.</td>
+<td>Multi-observer, diagonal contestation stretches.</td>
+<td></td>
+</tr>
+<tr>
+<td>TT-4</td>
+<td>Type oscillations</td>
+<td>Alternation pattern in contestation types, such as <code>I,II,I</code> or <code>II,III,II</code>, over a window of length at least three.</td>
+<td>Count and oscillation share per eligible windows.</td>
+<td>At least three contestation rounds.</td>
+<td>Slide a three-round window over contestation rounds and count return-to-prior-depth patterns.</td>
+<td><code>NOT MEASURABLE</code> with fewer than three contestation rounds.</td>
+<td>Oscillation indicates frame churn, unstable labeling, mixed claims, or adversarial dynamics.</td>
+<td>Over-broad statements, multiple live subclaims, and changing parties.</td>
+<td>A real multi-component dispute can look oscillatory if not decomposed.</td>
+<td>High oscillation in well-scoped, truthful records would weaken P4 and motivate Step 8 limitations.</td>
+<td>Multi-observer, diagonal contestation stretches.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-stage-trajectory-metrics">2.3 Stage-Trajectory Metrics</h3>
+<p>Stage metrics describe the whole statement trajectory. They are distinct from
+contestation type metrics because most rounds have no live counter-position.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>metric</th>
+<th>definition</th>
+<th>unit and range</th>
+<th>required inputs</th>
+<th>measurement procedure</th>
+<th>missing data</th>
+<th>interpretation</th>
+<th>confounders</th>
+<th>failure modes</th>
+<th>expected relationship</th>
+<th>falsification use</th>
+<th>applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ST-1</td>
+<td>Stage-transition rate</td>
+<td>Number of adjacent round pairs where <code>s_t != s_{t+1}</code> divided by <code>n-1</code>.</td>
+<td>Rate in <code>[0, 1]</code>.</td>
+<td>Complete stage sequence.</td>
+<td>Extract <code>fc-stage</code> from round files or a documented retrospective index; count adjacent changes.</td>
+<td>If historical stages are back-assigned, label them inferred and report frontmatter coverage separately.</td>
+<td>Higher rate means the statement is moving among lifecycle roles; lower rate means long stretches of one stage.</td>
+<td>Stage taxonomy granularity, retroactive classification, and merged multi-purpose rounds.</td>
+<td>High transition rate can reflect bookkeeping style, not inquiry dynamics.</td>
+<td>If stage movement never correlates with consolidation or supersession outcomes, P4' stage hypotheses are weakened.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-2</td>
+<td>Time to first contestation</td>
+<td>First contestation round minus formation round; optionally calendar duration.</td>
+<td>Rounds and elapsed time; <code>NOT OBSERVED</code> if none.</td>
+<td>Stage sequence and timestamps.</td>
+<td>Find first <code>formation</code> and first later <code>contestation</code>; subtract round numbers and dates.</td>
+<td><code>NOT OBSERVED</code> is distinct from missing data; <code>NOT MEASURABLE</code> if stages or dates are missing.</td>
+<td>Shorter time means disagreement appears early; no contestation means the trajectory has not entered observer disagreement.</td>
+<td>Missing early rounds, retrospective stage labels, and bundled changes.</td>
+<td>Absence of contestation may mean no rival observer, not consensus.</td>
+<td>If critique-before-contestation does not reduce later contestation length across cases, Step 6 prediction 8 weakens.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-3</td>
+<td>Contestation round count</td>
+<td>Number of rounds with <code>fc-stage: contestation</code>.</td>
+<td>Non-negative integer and share of rounds.</td>
+<td>Stage sequence.</td>
+<td>Count contestation rounds.</td>
+<td><code>NOT MEASURABLE</code> if stage sequence absent.</td>
+<td>Larger counts indicate longer live disagreement stretches.</td>
+<td>Over-splitting or merging rounds, mixed-stage records.</td>
+<td>Count ignores severity and content of disagreement.</td>
+<td>If many contestations resolve without type descent, P4 needs revision or narrower assumptions.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-4</td>
+<td>Time or rounds to consolidation</td>
+<td>First consolidation round after formation or after first contestation; optionally all consolidation intervals.</td>
+<td>Rounds and elapsed time; <code>NOT OBSERVED</code> if none.</td>
+<td>Stage sequence and timestamps.</td>
+<td>Compute interval from formation to first consolidation and from first contestation to next consolidation.</td>
+<td><code>NOT OBSERVED</code> if no consolidation; <code>NOT MEASURABLE</code> if stages or dates missing.</td>
+<td>Shorter intervals may indicate productive inquiry or premature closure.</td>
+<td>Administrative consolidations, low-stakes changes, and conventional rather than evidential settlement.</td>
+<td>Consolidation is supersedable; it is not proof of truth.</td>
+<td>If consolidation behaves as a permanent sink, that would contradict the framework's own supersession caveat, not validate it.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-5</td>
+<td>Post-consolidation supersession rate</td>
+<td>Share of rounds after first consolidation that supersede at least one current concept; optionally number of superseded concepts per post-consolidation round.</td>
+<td>Rate in <code>[0,1]</code>; count per round.</td>
+<td>First consolidation round, concept frontmatter, supersession metadata, round list.</td>
+<td>Identify first consolidation; for later rounds, count current concept files whose <code>fc-round</code> equals that round and have <code>fc-supersedes</code>.</td>
+<td><code>NOT MEASURABLE</code> if supersession metadata absent or old versions cannot be identified.</td>
+<td>Measures how often consolidated material is later revised.</td>
+<td>Metadata repairs, broad concept files, and current-state-only visibility.</td>
+<td>Current files hide superseded successors unless git history is queried.</td>
+<td>If post-consolidation supersession is common even after critique-before-contestation, Step 6 prediction 8 weakens.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-6</td>
+<td>Re-litigation rate</td>
+<td>Share of post-consolidation rounds that reopen the same settled claim, issue, or concept without adding new evidence or frame rationale.</td>
+<td>Rate in <code>[0,1]</code>; requires issue identifiers.</td>
+<td>Stable claim/issue ids, consolidation markers, later touches, evidence/frame rationale.</td>
+<td>Track each consolidated issue; count later contestation or critique rounds over the same issue with no new basis.</td>
+<td><code>NOT MEASURABLE</code> without stable issue ids or explicit "same point" metadata.</td>
+<td>High rate suggests weak recording discipline or premature consolidation.</td>
+<td>Legitimate reopening, new evidence, and concept files that contain many subclaims.</td>
+<td>Without issue ids, this becomes evaluator judgment.</td>
+<td>If disciplined bundles do not lower re-litigation relative to undocumented inquiries, prediction 7 weakens.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-7</td>
+<td>Evidence added per round</td>
+<td>Count of evidence moves, evidence links, or evidence items per round under a declared counting rule.</td>
+<td>Items per round, or evidence-move share in <code>[0,1]</code>.</td>
+<td>Round records and evidence-item extraction rule.</td>
+<td>Count <code>fc-move: evidence</code> or parse <code># Evidence added</code> items; report the rule used.</td>
+<td>Use <code>NOT MEASURABLE</code> for item counts when evidence is prose-only or mixed with implementation changes.</td>
+<td>Higher rate suggests context-window growth; in contestation, persistent disagreement despite evidence can expose Type II/III.</td>
+<td>Large items vs small items, infrastructure evidence, and duplicate links.</td>
+<td>Counting bullets can reward verbosity or split artifacts.</td>
+<td>If continued evidence sharing resolves all disputes regardless of frame/provenance, Type II/III claims weaken.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-8</td>
+<td>Frame-change frequency</td>
+<td>Number of <code>fc-move: frame-change</code> rounds divided by total rounds; optionally count consolidation frame adoptions separately from contestation frame splits.</td>
+<td>Rate in <code>[0,1]</code>.</td>
+<td>Round <code>fc-move</code> and <code>fc-stage</code>.</td>
+<td>Count frame-change moves and classify their stage.</td>
+<td><code>NOT MEASURABLE</code> if move metadata missing.</td>
+<td>Higher frequency suggests changing compression functions or policy frames.</td>
+<td>Some frame changes are administrative clarifications; others are substantive.</td>
+<td>Move labels may undercount frame changes hidden in evidence rounds.</td>
+<td>If frame-change frequency has no relationship to persistence after data sharing, Type II operationalization weakens.</td>
+<td>Multi-observer, diagonal.</td>
+<td></td>
+</tr>
+<tr>
+<td>ST-9</td>
+<td>Observer or agent handoff frequency</td>
+<td>Number of adjacent round pairs where <code>fc-party</code> changes divided by <code>n-1</code>.</td>
+<td>Rate in <code>[0,1]</code>.</td>
+<td>Round party sequence.</td>
+<td>Extract <code>fc-party</code> and count adjacent changes.</td>
+<td><code>NOT MEASURABLE</code> if party metadata missing or unstable.</td>
+<td>Higher rate means more sequential observer handoffs; it can expose multi-observer differences.</td>
+<td>Party labels may conflate human and tool; long single-party stretches may still include hidden reviewers.</td>
+<td>Handoff count does not measure substantive disagreement.</td>
+<td>If handoffs systematically add no new critiques, frames, or provenance changes, the sequential-observer contribution may be weaker than claimed.</td>
+<td>Multi-observer; diagonal when parties are time slices only if explicitly encoded.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-protocol-notes-and-boundary-cases">3. Protocol Notes and Boundary Cases</h2>
+<h3 id="31-provenance-completeness-type-ii-and-type-iii">3.1 Provenance Completeness, Type II, and Type III</h3>
+<p>Provenance completeness cannot by itself distinguish Type II from Type III.
+It can change the diagnostic odds:</p>
+<ul>
+<li>Low or missing provenance raises Type III risk because the disputed content
+  or recorder specification may be absent from <code>R</code>.</li>
+<li>High provenance can rule out some Type III explanations for a specific
+  claim, because later observers can inspect the relevant record and how it was
+  produced.</li>
+<li>High provenance does not eliminate Type II. Two observers can inspect the
+  same complete record and still apply different frames.</li>
+<li>Low provenance does not prove Type III. The missing field may be irrelevant
+  to the disputed proposition.</li>
+</ul>
+<p>Therefore OD-4 is a diagnostic proxy, not a classifier. A Type III diagnosis
+still requires showing that the disputed proposition is underdetermined by the
+surviving record.</p>
+<h3 id="32-stalled-type-trajectories">3.2 Stalled Type Trajectories</h3>
+<p>A stalled Type I trajectory under continued evidence sharing is a warning sign,
+not an automatic reclassification. Under P3, the likely explanations include:</p>
+<ul>
+<li>the apparent missing data is not actually present in <code>R</code>, making the case
+  Type III;</li>
+<li>the observers share data but compress it differently, making the residual
+  Type II;</li>
+<li>the evidence sharing is incomplete, untruthful, or not recorded; or</li>
+<li>the statement combines multiple subclaims that should be split.</li>
+</ul>
+<p>The measurement protocol should trigger a classification review and record the
+reason for either retaining the Type I label or superseding it.</p>
+<h3 id="33-description-length-is-representation-dependent">3.3 Description Length Is Representation-Dependent</h3>
+<p>Description length depends on the representation: language, encoding, token
+scheme, prompt, audience, allowed notation, and compression algorithm. A short
+Python program, a long plain-English paragraph, and a table may describe the
+same record with different byte counts. OD-3 is therefore only meaningful under
+a fixed measurement representation. It cannot be treated as an observer-
+independent measure of understanding.</p>
+<h3 id="34-kolmogorov-complexity-is-not-directly-measurable">3.4 Kolmogorov Complexity Is Not Directly Measurable</h3>
+<p>Kolmogorov complexity is the length of the shortest program that generates a
+string on a fixed universal machine. It is not computable in general. This
+framework therefore never claims to measure true Kolmogorov complexity.
+Description-length metrics are practical proxies such as word count, token
+count, MDL-style model cost, or compressed bytes under a declared compressor.
+Those proxies are useful only when their representation and compressor are
+explicitly recorded.</p>
+<h3 id="35-evaluator-frame-reproduction">3.5 Evaluator-Frame Reproduction</h3>
+<p>Metric choice can reproduce the evaluator's own frame. Examples:</p>
+<ul>
+<li>a forced-classification codebook can make one observer's categories the only
+  legal categories;</li>
+<li>a disclosure-level comparison can privilege the bundle author's hierarchy;</li>
+<li>a provenance checklist can overvalue fields familiar to one discipline;</li>
+<li>a description-length measure can reward the evaluator's preferred language or
+  notation.</li>
+</ul>
+<p>Mitigations: publish codebooks before labeling, allow objections to metric
+choice as critique or contestation rounds, record missing values, and preserve
+alternative encodings when they materially change the result.</p>
+<h2 id="4-framework-self-pilot-measurement">4. Framework-Self Pilot Measurement</h2>
+<p>This section applies every measurable bundle-derived metric to
+<code>bundles/framework-self/</code>. It uses only recorded files and metadata. It does
+not infer missing early-stage frontmatter silently: rounds 1-3 predate <code>fc-stage</code>
+frontmatter, and their stages are taken from the recorded retrospective
+classification in <code>bundles/framework-self/inquiry/index.md</code>.</p>
+<p>Measurement target: bundle rounds 1-13 at source commit
+<code>0c3346b7f4ebc92260cfecc1c6ee63e676d46ce8</code>, the HEAD of <code>main</code> when Step 5
+started. Round 14 records the measurement but is not included in the target
+values, to avoid circular self-measurement.</p>
+<p>Machine-readable values are recorded in
+<code>bundles/framework-self/r/metrics-rounds-0001-0013.csv</code>; reproduction
+instructions are in <code>bundles/framework-self/r/full-results.md</code>.</p>
+<p>Summary of measured values:</p>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th style="text-align: right;">value</th>
+<th>missingness note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rounds in target</td>
+<td style="text-align: right;">13</td>
+<td>Complete round files and bundle ledger rows are present.</td>
+</tr>
+<tr>
+<td>Stage-transition rate</td>
+<td style="text-align: right;">7/12 = 0.5833</td>
+<td>Rounds 1-3 use index-recorded retrospective stages.</td>
+</tr>
+<tr>
+<td>Stage counts</td>
+<td style="text-align: right;">formation 1; enrichment 8; critique 1; contestation 1; consolidation 2</td>
+<td>Complete via frontmatter plus index.</td>
+</tr>
+<tr>
+<td>Time to first contestation</td>
+<td style="text-align: right;">2 rounds after formation; 0 calendar days</td>
+<td>First contestation is round 3 on 2026-07-16.</td>
+</tr>
+<tr>
+<td>Contestation round count</td>
+<td style="text-align: right;">1</td>
+<td>Type trajectory has only one contestation round.</td>
+</tr>
+<tr>
+<td>Time to first consolidation</td>
+<td style="text-align: right;">3 rounds after formation; 1 round after first contestation; 3 calendar days after formation</td>
+<td>First consolidation is round 4 on 2026-07-19.</td>
+</tr>
+<tr>
+<td>Type descent, stalls, reversals, oscillations</td>
+<td style="text-align: right;">NOT MEASURABLE</td>
+<td>Fewer than two contestation rounds.</td>
+</tr>
+<tr>
+<td>Post-consolidation supersession rate</td>
+<td style="text-align: right;">4/9 = 0.4444 rounds after first consolidation; 19 current superseded concepts established after first consolidation</td>
+<td>Current-file metadata only; git-history lineage not re-expanded.</td>
+</tr>
+<tr>
+<td>Re-litigation rate</td>
+<td style="text-align: right;">NOT MEASURABLE</td>
+<td>No stable issue identifiers for "same settled point."</td>
+</tr>
+<tr>
+<td>Evidence-move share</td>
+<td style="text-align: right;">9/13 = 0.6923</td>
+<td>Counts <code>fc-move: evidence</code>, not evidence items.</td>
+</tr>
+<tr>
+<td>Frame-change frequency</td>
+<td style="text-align: right;">2/13 = 0.1538</td>
+<td>Rounds 4 and 8.</td>
+</tr>
+<tr>
+<td>Observer handoff frequency</td>
+<td style="text-align: right;">2/12 = 0.1667</td>
+<td>Party sequence changes at rounds 3 and 7.</td>
+</tr>
+<tr>
+<td>Stage frontmatter completeness</td>
+<td style="text-align: right;">10/13 = 0.7692</td>
+<td>Rounds 1-3 lack <code>fc-stage</code> frontmatter by historical migration rule.</td>
+</tr>
+<tr>
+<td>Stage availability including index</td>
+<td style="text-align: right;">13/13 = 1.0000</td>
+<td>Three values are index-recorded retrospective classifications.</td>
+</tr>
+<tr>
+<td>Description-length asymmetry by party</td>
+<td style="text-align: right;">Claude/Codex mean round-body word ratio = 4.039; median ratio = 2.903</td>
+<td>Demonstration only; heavily confounded by task scope and authorship style.</td>
+</tr>
+</tbody>
+</table>
+<p>Unavailable observer-distance values:</p>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>framework-self status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Predicted-continuation divergence</td>
+<td><code>NOT MEASURABLE</code>: no timestamped competing predictions over future rounds were recorded.</td>
+</tr>
+<tr>
+<td>Forced-classification disagreement rate</td>
+<td><code>NOT MEASURABLE</code>: no independent paired labels of the same item set were recorded.</td>
+</tr>
+<tr>
+<td>Deepest common disclosure level</td>
+<td><code>NOT MEASURABLE</code>: the bundle has disclosure levels, but not parallel party accounts at each level with an equivalence criterion.</td>
+</tr>
+<tr>
+<td>Provenance completeness as Type II/III classifier</td>
+<td><code>NOT A CLASSIFIER</code>: the bundle can report provenance components, but Type II vs Type III requires claim-specific underdetermination analysis.</td>
+</tr>
+</tbody>
+</table>
+<p>No general empirical claim is inferred from these values. The pilot shows that
+round metadata can support stage, type, provenance, handoff, and supersession
+measurements while keeping missing values visible.</p>
+<h2 id="5-hypotheses-for-later-testing">5. Hypotheses for Later Testing</h2>
+<p>These are speculative hypotheses, not repository results:</p>
+<ol>
+<li>Sharing raw data reduces OD-2 disagreement for Type I components more than
+   for Type II or Type III components.</li>
+<li>OD-4 and OD-5 predict Type III risk but do not independently classify Type
+   III. The key test is persistence under improved record sharing and frame
+   translation.</li>
+<li>Persistent TT-2 stalls under continued evidence sharing predict earlier
+   misclassification, especially Type III hidden as Type II under P3.</li>
+<li>Higher OD-6 deepest common disclosure level should localize disputes more
+   precisely and reduce unnecessary frame-level contestation.</li>
+<li>High ST-6 re-litigation should be lower in disciplined bundles than in
+   undocumented inquiry chains of comparable depth.</li>
+<li>A critique-stage round before first contestation should correlate with lower
+   ST-3 contestation count and lower ST-5 post-consolidation supersession rate.</li>
+</ol>
+<p>Each hypothesis requires multiple bundles or external case studies. The
+framework-self pilot alone validates none of them.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/metrics.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,1236 @@
+{
+  "aoi_id": "fazenda_sucuri_screening_aoi",
+  "artifacts": [
+    {
+      "description": "Bundle artifact (aoi_geometry): inputs/aoi.geojson",
+      "mime_type": "application/geo+json",
+      "path": "inputs/aoi.geojson",
+      "report_pages": [],
+      "required": true,
+      "role": "aoi_geometry",
+      "sha256": "59f53c1d0ca30b55b3b4a8af5cb9761841cb9a3a2ffafb38b7c4dce2f8879f88",
+      "size_bytes": 1458
+    },
+    {
+      "description": "Bundle artifact (satellite_baseline_raster): inputs/satellite_baseline.tif",
+      "mime_type": "image/tiff",
+      "path": "inputs/satellite_baseline.tif",
+      "report_pages": [],
+      "required": false,
+      "role": "satellite_baseline_raster",
+      "sha256": "d609b915e89e0efbcd966e78a78713cf1ccb44c338459258d70627a89e9be03f",
+      "size_bytes": 1175083
+    },
+    {
+      "description": "Bundle artifact (satellite_recent_raster): inputs/satellite_recent.tif",
+      "mime_type": "image/tiff",
+      "path": "inputs/satellite_recent.tif",
+      "report_pages": [],
+      "required": false,
+      "role": "satellite_recent_raster",
+      "sha256": "0d562745341aa00067aaa2758375f1e059684d647c821fcff3a79602b703d20f",
+      "size_bytes": 1172519
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi.html",
+      "mime_type": "text/html",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi.html",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "5825599ccb16204857bf82bb5bdffe9476c2e8c40c3afbb104891bfc236db8dc",
+      "size_bytes": 26880
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi.json",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "f804e240d8734a1035338b2aaa43714fe8736e71e85728f69be326608a5d0528",
+      "size_bytes": 94137
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/aoi_config_hash.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/aoi_config_hash.json",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "9a58d8a7777ab28215b6c05f0c7a72c6c4af671126802eb7a914abf9e0f1d327",
+      "size_bytes": 239
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_both_source_agreement_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_both_source_agreement_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "6ae6d2d0c41278fce7481376ab20ee645f600fffba31ba365879b4e6511aeb42",
+      "size_bytes": 944
+    },
+    {
+      "description": "Bundle artifact (commodity_debug): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_debug.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_debug.json",
+      "report_pages": [],
+      "required": true,
+      "role": "commodity_debug",
+      "sha256": "9a0c11691d2b8ddf4d045058d9a1056e14ffd7affcf5c1ba64b8ba3a7c3210b8",
+      "size_bytes": 3097
+    },
+    {
+      "description": "Bundle artifact (commodity_mask): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_mask.geojson",
+      "report_pages": [],
+      "required": true,
+      "role": "commodity_mask",
+      "sha256": "622bc2dbf808bc09b1588d4f377617deaf16428278e829b1d17253e1170d3e3d",
+      "size_bytes": 213009
+    },
+    {
+      "description": "Bundle artifact (commodity_summary): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_summary.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_commodity_summary.json",
+      "report_pages": [],
+      "required": true,
+      "role": "commodity_summary",
+      "sha256": "bfd6a0737e3288ee475726ff12d65f31bab7a24975b184b607607d1c5bd07ba4",
+      "size_bytes": 15377
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_fdp_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_fdp_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "a7dc484927f63764b57b0c8d7b4249c7ee7e4db035ee93b9fb744da33380b26b",
+      "size_bytes": 200439
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_fdp_only_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_fdp_only_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "aaa5239935f253d6f413670ec178da6da03371b07fae64e72648cc2534ad7695",
+      "size_bytes": 200755
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_hansen10pct_overlap_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_hansen10pct_overlap_mask.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "3d7a9a97a11864db767b67815b139700cca8f4f798472a3e551b13f1c1aa29fe",
+      "size_bytes": 1512
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_mapbiomas_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_mapbiomas_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "517446d9531d67a93a7eda51b8e15c167e492cf52c925d64944227cf67b5d199",
+      "size_bytes": 1952
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_mapbiomas_only_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_mapbiomas_only_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "72cc941e2e575c680270e29c769b1c9686651e3217e562250b0a90fbfb7a33f4",
+      "size_bytes": 1363
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_new_commodity_since_baseline.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_new_commodity_since_baseline.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "a7dc484927f63764b57b0c8d7b4249c7ee7e4db035ee93b9fb744da33380b26b",
+      "size_bytes": 200439
+    },
+    {
+      "description": "Bundle artifact (commodity_post2020_loss_overlap_mask): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post2020_loss_overlap_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post2020_loss_overlap_mask.geojson",
+      "report_pages": [],
+      "required": true,
+      "role": "commodity_post2020_loss_overlap_mask",
+      "sha256": "d148b935d5d2f6eeb06cee0f8c65bbf9d0c748d1cbba771d469df205a8c33364",
+      "size_bytes": 8731
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_both_source_agreement_new_commodity.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_both_source_agreement_new_commodity.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799",
+      "size_bytes": 43
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_fdp_new_commodity.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_fdp_new_commodity.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "645919e739c8d8d1ac7c71f09a0c73e2404ea2f1fbff75ff63a531be47262a3c",
+      "size_bytes": 4931
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_mapbiomas_new_commodity.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_mapbiomas_new_commodity.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799",
+      "size_bytes": 43
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_new_commodity.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_new_commodity.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "645919e739c8d8d1ac7c71f09a0c73e2404ea2f1fbff75ff63a531be47262a3c",
+      "size_bytes": 4931
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_source_specific_new_commodity.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/coffee_post_2020_loss_and_source_specific_new_commodity.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "645919e739c8d8d1ac7c71f09a0c73e2404ea2f1fbff75ff63a531be47262a3c",
+      "size_bytes": 4931
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "94f8627832221dd95d7779604a67a7b5817ee717669251036df496c0df8260e7",
+      "size_bytes": 16143
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/fdp_jrc_threshold_metrics.csv",
+      "mime_type": "text/csv",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/fdp_jrc_threshold_metrics.csv",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "6c0d1790d09b115ba229c804b6551ef8402d4e339e1778f7ecf9a3b1a911dc39",
+      "size_bytes": 619
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "747d79a77cf8e375cc20dae4fb6a2b2758afeac23a24ef2fc36b55eaab769be3",
+      "size_bytes": 5671
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "8246de3fc608778bb0dc00ec98083a53f03050345c2c763062e580af369c52ad",
+      "size_bytes": 5201
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "c2a8d45da920c162d748749bc703cf418fd15ee65fd8e54c3878e116e6e906a0",
+      "size_bytes": 4688
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "f3b4f36313da7361b1727b2cbefae96ce1d7545f43069ce60b96c74e26543778",
+      "size_bytes": 4459
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2020_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "eb380a15a2729c1dbde070559c6edbf8aee8cc0d1009b6f7f86548cecb7da063",
+      "size_bytes": 4345
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "4a1f7ef74070616f62af52ebf5bb0fcbeca7db8fb25a285a51c0d63e3114f313",
+      "size_bytes": 8062
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "488f619e92bb226e8f1eefdda470393128fbc08789a04a34600f7700e5dec2aa",
+      "size_bytes": 7733
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "ae85bf4131891ab0131e5e5c6c8fb81dc9fe49d478c9e0869529daef3d8c44bb",
+      "size_bytes": 7131
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "21dfec2fd99d176acd72eb81d7ce9e0ceacf418b7044249742ca98a972355f34",
+      "size_bytes": 6214
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_coffee_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e365b6065ac460870b05c3727f973b3c6e38b8d9d6a50a9191708ecbd4a75d32",
+      "size_bytes": 5898
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "08fc5e94dc4c206955e84dd3af2043c92b7794980cafc78b037703ac6f10a927",
+      "size_bytes": 7350
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "66630e6e76d93d56c3813b1c6c84498c31c4421affea006b2aea668c5b6204d4",
+      "size_bytes": 6949
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "9fec24062388fd17ac69c7e960417719483d7515ba0fcf4563071463d3245d92",
+      "size_bytes": 6487
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "f31db5ad17511974fff42d1821bc9deac123356742826bc84a53b23d185370f1",
+      "size_bytes": 5577
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_new_coffee_2020_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "c8cda728fa66c06ee370e16254c3de976c03d69fc6623b3af0776e43241a18b4",
+      "size_bytes": 5253
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_probability_2020.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_probability_2020.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e872f9b7beed0057eb6707dbd5fcd2e601142e3e874f06e2a2d0c77ec8ff673a",
+      "size_bytes": 75247
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_probability_2024.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/fdp_probability_2024.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "d4297fe2b88af8e2cd6c6ddf9db3687c3c8fbbb8ec448289c062b914b220f06e",
+      "size_bytes": 95144
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "5f7d49535dd98112ad9e21b6eb1076ddccef8ec93d3bc03e859adfacfda588a8",
+      "size_bytes": 3654
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "26b2b58599a5ac24e0d42c228b450b01dfc5a4e04ea738b2a26e19c165d0406a",
+      "size_bytes": 3221
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "0b90be93dadb655f5a018cf914752dabb495e21c6158cde7bd8831c8617cb6df",
+      "size_bytes": 2690
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e09e8f090f9d0acf607cc33052913f2b0addbf02c8781812d195bd427bcceb33",
+      "size_bytes": 2246
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_coffee_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "cc980b972e4984ff4dab08ca4077077e7d2194b3177c69ddacbf30211129ebf2",
+      "size_bytes": 2142
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "8edcc8aee67c439bfe23ffb725f34376c548431c7e7439928758c1d854ddc602",
+      "size_bytes": 2909
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "44fedf53699942118f52aa603799c1e17da935788a61a955ec72eed8230111f4",
+      "size_bytes": 2716
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "89d62b5038d21cee6a2014d85808c929650384d46d74e0d9a271e204bfe57f2d",
+      "size_bytes": 2384
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "2a837649d248503e8e75b8a5e0bf18157b80f657a332f9e1efd81bd2a1c7692a",
+      "size_bytes": 2119
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc2020_and_fdp_new_coffee_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "2e35a9c14d700bfaef0d17efad5ae5277d83950296da0da5396ae131620eb52e",
+      "size_bytes": 2012
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc_forest_2020_diagnostic.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/jrc_forest_2020_diagnostic.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "eacd68ca60dc99024dfccf513a502529f8bdffde339a71fca5c1acaa7aa381de",
+      "size_bytes": 4025
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/morphology_current_overlap_composite_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/morphology_current_overlap_composite_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "1fac93cc188455adc95e79034db1e96dc5c1ddeab3d60f5a93c9a1eccb8329f7",
+      "size_bytes": 10734
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/morphology_new_overlap_composite_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/commodity/coffee/fdp_jrc_diagnostics/png/morphology_new_overlap_composite_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "a87c5b866d493360f6df555120597ce246100ca324d0916106c22337005d623d",
+      "size_bytes": 10089
+    },
+    {
+      "description": "Bundle artifact (aoi_satellite_basemap): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01_aoi_satellite.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01_aoi_satellite.png",
+      "report_pages": [],
+      "required": false,
+      "role": "aoi_satellite_basemap",
+      "sha256": "56903ee63025cb4229efc4e2fe24f1518b1d1b9786389aa0c368074e30aa1634",
+      "size_bytes": 589480
+    },
+    {
+      "description": "Bundle artifact (aoi_satellite_evidence_map_basemap_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01b_aoi_satellite_evidence_map.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01b_aoi_satellite_evidence_map.png",
+      "report_pages": [],
+      "required": false,
+      "role": "aoi_satellite_evidence_map_basemap_png",
+      "sha256": "01d48a73a782b1d821c987d4c980bc5434ca5df6b97ba86c175247cbf8dd6296",
+      "size_bytes": 902957
+    },
+    {
+      "description": "Bundle artifact (aoi_satellite_interactive_map_html): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01c_aoi_satellite_map.html",
+      "mime_type": "text/html",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/01c_aoi_satellite_map.html",
+      "report_pages": [],
+      "required": false,
+      "role": "aoi_satellite_interactive_map_html",
+      "sha256": "64bbd8f5d3b491e116f79e17fbf8bef7c9681ae9b026a2d61d32c870b68d90aa",
+      "size_bytes": 474489
+    },
+    {
+      "description": "Bundle artifact (jrc_forest_2020_mask_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/02_jrc_forest_2020.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/02_jrc_forest_2020.png",
+      "report_pages": [],
+      "required": false,
+      "role": "jrc_forest_2020_mask_png",
+      "sha256": "b820df6aed5a0e721039d51234914be48a84b5abe66ea800406b9f0f5d9c0402",
+      "size_bytes": 866328
+    },
+    {
+      "description": "Bundle artifact (post_2020_loss_on_2020_forest_mask_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/03_forest_loss_2021_2025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/03_forest_loss_2021_2025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "post_2020_loss_on_2020_forest_mask_png",
+      "sha256": "11a2392e325d27012319510c1400986f4888833c26133082cdebc65b7b3c14d9",
+      "size_bytes": 850198
+    },
+    {
+      "description": "Bundle artifact (commodity_mask_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/04_commodity_layer.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/04_commodity_layer.png",
+      "report_pages": [],
+      "required": false,
+      "role": "commodity_mask_png",
+      "sha256": "46ee24d96e37cec6686492084ee5d6a00e9e1427287ce090dc9e4ed6c5a82fde",
+      "size_bytes": 865759
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/04b_baseline_commodity_layer.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/04b_baseline_commodity_layer.png",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "56e792f2d2557f48817a5a4728bd6bb6320a70aee241bcc86fd56964ecfd8391",
+      "size_bytes": 883850
+    },
+    {
+      "description": "Bundle artifact (commodity_post2020_loss_overlap_mask_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/05_intersection.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/05_intersection.png",
+      "report_pages": [],
+      "required": false,
+      "role": "commodity_post2020_loss_overlap_mask_png",
+      "sha256": "023eb082c73a9b8789a4d009f80e0795dc90af8f06799d1ac362645c6fb78869",
+      "size_bytes": 903125
+    },
+    {
+      "description": "Bundle artifact (before_after_satellite_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/06_before_after.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/06_before_after.png",
+      "report_pages": [],
+      "required": true,
+      "role": "before_after_satellite_png",
+      "sha256": "25103bbbaf173d3d2bbebe07208f570d73dcb30d982fdb0b44e2a61f9930a679",
+      "size_bytes": 1835617
+    },
+    {
+      "description": "Bundle artifact (regional_overview_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/07_regional_overview.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/07_regional_overview.png",
+      "report_pages": [],
+      "required": true,
+      "role": "regional_overview_png",
+      "sha256": "3742da15bb7b15efe4ddf56de2cca55e66eead71f814056f45a4ca6a7b40eca1",
+      "size_bytes": 915638
+    },
+    {
+      "description": "Bundle artifact (cover_hero_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/08_cover_hero.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/08_cover_hero.png",
+      "report_pages": [],
+      "required": false,
+      "role": "cover_hero_png",
+      "sha256": "56c6c3482400f659d2dd57db5a5fffe4f18716b419f74164e53437c7a952a86d",
+      "size_bytes": 1547390
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/09_fdp_new_commodity_since_baseline.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/09_fdp_new_commodity_since_baseline.png",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "80682d2973e384bbbe546a7f3aad5abb758554e5d526047626d637caaaae8359",
+      "size_bytes": 889691
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/10_mapbiomas_new_commodity_since_baseline.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/10_mapbiomas_new_commodity_since_baseline.png",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "511b6bb0dceffbf67df03b4ede6e38e2dcad027bb65697b2e06002d11bad5296",
+      "size_bytes": 903048
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/11_source_specific_conversion.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/11_source_specific_conversion.png",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "7b5cc1444ea4fe846a10f49a7516f5ef2f1b60925feb0df772149f136cfa18b4",
+      "size_bytes": 903321
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "747d79a77cf8e375cc20dae4fb6a2b2758afeac23a24ef2fc36b55eaab769be3",
+      "size_bytes": 5671
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "8246de3fc608778bb0dc00ec98083a53f03050345c2c763062e580af369c52ad",
+      "size_bytes": 5201
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "c2a8d45da920c162d748749bc703cf418fd15ee65fd8e54c3878e116e6e906a0",
+      "size_bytes": 4688
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "f3b4f36313da7361b1727b2cbefae96ce1d7545f43069ce60b96c74e26543778",
+      "size_bytes": 4459
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2020_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "eb380a15a2729c1dbde070559c6edbf8aee8cc0d1009b6f7f86548cecb7da063",
+      "size_bytes": 4345
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "4a1f7ef74070616f62af52ebf5bb0fcbeca7db8fb25a285a51c0d63e3114f313",
+      "size_bytes": 8062
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "488f619e92bb226e8f1eefdda470393128fbc08789a04a34600f7700e5dec2aa",
+      "size_bytes": 7733
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "ae85bf4131891ab0131e5e5c6c8fb81dc9fe49d478c9e0869529daef3d8c44bb",
+      "size_bytes": 7131
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "21dfec2fd99d176acd72eb81d7ce9e0ceacf418b7044249742ca98a972355f34",
+      "size_bytes": 6214
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_coffee_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e365b6065ac460870b05c3727f973b3c6e38b8d9d6a50a9191708ecbd4a75d32",
+      "size_bytes": 5898
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_morphology_diagnostics.json",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "94f8627832221dd95d7779604a67a7b5817ee717669251036df496c0df8260e7",
+      "size_bytes": 16143
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_threshold_metrics.csv",
+      "mime_type": "text/csv",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_jrc_threshold_metrics.csv",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "6c0d1790d09b115ba229c804b6551ef8402d4e339e1778f7ecf9a3b1a911dc39",
+      "size_bytes": 619
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "08fc5e94dc4c206955e84dd3af2043c92b7794980cafc78b037703ac6f10a927",
+      "size_bytes": 7350
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "66630e6e76d93d56c3813b1c6c84498c31c4421affea006b2aea668c5b6204d4",
+      "size_bytes": 6949
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "9fec24062388fd17ac69c7e960417719483d7515ba0fcf4563071463d3245d92",
+      "size_bytes": 6487
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "f31db5ad17511974fff42d1821bc9deac123356742826bc84a53b23d185370f1",
+      "size_bytes": 5577
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_new_coffee_2020_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "c8cda728fa66c06ee370e16254c3de976c03d69fc6623b3af0776e43241a18b4",
+      "size_bytes": 5253
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_probability_2020.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_probability_2020.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e872f9b7beed0057eb6707dbd5fcd2e601142e3e874f06e2a2d0c77ec8ff673a",
+      "size_bytes": 75247
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_probability_2024.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/fdp_probability_2024.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "d4297fe2b88af8e2cd6c6ddf9db3687c3c8fbbb8ec448289c062b914b220f06e",
+      "size_bytes": 95144
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "5f7d49535dd98112ad9e21b6eb1076ddccef8ec93d3bc03e859adfacfda588a8",
+      "size_bytes": 3654
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "26b2b58599a5ac24e0d42c228b450b01dfc5a4e04ea738b2a26e19c165d0406a",
+      "size_bytes": 3221
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "0b90be93dadb655f5a018cf914752dabb495e21c6158cde7bd8831c8617cb6df",
+      "size_bytes": 2690
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "e09e8f090f9d0acf607cc33052913f2b0addbf02c8781812d195bd427bcceb33",
+      "size_bytes": 2246
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_coffee_2024_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "cc980b972e4984ff4dab08ca4077077e7d2194b3177c69ddacbf30211129ebf2",
+      "size_bytes": 2142
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "8edcc8aee67c439bfe23ffb725f34376c548431c7e7439928758c1d854ddc602",
+      "size_bytes": 2909
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0050.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0050.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "44fedf53699942118f52aa603799c1e17da935788a61a955ec72eed8230111f4",
+      "size_bytes": 2716
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0100.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0100.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "89d62b5038d21cee6a2014d85808c929650384d46d74e0d9a271e204bfe57f2d",
+      "size_bytes": 2384
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0200.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0200.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "2a837649d248503e8e75b8a5e0bf18157b80f657a332f9e1efd81bd2a1c7692a",
+      "size_bytes": 2119
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0250.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc2020_and_fdp_new_coffee_t0250.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "2e35a9c14d700bfaef0d17efad5ae5277d83950296da0da5396ae131620eb52e",
+      "size_bytes": 2012
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc_forest_2020_diagnostic.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/jrc_forest_2020_diagnostic.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "eacd68ca60dc99024dfccf513a502529f8bdffde339a71fca5c1acaa7aa381de",
+      "size_bytes": 4025
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_current_overlap_composite_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_current_overlap_composite_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "1fac93cc188455adc95e79034db1e96dc5c1ddeab3d60f5a93c9a1eccb8329f7",
+      "size_bytes": 10734
+    },
+    {
+      "description": "Bundle artifact (fdp_jrc_diagnostic_artifact): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_new_overlap_composite_t0025.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/coffee_jrc_diagnostics/morphology_new_overlap_composite_t0025.png",
+      "report_pages": [],
+      "required": false,
+      "role": "fdp_jrc_diagnostic_artifact",
+      "sha256": "a87c5b866d493360f6df555120597ce246100ca324d0916106c22337005d623d",
+      "size_bytes": 10089
+    },
+    {
+      "description": "Bundle artifact (map_legend_png): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/legend.png",
+      "mime_type": "image/png",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/evidence/legend.png",
+      "report_pages": [],
+      "required": false,
+      "role": "map_legend_png",
+      "sha256": "515508244040c839a7ae62636928c68e203a95f541e6b23abe9ba4795a09efde",
+      "size_bytes": 658
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/forest_loss_2021_2025_on_hansen10pct_forest_2000_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/forest_loss_2021_2025_on_hansen10pct_forest_2000_mask.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "ca857f062bf2bdb978974eec5aa8dd1ed92f4da61c13cc87f309347648ff8631",
+      "size_bytes": 3634
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen10pct_forest_2000_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen10pct_forest_2000_mask.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "86666ec0eb4befe6a81357e90d8f351a52c80baaff9e8d589a589ec0520f08f8",
+      "size_bytes": 39273
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen_canopy_post2020_loss_2021_2025_summary.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen_canopy_post2020_loss_2021_2025_summary.json",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "2aebd5fe4690bdea19301b881a6dc56fdd9a9b6bf269db63500f19ba96ce407a",
+      "size_bytes": 3732
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen_canopy_post2020_loss_debug.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/hansen_canopy/hansen_canopy_post2020_loss_debug.json",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "37b34eba1092eaaaeecafbfee43f7d68e35f6e3c2a0303db18e6cbb32f0539dd",
+      "size_bytes": 1313
+    },
+    {
+      "description": "Bundle artifact (post_2020_loss_on_2020_forest_mask): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/forest_loss_2021_2025_on_jrc_forest_2020_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/forest_loss_2021_2025_on_jrc_forest_2020_mask.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "post_2020_loss_on_2020_forest_mask",
+      "sha256": "a25e3abead82a71112d112768ac72c414ffe9a54ef31610c5f0f2076e8ffda57",
+      "size_bytes": 6542
+    },
+    {
+      "description": "Bundle artifact (jrc_forest_2020_mask): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_forest_2020_mask.geojson",
+      "mime_type": "application/geo+json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_forest_2020_mask.geojson",
+      "report_pages": [],
+      "required": false,
+      "role": "jrc_forest_2020_mask",
+      "sha256": "51eb7c5644bf775d21169812cba13ff43d2c9fb72b582ddefed90115f196ff9b",
+      "size_bytes": 56034
+    },
+    {
+      "description": "Bundle artifact (post_2020_loss_on_2020_forest_summary): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_2021_2025_summary.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_2021_2025_summary.json",
+      "report_pages": [],
+      "required": false,
+      "role": "post_2020_loss_on_2020_forest_summary",
+      "sha256": "93419b86dc1e0ea17d143e179c98d442101afda9c3d5a0a77af0ccdc61c1a717",
+      "size_bytes": 3314
+    },
+    {
+      "description": "Bundle artifact (post_2020_loss_on_2020_forest_debug): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_debug.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/jrc_gfc2020/jrc_post2020_loss_debug.json",
+      "report_pages": [],
+      "required": false,
+      "role": "post_2020_loss_on_2020_forest_debug",
+      "sha256": "a4f7cc6c686aa3c7832326372b4604076a201d91ddf9a4cb97f5d72cc17f4566",
+      "size_bytes": 1243
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.csv",
+      "mime_type": "text/csv",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.csv",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "caa14b64eb9738a3dc9610966dd7bbc76821986ca5bcf1aa4bdadd44c5e9f41c",
+      "size_bytes": 129
+    },
+    {
+      "description": "Bundle artifact (unclassified): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/maaamet/maaamet_forest_area_crosscheck.json",
+      "report_pages": [],
+      "required": false,
+      "role": "unclassified_artifact",
+      "sha256": "8d6922c9dc054fef70dd6a49b0e8c95a9ac36476ceb2cf37f62bc5d21d1eb97f",
+      "size_bytes": 337
+    },
+    {
+      "description": "Bundle artifact (canonical_manifest): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/manifest.sha256",
+      "mime_type": "text/plain",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/manifest.sha256",
+      "report_pages": [],
+      "required": true,
+      "role": "canonical_manifest",
+      "sha256": "b4857edc61a42c98cd202793d532a903f87af78673e22eb81876249d8f4ff058",
+      "size_bytes": 8763
+    },
+    {
+      "description": "Bundle artifact (report_map_config): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/map/map_config.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/map/map_config.json",
+      "report_pages": [],
+      "required": false,
+      "role": "report_map_config",
+      "sha256": "ace2b08ef2d96c324acf8ed94c6f747f60099f4688304a2a1548fad420314245",
+      "size_bytes": 397
+    },
+    {
+      "description": "Bundle artifact (canonical_metrics_csv): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/metrics.csv",
+      "mime_type": "text/csv",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/metrics.csv",
+      "report_pages": [],
+      "required": true,
+      "role": "canonical_metrics_csv",
+      "sha256": "c072cf7d1f0bf9fa3a6aa44e351a2fbdbd7de46046b35618e21771645360a176",
+      "size_bytes": 8911
+    },
+    {
+      "description": "Bundle artifact (canonical_report_html): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html",
+      "mime_type": "text/html",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.html",
+      "report_pages": [],
+      "required": true,
+      "role": "canonical_report_html",
+      "sha256": "41768a7f3d6b8a47ccdfaf8bfb7120c15d495cbc88f69fbc8f12baa74f2f2c2b",
+      "size_bytes": 699638
+    },
+    {
+      "description": "Bundle artifact (canonical_report_json): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json",
+      "mime_type": "application/json",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.json",
+      "report_pages": [],
+      "required": true,
+      "role": "canonical_report_json",
+      "sha256": "46b188c64c89c709b60a1bd8599dc73598c432f0baa037f65e29f97287caa0f3",
+      "size_bytes": 178128
+    },
+    {
+      "description": "Bundle artifact (canonical_report_pdf): reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf",
+      "mime_type": "application/pdf",
+      "path": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf",
+      "report_pages": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "required": true,
+      "role": "canonical_report_pdf",
+      "sha256": "dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7",
+      "size_bytes": 7128915
+    }
+  ],
+  "bundle_manifest_relpath": "manifest.json",
+  "bundle_manifest_sha256": "a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e",
+  "commodity": "coffee",
+  "counterpart_commit": "d68e7ebbcc99fdff75742452538b241a382feb24",
+  "counterpart_dirty": false,
+  "counterpart_repository": "single-earth/eudr-dmi-gil",
+  "country": "Brazil",
+  "country_code": "BRA",
+  "datasets": [
+    {
+      "dataset_id": "aoi_geometry_input",
+      "license": "user_supplied",
+      "source_url": "inputs/aoi.geojson",
+      "version": "user_supplied"
+    },
+    {
+      "dataset_id": "projects/forestdatapartnership/assets/coffee/model_2026a",
+      "license": "see Forest Data Partnership source terms",
+      "source_url": "projects/forestdatapartnership/assets/coffee/model_2026a",
+      "version": "2026a"
+    }
+  ],
+  "evidence_bundle_id": "fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z",
+  "evidence_bundle_path": "/Users/server/projects/eudr-dmi-gil/audit/evidence/2026-09-11/fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z",
+  "generation_command": "python -m eudr_dmi_gil.reports.cli --aoi-id fazenda_sucuri_screening_aoi --commodity-config out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json --analysis-target-crs EPSG:6933 --analysis-target-resolution-m 10",
+  "purpose": "eudr",
+  "region": "Minas Gerais",
+  "report_page_count": 12,
+  "report_page_titles": [
+    "Cover",
+    "Executive Summary",
+    "Assessment Workflow",
+    "Regional Overview",
+    "Forest Baseline 2020",
+    "Forest Loss After 2020",
+    "Satellite Evidence",
+    "Interpretation",
+    "Data And Methods",
+    "Audit Trail",
+    "Deterministic Artifacts",
+    "Appendix"
+  ],
+  "report_pdf_relpath": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi/report.pdf",
+  "report_pdf_sha256": "dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7",
+  "report_root_relpath": "reports/aoi_report_v2/fazenda_sucuri_screening_aoi",
+  "resolved_end_year": 2025,
+  "schema_version": "okf-gsp-evidence-handoff-v1",
+  "task_bundle_id": "eudr-coffee-brazil-fazenda-sucuri"
+}

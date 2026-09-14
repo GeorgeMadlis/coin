@@ -1,0 +1,62 @@
+variable,value,unit,source,notes
+aoi_area_ha,1722.070000,ha,jrc_gfc2020+hansen_lossyear,AOI area.
+baseline_forest_and_commodity_overlap_ha,87.420000,ha,commodity:forestdatapartnership,JRC 2020 forest baseline intersected with observed commodity layer
+baseline_forest_and_commodity_overlap_hansen10pct_baseline_ha,11.760000,ha,commodity:forestdatapartnership+hansen_treecover2000,Hansen treecover2000 canopy forest baseline intersected with observed commodity layer
+baseline_forest_without_detected_loss_ha,195.490000,ha,jrc_gfc2020+hansen_lossyear,
+both_source_agreement_new_commodity_since_baseline_ha,0.430000,ha,commodity:forestdatapartnership,new commodity after the baseline year where FDP and MapBiomas agree
+commodity_area_ha,482.280000,ha,commodity_provider+jrc_gfc2020+hansen_lossyear,Configured commodity class area inside AOI.
+commodity_baseline_observation_year,2020,year,commodity:forestdatapartnership,
+commodity_observation_year,2024,year,commodity:forestdatapartnership,
+commodity_percent_of_aoi,28.005830,percent,commodity:forestdatapartnership,
+commodity_probability_admitted_share_of_valid_pixels_percent,20.831900,percent,commodity:forestdatapartnership,share of valid AOI pixels admitted at the configured threshold (valid pixels are the primary denominator; see the commodity summary JSON for the full sensitivity table across thresholds)
+commodity_probability_configured_threshold,0.025000,probability_fraction,commodity:forestdatapartnership,probability_threshold mode only: probability >= threshold defines the candidate mask
+commodity_probability_mean,0.061332,probability_fraction,commodity:forestdatapartnership,mean probability over valid AOI pixels
+commodity_probability_median,0.000058,probability_fraction,commodity:forestdatapartnership,median probability over valid AOI pixels
+commodity_probability_valid_coverage_of_aoi_percent,100.000000,percent,commodity:forestdatapartnership,share of AOI pixels with a valid (non-nodata) probability value
+effective_end_year,2025,year,jrc_gfc2020+hansen_lossyear,
+evidence_start_year,2021,year,jrc_gfc2020+hansen_lossyear,
+fdp_new_commodity_since_baseline_ha,225.290000,ha,commodity:forestdatapartnership,FDP latest commodity probability mask minus FDP baseline-year commodity probability mask
+fdp_only_new_commodity_since_baseline_ha,224.860000,ha,commodity:forestdatapartnership,new commodity after the baseline year present in FDP and absent from MapBiomas
+forest_baseline_2020_ha,219.260000,ha,jrc_gfc2020+hansen_lossyear,JRC 2020 forest baseline area inside AOI.
+forest_baseline_2020_percent_of_aoi,12.732351,percent,jrc_gfc2020+hansen_lossyear,JRC baseline forest share of AOI.
+forest_baseline_hansen10pct_2000_ha,95.480000,ha,hansen_treecover2000+hansen_lossyear,AOI & Hansen treecover2000 >= threshold & no Hansen loss in 2001-2020
+forest_baseline_hansen10pct_2000_percent_of_aoi,5.544490,percent,hansen_treecover2000+hansen_lossyear,
+forest_loss_post_2020_and_commodity_overlap_hansen10pct_baseline_ha,0.700000,ha,commodity:forestdatapartnership+hansen_treecover2000,post-2020 Hansen loss inside the Hansen treecover2000 canopy forest baseline intersected with commodity layer
+forest_loss_post_2020_and_commodity_overlap_hansen10pct_baseline_percent_of_aoi,0.040649,percent,commodity:forestdatapartnership+hansen_treecover2000,
+forest_loss_post_2020_and_commodity_overlap_hansen10pct_baseline_percent_of_loss,11.705686,percent,commodity:forestdatapartnership+hansen_treecover2000,
+forest_loss_post_2020_on_baseline_ha,23.770000,ha,jrc_gfc2020+hansen_lossyear,AOI & JRC GFC2020 forest value & Hansen lossyear range
+forest_loss_post_2020_on_hansen10pct_baseline_ha,5.980000,ha,hansen_treecover2000+hansen_lossyear,AOI & Hansen treecover2000 canopy baseline & Hansen lossyear range
+forest_loss_post_2020_on_hansen10pct_baseline_percent_of_aoi,0.347256,percent,hansen_treecover2000+hansen_lossyear,
+forest_loss_post_2020_percent_of_aoi,1.380316,percent,jrc_gfc2020+hansen_lossyear,Post-2020 forest loss share of AOI.
+forest_loss_post_2020_percent_of_baseline,10.841011,percent,jrc_gfc2020+hansen_lossyear,Post-2020 forest loss share of JRC baseline forest.
+forest_loss_post_2020_percent_of_hansen10pct_baseline,6.263092,percent,hansen_treecover2000+hansen_lossyear,
+hansen10pct_baseline_canopy_threshold_percent,10,percent,hansen_treecover2000+hansen_lossyear,canopy-cover threshold defining the Hansen forest baseline (FAO/EUDR Art.2 definition)
+hansen10pct_baseline_forest_without_detected_loss_ha,89.500000,ha,hansen_treecover2000+hansen_lossyear,
+interactive_overlay_both_source_agreement_conversion_available,false,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+interactive_overlay_fdp_new_commodity_available,true,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+interactive_overlay_forest_loss_available,true,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+interactive_overlay_jrc_forest_2020_available,true,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+interactive_overlay_mapbiomas_new_commodity_available,true,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+interactive_overlay_source_specific_conversion_available,true,boolean,generated_artifacts,Whether this optional overlay was rendered into the interactive AOI map; false records a per-AOI empty/unavailable-layer omission.
+mapbiomas_new_commodity_since_baseline_ha,1.040000,ha,commodity:forestdatapartnership,MapBiomas latest commodity class mask minus MapBiomas baseline-year commodity class mask
+mapbiomas_only_new_commodity_since_baseline_ha,0.610000,ha,commodity:forestdatapartnership,new commodity after the baseline year present in MapBiomas and absent from FDP
+new_commodity_since_baseline_ha,225.290000,ha,commodity:forestdatapartnership,latest commodity mask minus baseline-year commodity mask
+post_2020_loss_and_both_source_agreement_new_commodity_overlap_ha,0.000000,ha,commodity:forestdatapartnership,post-2020 baseline forest loss intersected with both-source agreement new commodity
+post_2020_loss_and_commodity_overlap_ha,5.140000,ha,commodity_provider+jrc_gfc2020+hansen_lossyear,post-2020 Hansen loss inside JRC 2020 forest intersected with commodity layer
+post_2020_loss_and_commodity_percent_of_aoi,0.298478,percent,commodity:forestdatapartnership,
+post_2020_loss_and_commodity_percent_of_loss,21.623896,percent,commodity:forestdatapartnership,
+post_2020_loss_and_fdp_new_commodity_overlap_ha,1.170000,ha,commodity:forestdatapartnership,post-2020 baseline forest loss intersected with FDP new commodity after the baseline year
+post_2020_loss_and_mapbiomas_new_commodity_overlap_ha,0.000000,ha,commodity:forestdatapartnership,post-2020 baseline forest loss intersected with MapBiomas new commodity after the baseline year
+post_2020_loss_and_new_commodity_overlap_ha,1.170000,ha,commodity:forestdatapartnership,post-2020 baseline forest loss intersected with new commodity after the baseline year
+post_2020_loss_and_new_commodity_percent_of_loss,4.922171,percent,commodity:forestdatapartnership,share of post-2020 baseline forest loss intersecting new commodity after the baseline year
+requested_end_year,2025,year,jrc_gfc2020+hansen_lossyear,
+s2_2020_least_cloudy_scene_cloud_pct,0.000931,percent,sentinel2_scene_diagnostics,Cloud percentage of the least-cloudy Sentinel-2 scene.
+s2_2020_least_cloudy_scene_date,2020-09-11,date,sentinel2_scene_diagnostics,Least-cloudy Sentinel-2 scene date.
+s2_2020_mean_valid_obs_per_pixel,21.221374,count,sentinel2_scene_diagnostics,Mean valid Sentinel-2 observations per AOI pixel.
+s2_2020_min_valid_obs_per_pixel,14,count,sentinel2_scene_diagnostics,Minimum valid Sentinel-2 observations per AOI pixel.
+s2_2020_scene_count,30,count,sentinel2_scene_diagnostics,Sentinel-2 matched-season scene count.
+s2_2025_least_cloudy_scene_cloud_pct,0.000388,percent,sentinel2_scene_diagnostics,Cloud percentage of the least-cloudy Sentinel-2 scene.
+s2_2025_least_cloudy_scene_date,2025-07-02,date,sentinel2_scene_diagnostics,Least-cloudy Sentinel-2 scene date.
+s2_2025_mean_valid_obs_per_pixel,26.448841,count,sentinel2_scene_diagnostics,Mean valid Sentinel-2 observations per AOI pixel.
+s2_2025_min_valid_obs_per_pixel,17,count,sentinel2_scene_diagnostics,Minimum valid Sentinel-2 observations per AOI pixel.
+s2_2025_scene_count,37,count,sentinel2_scene_diagnostics,Sentinel-2 matched-season scene count.

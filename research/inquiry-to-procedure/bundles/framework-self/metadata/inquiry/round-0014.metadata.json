@@ -1,0 +1,67 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "codex",
+    "fc-round": 14,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [
+      "r/index.md",
+      "r/results.md",
+      "r/full-results.md"
+    ],
+    "timestamp": "2026-07-21",
+    "title": "Round 14: observer-distance metrics completed",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 14: observer-distance metrics completed\"\ndescription: Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.\nfc-axis: INQUIRY\nfc-round: 14\nfc-move: evidence\nfc-stage: enrichment\nfc-party: codex\nfc-touches: [r/index.md, r/results.md, r/full-results.md]\nfc-status: open\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 14,
+    "move": "evidence",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "f469605823e73b22fa228507bb44554ab55832afc2c0a868c0cd520eaa8a124c",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "7290dd71c0e12e775f3c65fbfa8403fee2fbbca0cc673f6344275a17517649dd",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "7290dd71c0e12e775f3c65fbfa8403fee2fbbca0cc673f6344275a17517649dd"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Step 5 observer-distance metrics completed; framework-self pilot measurements recorded with explicit missing values.",
+    "html_path": "inquiry/round-0014.html",
+    "metadata_path": "metadata/inquiry/round-0014.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0014.md",
+    "title": "Round 14: observer-distance metrics completed"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "REPRO",
+    "description": "Repository pin and regeneration instructions for the framework-self pilot bundle.",
+    "level": 2,
+    "path": "reproduction/code.md",
+    "round": 16,
+    "supersedes": "reproduction/code.md@r13",
+    "title": "Code and regeneration",
+    "type": "Runbook"
+  },
+  "frontmatter": {
+    "description": "Repository pin and regeneration instructions for the framework-self pilot bundle.",
+    "fc-axis": "REPRO",
+    "fc-irreducibility": "none",
+    "fc-level": 2,
+    "fc-round": 16,
+    "fc-status": "open",
+    "fc-supersedes": "reproduction/code.md@r13",
+    "timestamp": "2026-07-21",
+    "title": "Code and regeneration",
+    "type": "Runbook"
+  },
+  "frontmatter_raw": "type: Runbook\ntitle: Code and regeneration\ndescription: Repository pin and regeneration instructions for the framework-self pilot bundle.\nfc-level: 2\nfc-axis: REPRO\nfc-irreducibility: none\nfc-status: open\nfc-round: 16\nfc-supersedes: reproduction/code.md@r13\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 16,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "REPRO",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "55ed39c077369e7808c6565bfecf1a235b52d861a5635f3a11ad3fcde2d38a33",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "23dc0bb666b4201638bded7ac5b0f3d798c257a24326b7f8f5b1ce9975e78509",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "23dc0bb666b4201638bded7ac5b0f3d798c257a24326b7f8f5b1ce9975e78509"
+  },
+  "represented_artifact": {
+    "artifact_type": "Runbook",
+    "description": "Repository pin and regeneration instructions for the framework-self pilot bundle.",
+    "html_path": "reproduction/code.html",
+    "metadata_path": "metadata/reproduction/code.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "reproduction",
+    "source_path": "reproduction/code.md",
+    "title": "Code and regeneration"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "reproduction/code.md@r13"
+  }
+}

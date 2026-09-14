@@ -1,0 +1,70 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "PF",
+    "description": "How a statement evolves over recorded rounds, of which disagreement is one stage.",
+    "level": 1,
+    "path": "pf/overview.md",
+    "round": 4,
+    "supersedes": "pf/overview.md@r1",
+    "title": "The problem in plain terms",
+    "type": "Finding"
+  },
+  "frontmatter": {
+    "description": "How a statement evolves over recorded rounds, of which disagreement is one stage.",
+    "fc-axis": "PF",
+    "fc-level": 1,
+    "fc-round": 4,
+    "fc-status": "open",
+    "fc-supersedes": "pf/overview.md@r1",
+    "timestamp": "2026-07-19",
+    "title": "The problem in plain terms",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: The problem in plain terms\ndescription: How a statement evolves over recorded rounds, of which disagreement is one stage.\nfc-level: 1\nfc-axis: PF\nfc-status: open\nfc-round: 4\nfc-supersedes: pf/overview.md@r1\ntimestamp: 2026-07-19",
+  "inquiry": {
+    "bundle_round_for_page": 4,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-19"
+  },
+  "progressive_disclosure": {
+    "axis": "PF",
+    "level": 1
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "33fa0f059f1d7762d4f235154db7885d6ed5815ad3b663256c4c63e29293c179",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "2afb0e09b5c72654d1c166f2af3eaeea02bedb830c3e1b9ec248daf1215caa3b",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "2afb0e09b5c72654d1c166f2af3eaeea02bedb830c3e1b9ec248daf1215caa3b"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "How a statement evolves over recorded rounds, of which disagreement is one stage.",
+    "html_path": "pf/overview.html",
+    "metadata_path": "metadata/pf/overview.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "problem-framing",
+    "source_path": "pf/overview.md",
+    "title": "The problem in plain terms"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "pf/overview.md@r1"
+  }
+}

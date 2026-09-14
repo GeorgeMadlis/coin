@@ -1,0 +1,62 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "R",
+    "fc-level": 1,
+    "fc-round": 8,
+    "fc-supersedes": "r/overview.md@round-0006",
+    "gsp-provenance": "pinned-not-reproduced",
+    "gsp-verdict-class": "possible_relevant_deforestation",
+    "title": "Result overview",
+    "type": "Finding"
+  },
+  "frontmatter_raw": "type: Finding\ntitle: \"Result overview\"\nfc-level: 1\nfc-axis: R\nfc-round: 8\nfc-supersedes: \"r/overview.md@round-0006\"\ngsp-provenance: pinned-not-reproduced\ngsp-verdict-class: possible_relevant_deforestation",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "R",
+    "level": 1
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "7078ea3a48eca12174e3bedfe1f9ada2b538ae52b06ec1e574330b917b85b061",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "950d1b1348e59760ff6cf8505223db3319a991ffff485ea4f86150cd5f5d3965"
+  },
+  "represented_artifact": {
+    "artifact_type": "Finding",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "r/overview.html",
+    "metadata_path": "metadata/r/overview.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "result",
+    "source_path": "r/overview.md",
+    "title": "Result overview"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "r/overview.html"
+  },
+  "supersession": {
+    "supersedes": "r/overview.md@round-0006"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Audited stubs, current-source correspondence, and foundation citations; clarified stub status, superseded stale v2-current bundle pages, and added reference links to literature anchors.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "objection",
+    "fc-party": "codex",
+    "fc-round": 7,
+    "fc-stage": "critique",
+    "fc-status": "open",
+    "fc-touches": [
+      "pf/formal.md",
+      "s/method.md",
+      "s/specification.md",
+      "r/overview.md",
+      "r/results.md",
+      "reproduction/code.md",
+      "reproduction/data.md",
+      "s/foundations/aumann-agreement.md",
+      "s/foundations/simon-bounded-rationality.md",
+      "s/foundations/ait-compression.md",
+      "s/foundations/coarse-graining-statmech.md",
+      "s/foundations/second-order-cybernetics.md",
+      "s/foundations/bayesian-agm-belief-revision.md",
+      "s/foundations/peirce-inquiry.md",
+      "s/foundations/argumentation-theory.md",
+      "s/foundations/quine-duhem.md",
+      "s/foundations/analytic-historiography.md",
+      "s/foundations/provenance-reproducibility.md"
+    ],
+    "timestamp": "2026-07-19",
+    "title": "Round 7: repository structure and reference audit",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 7: repository structure and reference audit\"\ndescription: Audited stubs, current-source correspondence, and foundation citations; clarified stub status, superseded stale v2-current bundle pages, and added reference links to literature anchors.\nfc-axis: INQUIRY\nfc-round: 7\nfc-move: objection\nfc-stage: critique\nfc-party: codex\nfc-touches: [pf/formal.md, s/method.md, s/specification.md, r/overview.md, r/results.md, reproduction/code.md, reproduction/data.md, s/foundations/aumann-agreement.md, s/foundations/simon-bounded-rationality.md, s/foundations/ait-compression.md, s/foundations/coarse-graining-statmech.md, s/foundations/second-order-cybernetics.md, s/foundations/bayesian-agm-belief-revision.md, s/foundations/peirce-inquiry.md, s/foundations/argumentation-theory.md, s/foundations/quine-duhem.md, s/foundations/analytic-historiography.md, s/foundations/provenance-reproducibility.md]\nfc-status: open\ntimestamp: 2026-07-19",
+  "inquiry": {
+    "bundle_round_for_page": 7,
+    "move": "objection",
+    "party": "codex",
+    "stage": "critique",
+    "timestamp_or_date": "2026-07-19"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "cef91de71bd5b636b92542f17ba813d5d94ca8b6458661522b82594353722489",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "e4786f7b2dbe3d335dee93d90f2ac5d0dd86fb73a209f1f75f889786e8702ed4",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "e4786f7b2dbe3d335dee93d90f2ac5d0dd86fb73a209f1f75f889786e8702ed4"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Audited stubs, current-source correspondence, and foundation citations; clarified stub status, superseded stale v2-current bundle pages, and added reference links to literature anchors.",
+    "html_path": "inquiry/round-0007.html",
+    "metadata_path": "metadata/inquiry/round-0007.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0007.md",
+    "title": "Round 7: repository structure and reference audit"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

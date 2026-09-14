@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Doubt, inquiry, and belief fixation as a temporal process.",
+    "level": 2,
+    "path": "s/foundations/peirce-inquiry.md",
+    "round": 13,
+    "supersedes": "s/foundations/peirce-inquiry.md@r7",
+    "title": "Peirce inquiry",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Doubt, inquiry, and belief fixation as a temporal process.",
+    "fc-axis": "S",
+    "fc-group": "B",
+    "fc-level": 2,
+    "fc-round": 13,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/peirce-inquiry.md@r7",
+    "timestamp": "2026-07-21",
+    "title": "Peirce inquiry",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Peirce inquiry\ndescription: Doubt, inquiry, and belief fixation as a temporal process.\nfc-level: 2\nfc-axis: S\nfc-group: B\nfc-status: open\nfc-round: 13\nfc-supersedes: s/foundations/peirce-inquiry.md@r7\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 13,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "1a54260c2aaaaa1d19868c97d9fb8a3afd6230c7a4373f783f4d7c0c44599400",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "8aaae7ad9289218ae67f0332e5c2fdb94eba6dc9bc03b0405f3ccc66c0296b7f",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "8aaae7ad9289218ae67f0332e5c2fdb94eba6dc9bc03b0405f3ccc66c0296b7f"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Doubt, inquiry, and belief fixation as a temporal process.",
+    "html_path": "s/foundations/peirce-inquiry.html",
+    "metadata_path": "metadata/s/foundations/peirce-inquiry.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/peirce-inquiry.md",
+    "title": "Peirce inquiry"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/peirce-inquiry.md@r7"
+  }
+}

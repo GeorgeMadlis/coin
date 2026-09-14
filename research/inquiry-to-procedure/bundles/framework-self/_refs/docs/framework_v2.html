@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Computational Framework for Observer Disagreement — v2</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / framework_v2</nav>
+<h1>A Computational Framework for Observer Disagreement — v2</h1>
+<article class="content"><h1 id="a-computational-framework-for-observer-disagreement-v2">A Computational Framework for Observer Disagreement — v2</h1>
+<p><strong>Foundation:</strong> Wolfram observer theory (as formal analogy) · <strong>Extensions:</strong> computational vs. factual irreducibility; sequential inquiry chains and self-disagreement · <strong>Delivery:</strong> OKF v0.1 fact-checking bundles with round records</p>
+<p><strong>Supersedes:</strong> v1 (<code>observer_disagreement_framework.md</code>). Changes in v2: §1 reframed around inquiry chains; §2 gains the dynamic model (observer trajectories, rounds, type descent, P4–P5) and the single-party diagonal case; §3 gains the <code>inquiry/</code> axis, round records, supersession rules, and the participating-observer contract; Steps 0, 2, 3, 4, 6, 7 updated accordingly.</p>
+<hr />
+<h2 id="1-purpose-and-assessment">1. Purpose and assessment</h2>
+<p><strong>Problem.</strong> Parties refer to the same events but cannot agree on their interpretation, because of either a limited or a different context window. Crucially, such a disagreement is almost never a single static comparison: objections, counter-arguments, and new evidence are applied <strong>sequentially in time</strong>. The statement "two parties refer to the same events" describes just one round in a possibly long chain. The general object of the framework is therefore not a disagreement but an <strong>inquiry chain</strong> — a sequence of interpretive rounds — of which a static disagreement is a single cross-section.</p>
+<p>The framework must cover two regimes with the same machinery:</p>
+<ul>
+<li><strong>Multi-party:</strong> two or more observers exchanging claims, objections, and evidence over rounds.</li>
+<li><strong>Single-party:</strong> one observer that keeps asking questions and adding evidence — digging deeper and deeper into a problem — while maintaining the records of the process. Self-disagreement (revising one's own earlier interpretation) is treated identically to disagreement with another party.</li>
+</ul>
+<p>The goal is a theoretical framework for analysing such chains, and a practical delivery format (per fact-checking problem) that records the chain itself, so that any human or AI agent can consume the current state — and its full derivation history — at a complexity level matched to their question.</p>
+<p><strong>Assessment: positive, with two qualifications.</strong></p>
+<p>Wolfram's observer theory supplies precise vocabulary for something usually handled vaguely: observers are computationally bounded compressors; what an observer perceives as "what happened" is not the event stream itself but the pocket of reducibility it was able to extract; agreement between observers is a function of proximity — shared position implies shared compressions, hence a shared "objective reality." Translated: two people who witnessed the same events but disagree are not necessarily disagreeing about facts. They applied different coarse-grainings (different equivalence relations over the raw event stream), driven either by a <strong>limited context window</strong> (they sampled different subsets of the events) or by a <strong>different position in "rulial space"</strong> (same events, different compression schemes — priors, categories, narratives).</p>
+<p>The sequential extension is also Wolfram-native: in his picture, time <em>is</em> the progressive rewriting of a state, and there are many possible paths of history. An inquiry chain is exactly such a path — a trajectory through the space of interpretive states — and, like other sufficiently rich computations, it is in general irreducible: the outcome of a genuine inquiry cannot be predicted without running it (P5 below).</p>
+<p><em>Qualification 1 — analogy, not physics.</em> Wolfram's physics program is speculative and not peer-established. The framework uses it as a <strong>formal analogy</strong> — a source of structure and definitions — not as a claim that human disagreement literally is rulial distance. This keeps the work defensible.</p>
+<p><em>Qualification 2 — must engage existing formal results.</em> Aumann's agreement theorem (Bayesian observers with common priors and common knowledge cannot agree to disagree — so persistent disagreement already implies different priors or partitions); Simon's bounded rationality; algorithmic information theory (compression as understanding); coarse-graining in statistical mechanics; second-order cybernetics (von Foerster, Luhmann). The sequential regime additionally connects to Bayesian belief revision and the AGM belief-revision literature, Peirce's model of inquiry, and argumentation theory (Dung frameworks, dialogue games) — the framework's contribution relative to these is the computational-boundedness dimension and the explicit recording function. The factual-irreducibility extension (§2) further connects to Quine–Duhem underdetermination, analytic historiography (Danto, Ankersmit), and the reproducibility/provenance literature (W3C PROV, FAIR).</p>
+<hr />
+<h2 id="2-formal-core">2. Formal core</h2>
+<h3 id="21-the-two-stage-observer-model-static-cross-section">2.1 The two-stage observer model (static cross-section)</h3>
+<p>A single-stage model (observer compresses the event stream directly) is insufficient, because observers of historical events never see the event stream. The corrected picture is a chain:</p>
+<pre><code>E  ──r──▶  R  ──fᵢ──▶  interpretationᵢ
+</code></pre>
+<ul>
+<li><strong>E</strong> — the event stream (what actually happened).</li>
+<li><strong>r</strong> — the <strong>recording function</strong>: a lossy compression of E performed by <em>past</em> observers (witnesses, archivists, instruments, publication pipelines), with their own context windows and compression schemes. r is non-invertible, and its specification is itself often lost.</li>
+<li><strong>R = r(E)</strong> — the surviving record. The only thing any present observer can access.</li>
+<li><strong>Oᵢ = (Cᵢ, fᵢ)</strong> — a present observer: a context window Cᵢ ⊆ R and a computationally bounded compression function fᵢ inducing an equivalence relation over R.</li>
+<li><strong>Interpretation</strong> — fᵢ(R ∩ Cᵢ). <strong>Disagreement</strong> — f₁(R ∩ C₁) ≠ f₂(R ∩ C₂).</li>
+</ul>
+<h3 id="22-the-dynamic-model-observer-trajectories-and-rounds">2.2 The dynamic model: observer trajectories and rounds</h3>
+<p>An observer is now indexed by time: <strong>O(t) = (C(t), f(t))</strong> — an <strong>observer trajectory</strong>. An inquiry chain proceeds in <strong>rounds</strong> t = 0, 1, 2, …. A round consists of:</p>
+<ol>
+<li>an emitted claim — interpretation(t) = f(t)(R(t) ∩ C(t));</li>
+<li>a <strong>move</strong> against it: an objection, a question, or new evidence e(t);</li>
+<li>a state update: <strong>C(t+1) = C(t) ∪ e(t)</strong> (context accumulates) and/or <strong>f(t+1) = update(f(t))</strong> (frame revision);</li>
+<li>a possibly revised claim, interpretation(t+1).</li>
+</ol>
+<p>Two structural facts make the chain recursive rather than merely iterative:</p>
+<ul>
+<li><strong>The chain extends E.</strong> Every claim, objection, and evidence submission is itself a new event. The dialogue appends to the event stream it is about.</li>
+<li><strong>The chain passes through r.</strong> Each round is recorded (or not). If the rounds are recorded lossily — or not at all — the inquiry's own history becomes a candidate for future Type III disputes ("what did we actually establish in round 12, and why?"). This is the theoretical motivation for the bundle's round records in §3: the bundle is the <strong>explicit recording function for the inquiry itself</strong>, guaranteeing that a chain maintained under the bundle discipline can never generate factual irreducibility <em>about its own history</em>.</li>
+</ul>
+<p><strong>The single-party diagonal case.</strong> When one party keeps asking questions and adding evidence, the "two observers" of the static model become <strong>time slices of one trajectory</strong>: the disagreement is between O(t+1) and O(t) — the observer's present state versus its own earlier interpretation. Nothing else changes: self-disagreement classifies under exactly the same taxonomy. "I found new data" is Type I against one's past self; "I now frame it differently" is Type II; "I have hit ground that no further digging can recover" is Type III. Multi-party disagreement is the general case; solitary deep-digging is its diagonal.</p>
+<h3 id="23-two-kinds-of-irreducibility">2.3 Two kinds of irreducibility</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Computational irreducibility</th>
+<th>Factual irreducibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nature of the limit</td>
+<td>Resource-relative</td>
+<td>Absolute (informational)</td>
+</tr>
+<tr>
+<td>Where the information is</td>
+<td>All present, but extraction cannot be shortcut</td>
+<td>Absent from R; lost at recording time</td>
+</tr>
+<tr>
+<td>Wolfram analogue</td>
+<td>Thermodynamics: initial conditions merely <em>encrypted</em> by the dynamics; only boundedness makes the result "look random"</td>
+<td>None — this is the extension: the past reaches the present only through non-invertible r</td>
+</tr>
+<tr>
+<td>Recoverable by unbounded compute?</td>
+<td>Yes, in principle</td>
+<td>No, by any observer</td>
+</tr>
+<tr>
+<td>Typical behaviour of disputes</td>
+<td>Shrink as resources grow</td>
+<td>Permanent at any resource level</td>
+</tr>
+<tr>
+<td>Manifestation in a chain</td>
+<td>Rounds are slow/costly but productive</td>
+<td>Rounds accumulate without resolution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dialogic irreducibility</strong> is the application of the computational kind to the chain itself: an inquiry chain is a computation whose outcome cannot in general be shortcut — one must actually run the rounds (see P5).</p>
+<h3 id="24-three-type-disagreement-taxonomy">2.4 Three-type disagreement taxonomy</h3>
+<ul>
+<li><strong>Type I — different context windows</strong> (C₁ ≠ C₂ over the accessible record; or C(t+1) ⊋ C(t) in the diagonal case): <em>data-resolvable</em> by sharing. Even here, resolution is blocked in practice when unpacking someone else's compressed narrative back to raw events — to re-compress it one's own way — is computationally intractable for a bounded observer.</li>
+<li><strong>Type II — different compression functions</strong> (f₁ ≠ f₂; or f(t+1) ≠ f(t)): <em>frame-resolvable only</em> — by translation between frames or a jointly adopted third coarse-graining. No amount of additional shared data closes the gap, because the divergence is in the compression function, not the input.</li>
+<li><strong>Type III — disputed content lies outside R</strong> (factual irreducibility): <em>not resolvable by data or by frames</em>. At best <strong>convention-resolvable</strong> (the parties — or the digging party and its future self — agree on a shared inference procedure over surviving traces) or honestly declared permanently underdetermined.</li>
+</ul>
+<p><strong>Type descent.</strong> In a well-formed chain the classification is not fixed: it typically <em>descends</em>. Early rounds resolve Type I components (evidence is shared or acquired), which exposes the underlying Type II components (frames now confront each other directly), whose resolution or explicit conventionalization exposes the Type III residue — the part of the question the surviving record simply underdetermines. Digging deeper is a descent through the taxonomy, and it has a floor.</p>
+<h3 id="25-key-propositions">2.5 Key propositions</h3>
+<ul>
+<li><strong>P1.</strong> Type II convergence is blocked in practice by the computational irreducibility of frame translation.</li>
+<li><strong>P2.</strong> Type III disagreements are invariant under both context enlargement and frame translation — a consequence of the non-invertibility of r.</li>
+<li><strong>P3.</strong> When the specification of r is itself lost, observers cannot even bound the underdetermination; Type III disputes are then undetectable from within and are systematically misclassified as Type II. This explains why parties to a historically underdetermined dispute each believe the other is merely biased — absent facts are silently filled by each observer's compression scheme.</li>
+<li><strong>P4 — type descent and termination.</strong> A chain whose moves are truthful and recorded descends the taxonomy monotonically in the limit: Type I components resolve first, then Type II components resolve or are conventionalized, and the chain <strong>bottoms out at the Type III residue</strong>. Termination criterion for an inquiry: further rounds add records but no resolution — the remaining disagreement is invariant under both new evidence and frame moves. Reaching this floor <em>is</em> a result, and the bundle should state it as such (<code>fc-status: underdetermined</code>), not disguise it as an open question.</li>
+<li><strong>P5 — dialogic irreducibility.</strong> The outcome of a genuine inquiry chain cannot in general be predicted without running it. Corollaries: (a) a party cannot legitimately pre-announce where the chain will converge; (b) shortcutting rounds (skipping the descent) does not accelerate convergence but misclassifies the disagreement type, typically mistaking Type II or III for Type I.</li>
+</ul>
+<h3 id="26-the-climate-model-case-is-a-hybrid-and-diagnosing-it-is-a-contribution">2.6 The climate-model case is a hybrid — and diagnosing it is a contribution</h3>
+<p>When a published climate-model prediction cannot be reproduced, two distinct causes are usually conflated:</p>
+<ol>
+<li><strong>Computational irreducibility</strong>: code, exact version, forcing datasets, initial conditions, and tuning choices all survive, but re-running is prohibitively expensive. Recoverable in principle, bounded in practice.</li>
+<li><strong>Factual irreducibility</strong>: any element of the provenance is lost — undocumented tuning, a silently revised forcing dataset, an unarchived code version. The <em>computation itself</em> has become a historical event with a lossy record.</li>
+</ol>
+<p>The framework predicts these populations behave differently (prediction 4, §4 Step 6): the first yields disagreements that shrink as compute gets cheaper; the second yields disagreements that are permanent regardless of resources. In chain terms: reproduction attempts on the first population are productive rounds; on the second they accumulate without resolution — a P4 floor.</p>
+<h3 id="27-the-eudr-system-as-demonstrated-countermeasure">2.7 The EUDR system as demonstrated countermeasure</h3>
+<p>Deterministic pipelines, SHA256 manifests, vendored WSDL/XSD snapshots, dated evidence bundles under <code>evidence/&lt;YYYY-MM-DD&gt;/&lt;run_id&gt;/</code> — this is engineering that prevents present verdicts from becoming Type III disputes in the future. An evidence bundle is a recording function r made <strong>explicit, complete, and invertible with respect to the verdict</strong>: any future observer can re-derive f(R) exactly. Likewise, Hansen GFC vs. JRC GFC2020 are two observers of the same physical forest with different context windows (annual loss-year band vs. baseline-only semantics) and different coarse-grainings (canopy thresholds, pixel geometry); the asymmetric verdict rule (one credible loss signal suffices to FAIL; one zero-loss signal never suffices to PASS) is a <strong>meta-observer aggregation rule</strong> — a Type II disagreement resolved by frame-level convention rather than data-sharing. The iterative refinement of the EUDR documentation itself — successive sessions adding evidence, correcting framings, superseding earlier claims — is a live single-party inquiry chain, usable as a case study (§4 Step 7d).</p>
+<hr />
+<h2 id="3-delivery-format-okf-fact-checking-bundles-with-round-records">3. Delivery format: OKF fact-checking bundles with round records</h2>
+<h3 id="31-why-okf-fits-the-theory">3.1 Why OKF fits the theory</h3>
+<p>The Open Knowledge Format (OKF v0.1, published by Google Cloud, 12 June 2026) represents knowledge as a directory of markdown files with YAML frontmatter, authored and consumed by both humans and AI agents. Relevant constraints: a bundle is a self-contained hierarchical collection; each concept is one markdown document whose file path (minus <code>.md</code>) is its identity; links are ordinary markdown links whose relationship kind is conveyed by surrounding prose; <code>index.md</code> files support progressive disclosure; <code>log.md</code> records chronological change history; consumers must tolerate broken links; the only required frontmatter field is <code>type</code> (recommended: <code>title</code>, <code>description</code>, <code>resource</code>, <code>tags</code>, <code>timestamp</code>); producers may add custom keys and consumers must tolerate unknown keys. OKF explicitly does not subsume domain-specific schemas — it references them — so evidence manifests, WSDLs, and code repos are linked resources, not content to be re-encoded.</p>
+<p>The bundle closes the framework's loop by making four normally-implicit things explicit:</p>
+<ol>
+<li><strong>R</strong> — pinned by links to code at exact commits, input data with checksums, evidence manifests → the Type III countermeasure for the <em>subject matter</em>.</li>
+<li><strong>f</strong> — the method, documented in the S axis.</li>
+<li><strong>A graded family of coarse-grainings f₀ ⊃ f₁ ⊃ f₂ ⊃ f₃</strong> — the same content at increasing resolution; the layman answer is the maximal compression, the deepest level approaches the raw record. Progressive disclosure = an observer choosing how far down the reducibility hierarchy to descend.</li>
+<li><strong>The inquiry chain itself</strong> <em>(new in v2)</em> — every round recorded, every revision a supersession, never a silent edit → the Type III countermeasure for the <em>inquiry's own history</em>. <code>log.md</code>, peripheral in v1, is now central: it is the chain's ledger.</li>
+</ol>
+<p><strong>Diagnostic use.</strong> When two parties — or one party and its earlier self — dispute a claim, the layered structure localizes the disagreement: find the <strong>deepest common level</strong> at which the accounts still coincide, <em>per round</em>. Divergence at R-level with agreement on S → data dispute (Type I). Divergence at S with agreement on R-inputs → frame dispute (Type II). Divergence about content absent from the reproduction layer → Type III. The sequence of per-round classifications is the chain's <strong>type trajectory</strong>; under P4 it should descend, and a trajectory stuck at one type is itself diagnostic (a Type I that never resolves despite data-sharing is probably a misclassified Type II or III — cf. P3).</p>
+<h3 id="32-bundle-layout-one-bundle-per-fact-checking-problem">3.2 Bundle layout (one bundle per fact-checking problem)</h3>
+<pre><code>&lt;problem-id&gt;/
+├── index.md                  # root progressive-disclosure entry (no frontmatter)
+├── answer.md                 # L0: layman problem statement + CURRENT verdict; links to axes
+├── agent-contract.md         # consumption + participation contract (see 3.5)
+├── log.md                    # chronological ledger: one entry per round (reserved filename)
+├── pf/                       # Problem Formulation axis
+│   ├── index.md
+│   ├── overview.md           # L1: problem formulation, plain terms
+│   ├── formal.md             # L2: formalized claim, scope, definitions
+│   └── full-context.md       # L3: regulatory/legal/scientific context, edge cases
+├── s/                        # Solution axis
+│   ├── index.md
+│   ├── overview.md           # L1: method in one paragraph
+│   ├── method.md             # L2: algorithm, parameters, thresholds, assumptions
+│   └── specification.md      # L3: exact configuration, versions, deviations
+├── r/                        # Results axis
+│   ├── index.md
+│   ├── overview.md           # L1: result in plain terms
+│   ├── results.md            # L2: quantitative results, uncertainty, agreement metrics
+│   └── full-results.md       # L3: per-item outputs, links to evidence artifacts
+├── reproduction/             # REPRO axis — mandatory
+│   ├── index.md
+│   ├── code.md               # type: Runbook — repo URL, commit hash, run command
+│   ├── data.md               # input datasets, versions, access dates, checksums
+│   └── environment.md        # runtime, dependencies, lockfiles
+└── inquiry/                  # INQUIRY axis — the chain record (new in v2)
+    ├── index.md              # round listing, current fc-status, type trajectory summary
+    ├── round-0001.md         # one file per round (see 3.4)
+    ├── round-0002.md
+    └── ...
+</code></pre>
+<h3 id="33-frontmatter-convention">3.3 Frontmatter convention</h3>
+<p>Custom keys are conformant (consumers tolerate unknown keys). Namespace them defensively (<code>fc-</code> prefix), since OKF v0.1 is explicitly a starting point and reserved keys may grow.</p>
+<p>Concept files (PF/S/R/REPRO axes):</p>
+<pre><code class="language-yaml">---
+type: Finding                     # required by OKF
+title: Post-2020 forest loss, Estonia AOI
+description: One-line summary for index scanning
+fc-level: 2                       # 0 = layman … 3 = full detail
+fc-axis: R                        # PF | S | R | REPRO | INQUIRY
+fc-irreducibility: computational  # computational | factual | none
+fc-round: 7                       # round in which this version was established
+fc-supersedes: r/results.md@r5    # concept@round it replaces, if a revision (git history holds the text)
+resource: https://github.com/.../evidence/2026-.../manifest.json
+timestamp: 2026-07-16
+---
+</code></pre>
+<h3 id="34-round-records">3.4 Round records</h3>
+<p>Each <code>inquiry/round-NNNN.md</code> is one concept documenting one move of the chain:</p>
+<pre><code class="language-yaml">---
+type: Event
+title: &quot;Round 7: objection to per-pixel area method&quot;
+description: Counter-argument on projection choice; new JRC coverage evidence added
+fc-axis: INQUIRY
+fc-round: 7
+fc-move: objection            # question | objection | evidence | frame-change | convention | verdict-revision
+fc-party: reviewer-B          # or &quot;self&quot; in the single-party regime
+fc-type-at-round: II          # I | II | III | resolved — the classification of the live disagreement
+fc-touches: [s/method.md, r/results.md]   # concepts updated in consequence
+fc-status: open               # open | resolved | underdetermined
+timestamp: 2026-07-16
+---
+# Move
+&lt;the objection / question / evidence, verbatim or pinned by link&gt;
+
+# Evidence added
+&lt;links, checksums, dataset versions — pinned per REPRO rules&gt;
+
+# Effect on state
+Context window: &lt;what was added to C(t)&gt;
+Frame: &lt;unchanged | changed, and how f(t) → f(t+1)&gt;
+
+# Resulting revisions
+&lt;which concept files were superseded, with fc-supersedes references&gt;
+
+# Classification rationale
+&lt;why this round is Type I/II/III; if the type changed from the previous round, why (type descent)&gt;
+</code></pre>
+<p><code>log.md</code> (no frontmatter, per OKF) lists one line per round: date, round number, move type, one-line summary, link to the round file. <code>inquiry/index.md</code> additionally summarizes the <strong>type trajectory</strong> (e.g., "r1–r4: Type I, resolved; r5–r7: Type II, conventionalized at r7; r8: Type III residue declared") and the current <code>fc-status</code> of the problem as a whole.</p>
+<h3 id="35-design-rules-theory-format">3.5 Design rules (theory → format)</h3>
+<ol>
+<li><strong>Every level is self-contained for its reader.</strong> L0 is not a teaser but a complete answer at maximal compression. Deeper levels add resolution, never contradict shallower ones. <em>(Revised in v2:)</em> the <strong>consistency condition applies to the current version of the bundle</strong>. When deeper digging <em>does</em> uncover a contradiction with a shallower claim — the normal and expected outcome of a productive round — the shallower claim is corrected <strong>as a recorded round</strong>: the old text is superseded (<code>fc-supersedes</code>, git history), the round file states what changed and why, and <code>log.md</code> ledgers it. Never a silent edit.</li>
+<li><strong>The reproduction axis is mandatory and pinned.</strong> <code>code.md</code> references an exact commit; <code>data.md</code> exact dataset versions with checksums. An unpinned link is a future Type III dispute.</li>
+<li><strong>Declare irreducibility explicitly.</strong> Where a result cannot be cheaply re-derived, state whether the obstacle is computational (re-run expensive but fully specified) or factual (some input no longer recoverable — mark it, consistent with the existing <code>UNVERIFIED</code> inline convention). Where a chain has bottomed out (P4), declare <code>fc-status: underdetermined</code> rather than leaving the question artificially open.</li>
+<li><strong>Append-only supersession.</strong> <em>(New in v2.)</em> The bundle grows monotonically at the provenance level: rounds are never deleted or renumbered; revisions supersede rather than overwrite; the current state is always derivable from round 0 plus the ledger. This rule is what makes the bundle the explicit recording function for the inquiry itself — a single party can dig arbitrarily deep over months of sessions and never lose the ability to answer "what did I believe at round t, and what moved me off it?"</li>
+</ol>
+<h3 id="36-agent-contract-proxy-observer-and-participating-observer">3.6 Agent contract: proxy observer and participating observer</h3>
+<p><strong>Consumption (proxy observer)</strong> — unchanged from v1: read root <code>index.md</code> → classify the user's question by implied level and axis ("So is it compliant?" → L0; "Why 10% canopy and not 30%?" → S/L2–L3; "Can I re-run this?" → REPRO; "How did we get here?" / "What changed since last time?" → INQUIRY) → descend only as deep as the question requires → answer <em>from</em> that level, citing the concept file path → offer the next level down as follow-up. Two hard rules: never answer at a deeper level than asked (imposing the agent's own coarse-graining); never at a shallower level than the question requires (lossy beyond the questioner's request).</p>
+<p><strong>Participation (participating observer)</strong> — new in v2. When the user's message is a <em>move</em> (an objection, new evidence, a follow-up question that extends the inquiry) rather than a pure query, the agent: (1) opens a new round file with the move recorded verbatim or pinned; (2) classifies the live disagreement type and states the rationale; (3) applies resulting revisions under the supersession rule; (4) updates <code>log.md</code> and <code>inquiry/index.md</code>; (5) answers from the revised state. The agent's own contributions are moves like any other — logged, attributable, supersedable. This makes the single-party deep-digging regime concrete: the human asks, the agent answers and records, and the bundle accumulates the full chain across sessions with no dependence on either party's memory.</p>
+<p>Write this contract into the bundle itself (<code>agent-contract.md</code>) so any OKF-consuming agent inherits both behaviours without bespoke integration.</p>
+<hr />
+<h2 id="4-unified-stepprompt-sequence">4. Unified step/prompt sequence</h2>
+<p>One deliverable per step; each prompt is copy-paste-ready. <em>(v2 changes are integrated in place.)</em></p>
+<p><strong>Step 0 — Scope, commitments, terminology.</strong></p>
+<blockquote>
+<p>Define the scope of a theoretical framework for observer disagreement based on Wolfram's observer theory, used as formal analogy rather than literal physics. Produce a glossary defining: event stream, observer, context window, compression function, equivalence relation (coarse-graining), pocket of reducibility, interpretation, disagreement, recording function r, surviving record R = r(E), provenance, factual irreducibility, underdetermination, knowledge bundle, coarse-graining family with its consistency condition, disclosure level, proxy observer, and additionally: observer trajectory O(t) = (C(t), f(t)); round (claim → move → state update → revised claim); move types (question, objection, evidence, frame-change, convention, verdict-revision); inquiry chain; self-disagreement (the diagonal case: disagreement between O(t+1) and O(t)); type trajectory; type descent; termination/bottoming-out; supersession; participating observer. Each definition must be stated in computational terms, note its Wolfram-source concept and nearest established-literature counterpart, and state whether any limitation involved is resource-relative (computational) or absolute (informational).</p>
+</blockquote>
+<p><strong>Step 1 — Literature positioning.</strong></p>
+<blockquote>
+<p>Produce a comparison table mapping the framework's concepts against: Aumann (1976) agreement theorem; Simon's bounded rationality; algorithmic information theory; coarse-graining in statistical mechanics; second-order cybernetics; Quine–Duhem underdetermination; analytic historiography (Danto, Ankersmit); the reproducibility-crisis and data-provenance literature (W3C PROV, FAIR); and, for the sequential regime: Bayesian belief updating and AGM belief revision; Peirce's model of inquiry; and formal argumentation theory (Dung frameworks, dialogue games). For each: what it already explains, what it fails to explain, which disagreement type (I/II/III) and which regime (static / multi-party chain / single-party chain) it addresses, and what the computational-boundedness argument and the explicit recording function add. State explicitly what is novel.</p>
+</blockquote>
+<p><strong>Step 2 — Formal core.</strong></p>
+<blockquote>
+<p>Formalize (a) the static two-stage chain E → r → R → observers Oᵢ = (Cᵢ, fᵢ) computing fᵢ(R ∩ Cᵢ), and (b) the dynamic model: observer trajectories O(t) = (C(t), f(t)); rounds as the operator (claim(t), move, e(t)) ↦ (C(t+1), f(t+1), claim(t+1)) with C(t+1) = C(t) ∪ e(t); the recursion whereby each round appends to E and passes through r; and the diagonal (single-party) case as disagreement between time slices of one trajectory. Derive the three-type taxonomy and its dynamic reading (per-round classification, type trajectory). Prove or argue: (P1) Type II convergence is blocked in practice by computational irreducibility of frame translation; (P2) Type III disagreements are invariant under both context enlargement and frame translation — prove from non-invertibility of r; (P3) when the specification of r is itself lost, Type III disputes are undetectable from within and systematically misclassified as Type II; (P4) truthful, recorded chains descend the taxonomy and bottom out at the Type III residue — state the termination criterion (invariance of the residual disagreement under both evidence and frame moves) and required assumptions (truthfulness, recording discipline, bounded frame set or a fairness condition on moves); (P5) dialogic irreducibility — the outcome of a genuine chain cannot in general be predicted without running it; derive the corollaries (no legitimate pre-announcement of convergence; shortcutting rounds misclassifies type). Assess for each proposition whether it is provable or merely plausible, and under what assumptions; P4's monotonicity in particular must be examined for counterexamples (frame oscillation, adversarial moves).</p>
+</blockquote>
+<p><strong>Step 3 — OKF bundle specification.</strong></p>
+<blockquote>
+<p>Write an OKF v0.1-conformant specification for fact-checking bundles: the PF/S/R/REPRO/INQUIRY directory layout with disclosure levels L0–L3; the frontmatter convention (type required; namespaced custom keys fc-level, fc-axis, fc-irreducibility, fc-round, fc-supersedes, fc-status, and for round files fc-move, fc-party, fc-type-at-round, fc-touches); the round-record schema (Move / Evidence added / Effect on state / Resulting revisions / Classification rationale); the revised consistency condition (applies to the current version; contradictions found by deeper digging are resolved as recorded rounds with supersession, never silent edits); the append-only supersession rule; the pinning rules for the reproduction axis; the rule for marking factual vs. computational irreducibility inline and for declaring bottomed-out status; and the two-part agent contract (proxy observer for consumption; participating observer for moves, including the duty to log its own contributions). Declare the targeted OKF version explicitly. Include one fully worked concept file per axis, including a worked round file. Output as a single SPEC-style markdown document.</p>
+</blockquote>
+<p><strong>Step 4 — Bundle generator and validator (Python).</strong></p>
+<blockquote>
+<p>Write a Python module that (a) emits a conformant bundle skeleton from a structured problem description (problem-id, claim, verdict, method summary, results, repo+commit, dataset versions with hashes), and (b) provides a round-append function: given a move (type, party, text, evidence links, touched concepts), it creates the next round-NNNN.md, applies supersession frontmatter to revised concepts, and updates log.md and inquiry/index.md (including the type-trajectory summary) atomically. Include a validator that checks: required type field present; level-consistency (no orphan levels, no contradiction markers across levels in the current version); all reproduction and evidence links pinned (commit hashes and checksums present); round numbering contiguous and append-only (no gaps, no rewrites of past rounds — verify via git history if available); every superseded concept referenced by exactly one round; internal links resolvable — reporting unresolved links as warnings, not errors, per the OKF broken-link tolerance rule. Provide unit tests, including a multi-round single-party scenario.</p>
+</blockquote>
+<p><strong>Step 5 — Operationalizing observer distance.</strong></p>
+<blockquote>
+<p>Propose measurable proxies for the distance between two observers — including between time slices of one observer: (a) divergence of predicted continuations of the same event stream; (b) disagreement rate on forced classification of shared events; (c) description-length asymmetry; (d) recoverability/provenance-completeness of R; (e) bundle-derived metrics: deepest-common-level per round, and the type trajectory (rate of descent, stalls, oscillations). For each proxy: measurement procedure, failure modes, and what would falsify the framework. Hypotheses to state explicitly: metric (d) predicts Type II vs. Type III behaviour; a stalled type trajectory under continued data-sharing indicates misclassification per P3.</p>
+</blockquote>
+<p><strong>Step 6 — Derived predictions.</strong></p>
+<blockquote>
+<p>From the formal core, derive testable predictions: (1) sharing raw data reduces Type I but not Type II disagreement; (2) disagreement persistence correlates with compression-scheme distance, not information asymmetry; (3) convergence requires either translation between frames or a jointly adopted third frame; (4) irreproducible scientific claims split into cost-limited and provenance-limited populations with different convergence behaviour under growing resources; (5) disagreements over thinly recorded events are more persistent and more frame-driven than over well-recorded events; (6) recorded chains exhibit type descent — the modal order of resolution is I before II before III — and violations of descent predict either untruthful moves or misclassification; (7) single-party chains maintained under bundle discipline show measurably lower re-litigation (repeat rounds over already-settled points) than undocumented inquiries of comparable depth. For each prediction, sketch an empirical or case-study test.</p>
+</blockquote>
+<p><strong>Step 7 — Case studies (four).</strong></p>
+<blockquote>
+<p>Apply the framework to: (a) a documented historical dispute where the contested facts are demonstrably absent from the surviving record — a Type III case, including evidence of P3-style misclassification; (b) reproduction of a specific published climate-model prediction, built as a pilot OKF bundle with the reproduction axis populated honestly and each obstacle classified as computational or factual irreducibility — doubling as the empirical test of prediction (4); (c) the EUDR evidence-bundle architecture re-expressed as an OKF fact-checking bundle: map evidence/<date>/<run_id>/ manifests to the reproduction axis, render the Estonia AOI FAIL verdict (~16.77 ha post-2020 loss) as answer.md L0 with the full PF/S/R descent, and show the Hansen GFC vs. JRC GFC2020 divergence as a Type II disagreement resolved by frame-level convention (the asymmetric verdict rule); (d) a single-party inquiry chain: reconstruct one multi-session deep-dig from the EUDR documentation work (e.g., the sequence of corrections around a documentation discrepancy) as an inquiry/ axis with round files, demonstrating self-disagreement classification, supersession, and a type trajectory — and showing that the bundle discipline would have made the chain's history fully re-derivable.</p>
+</blockquote>
+<p><strong>Step 8 — Limitations and falsifiability.</strong></p>
+<blockquote>
+<p>Write the limitations section honestly. The framework treats disagreement as purely epistemic-computational: identify what it deliberately excludes — motivated reasoning, interests, power, identity-protective cognition — and specify boundary conditions under which the computational account dominates versus is swamped. The recording function is treated as epistemically neutral, whereas r is often shaped by the interests of past recorders (archival power, victor's history) — note the interaction with, and distinction from, motivated reasoning in present observers. P4 assumes truthful moves: characterize how adversarial or strategic moves (bad-faith objections, evidence flooding, frame churn) break type descent, and whether the round records make such behaviour detectable post hoc. Note OKF v0.1 draft status and the versioning/namespacing mitigation. Note the bookkeeping cost of round discipline and when lightweight variants are acceptable.</p>
+</blockquote>
+<p><strong>Step 9 — Assemble the working paper.</strong></p>
+<blockquote>
+<p>Assemble Steps 0–8 into a working-paper draft: abstract, motivation, framework (static and dynamic), formalization, bundle specification, operationalization, predictions, case studies, limitations, related work. Target format and rigor comparable to the EUDR Digital Twin / Procedural DAO preprint (SSRN).</p>
+</blockquote>
+<hr />
+<h2 id="5-standing-caveats">5. Standing caveats</h2>
+<ol>
+<li><strong>Analogy discipline.</strong> Every Wolfram-derived claim in the paper must be traceable to a computational definition that stands independently of the physics program.</li>
+<li><strong>OKF is a draft.</strong> v0.1 is explicitly a starting point; declare the targeted version in the spec and keep custom keys namespaced (<code>fc-</code>) against future reserved-key collisions.</li>
+<li><strong>P2/P3 remain load-bearing; P4/P5 join them.</strong> P4's monotonicity (type descent) is the most exposed new claim — frame oscillation and adversarial moves are the obvious counterexample families, and Step 2 must either restrict the assumptions until it holds or downgrade it to an empirical regularity tested at Step 6 prediction (6). If P4 or P5 turn out to be merely plausible rather than provable under stated assumptions, soften from "theorem" to "conjecture with supporting argument" before anything downstream is built.</li>
+<li><strong>Round discipline has a cost.</strong> Full round records are justified for contested or long-running problems; the spec should define a lightweight profile (ledger-only, no per-round files) for low-stakes bundles, with an upgrade path.</li>
+</ol>
+<h2 id="6-references-format-and-standard">6. References (format and standard)</h2>
+<ul>
+<li>Wolfram observer theory: source interview transcript (YouTube, https://www.youtube.com/watch?v=07jmttVw2Yo).</li>
+<li>OKF v0.1 specification: GoogleCloudPlatform/knowledge-catalog repository, <code>okf/SPEC.md</code> (https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md).</li>
+<li>OKF announcement: Google Cloud blog, "How the Open Knowledge Format can improve data sharing," 12 June 2026.</li>
+</ul>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/framework_v2.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

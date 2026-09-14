@@ -3,8 +3,8 @@ type: Finding
 title: "eudr-coffee-brazil-fazenda-sucuri: current verdict"
 fc-level: 0
 fc-axis: R
-fc-round: 6
-fc-supersedes: "answer.md@round-0001"
+fc-round: 8
+fc-supersedes: "answer.md@round-0006"
 fc-status: open
 gsp-verdict-class: possible_relevant_deforestation
 gsp-provenance: pinned-not-reproduced
@@ -12,14 +12,17 @@ gsp-provenance: pinned-not-reproduced
 # What this bundle decides
 
 The pinned Fazenda Sucuri screening evidence shows post-2020 forest loss inside the JRC 2020 forest
-baseline and a small co-location with coffee evidence. The recalculated current coffee mask now
-preserves the 2020 baseline coffee footprint, while the "new commodity since baseline" mask remains
-latest observed coffee minus baseline-year coffee. The verdict remains
+baseline and co-location with coffee evidence. The current evidence state remains
 `possible_relevant_deforestation` for screening purposes, matching the counterpart report's
 `human_review_required` status.
 
-This is not a legal non-compliance determination. The new-conversion signal is source-specific:
-FDP shows 0.27 ha of post-2020 baseline-forest loss intersecting new coffee after the baseline year,
-while MapBiomas and the both-source-agreement conversion layer show 0.0 ha for that same conversion
-intersection. Current coffee/loss overlap is 1.08 ha after baseline coffee is retained. Human review
-remains required.
+The richer round-8 FDP/JRC morphology and threshold diagnostics change the interpretation detail,
+not the verdict. At the configured, permissive 0.025 FDP probability threshold, current
+coffee/loss overlap is 5.14 ha and new post-baseline coffee/loss overlap is 1.17 ha. That
+new-coffee/loss signal is FDP-specific: MapBiomas and the both-source-agreement conversion layer
+show 0.0 ha for the same conversion intersection.
+
+This is not a legal non-compliance determination. The diagnostic report says the JRC/FDP new-coffee
+overlap is threshold-sensitive and morphology-inconclusive from shape metrics alone: JRC 2020
+intersecting FDP new coffee drops from 17.25 ha at 0.025 to 5.67 ha at 0.25, and the 0.025
+new-overlap boundary-adjacency fraction is 0.54029. Human review remains required.

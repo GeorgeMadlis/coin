@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Retrospective description and narrative structure in historical explanation.",
+    "level": 2,
+    "path": "s/foundations/analytic-historiography.md",
+    "round": 13,
+    "supersedes": "s/foundations/analytic-historiography.md@r7",
+    "title": "Analytic historiography",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Retrospective description and narrative structure in historical explanation.",
+    "fc-axis": "S",
+    "fc-group": "C",
+    "fc-level": 2,
+    "fc-round": 13,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/analytic-historiography.md@r7",
+    "timestamp": "2026-07-21",
+    "title": "Analytic historiography",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Analytic historiography\ndescription: Retrospective description and narrative structure in historical explanation.\nfc-level: 2\nfc-axis: S\nfc-group: C\nfc-status: open\nfc-round: 13\nfc-supersedes: s/foundations/analytic-historiography.md@r7\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 13,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "e8e8f2d656f6e3972c335cf89a1db51d3823a0e6d909ed3e95e3aa07bdcca535",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "b2bee4f048a6f06d44cbf3e3abaaaf747b9610f9e680e114c34e05a256238216",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "b2bee4f048a6f06d44cbf3e3abaaaf747b9610f9e680e114c34e05a256238216"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Retrospective description and narrative structure in historical explanation.",
+    "html_path": "s/foundations/analytic-historiography.html",
+    "metadata_path": "metadata/s/foundations/analytic-historiography.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/analytic-historiography.md",
+    "title": "Analytic historiography"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/analytic-historiography.md@r7"
+  }
+}

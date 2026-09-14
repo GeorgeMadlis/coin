@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Satisficing and cognitive limits as constraints on observer behavior.",
+    "level": 2,
+    "path": "s/foundations/simon-bounded-rationality.md",
+    "round": 13,
+    "supersedes": "s/foundations/simon-bounded-rationality.md@r7",
+    "title": "Simon bounded rationality",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Satisficing and cognitive limits as constraints on observer behavior.",
+    "fc-axis": "S",
+    "fc-group": "A",
+    "fc-level": 2,
+    "fc-round": 13,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/simon-bounded-rationality.md@r7",
+    "timestamp": "2026-07-21",
+    "title": "Simon bounded rationality",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Simon bounded rationality\ndescription: Satisficing and cognitive limits as constraints on observer behavior.\nfc-level: 2\nfc-axis: S\nfc-group: A\nfc-status: open\nfc-round: 13\nfc-supersedes: s/foundations/simon-bounded-rationality.md@r7\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 13,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "e4188c351df8322838753945ce25819a93b1d454475b59ad5e86026be57e2020",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "fdd523970616a602ac2f27ff79b2ee9e1e78c86c2c88e997bdaf80cb2474e0b0",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "fdd523970616a602ac2f27ff79b2ee9e1e78c86c2c88e997bdaf80cb2474e0b0"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Satisficing and cognitive limits as constraints on observer behavior.",
+    "html_path": "s/foundations/simon-bounded-rationality.html",
+    "metadata_path": "metadata/s/foundations/simon-bounded-rationality.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/simon-bounded-rationality.md",
+    "title": "Simon bounded rationality"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/simon-bounded-rationality.md@r7"
+  }
+}

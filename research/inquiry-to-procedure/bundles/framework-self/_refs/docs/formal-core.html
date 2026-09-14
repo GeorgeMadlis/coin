@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formal core</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / _refs / docs / formal-core</nav>
+<h1>Formal core</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Step 2 formalization of the static and dynamic statement-evolution model.</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>timestamp</dt><dd>2026-07-21</dd><dt>title</dt><dd>Formal core</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h1 id="formal-core">Formal Core</h1>
+<p>This document fills the Step 2 deliverable for the statement-evolution
+framework. It formalizes the static observer-disagreement cross-section and the
+dynamic round model described in <a href="framework_v3.html">docs/framework_v3.md</a>, using
+the vocabulary fixed in <a href="glossary.html">docs/glossary.md</a> and the literature
+boundaries recorded in <a href="related-work.html">docs/related-work.md</a>.</p>
+<p>Status note: the definitions below are part of the framework. The propositions
+are not all theorems. Each proposition states its assumptions, epistemic status,
+supporting argument, boundary cases, and revision conditions.</p>
+<h2 id="1-notation-and-domains">1. Notation And Domains</h2>
+<p>Let <code>T = {0, 1, 2, ...}</code> be the round index set. Let <code>P</code> be the set of parties
+or agents participating in a statement trajectory. Let <code>Y</code> be an interpretation
+space: labels, verdicts, claims, model outputs, narratives, or structured
+statements. When two observers use different output vocabularies, assume an
+explicit comparison relation <code>~</code> on outputs. If no comparison relation is
+available, equality of raw strings is not enough to diagnose substantive
+agreement.</p>
+<p>The framework distinguishes three uses of "record":</p>
+<ul>
+<li><code>E</code>: the event stream, including the historical events under discussion and
+  later inquiry events such as claims, objections, evidence submissions, and
+  revisions.</li>
+<li><code>R = r(E)</code>: the surviving record available to present observers after a
+  lossy recording function <code>r</code>.</li>
+<li><code>R</code> as a bundle axis value, written <code>fc-axis: R</code>, meaning Results. This is a
+  metadata label, not the formal surviving-record symbol.</li>
+</ul>
+<p>The static chain is:</p>
+<p><code>E -&gt; r -&gt; R -&gt; O_i -&gt; y_i</code></p>
+<p>where observer <code>O_i = (C_i, f_i)</code> emits output <code>y_i = f_i(R cap C_i)</code>.</p>
+<p>The dynamic chain is the same model indexed by rounds, with the additional fact
+that the trajectory's own rounds become new events:</p>
+<p><code>E(t+1) = E(t) concat q(t)</code></p>
+<p>where <code>q(t)</code> is the recorded-or-unrecorded event generated by round <code>t</code>.</p>
+<h2 id="2-static-model">2. Static Model</h2>
+<h3 id="21-event-stream">2.1 Event Stream</h3>
+<p>An event stream <code>E</code> is an ordered sequence, partially ordered history, or other
+event structure representing what occurred before present interpretation. The
+framework does not require observers to access <code>E</code> directly. In historical,
+scientific, institutional, or repository settings, present observers normally
+access only traces left by prior recording processes.</p>
+<p>Repository-specific observation: in this repository, the event stream includes
+commits, pull requests, bundle rounds, documentation edits, and derived-artifact
+generation. The committed HEAD of <code>main</code> is the canonical current source state,
+but it is still a record of past events, not the events themselves.</p>
+<h3 id="22-recording-function">2.2 Recording Function</h3>
+<p>The recording function <code>r</code> maps the event stream into a surviving record:</p>
+<p><code>r: E -&gt; R</code>.</p>
+<p><code>r</code> may stand for witnesses, instruments, archives, publication pipelines,
+version-control commits, bundle manifests, data-cleaning procedures, or any
+other process that selects and encodes some aspects of <code>E</code>. It is generally
+lossy and non-invertible. The full specification of <code>r</code> may itself be absent
+from <code>R</code>.</p>
+<p>Two levels of loss matter:</p>
+<ul>
+<li>Loss in the recorded content: some fact about <code>E</code> is not retained in <code>R</code>.</li>
+<li>Loss in the recorder specification: facts about how <code>r</code> selected, transformed,
+  omitted, timestamped, or normalized events are not retained.</li>
+</ul>
+<p>The first can make an object-level claim underdetermined. The second can make
+the extent of underdetermination itself inaccessible.</p>
+<h3 id="23-surviving-record">2.3 Surviving Record</h3>
+<p>The surviving record is:</p>
+<p><code>R = r(E)</code>.</p>
+<p>Present observers compute over <code>R</code>, not over <code>E</code>. <code>R</code> may be a set, sequence, or
+structured collection of records. The notation <code>R cap C_i</code> denotes the part of
+the surviving record available to, attended to by, or selected by observer <code>i</code>.
+If <code>C_i</code> is already defined as a subset of <code>R</code>, then <code>R cap C_i = C_i</code>; the
+expanded notation is retained to emphasize that present observation is mediated
+by <code>R</code>.</p>
+<h3 id="24-observer">2.4 Observer</h3>
+<p>An observer is:</p>
+<p><code>O_i = (C_i, f_i)</code>.</p>
+<p><code>C_i</code> is the context window: the accessible or attended subset of the surviving
+record. <code>f_i</code> is the compression function or frame: a bounded map from
+accessible records to an interpretation output. A compression function induces
+an equivalence relation on record states: two record states are equivalent for
+observer <code>i</code> when <code>f_i</code> maps them to the same output.</p>
+<p>The framework treats <code>f_i</code> computationally. It may encode a model, prior,
+classification scheme, narrative frame, legal rule, threshold, method, or
+translation procedure. It is not assumed to be neutral or complete.</p>
+<h3 id="25-observer-interpretation">2.5 Observer Interpretation</h3>
+<p>Observer <code>i</code> emits:</p>
+<p><code>y_i = f_i(R cap C_i)</code>.</p>
+<p>An interpretation can be a verdict, belief state, claim, explanation, or
+structured answer. It is always relative to <code>R</code>, <code>C_i</code>, and <code>f_i</code>. The framework
+therefore never equates "what the observer says" with "what happened in <code>E</code>"
+unless separate assumptions justify that equation.</p>
+<h3 id="26-disagreement">2.6 Disagreement</h3>
+<p>Observers <code>i</code> and <code>j</code> disagree when their comparable outputs are not equivalent:</p>
+<p><code>D(i, j; R) iff not (y_i ~ y_j)</code>.</p>
+<p>If both outputs live in a common interpretation space and exact equality is the
+chosen comparison relation, this reduces to:</p>
+<p><code>f_i(R cap C_i) != f_j(R cap C_j)</code>.</p>
+<p>Disagreement is a relation over observer outputs. Diagnosing the cause of
+disagreement requires additional counterfactual tests over contexts, frames,
+and the retained record.</p>
+<h3 id="27-type-i-type-ii-and-type-iii-conditions">2.7 Type I, Type II, And Type III Conditions</h3>
+<p>The Type I/II/III taxonomy applies only when a live counter-position exists;
+that is, only to contestation-stage rounds in the dynamic model. A static
+cross-section can still state the corresponding conditions.</p>
+<p>Let <code>Q</code> be the disputed question or proposition. Let <code>A(R)</code> be the accessible
+record closure: the records currently present in <code>R</code> that could in principle be
+shared or inspected under the available resource limits.</p>
+<p><strong>Type I: different context windows.</strong></p>
+<p>A disagreement has a Type I component when the outputs differ because observers
+use different accessible subsets of <code>R</code>:</p>
+<ul>
+<li><code>C_i != C_j</code> over accessible records;</li>
+<li>there is record content <code>d in A(R)</code> available to at least one observer and
+  absent from the other's context;</li>
+<li>holding the relevant frame fixed or mutually translated, adding <code>d</code> can
+  remove the disagreement.</li>
+</ul>
+<p>Type I is data-resolvable in principle when the missing records are present in
+<code>R</code>, shareable, and computable by the receiving observer. It may remain blocked
+in practice when decompression, verification, or integration of another
+observer's evidence is too costly for bounded observers.</p>
+<p><strong>Type II: different compression functions.</strong></p>
+<p>A disagreement has a Type II component when the accessible record is shared, or
+would be shared after Type I closure, but outputs still differ because frames
+diverge:</p>
+<ul>
+<li><code>R cap C_i</code> and <code>R cap C_j</code> are evidence-equivalent for the disputed question;</li>
+<li><code>f_i</code> and <code>f_j</code> induce different partitions, thresholds, priors, methods, or
+  category schemes over that evidence;</li>
+<li>adding more of the same accessible record does not by itself remove the
+  disagreement;</li>
+<li>a translation between frames or an adopted third frame could remove or
+  conventionalize the disagreement.</li>
+</ul>
+<p>Type II is frame-resolvable in principle, not data-resolvable by mere context
+enlargement.</p>
+<p><strong>Type III: disputed content outside the surviving record.</strong></p>
+<p>A disagreement has a Type III component when the surviving record is
+insufficient to determine the disputed proposition. A precise condition is:</p>
+<p>there exist event streams <code>E_a</code> and <code>E_b</code> such that <code>r(E_a) = r(E_b) = R</code>, but
+<code>Q</code> is true in <code>E_a</code> and false in <code>E_b</code>.</p>
+<p>Then no present observer whose input is only <code>R</code> can determine <code>Q</code> by more
+computation, a larger context window, or a different frame. The result can be
+conventionalized by adopting an inference procedure over traces, or declared
+underdetermined, but the absent fact is not recovered from <code>R</code>.</p>
+<h3 id="28-resource-inaccessible-vs-irrecoverable-information">2.8 Resource-Inaccessible Vs. Irrecoverable Information</h3>
+<p>The framework keeps two limits separate.</p>
+<p><strong>Currently inaccessible because of resource limits:</strong></p>
+<ul>
+<li>records present in <code>R</code> but not yet found, parsed, afforded, licensed,
+  downloaded, translated, or read;</li>
+<li>computations over retained records that are too expensive to rerun now;</li>
+<li>comparisons between frames whose translation cost exceeds available time,
+  compute, expertise, or attention;</li>
+<li>latent implications of <code>R</code> that require running a long inquiry process to
+  expose.</li>
+</ul>
+<p>These are computational limits. They may change as resources, tools, or
+coordination improve.</p>
+<p><strong>Irrecoverable because not retained in <code>R</code>:</strong></p>
+<ul>
+<li>events or attributes omitted by <code>r</code>;</li>
+<li>discarded raw measurements after only aggregates survive, unless the
+  aggregate is sufficient for the disputed question;</li>
+<li>unrecorded code versions, dataset versions, prompts, thresholds, reviewer
+  decisions, witness observations, or chain-of-custody facts needed to decide
+  <code>Q</code>;</li>
+<li>the specification of <code>r</code> itself when no record identifies how selection,
+  transformation, or omission occurred;</li>
+<li>unrecorded rounds of a statement trajectory.</li>
+</ul>
+<p>These are informational limits. More compute over the same <code>R</code> cannot recover
+the missing fact.</p>
+<h2 id="3-dynamic-model">3. Dynamic Model</h2>
+<h3 id="31-observer-trajectory">3.1 Observer Trajectory</h3>
+<p>An observer trajectory indexes observer state by round:</p>
+<p><code>O(t) = (C(t), f(t))</code>.</p>
+<p><code>C(t)</code> is the context window at round <code>t</code>. <code>f(t)</code> is the frame or compression
+function at round <code>t</code>. The observer output at the start of round <code>t</code> is:</p>
+<p><code>claim(t) = f(t)(R(t) cap C(t))</code>.</p>
+<p>For a multi-party trajectory, <code>O(t)</code> denotes the trajectory's shared effective
+state at round <code>t</code>. Party-local histories are restrictions of the shared round
+sequence, defined below.</p>
+<h3 id="32-claim-state">3.2 Claim State</h3>
+<p>A claim state packages the parts of the trajectory relevant for a round:</p>
+<p><code>S(t) = (E(t), R(t), C(t), f(t), claim(t), L(t), status(t))</code>.</p>
+<p><code>L(t)</code> is the set of live positions or commitments known in the record at the
+start of round <code>t</code>. <code>status(t)</code> is the current status: open, resolved, or
+underdetermined. Other implementations may add metadata, but the formal model
+requires at least the event stream, surviving record, context, frame, emitted
+claim, live-position set, and status.</p>
+<h3 id="33-move">3.3 Move</h3>
+<p>A move is the action made in a round. Let:</p>
+<p><code>m(t) in M = {question, objection, evidence, frame-change, convention, verdict-revision}</code>.</p>
+<p>This set names operational move types, corresponding to <code>fc-move</code>. The move
+type does not uniquely determine the stage. For example, an <code>objection</code> can be
+critique or contestation, and <code>evidence</code> can be formation, enrichment, or
+contestation.</p>
+<h3 id="34-evidence-update">3.4 Evidence Update</h3>
+<p>Let <code>e(t)</code> be record content introduced or selected during round <code>t</code>. Under the
+normal bundle discipline:</p>
+<p><code>C(t+1) = C(t) union e(t)</code>.</p>
+<p>Strictly, <code>e(t)</code> must be content in or added to <code>R(t+1)</code>. In external-world
+inquiries, new evidence may be newly discovered records, newly generated
+measurements, or links to previously uninspected material. In repository
+inquiries, it may be a committed document, round record, code change, render, or
+manifest.</p>
+<p>Evidence deletion breaks monotonicity. If evidence is removed from <code>R</code>, then
+the simple union update no longer describes the actual record. The bundle rule
+therefore treats deletions as dangerous: a deleted or unpinned source can create
+future Type III uncertainty about the trajectory's own history.</p>
+<h3 id="35-frame-update">3.5 Frame Update</h3>
+<p>A frame update is:</p>
+<p><code>f(t+1) = U_f(f(t), m(t), e(t), S(t))</code>.</p>
+<p><code>U_f</code> may leave the frame unchanged, translate between frames, adopt a joint
+convention, revise a verdict rule, or replace a prior compression function. The
+formal core does not assume monotonic belief revision: later evidence or frame
+changes may retract earlier beliefs, re-open consolidated points, or expose
+that an earlier stage classification was provisional.</p>
+<h3 id="36-round-transition-operator">3.6 Round Transition Operator</h3>
+<p>The round transition operator is:</p>
+<p><code>Tau_t(S(t), m(t), e(t)) = S(t+1)</code>.</p>
+<p>At minimum it satisfies:</p>
+<ul>
+<li><code>E(t+1) = E(t) concat q(t)</code>, where <code>q(t)</code> is the event generated by the round;</li>
+<li><code>R(t+1) = r(E(t+1))</code>, or under explicit bundle discipline,
+  <code>R(t+1) = R(t) union record(q(t)) union e(t)</code> when the round is retained;</li>
+<li><code>C(t+1) = C(t) union e(t)</code> for retained evidence additions;</li>
+<li><code>f(t+1) = U_f(f(t), m(t), e(t), S(t))</code>;</li>
+<li><code>claim(t+1) = f(t+1)(R(t+1) cap C(t+1))</code>;</li>
+<li><code>L(t+1)</code> updates live positions according to the move and any revised claim;</li>
+<li><code>status(t+1)</code> updates if the round resolves, consolidates, or declares
+  underdetermination.</li>
+</ul>
+<p>The recursion is important: every round appends to the event stream and passes
+through a recording function. The bundle's inquiry axis is the explicit
+recording function for the trajectory itself.</p>
+<h3 id="37-statement-trajectory">3.7 Statement Trajectory</h3>
+<p>A statement trajectory is the recorded sequence:</p>
+<p><code>Sigma = (S(0), m(0), S(1), m(1), S(2), ...)</code>.</p>
+<p>It may be finite or open-ended. It can pass through formation, enrichment,
+critique, contestation, and consolidation, and it can revisit stages after
+later supersession. A trajectory with no contestation rounds is still a valid
+statement trajectory.</p>
+<h3 id="38-stage-function-and-stage-trajectory">3.8 Stage Function And Stage Trajectory</h3>
+<p>The stage function maps rounds to lifecycle stages:</p>
+<p><code>stage: T -&gt; {formation, enrichment, critique, contestation, consolidation}</code>.</p>
+<p>The stage trajectory is:</p>
+<p><code>Stage(Sigma) = (stage(0), stage(1), stage(2), ...)</code>.</p>
+<p>Stage is determined by the round's role in the statement lifecycle, not by move
+name alone:</p>
+<ul>
+<li>formation: the first round that emits the statement on this trajectory;</li>
+<li>enrichment: information is added with no standing counter-position;</li>
+<li>critique: a frame, assumption, or claim is probed without a maintained rival
+  position;</li>
+<li>contestation: a live counter-position stands against the current claim;</li>
+<li>consolidation: a convention, verdict revision, settlement, supersession, or
+  underdetermined closure is adopted.</li>
+</ul>
+<h3 id="39-relationship-between-fc-move-and-fc-stage">3.9 Relationship Between fc-move And fc-stage</h3>
+<p>Let <code>mu(t)</code> be the recorded <code>fc-move</code> and <code>stage(t)</code> the recorded <code>fc-stage</code>.
+There is an admissibility relation <code>A subset M x Stages</code>:</p>
+<ul>
+<li><code>(evidence, formation)</code>, <code>(evidence, enrichment)</code>,
+  <code>(evidence, contestation)</code>;</li>
+<li><code>(question, enrichment)</code>, <code>(question, critique)</code>;</li>
+<li><code>(objection, critique)</code>, <code>(objection, contestation)</code>;</li>
+<li><code>(frame-change, contestation)</code>, <code>(frame-change, consolidation)</code>;</li>
+<li><code>(convention, consolidation)</code>;</li>
+<li><code>(verdict-revision, consolidation)</code>.</li>
+</ul>
+<p><code>stage(t)</code> is not a function of <code>mu(t)</code> alone. It is a function of the prior
+state, the move, the resulting state, and the recorded rationale:</p>
+<p><code>stage(t) = sigma(S(t), mu(t), e(t), S(t+1), rationale(t))</code>.</p>
+<p>This matters in adversarial or ambiguous cases. A party may present an
+<code>evidence</code> move as neutral enrichment while actually maintaining a rival
+position; that should be classified as contestation if the record supports the
+presence of a live counter-position. Conversely, an <code>objection</code> used only to
+probe an assumption is critique, not contestation. If the record does not show
+whether a rival position exists, the stage classification should be marked
+PROVISIONAL or UNVERIFIED rather than forced.</p>
+<h3 id="310-type-trajectory">3.10 Type Trajectory</h3>
+<p>Define a contestation-type function only on contestation rounds:</p>
+<p><code>type(t) in {I, II, III, resolved}</code> if <code>stage(t) = contestation</code>.</p>
+<p>It is undefined otherwise. The type trajectory is the contestation restriction
+of the stage trajectory:</p>
+<p><code>Type(Sigma) = ((t, type(t)) : t in T and stage(t) = contestation)</code>.</p>
+<p>Formation, enrichment, critique, and consolidation rounds do not carry
+<code>fc-type-at-round</code>. This avoids conflating lifecycle role with disagreement
+diagnosis.</p>
+<h3 id="311-sequential-multi-observer-party-assignment">3.11 Sequential Multi-Observer Party Assignment</h3>
+<p>The operational multi-observer model is one shared round sequence with a party
+assignment:</p>
+<p><code>p: N -&gt; P</code>.</p>
+<p>Round <code>t</code> is authored by party <code>p(t)</code>. Each party acts on the full accumulated
+state left by all earlier rounds. Party <code>a</code>'s contribution history is the
+restriction:</p>
+<p><code>Sigma|a = (t, S(t), m(t), S(t+1) : p(t) = a)</code>.</p>
+<p>This is not an independently-clocked private branch. A parallel-branch model
+with separate <code>O_a(t)</code> and <code>O_b(t)</code> trajectories later fused is representable in
+general, but it is not the repository workflow. The repository adopts the
+sequential realization because the canonical-state rule makes one committed
+mainline authoritative, and because disagreement between agents is recorded as
+content in the inquiry axis rather than as competing branch topology.</p>
+<h3 id="312-the-diagonal-single-observer-case">3.12 The Diagonal Single-Observer Case</h3>
+<p>The single-party case sets <code>P = {self}</code> and <code>p(t) = self</code> for every round. The
+same observer can disagree with its earlier time slice:</p>
+<p><code>D(t+1, t) iff not (claim(t+1) ~ claim(t))</code>.</p>
+<p>If the disagreement occurs during contestation, the same Type I/II/III taxonomy
+applies:</p>
+<ul>
+<li>new retained data against one's past self: Type I component;</li>
+<li>a changed frame against one's past self: Type II component;</li>
+<li>recognition that the needed past fact was never retained: Type III component.</li>
+</ul>
+<p>The diagonal is broader than contestation. A single party can enrich, critique,
+or consolidate its own earlier statement without opening a live disagreement.</p>
+<h3 id="313-supersession">3.13 Supersession</h3>
+<p>Supersession is an append-only revision relation. A concept version established
+at round <code>k</code> may be replaced at round <code>t &gt; k</code> by a new version that records:</p>
+<ul>
+<li><code>fc-round: t</code>;</li>
+<li><code>fc-supersedes: path@rk</code>;</li>
+<li>a round file explaining the move, evidence, state effect, and rationale.</li>
+</ul>
+<p>The prior text remains recoverable from Git history. Supersession is not
+deletion, and it is not retroactive renumbering.</p>
+<h3 id="314-consolidation-and-later-supersession">3.14 Consolidation And Later Supersession</h3>
+<p>Consolidation sets a current status, convention, verdict, or settlement. It is
+not an absorbing terminal state. A later round may add evidence, critique the
+settlement, contest it, or supersede the consolidated concept. Therefore there
+is no stage-level floor analogous to the Type III residue. Consolidation is a
+current-state marker under append-only provenance, not an eternal guarantee.</p>
+<h3 id="315-bottoming-out-and-underdetermined-closure">3.15 Bottoming-Out And Underdetermined Closure</h3>
+<p>A contestation stretch bottoms out when the remaining disagreement is invariant
+under admissible evidence and frame moves. Formally, for residual disputed
+proposition <code>Q</code> at round <code>t</code>, bottoming-out is supported when:</p>
+<ul>
+<li>no available evidence update <code>e</code> drawn from <code>R</code> changes the residual
+  disagreement;</li>
+<li>no admissible frame update under the parties' accepted frame set resolves the
+  residual;</li>
+<li>there exist record-compatible event streams that disagree on <code>Q</code>, or the
+  missingness of <code>r</code> is sufficient to make that possibility unavoidable.</li>
+</ul>
+<p>If these conditions hold because <code>Q</code> is absent from <code>R</code>, the correct closure is
+<code>fc-status: underdetermined</code>. If the search over evidence or frames is
+incomplete because of current resources, the closure should be marked
+PROVISIONAL or NOT MEASURABLE rather than final.</p>
+<h2 id="4-propositions-and-assumptions">4. Propositions And Assumptions</h2>
+<p>The labels P1-P5 and P4' reconstruct the current v3 framework. The status terms
+below are intentionally cautious:</p>
+<ul>
+<li>definition: true by stipulation inside the framework;</li>
+<li>derivable proposition: follows from definitions and stated assumptions;</li>
+<li>theorem candidate: plausibly formalizable as a theorem after stronger
+  technical assumptions are fixed;</li>
+<li>conjecture: plausible but not proven;</li>
+<li>empirical regularity: expected pattern to be tested in later steps.</li>
+</ul>
+<h3 id="p1-type-ii-frame-translation-is-practically-blocked">P1. Type II Frame Translation Is Practically Blocked</h3>
+<p><strong>Precise statement.</strong> In a Type II contestation, where observers share the
+relevant accessible record but use different compression functions, convergence
+by frame translation is blocked in practice when computing an adequate
+translation between <code>f_i</code> and <code>f_j</code>, or evaluating a jointly acceptable third
+frame, exceeds the observers' resource bounds.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>Present observers are computationally bounded.</li>
+<li>The disagreement remains after Type I context closure.</li>
+<li><code>f_i</code> and <code>f_j</code> induce materially different partitions, thresholds, priors,
+  or category schemes.</li>
+<li>No already-accepted common frame or lookup table resolves the outputs.</li>
+<li>"Convergence" means substantive output equivalence under the comparison
+  relation <code>~</code>, not merely verbal compromise.</li>
+</ul>
+<p><strong>Epistemic status.</strong> Theorem candidate under explicit complexity assumptions;
+otherwise a proposed extension and empirical regularity. It is not established
+as a theorem for human or AI inquiry in this repository.</p>
+<p><strong>Supporting argument.</strong> If the disagreement is located in <code>f</code> rather than <code>C</code>,
+then adding records alone is insufficient. The task becomes translating,
+comparing, or replacing compression functions. For rich frames, that task can
+require reconstructing why each frame groups record states as it does. This is
+the computational-boundedness contribution inherited from bounded rationality
+and compression views of interpretation.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>The frames are finite, explicit, and connected by a small translation table.</li>
+<li>A domain standard already defines the joint frame.</li>
+<li>The apparent Type II disagreement was actually Type I missing context.</li>
+<li>The parties accept a convention without needing full frame translation.</li>
+<li>An unbounded or much more capable observer can compute the translation.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> P1 would need revision if a general,
+resource-cheap translation method reliably produced convergence across rich
+frame disagreements, or if measured persistence of Type II disagreements did
+not correlate with frame distance or translation cost.</p>
+<h3 id="p2-type-iii-is-invariant-under-context-enlargement-and-frame-translation">P2. Type III Is Invariant Under Context Enlargement And Frame Translation</h3>
+<p><strong>Precise statement.</strong> If a disputed proposition <code>Q</code> is Type III with respect to
+surviving record <code>R</code>, meaning there exist <code>E_a</code> and <code>E_b</code> such that
+<code>r(E_a) = r(E_b) = R</code> but <code>Q</code> differs between them, then no context enlargement
+within <code>R</code> and no frame translation whose input is only <code>R</code> can determine <code>Q</code>.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>Present observers access only <code>R</code> and functions of <code>R</code>.</li>
+<li>The Type III condition is correctly diagnosed.</li>
+<li>No new independent record is added that changes <code>R</code>.</li>
+<li><code>Q</code> is not inferable from sufficient retained statistics in <code>R</code>.</li>
+</ul>
+<p><strong>Epistemic status.</strong> Derivable proposition, and theorem candidate in a fully
+specified information-theoretic model.</p>
+<p><strong>Proof sketch.</strong> Let <code>g</code> be any present-observer procedure: a context expansion,
+frame translation, inference rule, or model whose input is only <code>R</code>. Since
+<code>r(E_a) = r(E_b) = R</code>, <code>g(R)</code> is identical in both possible event streams. But
+<code>Q</code> has different truth values in <code>E_a</code> and <code>E_b</code>. Therefore <code>g(R)</code> cannot
+determine which event stream occurred. It can select a convention over
+compatible histories, but it cannot recover the absent fact.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>The claim was mislabeled Type III; <code>R</code> actually contains a sufficient record.</li>
+<li><code>r</code> is non-invertible overall but invertible with respect to <code>Q</code>.</li>
+<li>A new archive, witness record, checksum, or instrument log is added, changing
+  the surviving record from <code>R</code> to <code>R'</code>.</li>
+<li>The question is not about <code>E</code> but about which convention to adopt over <code>R</code>.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> A successful recovery of a correctly
+diagnosed Type III fact using only the original <code>R</code> would falsify P2. More
+likely, such a case would show that the original Type III diagnosis was wrong
+or that the record had silently expanded.</p>
+<h3 id="p3-lost-recorder-specification-causes-type-iii-to-be-misread-as-type-ii">P3. Lost Recorder Specification Causes Type III To Be Misread As Type II</h3>
+<p><strong>Precise statement.</strong> When the specification of <code>r</code> is itself absent from <code>R</code>,
+observers may be unable to tell whether a persistent disagreement is caused by
+different frames over a sufficient record or by information missing from the
+record. Under the additional assumption that observers treat the record as
+sufficient by default, Type III disputes are systematically misclassified from
+within as Type II frame disputes.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>The disputed fact depends on how <code>r</code> selected, transformed, or omitted
+  events.</li>
+<li>The relevant specification of <code>r</code> is absent from <code>R</code>.</li>
+<li>Observers cannot independently audit missingness.</li>
+<li>Observers have competing frames capable of filling the absent content.</li>
+<li>The social or methodological setting encourages record-sufficiency
+  assumptions.</li>
+</ul>
+<p><strong>Epistemic status.</strong> Conjecture and empirical regularity. It is not a theorem:
+the word "systematically" depends on observer behavior and domain practice.</p>
+<p><strong>Supporting argument.</strong> If the record does not reveal what it failed to retain,
+then an observer inside the record cannot distinguish "your frame compresses
+the retained facts differently" from "the facts needed to decide this were not
+retained." Each observer's frame supplies a completion of the gap, so the
+dispute appears to be about bias, priors, or categories.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>The record includes explicit missingness metadata or provenance warnings.</li>
+<li>Domain practice assumes incompleteness and marks underdetermination early.</li>
+<li>Independent sources allow observers to bound what <code>r</code> omitted.</li>
+<li>Strategic behavior or incentives, not hidden missingness, explain the
+  disagreement.</li>
+<li>Observers misclassify the dispute as Type I rather than Type II.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> P3 would need revision if case studies
+showed observers reliably detect Type III causes without recorder
+specification, or if persistent missing-record disputes were more often
+classified as Type I, bad faith, or convention disputes than as Type II.</p>
+<h3 id="p4-truthful-recorded-contestation-descends-and-bottoms-out">P4. Truthful Recorded Contestation Descends And Bottoms Out</h3>
+<p><strong>Precise statement.</strong> In a contestation stretch whose moves are truthful,
+recorded, fair, and sufficiently exhaustive over accessible evidence and a
+bounded or fairly scheduled frame set, Type I components resolve first by
+context sharing; remaining Type II components resolve, translate, or
+conventionalize; any residual disagreement bottoms out at Type III
+underdetermination. The termination criterion is invariance of the residual
+disagreement under admissible evidence updates and frame moves.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>The stretch is genuinely contestation-stage: a live counter-position exists.</li>
+<li>Moves are truthful: parties do not knowingly suppress, fabricate, or distort
+  evidence.</li>
+<li>Rounds are recorded append-only, so prior moves remain inspectable.</li>
+<li>Evidence updates are monotonic with respect to retained <code>R</code>; no relevant
+  evidence deletion occurs.</li>
+<li>Accessible Type I evidence is finite or fairly scheduled so it is eventually
+  shared.</li>
+<li>Frame candidates are bounded, or frame exploration is governed by a fairness
+  rule preventing endless evasion.</li>
+<li>The parties accept a termination rule for conventionalized Type II residues
+  and underdetermined Type III residues.</li>
+</ul>
+<p><strong>Epistemic status.</strong> Derivable as a termination result only under strong finite
+or fairness assumptions. In the general framework it is an empirical regularity
+and theorem candidate, not an established theorem.</p>
+<p><strong>Supporting argument.</strong> Type I differences are located in accessible context,
+so truthful sharing should remove them before deeper causes are exposed. Once
+the accessible record is shared, any remaining divergence must be located in
+frames or in absent facts. Frame work can translate or conventionalize Type II
+components. If the residual is invariant under both evidence and accepted
+frame moves, and if compatible event streams still differ on the disputed
+proposition, the stretch has reached a Type III floor.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>Frame oscillation: parties repeatedly change <code>f</code> after each evidence update.</li>
+<li>Strategic moves: evidence flooding, selective disclosure, bad-faith
+  objections, or deliberate ambiguity prevent descent.</li>
+<li>Non-monotonic belief revision: later evidence legitimately reopens a Type I
+  component that seemed closed.</li>
+<li>Evidence deletion: a once-retained record disappears, creating a new Type III
+  limit.</li>
+<li>Unbounded frame invention: parties can always introduce a new frame, so Type
+  II never reaches a stable conventionalization point.</li>
+<li>New external evidence expands <code>R</code>, so a declared Type III floor was only
+  provisional relative to the previous record.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> P4 would be weakened if well-recorded,
+truthful, non-adversarial contestation stretches with fair evidence and frame
+exploration frequently failed to show descent, or if Type II/III components
+regularly resolved before accessible Type I differences without an explanation
+in the domain structure.</p>
+<h3 id="p4-stage-ordering-across-whole-trajectories">P4'. Stage Ordering Across Whole Trajectories</h3>
+<p><strong>Precise statement.</strong> P4' has two parts.</p>
+<p>P4'(a): For a given statement trajectory, formation precedes every enrichment,
+critique, contestation, or consolidation round about that statement.</p>
+<p>P4'(b): Across whole trajectories, stages may tend toward consolidation, but
+the claim is not monotone and not guaranteed. Consolidation can be superseded,
+so there is no stage-level floor analogous to Type III bottoming-out.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>A "given statement" has an identifiable first emitted claim.</li>
+<li>Later rounds are about that statement or its recorded supersessions.</li>
+<li>Stage classifications are assigned from the live state, not move name alone.</li>
+<li>For the stronger P4'(b), one would need assumptions about cooperative inquiry,
+  finite problem scope, stable records, and non-adversarial move selection.</li>
+</ul>
+<p><strong>Epistemic status.</strong> P4'(a) is definitional. P4'(b) is a conjecture and
+empirical hypothesis, not a theorem.</p>
+<p><strong>Proof sketch for P4'(a).</strong> A round cannot enrich, critique, contest, or
+consolidate a statement before that statement exists on the trajectory.
+Formation is defined as the first emission of the statement. Therefore
+formation precedes all later stages for that statement.</p>
+<p><strong>Supporting argument for P4'(b).</strong> Many inquiries aim to reduce open questions
+and eventually adopt a verdict, convention, or underdetermined closure. P4's
+descent may still hold inside any contestation stretch that the trajectory
+enters. It is also plausible that critique before first contestation reduces
+later contestation length and post-consolidation supersession, because some
+frame and context issues have already been exposed.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>A consolidated point is later superseded by new evidence.</li>
+<li>A trajectory cycles through enrichment and critique indefinitely.</li>
+<li>A strategic party repeatedly reopens contestation after settlement.</li>
+<li>A statement is abandoned open rather than consolidated.</li>
+<li>Multiple statements are conflated, making "first formation" ambiguous.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> P4'(b) would be weakened if recorded
+trajectories showed no movement toward consolidation, or if critique before
+contestation did not correlate with shorter contestation stretches or lower
+post-consolidation supersession rates. This repository's single
+<code>framework-self</code> trajectory is an example source, not validation by itself.</p>
+<h3 id="p5-dialogic-irreducibility">P5. Dialogic Irreducibility</h3>
+<p><strong>Precise statement.</strong> The outcome of a genuine statement trajectory cannot in
+general be predicted without running the rounds. Corollaries: no party can
+legitimately pre-announce where an open trajectory will converge; shortcutting
+rounds tends to misclassify disagreement type by treating Type II or Type III
+residue as if it were Type I.</p>
+<p><strong>Assumptions.</strong></p>
+<ul>
+<li>The trajectory permits nontrivial evidence discovery, frame revision, or
+  party response.</li>
+<li>Future moves are not fully known to the predictor.</li>
+<li>The update operator can encode sufficiently rich computation or inquiry.</li>
+<li>Observers are bounded.</li>
+<li>"Outcome" includes final claim, stage path, type path, and closure status.</li>
+</ul>
+<p><strong>Epistemic status.</strong> Conjecture and theorem candidate under computational
+universality assumptions. It is not established as a theorem for this
+repository.</p>
+<p><strong>Supporting argument.</strong> If future evidence, objections, and frame changes can
+materially alter both state and classification, then predicting the final state
+requires predicting the path of those moves. For sufficiently rich trajectories,
+the path can embody an irreducible computation or an open-ended inquiry whose
+result is known only after the relevant rounds occur.</p>
+<p><strong>Counterexamples and boundary cases.</strong></p>
+<ul>
+<li>A finite deterministic workflow with known inputs and known update rules.</li>
+<li>A trivial trajectory where no evidence or frame changes are possible.</li>
+<li>A domain with a canonical procedure that already determines the verdict.</li>
+<li>A predictor with access to all future moves, making the "future" no longer
+  open.</li>
+</ul>
+<p><strong>Revision or falsification evidence.</strong> P5 would need revision if rich
+statement trajectories could generally be predicted accurately from initial
+state summaries without running their rounds, including their stage and type
+paths.</p>
+<h2 id="5-framework-self-worked-encodings">5. Framework-Self Worked Encodings</h2>
+<p>These examples use only recorded rounds from
+<a href="../bundles/framework-self/inquiry/index.md">bundles/framework-self/inquiry/index.md</a><span class="unresolved" title="Unresolved local link">⚠ unresolved</span>.
+They illustrate how repository events can be encoded. They are not empirical
+validation of general propositions.</p>
+<h3 id="51-round-1-as-formation">5.1 Round 1 As Formation</h3>
+<p>Bundle round 1 created the pilot self-description bundle. In the dynamic model:</p>
+<ul>
+<li><code>q(1)</code> is the repository event "pilot bundle initialized."</li>
+<li><code>record(q(1))</code> includes <code>bundles/framework-self/inquiry/round-0001.md</code> and
+  the initial concept files.</li>
+<li><code>stage(1) = formation</code> in the index summary, because the bundle's
+  self-description statement first appears on the trajectory.</li>
+<li><code>type(1)</code> is undefined, because no live counter-position existed.</li>
+</ul>
+<p>This is a formal encoding of a repository event, not evidence that all
+formations behave this way.</p>
+<h3 id="52-round-3-as-contestation">5.2 Round 3 As Contestation</h3>
+<p>Bundle round 3 records a second-observer validation. The inquiry index classifies
+it as contestation: mechanical Type I defects were resolved, exposing an
+unresolved Type II residue about labeling and specification gaps.</p>
+<p>Encoding:</p>
+<ul>
+<li><code>p(3) = claude</code>.</li>
+<li><code>mu(3) = objection</code>.</li>
+<li><code>stage(3) = contestation</code>, because a live counter-position stood against the
+  prior bundle state.</li>
+<li><code>type(3)</code> includes Type I components and a remaining Type II residue, as
+  summarized by the current inquiry index.</li>
+</ul>
+<p>This is illustrative evidence that the repository can record a contestation
+round. One contestation round is not enough to validate P4's descent claim.</p>
+<h3 id="53-round-4-as-consolidation">5.3 Round 4 As Consolidation</h3>
+<p>Bundle round 4 adopted the v3 frame: statement evolution became the broader
+object, and observer disagreement became the contestation regime. It
+superseded current concept files that described the v2 scope as current.</p>
+<p>Encoding:</p>
+<ul>
+<li><code>mu(4) = frame-change</code>.</li>
+<li><code>stage(4) = consolidation</code>, not contestation, because the new frame was
+  adopted rather than maintained as a rival position.</li>
+<li>Supersession links preserve the prior v2-current wording in Git history.</li>
+</ul>
+<p>This shows why <code>frame-change</code> cannot uniquely determine stage. The same move
+name could have been contestation if a rival frame had remained live.</p>
+<h3 id="54-round-10-as-enrichment">5.4 Round 10 As Enrichment</h3>
+<p>Bundle round 10 completed the Step 1 related-work positioning and superseded
+one foundation page to include dialogue-game sources. It is classified as
+enrichment because it added scholarly context without a live counter-position.</p>
+<p>Encoding:</p>
+<ul>
+<li><code>p(10) = codex</code>.</li>
+<li><code>mu(10) = evidence</code>.</li>
+<li><code>stage(10) = enrichment</code>.</li>
+<li><code>type(10)</code> is undefined.</li>
+</ul>
+<p>This is evidence for the repository's current self-description, not evidence
+that related-work enrichment generally causes convergence.</p>
+<h2 id="6-boundaries-and-labels">6. Boundaries And Labels</h2>
+<p>The framework's current formal status is deliberately mixed:</p>
+<ul>
+<li>Static definitions and stage/type distinctions are definitions.</li>
+<li>P2 follows from the Type III definition under explicit assumptions.</li>
+<li>P1, P3, P4, P4'(b), and P5 remain open in varying degrees and should not be
+  described downstream as established universal theorems.</li>
+<li>Claims about frame oscillation, strategic moves, non-monotonic revision,
+  evidence deletion, and supersedable consolidation are boundary conditions,
+  not implementation details to hide.</li>
+<li>Any bottoming-out claim must say whether it is final relative to a fixed <code>R</code>
+  or only PROVISIONAL because the search over records or frames is incomplete.</li>
+</ul>
+<h2 id="7-references">7. References</h2>
+<p>Primary and stable sources for inherited concepts are listed more fully in
+<a href="related-work.html">docs/related-work.md</a>. The most relevant anchors for this
+formal core are:</p>
+<ul>
+<li>Robert J. Aumann, "Agreeing to Disagree," <em>The Annals of Statistics</em> 4(6),
+  1976, 1236-1239. DOI:
+  <a href="https://doi.org/10.1214/aos/1176343654">10.1214/aos/1176343654</a>.</li>
+<li>Herbert A. Simon, "A Behavioral Model of Rational Choice," <em>The Quarterly
+  Journal of Economics</em> 69(1), 1955, 99-118. DOI:
+  <a href="https://doi.org/10.2307/1884852">10.2307/1884852</a>.</li>
+<li>A. N. Kolmogorov, "Three approaches to the definition of the concept
+  'quantity of information'," <em>Problems of Information Transmission</em> 1(1),
+  1965, 3-11. Bibliographic record:
+  <a href="https://www.mathnet.ru/eng/ppi68">Math-Net.Ru</a>.</li>
+<li>Carlos E. Alchourron, Peter Gardenfors, and David Makinson, "On the Logic of
+  Theory Change: Partial Meet Contraction and Revision Functions," <em>Journal of
+  Symbolic Logic</em> 50(2), 1985, 510-530. DOI:
+  <a href="https://doi.org/10.2307/2274239">10.2307/2274239</a>.</li>
+<li>Phan Minh Dung, "On the Acceptability of Arguments and its Fundamental Role
+  in Nonmonotonic Reasoning, Logic Programming and n-Person Games,"
+  <em>Artificial Intelligence</em> 77(2), 1995, 321-357. DOI:
+  <a href="https://doi.org/10.1016/0004-3702(94)00041-X">10.1016/0004-3702(94)00041-X</a>.</li>
+<li>W. V. O. Quine, "Two Dogmas of Empiricism," <em>The Philosophical Review</em>
+  60(1), 1951, 20-43. DOI:
+  <a href="https://doi.org/10.2307/2266637">10.2307/2266637</a>.</li>
+<li>Luc Moreau and Paolo Missier, eds., "PROV-DM: The PROV Data Model," W3C
+  Recommendation, 30 April 2013. <a href="https://www.w3.org/TR/prov-dm/">W3C</a>.</li>
+<li>Mark D. Wilkinson et al., "The FAIR Guiding Principles for scientific data
+  management and stewardship," <em>Scientific Data</em> 3, 2016. DOI:
+  <a href="https://doi.org/10.1038/sdata.2016.18">10.1038/sdata.2016.18</a>.</li>
+</ul>
+<p>The formal definitions here are repository-specific integrations of those
+ideas; they do not claim that Wolfram's physics program is literally true of
+human or AI inquiry.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/_refs/docs/formal-core.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

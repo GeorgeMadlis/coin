@@ -1,0 +1,65 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "date": "2026-08-12",
+    "fc-round": 5,
+    "fc-stage": "enrichment",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "gsp-counterpart": "single-earth/eudr-dmi-gil@80192bcdbde9329f1a64a60901a52a11d5fcfca8",
+    "gsp-provenance": "pinned-not-reproduced",
+    "gsp-verdict-class": "possible_relevant_deforestation",
+    "move": "fix",
+    "party": "codex",
+    "title": "Round 5 - canonical Hansen-flag handoff hygiene",
+    "type": "InquiryRound"
+  },
+  "frontmatter_raw": "type: InquiryRound\ntitle: \"Round 5 - canonical Hansen-flag handoff hygiene\"\nfc-round: 5\nfc-stage: enrichment\ndate: 2026-08-12\nparty: codex\nmove: fix\ngsp-aoi: fazenda_sucuri_screening_aoi\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced\ngsp-counterpart: single-earth/eudr-dmi-gil@80192bcdbde9329f1a64a60901a52a11d5fcfca8",
+  "inquiry": {
+    "bundle_round_for_page": 5,
+    "move": "fix",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-08-12"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "9f947628f2c233860d75f62b0ee71569a17d5aec5a01dd855638be43b55cf85c",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "aac6dd7b358ef978438402df56fe5ffba6ed50969ab84b619ab47fb4f6224fe4"
+  },
+  "represented_artifact": {
+    "artifact_type": "InquiryRound",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "inquiry/round-0005.html",
+    "metadata_path": "metadata/inquiry/round-0005.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0005.md",
+    "title": "Round 5 - canonical Hansen-flag handoff hygiene"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "inquiry/round-0005.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

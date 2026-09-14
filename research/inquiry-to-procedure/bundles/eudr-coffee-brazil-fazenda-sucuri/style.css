@@ -1,0 +1,24 @@
+/* source_commit is recorded in each HTML page and manifest.json. */
+:root { color-scheme: light; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f7f7f4; color: #222; }
+body { margin: 0; }
+header, footer { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 12px 18px; background: #1d2b29; color: #f8fbf6; }
+header span, footer span { color: #c7d7d1; }
+main { display: grid; grid-template-columns: minmax(180px, 260px) minmax(0, 1fr); gap: 22px; max-width: 1180px; margin: 0 auto; padding: 22px 18px 42px; }
+nav { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 12px; align-self: start; }
+nav a { color: #24524a; padding: 6px 8px; text-decoration: none; border-left: 3px solid transparent; }
+nav a.active { background: #e7eee8; border-left-color: #3b7469; font-weight: 650; }
+article { background: #fff; border: 1px solid #deded6; border-radius: 6px; padding: 24px; overflow-x: auto; }
+h1, h2, h3 { color: #172a27; line-height: 1.2; }
+p, li { line-height: 1.55; }
+a { color: #245f91; }
+code { background: #edf2ef; border-radius: 4px; padding: 1px 4px; }
+pre { background: #182522; color: #e8f3ed; padding: 14px; overflow-x: auto; border-radius: 6px; }
+pre.mermaid { background: none; color: inherit; padding: 0; border-radius: 0; text-align: center; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+th, td { border: 1px solid #d7ddd6; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #edf2ef; }
+details { border: 1px solid #d7ddd6; border-radius: 6px; padding: 10px 12px; background: #fafbf8; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; }
+dt { font-weight: 700; }
+footer { font-size: 13px; }
+@media (max-width: 760px) { main { display: block; padding: 14px; } nav { position: static; margin-bottom: 14px; } article { padding: 16px; } }

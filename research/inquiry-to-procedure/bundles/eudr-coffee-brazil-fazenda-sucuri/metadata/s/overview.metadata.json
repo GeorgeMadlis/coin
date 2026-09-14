@@ -1,0 +1,61 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "fc-axis": "S",
+    "fc-level": 1,
+    "fc-round": 8,
+    "fc-supersedes": "s/overview.md@round-0007",
+    "gsp-engine": "gee",
+    "title": "Method overview",
+    "type": "Method"
+  },
+  "frontmatter_raw": "type: Method\ntitle: \"Method overview\"\nfc-level: 1\nfc-axis: S\nfc-round: 8\nfc-supersedes: \"s/overview.md@round-0007\"\ngsp-engine: gee",
+  "inquiry": {
+    "bundle_round_for_page": 8,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 1
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "2b4271c5e006b1d9a7eb9628d7e040ccca9020f804e1e09f67b926892d05a8bd",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "d278684df9b603ddc6d50c6795ca9f2eec68c35db8f84922692eef9fdb86e7cb"
+  },
+  "represented_artifact": {
+    "artifact_type": "Method",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "s/overview.html",
+    "metadata_path": "metadata/s/overview.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/overview.md",
+    "title": "Method overview"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "s/overview.html"
+  },
+  "supersession": {
+    "supersedes": "s/overview.md@round-0007"
+  }
+}

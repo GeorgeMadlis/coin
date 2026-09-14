@@ -1,0 +1,66 @@
+{
+  "bundle": {
+    "bundle_round": 9,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_dirty": false,
+    "source_repository_round": 53,
+    "status": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "date": "2026-08-12",
+    "fc-round": 6,
+    "fc-stage": "enrichment",
+    "fc-touches": "answer.md, pf/formal.md, s/overview.md, s/modeling.md, s/gsp-mapping.md, s/specification.md, s/task-scope.md, r/overview.md, r/results.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, bundle.json, index.md, log.md, inquiry/index.md",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "gsp-counterpart": "GeorgeMadlis/eudr-dmi-gil@e46d9a4c833c22805dc17e50315fd814e25043a0",
+    "gsp-provenance": "pinned-not-reproduced",
+    "gsp-verdict-class": "possible_relevant_deforestation",
+    "move": "fix",
+    "party": "codex",
+    "title": "Round 6 - coffee temporal-mask correction",
+    "type": "InquiryRound"
+  },
+  "frontmatter_raw": "type: InquiryRound\ntitle: \"Round 6 - coffee temporal-mask correction\"\nfc-round: 6\nfc-stage: enrichment\ndate: 2026-08-12\nparty: codex\nmove: fix\ngsp-aoi: fazenda_sucuri_screening_aoi\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced\ngsp-counterpart: GeorgeMadlis/eudr-dmi-gil@e46d9a4c833c22805dc17e50315fd814e25043a0\nfc-touches: \"answer.md, pf/formal.md, s/overview.md, s/modeling.md, s/gsp-mapping.md, s/specification.md, s/task-scope.md, r/overview.md, r/results.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, bundle.json, index.md, log.md, inquiry/index.md\"",
+  "inquiry": {
+    "bundle_round_for_page": 6,
+    "move": "fix",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-08-12"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "389d62301e27940963cb7f0248dc6b2fc05792df087eef06150a4962b349c2bb",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
+    "rendered_at": "2026-09-12",
+    "source_checksum_sha256": "56aa935a1ad6966b1b6a39ec9a455f158fe301f995c08959af6cc175c87cd882"
+  },
+  "represented_artifact": {
+    "artifact_type": "InquiryRound",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "inquiry/round-0006.html",
+    "metadata_path": "metadata/inquiry/round-0006.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0006.md",
+    "title": "Round 6 - coffee temporal-mask correction"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "inquiry/round-0006.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

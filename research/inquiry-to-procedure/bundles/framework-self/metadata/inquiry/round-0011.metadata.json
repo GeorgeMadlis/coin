@@ -1,0 +1,67 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "description": "Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.",
+    "fc-axis": "INQUIRY",
+    "fc-move": "evidence",
+    "fc-party": "codex",
+    "fc-round": 11,
+    "fc-stage": "enrichment",
+    "fc-status": "open",
+    "fc-touches": [
+      "pf/formal.md",
+      "s/method.md",
+      "r/results.md"
+    ],
+    "timestamp": "2026-07-21",
+    "title": "Round 11: formal core completed",
+    "type": "Event"
+  },
+  "frontmatter_raw": "type: Event\ntitle: \"Round 11: formal core completed\"\ndescription: Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.\nfc-axis: INQUIRY\nfc-round: 11\nfc-move: evidence\nfc-stage: enrichment\nfc-party: codex\nfc-touches: [pf/formal.md, s/method.md, r/results.md]\nfc-status: open\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 11,
+    "move": "evidence",
+    "party": "codex",
+    "stage": "enrichment",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": "NOT AVAILABLE in this committed COIN copy"
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "70995275960e618e30d5fed8ed905dab91f4c448929055dca81f38843a87860f",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "f835265728a95930e68aec60467e74729fab6946960c85f23631c860ca8e0ae0",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "f835265728a95930e68aec60467e74729fab6946960c85f23631c860ca8e0ae0"
+  },
+  "represented_artifact": {
+    "artifact_type": "Event",
+    "description": "Step 2 formal core completed; static and dynamic models connected, stage/type trajectories separated, and proposition statuses sharpened.",
+    "html_path": "inquiry/round-0011.html",
+    "metadata_path": "metadata/inquiry/round-0011.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0011.md",
+    "title": "Round 11: formal core completed"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

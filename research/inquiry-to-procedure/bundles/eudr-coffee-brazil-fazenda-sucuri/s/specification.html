@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Exact configuration - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>s/specification.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="../inquiry/index.html">inquiry/index.md</a><a href="../inquiry/round-0001.html">inquiry/round-0001.md</a><a href="../inquiry/round-0002.html">inquiry/round-0002.md</a><a href="../inquiry/round-0003.html">inquiry/round-0003.md</a><a href="../inquiry/round-0004.html">inquiry/round-0004.md</a><a href="../inquiry/round-0005.html">inquiry/round-0005.md</a><a href="../inquiry/round-0006.html">inquiry/round-0006.md</a><a href="../inquiry/round-0007.html">inquiry/round-0007.md</a><a href="../inquiry/round-0008.html">inquiry/round-0008.md</a><a href="../inquiry/round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="data-sources.html">s/data-sources.md</a><a href="gsp-mapping.html">s/gsp-mapping.md</a><a href="index.html">s/index.md</a><a href="modeling.html">s/modeling.md</a><a href="overview.html">s/overview.md</a><a href="report-structure.html">s/report-structure.md</a><a class="active" href="specification.html">s/specification.md</a><a href="task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>Method</dd><dt>title</dt><dd>Exact configuration</dd><dt>fc-level</dt><dd>3</dd><dt>fc-axis</dt><dd>S</dd><dt>fc-round</dt><dd>8</dd><dt>fc-supersedes</dt><dd>s/specification.md@round-0007</dd><dt>gsp-engine</dt><dd>gee</dd></dl></details>
+<h1>Exact configuration</h1>
+<p>Counterpart commit: <code>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</code>.</p>
+<p>Evidence bundle id: <code>fazenda_sucuri_screening_aoi_evidence_freeze_20260911T130900Z</code>.</p>
+<p>Generation command is recorded verbatim in <code>../reproduction/source-evidence.json</code>:</p>
+<p><code>python -m eudr_dmi_gil.reports.cli --aoi-id fazenda_sucuri_screening_aoi --commodity-config out/fazenda_sucuri_screening_aoi_inputs/coffee_config_fazenda_sucuri_two_source.json --analysis-target-crs EPSG:6933 --analysis-target-resolution-m 10</code></p>
+<p>Round 8 is regenerated from this clean counterpart commit; the refreshed handoff records <code>counterpart_dirty: false</code>.</p>
+<p>Round 2 fixes the Sentinel-2 visual-context acquisition path: baseline/recent visual rasters are seasonal masked median composites and acquisition now fails if either visual raster has less than 98% valid coverage overall or in its left half.</p>
+<p>Round 4 adds AOI administrative labels to the raw/canonical report model (<code>Minas Gerais</code>, <code>Coromandel</code>) and changes canonical HTML rendering so the AOI panel displays a renderable evidence layer with a matching legend, the AOI image uses cover fitting, and the interactive map title is offset from the zoom controls.</p>
+<p>Round 5 keeps the same evidence bundle id but reruns through the canonical <code>python -m eudr_dmi_gil.reports.cli</code> entry point with the explicit Hansen post-2020-loss branch enabled. The refreshed handoff records 59 artifacts, root manifest hash <code>a4663ba4659e2689462f522e2f2fff3d97dcbe25a34d7bf17ba3d61986b4a446</code>, and report PDF hash <code>1ca879da2898941971f07ed6c369b2a245556d7814cacc110c27b0bb3cbd4d83</code>. The verdict remains based on the report&#x27;s JRC-baseline commodity-overlap metrics, not on the AOI brief&#x27;s no-evidence framing.</p>
+<p>Round 6 updates the coffee temporal-mask calculation. The current coffee layer preserves baseline-year coffee by unioning latest observed 2024 coffee with 2020 baseline coffee. The new commodity layer remains the latest 2024 coffee mask minus the 2020 baseline coffee mask. The refreshed handoff records 58 artifacts, root manifest hash <code>5e52311b1111042a01d4845bdff0351deb9bfdd62858bae88c07647eef4b1bc4</code>, and report PDF hash <code>47b47a0164d15bda0665c847f5b7ed6472ac3ecbc9f21bfd7ca2db80a1769709</code>.</p>
+<p>Round 7 fixes the page-4 regional overview as a recurring renderer failure. The counterpart now uses a pinned local recent Sentinel-2 raster as the offline page-4 fallback whenever no dedicated regional raster is supplied; the OKF/GSP handoff and publish gate also treat <code>regional_overview_png</code> as a required Brazil/coffee artifact. The refreshed handoff records 59 artifacts, root manifest hash <code>a481ea836ad47bd5d4fc56c68f0191d58b24637d27674aafaeea8d5389b927de</code>, report PDF hash <code>e5c8da5dcf11afc2fae68129b59fa5c8c0fc48029df2ba528ba9c92a0666c87d</code>, and page-4 regional PNG hash <code>3742da15bb7b15efe4ddf56de2cca55e66eead71f814056f45a4ca6a7b40eca1</code>.</p>
+<p>Round 8 adds the task-specific FDP/JRC morphology and threshold sensitivity diagnostic to the Fazenda Sucuri evidence package without changing the canonical PDF structure. The handoff verifies 117 artifacts, root manifest hash <code>a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e</code>, report PDF hash <code>dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7</code>, and 12 report pages. The diagnostic thresholds are 0.025, 0.05, 0.10, 0.20, and 0.25; 0.025 is a permissive 2.5% FDP model-probability diagnostic threshold and is not treated as ground truth. The regenerated contact sheet retains the established 3 by 4, 12-page structure and records output PDF hash <code>a68592de13ec8879bac692aadad04f153e758c762bf494821b8a205925670f77</code>.</p>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/s/specification.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

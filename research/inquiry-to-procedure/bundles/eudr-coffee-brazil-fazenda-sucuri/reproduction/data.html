@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Asset versions and checksums - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>reproduction/data.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="../inquiry/index.html">inquiry/index.md</a><a href="../inquiry/round-0001.html">inquiry/round-0001.md</a><a href="../inquiry/round-0002.html">inquiry/round-0002.md</a><a href="../inquiry/round-0003.html">inquiry/round-0003.md</a><a href="../inquiry/round-0004.html">inquiry/round-0004.md</a><a href="../inquiry/round-0005.html">inquiry/round-0005.md</a><a href="../inquiry/round-0006.html">inquiry/round-0006.md</a><a href="../inquiry/round-0007.html">inquiry/round-0007.md</a><a href="../inquiry/round-0008.html">inquiry/round-0008.md</a><a href="../inquiry/round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="code.html">reproduction/code.md</a><a class="active" href="data.html">reproduction/data.md</a><a href="environment.html">reproduction/environment.md</a><a href="gee-auth.html">reproduction/gee-auth.md</a><a href="index.html">reproduction/index.md</a><a href="lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>Runbook</dd><dt>title</dt><dd>Asset versions and checksums</dd><dt>fc-axis</dt><dd>REPRO</dd><dt>fc-round</dt><dd>8</dd><dt>fc-supersedes</dt><dd>reproduction/data.md@round-0007</dd></dl></details>
+<h1>Pinned assets</h1>
+<table><thead><tr><th>gsp-asset-id</th><th>version tag</th><th>access date</th><th>checksum / snapshot</th><th>notes</th></tr></thead><tbody>
+</tbody></table>
+<p>|--------------|-------------|-------------|---------------------|-------|</p>
+<table><thead><tr><th><code>aoi_geometry_input</code></th><th>user_supplied</th><th>2026-09-11</th><th><code>59f53c1d0ca30b55b3b4a8af5cb9761841cb9a3a2ffafb38b7c4dce2f8879f88</code></th><th>AOI GeoJSON config hash stored beside report outputs</th></tr></thead><tbody>
+<tr><td><code>JRC/GFC2020/V3</code></td><td>V3</td><td>2026-09-11</td><td>see <code>source-evidence.json</code></td><td>forest baseline</td></tr>
+<tr><td><code>UMD/hansen/global_forest_change_2025_v1_13</code></td><td>2025-v1.13</td><td>2026-09-11</td><td>see <code>source-evidence.json</code></td><td>lossyear and canopy cross-check</td></tr>
+<tr><td><code>projects/forestdatapartnership/assets/coffee/model_2026a</code></td><td>2026a</td><td>2026-09-11</td><td>see <code>source-evidence.json</code>; acquired 2024 probability raster checksum <code>f4a40871a8c12f09bbed15974664e75f2a0b5156e4d4b8523bd14908cb453366</code></td><td>FDP coffee probability, 2020/2024, threshold sensitivity, morphology diagnostics</td></tr>
+<tr><td><code>projects/mapbiomas-public/assets/brazil/lulc/v1</code></td><td>collection10-v1</td><td>2026-09-11</td><td>see <code>source-evidence.json</code></td><td>MapBiomas coffee class, 2020/2024</td></tr>
+<tr><td><code>COPERNICUS/S2_SR_HARMONIZED</code></td><td>sentinel-2-l2a</td><td>2026-09-11</td><td>see <code>source-evidence.json</code></td><td>Sentinel-2 context and scene diagnostics; round 2 visual rasters pass 100% valid coverage overall and in the left half</td></tr>
+</tbody></table>
+<p>Round 4 records AOI administrative labels from the AOI GeoJSON properties: state <code>Minas Gerais</code> and municipality <code>Coromandel</code>.</p>
+<p>The root evidence manifest hash for the regenerated clean-pinned round-7 evidence is <code>a481ea836ad47bd5d4fc56c68f0191d58b24637d27674aafaeea8d5389b927de</code>; the report PDF hash is <code>e5c8da5dcf11afc2fae68129b59fa5c8c0fc48029df2ba528ba9c92a0666c87d</code>; the page-4 regional overview PNG hash is <code>3742da15bb7b15efe4ddf56de2cca55e66eead71f814056f45a4ca6a7b40eca1</code>; the handoff records 59 artifacts and <code>counterpart_dirty: false</code>.</p>
+<p>The root evidence manifest hash for the regenerated clean-pinned round-8 evidence is <code>a0cc46dc310751c082f659b3e9682218a45bc4fed92162503207e7a67aa65e6e</code>; the report PDF hash is <code>dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7</code>; the threshold metrics CSV hash is <code>6c0d1790d09b115ba229c804b6551ef8402d4e339e1778f7ecf9a3b1a911dc39</code>; the morphology JSON hash is <code>94f8627832221dd95d7779604a67a7b5817ee717669251036df496c0df8260e7</code>; the handoff records 117 artifacts and <code>counterpart_dirty: false</code>.</p>
+<p>The FDP provider metadata records asset identifier <code>projects/forestdatapartnership/assets/coffee/model_2026a</code>, dataset version <code>2026a</code>, provider id <code>forestdatapartnership</code>, and source URL <code>https://dataforgood.facebook.com/dfg/tools/forest-data-partnership</code>. No separate provider-side task receipt is present in the handoff/report metadata.</p>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/reproduction/data.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

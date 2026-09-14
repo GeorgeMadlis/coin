@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="4eccee877e2dca86788ced0eaf6022ca6c0f45e0">
+  <title>Round 7 - page 4 regional overview repair - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>inquiry/round-0007.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="index.html">inquiry/index.md</a><a href="round-0001.html">inquiry/round-0001.md</a><a href="round-0002.html">inquiry/round-0002.md</a><a href="round-0003.html">inquiry/round-0003.md</a><a href="round-0004.html">inquiry/round-0004.md</a><a href="round-0005.html">inquiry/round-0005.md</a><a href="round-0006.html">inquiry/round-0006.md</a><a class="active" href="round-0007.html">inquiry/round-0007.md</a><a href="round-0008.html">inquiry/round-0008.md</a><a href="round-0009.html">inquiry/round-0009.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>InquiryRound</dd><dt>title</dt><dd>Round 7 - page 4 regional overview repair</dd><dt>fc-round</dt><dd>7</dd><dt>fc-stage</dt><dd>enrichment</dd><dt>date</dt><dd>2026-08-12</dd><dt>party</dt><dd>codex</dd><dt>move</dt><dd>fix</dd><dt>gsp-aoi</dt><dd>fazenda_sucuri_screening_aoi</dd><dt>gsp-verdict-class</dt><dd>possible_relevant_deforestation</dd><dt>gsp-provenance</dt><dd>pinned-not-reproduced</dd><dt>gsp-counterpart</dt><dd>GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47</dd><dt>fc-touches</dt><dd>index.md, s/overview.md, s/specification.md, s/gsp-mapping.md, r/report-page-audit.md, r/artifact-inventory.md, reproduction/code.md, reproduction/data.md, reproduction/index.md, reproduction/source-evidence.json, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf, reproduction/fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json, tools/okf_gsp.py, tests/test_okf_gsp.py, log.md, inquiry/index.md</dd></dl></details>
+<h1>Round 7 - page 4 regional overview repair</h1>
+<p>User-directed fix: snapshot <code>2026-08-12-r0006-b969a23</code> still showed the page-4 Regional Overview map box as a missing-image panel.</p>
+<p>Root cause:</p>
+<ul><li>The Sucuri canonical CLI command supplied baseline/recent Sentinel-2 rasters but no dedicated</li></ul>
+<p><code>--satellite-regional-raster</code>.</p>
+<ul><li>The report renderer could fall through to a live Esri fallback; when that did not materialize,</li></ul>
+<p>page 4 rendered the gap panel instead of using already-pinned local satellite context.</p>
+<p>Counterpart fix:</p>
+<ul><li>Committed <code>GeorgeMadlis/eudr-dmi-gil@ebb74d93889b7114c629230d198ebd662044bc47</code>.</li><li><code>report_model.py</code> now uses the dedicated regional raster first, then falls back to the locally</li></ul>
+<p>pinned recent satellite raster, and only then tries live Esri for reports with no local imagery.</p>
+<ul><li><code>scripts/generate_okf_gsp_handoff.py</code> marks <code>regional_overview_png</code> as required when present.</li><li>Focused counterpart tests passed:</li></ul>
+<p><code>.venv/bin/python -m pytest tests/test_canonical_report_model.py::test_regional_overview_falls_back_to_local_recent_raster tests/test_generate_okf_gsp_handoff.py</code> reported 4 passed.</p>
+<p>Framework/publish-contract fix:</p>
+<ul><li><code>tools/okf_gsp.py</code> now requires <code>regional_overview_png</code> for Brazil/coffee handoffs, alongside</li></ul>
+<p>commodity mask, commodity/loss overlap, and before/after imagery.</p>
+<ul><li>The focused framework publish tests passed:</li></ul>
+<p><code>.venv/bin/python -m pytest tests/test_okf_gsp.py -k &quot;publish or evidence_handoff or required&quot;</code> reported 10 passed, 1 skipped.</p>
+<p>Evidence package transition:</p>
+<ul><li>Old evidence bundle id:</li></ul>
+<p><code>fazenda_sucuri_screening_aoi_evidence_freeze_20260812T104000Z</code>.</p>
+<ul><li>New evidence bundle id:</li></ul>
+<p><code>fazenda_sucuri_screening_aoi_evidence_freeze_20260812T121500Z</code>.</p>
+<ul><li>Root manifest SHA256:</li></ul>
+<p><code>a481ea836ad47bd5d4fc56c68f0191d58b24637d27674aafaeea8d5389b927de</code>.</p>
+<ul><li>Report PDF SHA256:</li></ul>
+<p><code>e5c8da5dcf11afc2fae68129b59fa5c8c0fc48029df2ba528ba9c92a0666c87d</code>.</p>
+<ul><li>Page-4 regional overview PNG SHA256:</li></ul>
+<p><code>3742da15bb7b15efe4ddf56de2cca55e66eead71f814056f45a4ca6a7b40eca1</code>.</p>
+<ul><li>Contact-sheet PDF SHA256:</li></ul>
+<p><code>f8f94775e4297bc7894283f861daa701e18f759fe06f62aea27aff7f0bcb9d6c</code>.</p>
+<p>Verification completed:</p>
+<ul><li>New handoff records <code>counterpart_dirty: false</code>, 59 artifacts, 12 report pages, and required</li></ul>
+<p><code>regional_overview_png</code>.</p>
+<ul><li>The regenerated source report page 4 was rendered to PNG and visually checked: the map box is</li></ul>
+<p>populated with satellite imagery and the AOI outline.</p>
+<ul><li>The regenerated contact sheet was rendered to PNG and visually checked: the page-4 thumbnail is</li></ul>
+<p>populated and no longer shows the missing-image panel.</p>
+<ul><li>Pixel check on the rendered page-4 map area measured <code>nonwhite_ratio=0.7968</code>; the contact-sheet</li></ul>
+<p>page-4 thumbnail crop measured <code>nonwhite_ratio=0.3595</code>, confirming nonblank visual content.</p>
+<p>Verdict effect:</p>
+<p>No metric or verdict changed. The verdict remains <code>possible_relevant_deforestation</code> / <code>pinned-not-reproduced</code>; this round repairs presentation/provenance completeness for page 4 and the publish gate that let the gap recur.</p>
+<p>Supersedes ledger for current concept files:</p>
+<ul><li><code>s/overview.md@round-0006</code></li><li><code>s/specification.md@round-0006</code></li><li><code>s/gsp-mapping.md@round-0006</code></li><li><code>r/report-page-audit.md@round-0006</code></li><li><code>r/artifact-inventory.md@round-0006</code></li><li><code>reproduction/code.md@round-0006</code></li><li><code>reproduction/data.md@round-0006</code></li></ul>
+
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0007.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>9</code></span> <span>source_repository_round: <code>53</code></span> <span>source_commit: <code>4eccee877e2dca86788ced0eaf6022ca6c0f45e0</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

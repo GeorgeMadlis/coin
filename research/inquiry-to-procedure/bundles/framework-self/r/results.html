@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itemized current state</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / r / results</nav>
+<h1>Itemized current state</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Current project state, framework-self-only pilot findings, and Step 8 limitations status.</dd><dt>fc-axis</dt><dd><span class="badge axis-r">R</span></dd><dt>fc-level</dt><dd><span class="badge level-2">L2</span></dd><dt>fc-round</dt><dd>17</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-supersedes</dt><dd>r/results.md@r16</dd><dt>timestamp</dt><dd>2026-07-21</dd><dt>title</dt><dd>Itemized current state</dd><dt>type</dt><dd>Finding</dd></dl></section>
+<article class="content"><ul>
+<li>Current framework document: <a href="../_refs/docs/framework_v3.html">docs/framework_v3.md</a>, which supersedes <a href="../_refs/docs/framework_v2.html">docs/framework_v2.md</a>.</li>
+<li>Step 0 glossary: <a href="../_refs/docs/glossary.html">docs/glossary.md</a>, filled at an interim level.</li>
+<li>Step 1 related-work positioning: <a href="../_refs/docs/related-work.html">docs/related-work.md</a>, filled at an interim level.</li>
+<li>Step 2 formal core: <a href="../_refs/docs/formal-core.html">docs/formal-core.md</a>, filled at an interim level.</li>
+<li>Step 3 OKF-FC specification: <a href="../_refs/spec/SPEC.html">spec/SPEC.md</a>, filled at an interim level.</li>
+<li>Step 4 generator, append, and validator tooling: <a href="../../../tools">tools/</a><span class="unresolved" title="Unresolved local link">⚠ unresolved</span>, implemented at an interim level.</li>
+<li>Step 5 observer-distance metrics: <a href="../_refs/docs/metrics.html">docs/metrics.md</a>, filled at an interim level.</li>
+<li>Step 6 derived predictions: <a href="../_refs/docs/predictions.html">docs/predictions.md</a>, filled at an interim level with falsifiable prediction designs and framework-self exploratory coding notes.</li>
+<li>Step 7 status: this PR completes only the framework-self longitudinal case-study pilot recorded in <a href="../inquiry/round-0016.html">inquiry/round-0016.md</a>. The four originally planned external case-study bundles remain deferred and are not claimed as complete.</li>
+<li>Step 8 limitations and falsifiability: <a href="../_refs/docs/limitations.html">docs/limitations.md</a>, filled at an interim level with adversarial limits, stage-taxonomy stress tests, behavioral and provenance failure modes, and a falsification registry.</li>
+<li>Framework-self metric measurements: <a href="full-results.html">r/full-results.md</a>, with machine-readable values in <a href="../_refs/bundles/framework-self/r/metrics-rounds-0001-0013.csv.html">r/metrics-rounds-0001-0013.csv</a>. These are a reproducible demonstration over this bundle's rounds 1-13, not validation of the framework.</li>
+<li>Framework-self prediction observations: <a href="full-results.html">r/full-results.md</a> records genuinely computed Step 6 exploratory values over rounds 1-14, including the Prediction 8 calculation boundary. These values are not population-level validation.</li>
+<li>Framework-self retrospective classification: <a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">r/retrospective-round-classification.csv</a> separates contemporaneous metadata from later inferred stage/type classifications over rounds 1-15.</li>
+<li>P2 is a derivable proposition under the Type III assumptions stated in <code>docs/formal-core.md</code>.</li>
+<li>P1 is a theorem candidate under explicit complexity assumptions; otherwise a proposed extension and empirical regularity.</li>
+<li>P3 is a conjecture and empirical regularity about lost recorder specifications causing Type III disputes to be misread as Type II.</li>
+<li>P4 is derivable only under strong truthfulness, recording, monotonicity, and fairness assumptions; in the general framework it remains an empirical regularity and theorem candidate.</li>
+<li>P4' has a definitional part, formation precedes later stages, and a conjectural part about stage-level movement toward consolidation.</li>
+<li>P5 is a conjecture and theorem candidate under rich trajectory assumptions; it is not established as a repository theorem.</li>
+<li>Step 8 does not close the framework. It records ways the framework can fail: redundant theory, circular self-evidence, unstable stage labels, unmeasurable frames, strategic behavior, stale provenance, and failed external prediction tests.</li>
+<li>Step 9 remains a future paper-draft deliverable.</li>
+<li>This pilot bundle was created at bundle round 1 and repo round 1, then updated through the recorded inquiry rounds.</li>
+</ul>
+<h1 id="framework-self-case-study-account">Framework-Self Case-Study Account</h1>
+<p>Initial formation: round 1 created the self-description bundle from
+<code>docs/framework_v2.md</code> and records the initial bundle input checksum
+(<a href="../inquiry/round-0001.html">round 1</a>; <a href="../reproduction/data.html">reproduction/data.md</a>).
+The normal PR workflow was not yet in force for that content; the current code
+runbook points to initial commit <code>a1fc43c</code>
+(<a href="../reproduction/code.html">reproduction/code.md</a>).</p>
+<p>Rendering and publication enrichment: round 2 added static HTML inspection
+(<a href="../inquiry/round-0002.html">round 2</a>); round 5 added self-contained snapshots,
+manifest generation, and structure visualization (<a href="../inquiry/round-0005.html">round 5</a>);
+round 6 added publish/catalog/evolution visualization and produced the first
+published framework-self snapshot
+(<a href="../inquiry/round-0006.html">round 6</a>;
+<code>../okf-bundle-snapshots/framework-self/2026-07-19-r0006-0445f09/manifest.json</code>).</p>
+<p>Critique and objections: round 3 is the only contestation-stage point in the
+retrospective type trajectory. It fixed two Type I mechanical defects while
+leaving Type II judgment/specification residue open
+(<a href="../inquiry/round-0003.html">round 3</a>;
+<a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">retrospective CSV</a>). Round 7 is
+classified as critique rather than contestation because it audits and revises
+stale structure/reference pages without maintaining a rival framework
+(<a href="../inquiry/round-0007.html">round 7</a>).</p>
+<p>Scope change and self-disagreement: round 4 superseded the narrower
+observer-disagreement frame with the broader statement-evolution frame in
+<code>docs/framework_v3.md</code>, making disagreement the contestation stage of a larger
+trajectory (<a href="../inquiry/round-0004.html">round 4</a>;
+<a href="../_refs/docs/framework_v3.html">docs/framework_v3.md</a>). This is the bundle's
+clearest self-disagreement and frame revision: the current repository describes
+its own earlier name and scope as historically narrower, not false but
+incomplete.</p>
+<p>Consolidation and concept supersession: round 4 consolidated the new frame and
+superseded <code>answer.md</code>, <code>pf/overview.md</code>, and <code>s/overview.md</code>
+(<a href="../inquiry/round-0004.html">round 4</a>). Round 8 consolidated the repository-round
+versus bundle-round distinction and superseded bookkeeping/reproduction
+concepts (<a href="../inquiry/round-0008.html">round 8</a>;
+<a href="../_refs/docs/round-ledgers.html">docs/round-ledgers.md</a>). Later enrichment
+rounds continued to supersede current concepts without erasing prior records,
+including formal/method/results pages at round 11, specification at round 12,
+reproduction/foundation metadata at round 13, results at rounds 14 and 15, and
+this case-study layer at round 16.</p>
+<p>Codex and Claude as sequential observers: the party sequence is Codex for
+rounds 1-2, Claude for rounds 3-6, and Codex for rounds 7-16
+(<a href="../inquiry/index.html">inquiry/index.md</a>). The repository-level workflow change
+that made this a sequential multi-observer model is recorded in repository
+round 4 and bundle round 4 (<a href="../_refs/log.html">log.md</a>;
+<a href="../inquiry/round-0004.html">round 4</a>).</p>
+<p>Repository-round versus bundle-round divergence: round 8 records the ambiguity
+caused by root repository round 8 and framework-self bundle round 7 being
+different counters, then adopts the two-counter convention
+(<a href="../inquiry/round-0008.html">round 8</a>). The r0009 published manifest records
+<code>bundle_round: 9</code> and <code>source_repo_round: 10</code>, demonstrating the distinction in
+a derived artifact
+(<code>../okf-bundle-snapshots/framework-self/2026-07-20-r0009-43c1962/manifest.json</code>).</p>
+<p>Stage trajectory: rounds 1-15 classify as formation, enrichment, contestation,
+consolidation, enrichment, enrichment, critique, consolidation, and enrichment
+for rounds 9-15. Rounds 1-3 are inferred later, while rounds 4-15 use
+contemporary <code>fc-stage</code> metadata
+(<a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">retrospective CSV</a>;
+<a href="../inquiry/index.html">inquiry/index.md</a>).</p>
+<p>Contestation-type trajectory: only round 3 remains in the usable type
+trajectory. Because all other rounds are non-contestation under the current
+spec, their legacy or absent type values are treated as not applicable rather
+than edited in place (<a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">retrospective CSV</a>;
+<a href="../_refs/spec/SPEC.html#52-round-fields">spec/SPEC.md section 5.2</a>).</p>
+<p>Measurable stalls, reversals, and oscillations: stage persistence is visible in
+the enrichment runs at rounds 5-6 and 9-15, and consolidation is visibly
+non-terminal because rounds 5 and 9 return to enrichment after consolidation
+rounds 4 and 8 (<a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">retrospective CSV</a>).
+Type stalls, type reversals, and type oscillations are not measurable because
+there is only one contestation-stage round (<a href="full-results.html">r/full-results.md</a>).</p>
+<p>Limits of reconstruction: records do not support confident direct measurement
+of re-litigation rate because stable issue identifiers were not recorded in
+rounds 1-15 (<a href="../_refs/bundles/framework-self/r/metrics-rounds-0001-0013.csv.html">metrics-rounds-0001-0013.csv</a>).
+The record also cannot prove external validity because this is one
+self-referential trajectory and the external cases are still stubs.</p>
+<p>Limitations and falsifiability: Step 8 makes the framework's failure conditions
+explicit rather than treating limitations as a defensive footnote
+(<a href="../_refs/docs/limitations.html">docs/limitations.md</a>;
+<a href="../inquiry/round-0017.html">round 17</a>). The current evidence can show that this
+repository can preserve rounds, supersession, provenance notes, metrics, and
+missing values. It cannot show that the taxonomy is reliable across domains,
+that P1-P5 or P4'(b) hold empirically, or that explicit recording causally
+reduces re-litigation. The framework remains open and provisional.</p>
+<p>Re-litigation and trajectory influence: the bundle appears to reduce
+re-litigation about its own history in specific cases: round 8 records the
+round-counter ambiguity, round 9 repairs the metadata failure, and later rounds
+use the two-counter convention rather than reopening it (<a href="../inquiry/round-0008.html">round 8</a>;
+<a href="../inquiry/round-0009.html">round 9</a>; <a href="../inquiry/round-0015.html">round 15</a>).
+The bundle also influenced the trajectory it records: renderer, snapshot,
+publish/catalog, metadata repair, validator, metrics, prediction, and this
+classification work were all created because the bundle made those needs
+inspectable (<a href="../inquiry/round-0002.html">rounds 2</a>,
+<a href="../inquiry/round-0005.html">5</a>, <a href="../inquiry/round-0006.html">6</a>,
+<a href="../inquiry/round-0009.html">9</a>, <a href="../inquiry/round-0013.html">13</a>,
+<a href="../inquiry/round-0014.html">14</a>, <a href="../inquiry/round-0015.html">15</a>,
+<a href="../inquiry/round-0016.html">16</a>).</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/r/results.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

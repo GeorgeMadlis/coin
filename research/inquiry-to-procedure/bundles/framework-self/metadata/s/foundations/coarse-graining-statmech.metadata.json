@@ -1,0 +1,71 @@
+{
+  "bundle": {
+    "bundle_round": 19,
+    "id": "framework-self",
+    "profile": "okf-fc",
+    "source_commit": "cbfc910164b168eced54b3e32aa6192aa4afe167",
+    "source_dirty": "NOT AVAILABLE in this committed COIN copy",
+    "source_repository_round": 22,
+    "status": "open"
+  },
+  "concept_manifest_record": {
+    "axis": "S",
+    "description": "Macrostates as equivalence classes over microstates.",
+    "level": 2,
+    "path": "s/foundations/coarse-graining-statmech.md",
+    "round": 13,
+    "supersedes": "s/foundations/coarse-graining-statmech.md@r7",
+    "title": "Coarse-graining in statistical mechanics",
+    "type": "Concept"
+  },
+  "frontmatter": {
+    "description": "Macrostates as equivalence classes over microstates.",
+    "fc-axis": "S",
+    "fc-group": "A",
+    "fc-level": 2,
+    "fc-round": 13,
+    "fc-status": "open",
+    "fc-supersedes": "s/foundations/coarse-graining-statmech.md@r7",
+    "timestamp": "2026-07-21",
+    "title": "Coarse-graining in statistical mechanics",
+    "type": "Concept"
+  },
+  "frontmatter_raw": "type: Concept\ntitle: Coarse-graining in statistical mechanics\ndescription: Macrostates as equivalence classes over microstates.\nfc-level: 2\nfc-axis: S\nfc-group: A\nfc-status: open\nfc-round: 13\nfc-supersedes: s/foundations/coarse-graining-statmech.md@r7\ntimestamp: 2026-07-21",
+  "inquiry": {
+    "bundle_round_for_page": 13,
+    "move": "NOT AVAILABLE in this committed COIN copy",
+    "party": "NOT AVAILABLE in this committed COIN copy",
+    "stage": "NOT AVAILABLE in this committed COIN copy",
+    "timestamp_or_date": "2026-07-21"
+  },
+  "progressive_disclosure": {
+    "axis": "S",
+    "level": 2
+  },
+  "provenance": {
+    "bundle_json": "NOT AVAILABLE in this committed COIN copy",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "7d5eb3795890b816bb685597bf83acdd2450ab7001e8e1968e2b5549e2471568",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "16dbb6cecc037e48d0713d34652fbbd1671e9827438de9e7166dd53a4ee37178",
+    "published_path": "NOT AVAILABLE in this committed COIN copy",
+    "rendered_at": "NOT AVAILABLE in this committed COIN copy",
+    "source_checksum_sha256": "16dbb6cecc037e48d0713d34652fbbd1671e9827438de9e7166dd53a4ee37178"
+  },
+  "represented_artifact": {
+    "artifact_type": "Concept",
+    "description": "Macrostates as equivalence classes over microstates.",
+    "html_path": "s/foundations/coarse-graining-statmech.html",
+    "metadata_path": "metadata/s/foundations/coarse-graining-statmech.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "method",
+    "source_path": "s/foundations/coarse-graining-statmech.md",
+    "title": "Coarse-graining in statistical mechanics"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {},
+  "supersession": {
+    "supersedes": "s/foundations/coarse-graining-statmech.md@r7"
+  }
+}

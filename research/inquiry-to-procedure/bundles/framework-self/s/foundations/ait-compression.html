@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algorithmic information theory and compression</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Bundle root</a> / s / foundations / ait-compression</nav>
+<h1>Algorithmic information theory and compression</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Understanding as compression through Kolmogorov complexity and MDL.</dd><dt>fc-axis</dt><dd><span class="badge axis-s">S</span></dd><dt>fc-group</dt><dd><span class="badge group">A</span></dd><dt>fc-level</dt><dd><span class="badge level-2">L2</span></dd><dt>fc-round</dt><dd>18</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-supersedes</dt><dd>s/foundations/ait-compression.md@r13</dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Algorithmic information theory and compression</dd><dt>type</dt><dd>Concept</dd></dl></section>
+<article class="content"><h2 id="summary">Summary</h2>
+<p>Kolmogorov 1965 and related algorithmic information theory treat complexity in terms of the shortest description that can generate an object. Rissanen 1978 develops minimum description length as a principle for choosing compact explanations. These ideas make compression a precise proxy for understanding. They fit the framework's claim that observers extract summaries rather than copy the whole event stream.</p>
+<p>This page is the established mathematical counterpart for compression. It is
+not the framework's Wolfram observer-theory foundation. The Wolfram-derived
+observer vocabulary, including computational boundedness, equivalencing,
+observer persistence, ruliad/rulial-space sampling, and the project's
+translation boundary, is documented separately in
+<a href="wolfram-observer-theory.html">Wolfram observer theory</a>.</p>
+<h2 id="what-it-explains">What it explains</h2>
+<p>It explains why different short descriptions can compete as summaries of the same material.</p>
+<h2 id="what-it-fails-to-explain">What it fails to explain</h2>
+<p>It does not by itself model multiple observers, social inquiry, or temporal revision.</p>
+<h2 id="what-this-framework-adds">What this framework adds</h2>
+<p>This framework extends compression theory with a multi-observer setting, a computational-boundedness dimension, and an explicit recording function that separates compressing a record from losing facts before the record exists.</p>
+<p>It also keeps two compression vocabularies distinct: AIT/MDL supplies a mature
+mathematical literature for description length and model selection, while
+Wolfram observer theory supplies the formal analogy of bounded observers
+equivalencing complex states into reduced impressions. The project uses both,
+but does not treat one as a source for the other.</p>
+<h2 id="classification">Classification</h2>
+<p>Addresses Type II in the static regime, with relevance to sequential revision.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>A. N. Kolmogorov, "Three approaches to the definition of the concept 'quantity of information'," Problems of Information Transmission 1(1), 1965. Bibliographic record: <a href="https://www.mathnet.ru/eng/ppi68">Math-Net.Ru</a>.</li>
+<li>Jorma Rissanen, "Modeling by shortest data description," Automatica 14(5), 1978. DOI: <a href="https://doi.org/10.1016/0005-1098(78)90005-5">10.1016/0005-1098(78)90005-5</a>.</li>
+</ul>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../../metadata/s/foundations/ait-compression.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>

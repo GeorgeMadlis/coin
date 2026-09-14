@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrospective case-study method</title>
+<style>
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #22262f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.58;
+}
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+a { color: #2458a6; }
+a:hover { color: #143a70; }
+h1, h2, h3 { line-height: 1.2; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #d5d9e2;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eceff5; }
+pre, code {
+  background: #eceff5;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre {
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+code { padding: 0.08rem 0.22rem; }
+pre code { padding: 0; }
+.breadcrumb {
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: inherit; }
+.metadata, .notice, .panel {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+.metadata h2, .panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+.metadata dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 30%) 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+.metadata dt {
+  color: #5d6678;
+  font-weight: 650;
+}
+.metadata dd { margin: 0; }
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.28rem 0.5rem;
+}
+.level-0 { background: #1f8a4c; }
+.level-1 { background: #7c9d1f; }
+.level-2 { background: #d9822b; }
+.level-3 { background: #c0392b; }
+.axis-p, .axis-pf { background: #3867d6; }
+.axis-s { background: #7b4db8; }
+.axis-r { background: #0f8b8d; }
+.axis-inquiry { background: #5b6472; }
+.status-open { background: #8a5a00; }
+.status-resolved { background: #23724d; }
+.status-closed { background: #5b6472; }
+.irreducibility { background: #9b4d89; }
+.group { background: #36506b; }
+.unresolved {
+  color: #9b2c2c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+.file-tree ul {
+  list-style: none;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0;
+}
+.file-tree li { margin: 0.18rem 0; }
+.file-tree details { margin: 0.25rem 0; }
+.footer {
+  border-top: 1px solid #dfe3ec;
+  color: #5d6678;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+
+
+
+
+
+
+/* coin-local-metadata:start */
+.coin-local-metadata {
+  background: #ffffff;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+}
+.coin-local-metadata h2 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+.coin-local-metadata p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* coin-local-metadata:end */
+
+</style>
+</head>
+<body>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Bundle root</a> / s / method</nav>
+<h1>Retrospective case-study method</h1>
+<section class="metadata"><h2>Metadata</h2><dl><dt>description</dt><dd>Method used to classify and analyze the framework-self trajectory without rewriting history.</dd><dt>fc-axis</dt><dd><span class="badge axis-s">S</span></dd><dt>fc-level</dt><dd><span class="badge level-2">L2</span></dd><dt>fc-round</dt><dd>18</dd><dt>fc-status</dt><dd><span class="badge status-open">open</span></dd><dt>fc-supersedes</dt><dd>s/method.md@r16</dd><dt>timestamp</dt><dd>2026-07-23</dd><dt>title</dt><dd>Retrospective case-study method</dd><dt>type</dt><dd>Finding</dd></dl></section>
+<article class="content"><p>This pilot uses the current framework to classify the repository's own recorded
+history without changing prior round files. The method is:</p>
+<ol>
+<li>Treat the round files, bundle ledger, repository ledger, concept
+   frontmatter, git commits, and published manifests as the record <code>R</code>
+   (<a href="../reproduction/data.html">reproduction/data.md</a>).</li>
+<li>Treat <a href="foundations/wolfram-observer-theory.html">Wolfram observer theory</a> as
+   the cross-cutting foundation for the bounded-observer analogy, while using
+   <a href="foundations/ait-compression.html">Algorithmic information theory and compression</a>
+   only as the established mathematical counterpart for compression/description
+   length. Do not infer project extensions such as <code>r</code>, factual irreducibility,
+   or Type I/II/III from Wolfram sources.</li>
+<li>Read contemporaneous <code>fc-move</code>, <code>fc-party</code>, <code>fc-stage</code>, and
+   <code>fc-type-at-round</code> directly from each <code>inquiry/round-NNNN.md</code> file.</li>
+<li>For rounds 1-3, which predate <code>fc-stage</code>, infer stage under
+   <a href="../_refs/docs/framework_v3.html#22-the-dynamic-model-observer-trajectories-rounds-and-stages">docs/framework_v3.md section 2.2</a>
+   and mark the inference as retrospective in
+   <a href="../_refs/bundles/framework-self/r/retrospective-round-classification.csv.html">r/retrospective-round-classification.csv</a>.</li>
+<li>Treat <code>fc-type-at-round</code> as applicable only to contestation-stage rounds
+   under <a href="../_refs/spec/SPEC.html#52-round-fields">spec/SPEC.md section 5.2</a>;
+   legacy non-contestation type values remain in their original round files but
+   are excluded from the retrospective type trajectory.</li>
+<li>Count stalls, reversals, and oscillations only where the record supplies
+   enough repeated states to measure them. This pilot can measure stage
+   persistence and stage returns, but not type stalls or type oscillations
+   because round 3 is the only contestation-stage round.</li>
+</ol>
+<p>The case account deliberately does not claim external validity. Its role is to
+test inspectability and reproduction on one self-referential trajectory before
+the four external Step 7 validation cases are attempted.</p>
+
+
+
+
+
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/s/method.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+<footer class="footer">Derived file — do not edit. Regenerate: <code>okf-fc render /Users/server/projects/observer-disagreement-framework/bundles/framework-self</code></footer>
+</main>
+</body>
+</html>
