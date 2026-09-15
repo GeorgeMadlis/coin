@@ -10,9 +10,11 @@
   derived, non-evidentiary 12-page contact sheet of the pinned `report.pdf`; see its
   [metadata](fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json).
 
-The counterpart, evidence bundle, and report artifacts referenced here live in
-`GeorgeMadlis/eudr-dmi-gil`'s `audit/evidence/**`; this source bundle records hashes and paths
-without copying evidence content.
+The counterpart, source evidence bundle, and original report artifacts referenced here live in
+`GeorgeMadlis/eudr-dmi-gil`'s `audit/evidence/**`; this COIN bundle also carries a copied
+`evidence-package/` for public inspection. The copied package improves direct inspectability but
+does not change the provenance boundary: source identity remains pinned by the source manifest,
+report manifest, hashes, and bundle documentation.
 
 ## Publish history
 

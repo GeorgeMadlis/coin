@@ -25,13 +25,13 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "10ed401eb25d809bc6ab7f7ca77a1b7d5736e6f7aadd463054a90318c85a357d",
+    "html_checksum_sha256": "8737dc156cf42ff26c01a631259b258928b148bd9ad7c44082c5892a85168c38",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
     "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
     "rendered_at": "2026-09-12",
-    "source_checksum_sha256": "2126a6d2d514bc1260d326fa086974662d23ac5c88d1a8b54fac227d80b79b50"
+    "source_checksum_sha256": "31c2d0c453347d4b61090dade83e9a915ec04bb385c5e5999a1ae102dfa99e79"
   },
   "represented_artifact": {
     "artifact_type": "HTMLArtifact",
