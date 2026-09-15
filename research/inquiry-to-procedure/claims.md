@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: From Inquiry to Procedure — Recorded Inquiry, Method Evolution, and Operational Method
 status: draft
-updated: 2026-08-24
+updated: 2026-09-14
 ---
 
 # Claims ledger
@@ -22,9 +22,11 @@ The originating proposition and its negative are recorded first so that later cl
 - **C0a** *[inferential]* The inquiry should distinguish three objects: recorded trajectory `H`; method-evolution protocol `P`, which decides what a finding becomes; and operational method `M`, consisting of the specifications, code, tests, validators, AI instructions, evidence semantics, decision procedures, and explicit unresolved questions required to perform the task now.
 - **C0b** *[inferential]* Routine execution should normally use `M + current/new evidence E -> result`, not `H + M + E -> result`. Archived trajectory may become relevant again when revising `M`, for example after a contradiction, source-authenticity failure, frame change, unexplained constraint, scope drift, or evidence that the current method is inadequate.
 - **C0c** *[inferential]* No human or AI observer starts from zero. For observer `i`, the available initial knowledge for a project handoff can be represented as `K_i^0 = B_i + L + S_0`, where `B_i` is the observer's partly latent background knowledge, learned competence, tacit framing, and biases; `L` is explicitly communicated prior knowledge such as literature, standards, documentation, established results, and current scholarly synthesis; and `S_0` is the current project/problem state at handoff.
-- **C0d** *[inferential]* The local project trajectory is `H_{0:t}: S_0 -> S_1 -> ... -> S_t`. The key comparison for observer `j` is therefore `B_j + L + S_t` versus `B_j + L + S_t + H_{0:t}`, not "history" versus "no history" in general.
+- **C0d** *[inferential]* The local project trajectory is `H_{0:t}: S_0 -> S_1 -> ... -> S_t`. The key comparison for observer `j` is therefore a sufficiently explicit current-state handoff, represented in the counterfactual catalogue as `X_state`, versus `X_traj = X_state + H_{0:t}`, not "history" versus "no history" in general.
 - **C0e** *[inferential]* The bundle cannot exhaustively serialize `B_i` or reproduce cognition. It can externalize only relevant observable consequences: assumptions, frame choices, transitions, corrections, evidence changes, supersessions, rejected interpretations, unresolved issues, and method changes.
 - **C0f** *[inferential]* "History-blind" means blind to the project-specific recorded trajectory `H_{0:t}`, not devoid of prior knowledge. A history-blind observer still has `B_i + L`, and may also receive an explicit current-state handoff.
+- **C0g** *[inferential]* Incremental trajectory value, external-reference correspondence, and inter-observer agreement are separate validation axes. Agreement does not establish correctness, and movement toward an external reference does not by itself establish the value of recorded trajectory.
+- **C0h** *[inferential]* Representation proportionality should distinguish at least three non-rigid options: a current-state evidence record, which may be sufficient when present definitions, assumptions, evidence, and transformations are explicit and recoverable; a conflict bundle, which is appropriate when competing claims must be compared across evidence, frames, accounting objects, boundaries, indicators, time horizons, or normative criteria; and a trajectory-aware conflict bundle, which is valuable when interpreting the disagreement requires reconstructing how claims, frames, evidence selections, definitions, boundaries, counterarguments, or normative choices changed through time.
 
 ## Boundedness of inquiry
 
@@ -69,10 +71,13 @@ The originating proposition and its negative are recorded first so that later cl
 ## Evidence provenance — committed bundles (resolves V1, V2)
 
 The source `observer-disagreement-framework` repository is private; its public evidence is the
-committed `framework-self` bundle. The applied EUDR evidence uses the public
-`geospatial-evidence-framework` Fazenda Sucuri bundle, copied into COIN as a reading snapshot with
-JSON, GeoJSON, PDF, and canonical `report.html` artifacts omitted. Bundle-sourced claims below
-upgrade the earlier generic "repository state" tag to specific round/file references.
+committed `framework-self` bundle. The applied EUDR evidence uses the public Fazenda Sucuri bundle
+copied into COIN with public inspection material now present: a derived 12-page contact-sheet PDF,
+its metadata sidecar, bundle and contact-sheet guides, a machine-readable evidence manifest, and a
+copied `evidence-package/` containing canonical report files and supporting artifacts. Earlier
+versions of this inquiry described the COIN copy as an artifact-reduced reading snapshot; that
+description is no longer current. Bundle-sourced claims below upgrade the earlier generic
+"repository state" tag to specific round/file references.
 
 - **C3′** *[sourced: bundles/framework-self/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/log.md]* Two committed bundles: framework-self (20 rounds, parties codex/claude) and the Fazenda Sucuri EUDR coffee bundle (7 native rounds).
 - **C4′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* The applied trajectory records repeated conversion of review findings into corrected artifacts: Sentinel-2 visual repair, AOI label/report-map fixes, coffee temporal-mask correction, and page-4 regional-overview repair, while preserving the screening verdict class.
@@ -87,9 +92,9 @@ upgrade the earlier generic "repository state" tag to specific round/file refere
 
 - **V3** Re-check C6–C9 against the current consolidated EUDR text and latest environment FAQ iteration at publication time; the cutoff date and Article 3 wording are stable, but degradation-condition phrasing has moved across FAQ iterations.
 - **V4** No measurement yet exists for C16's open part (does compression reduce error recurrence?); mark as unresolved, not supported. The framework-self metrics confirm this is NOT_MEASURABLE from the current record, not merely unmeasured.
-- **V5** Resolved in the committed COIN snapshot: the framework-self `_site/` rendered tree is not present; Markdown source and CSVs are retained; the applied EUDR bundle is the Fazenda Sucuri reading snapshot, with JSON, GeoJSON, PDF, and canonical `report.html` artifacts omitted.
+- **V5** Resolved in the committed COIN snapshot: the framework-self `_site/` rendered tree is not present; Markdown source and CSVs are retained; the applied EUDR bundle now exposes public inspection artifacts, including the derived contact-sheet PDF, its metadata, reading/contact-sheet guides, `source-evidence.json`, and a copied `evidence-package/`. The contact sheet is non-evidentiary convenience material; canonical evidence status remains tied to recorded hashes, manifests, and source-package provenance.
 - **V6** Some framework-self commit refs read "NOT AVAILABLE until merge" (rounds 19–20); pin the committed snapshot to a resolved state or note them as pending.
-- **V7** No controlled comparison has yet tested trajectory-aware derivation against trajectory-blind derivation: competent observers with normal prior knowledge, shared explicit prior knowledge, and a specified current project state, with only one condition receiving the project-specific recorded trajectory.
+- **V7** No controlled comparison has yet tested trajectory-aware derivation against trajectory-blind derivation: competent observers with normal prior knowledge, shared explicit prior knowledge, and a sufficiently explicit current-state handoff, with only one condition receiving the project-specific recorded trajectory.
 - **V8** No controlled method-revision experiment has yet tested whether archived provenance materially improves diagnosis and revision when the current operational method encounters a contradiction, unexplained rule, frame failure, source-authenticity problem, or new class of case.
 
 ## Additional claims
@@ -109,3 +114,13 @@ upgrade the earlier generic "repository state" tag to specific round/file refere
 - **C32** *[inferential; MHS recorded inquiry]* The final MHS/world-models fact-checking question became salient only after earlier conceptual inquiry into MHS, Digital Twin analogy, and Free Energy Principle framing. A record beginning directly with "Did MHS make world models unnecessary?" would preserve the final question but omit that path.
 - **C33** *[sourced; MHS recorded inquiry]* The exact saved MHS human-Claude Q/A was supplied after the initial migration as the `mhs-world-models-claude-qa` attachment and is preserved at `recorded-inquiries/mhs-world-models/MHS-QA-source.md`. The record should now be read as source-backed, with later interpretation kept separate in `analysis.md`.
 - **C34** *[inferential; MHS recorded inquiry]* The pre-insertion state was itself a provenance gap: the public Sixth post interpreted an MHS trajectory that was not yet publicly inspectable in COIN. After insertion, the intended chain is `saved Q/A -> recorded inquiry -> retrospective analysis -> public article`, so public-site correction can inspect a primary COIN artifact rather than treating the article as evidence for its own interpretation.
+- **C35** *[inferential]* External contestation is a candidate future use of reconstructible trajectory. A challenger of a technical or evidentiary determination `T_t`, or where the project has the evidence and institutional authority to represent one, a downstream legal or operational disposition `D_t`, may sometimes need information about materially relevant earlier states that has been compressed out of the current state.
+- **C36** *[inferential]* Contestation value is an incremental-value hypothesis, not an established benefit: explicit trajectory access has contestation value only if it enables a materially stronger, better-grounded challenge than an equivalently rich current-state handoff `X_state`.
+- **C37** *[flagged; untested]* The present cases do not experimentally establish that `Q_C(X_traj) > Q_C(X_state)`, where `Q_C` denotes quality of contestation or challenge and need not reduce to one universal scalar score.
+- **C38** *[inferential]* Contestation should be treated as an external reopening trigger. A material challenge may reveal a need for diagnosis or method revision, but the existence of contestation does not itself establish that the operational method is wrong.
+- **C39** *[inferential]* The current public synthesis uses three principal examples as three broad families identified in the present inquiry, not as an exhaustive taxonomy of all research use cases: Fazenda Sucuri, grounded in the committed EUDR coffee bundle, represents operational correction; framework-self, grounded in the committed self-referential bundle, represents conceptual/frame correction; and Estonian forest management, grounded in the public *Evidence First, Consensus Later* conflict analysis rather than a formal bundle, represents comparative interpretation and contestation.
+- **C40** *[sourced: ConnectedNature, Evidence First, Consensus Later, Estonian forest-management section]* The public conflict analysis records apparently divergent Estonian forestry sustainability claims: an EU-comparable wood-balance frame reports 2023 removals above net annual increment on available data, while other sources using managed-forest growing-stock increment, gross national increment, carbon-stock stability, or LULUCF accounting support different interpretations of sustainability.
+- **C41** *[sourced: ConnectedNature, Evidence First, Consensus Later, Estonian forest-management section]* The same source identifies multiple dimensions along which the Estonian dispute can vary: accounting object, system boundary, indicator, time horizon, substitution effects, biodiversity scale, forest type, ownership/legal category, economic model, and legal/institutional baseline.
+- **C42** *[inferential; medium-high confidence]* The Estonian case motivates a trajectory-aware conflict-bundle design because endpoint claims may not preserve enough information to reconstruct how different definitions, boundaries, evidence selections, counterarguments, or normative criteria made earlier conclusions appear defensible.
+- **C43** *[inferential; untested]* The inference from the Estonian case is about possible loss through endpoint/current-state compression: an apparent contradiction visible in the current conflict state may itself partly result from compressing away the provenance of disagreement.
+- **C44** *[flagged; unestablished]* The stronger claim that trajectory-aware bundling is strictly necessary to resolve the Estonian forest-management disagreement is not established. The Estonian example is not presently represented by a versioned formal bundle with recorded internal trajectory, and no test has shown that an equivalently rich current-state dossier could not resolve or adequately diagnose the disagreement.

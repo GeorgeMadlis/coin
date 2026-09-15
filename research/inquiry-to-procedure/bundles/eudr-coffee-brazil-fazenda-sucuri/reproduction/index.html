@@ -16,13 +16,17 @@
 <h1>REPRO - Reproduction</h1>
 <ul><li><a href="gee-auth.html">gee-auth.md</a> - authentication and acquisition context.</li><li><a href="code.html">code.md</a> - counterpart code, pinned commit, run command.</li><li><a href="data.html">data.md</a> - asset pins and checksums.</li><li><a href="environment.html">environment.md</a> - runtime.</li><li><a href="lineage.html">lineage.md</a> - why this bundle imports no legacy lineage.</li><li><a href="source-evidence.json">source-evidence.json</a> - machine-readable evidence manifest for this task.</li><li><a href="fazenda_sucuri_screening_aoi_contact_sheet.pdf">fazenda_sucuri_screening_aoi_contact_sheet.pdf</a> -</li></ul>
 <p>derived, non-evidentiary 12-page contact sheet of the pinned <code>report.pdf</code>; see its <a href="fazenda_sucuri_screening_aoi_contact_sheet.pdf.metadata.json">metadata</a>.</p>
-<p>The counterpart, evidence bundle, and report artifacts referenced here live in <code>GeorgeMadlis/eudr-dmi-gil</code>&#x27;s <code>audit/evidence/**</code>; this source bundle records hashes and paths without copying evidence content.</p>
+<p>The counterpart, source evidence bundle, and original report artifacts referenced here live in <code>GeorgeMadlis/eudr-dmi-gil</code>&#x27;s <code>audit/evidence/**</code>; this COIN bundle also carries a copied <code>evidence-package/</code> for public inspection. The copied package improves direct inspectability but does not change the provenance boundary: source identity remains pinned by the source manifest, report manifest, hashes, and bundle documentation.</p>
 <h2>Publish history</h2>
 <p>Round 1 published snapshot <code>2026-08-11-r0001-4ba9827</code>. Round 2 supersedes it because the pinned before/after Sentinel-2 baseline panel contained a half-black/nodata left image and because the package lacked <code>fazenda_sucuri_contact_sheet_guide.html</code>.</p>
 <p>Round 7 supersedes snapshot <code>2026-08-12-r0006-b969a23</code> because page 4 still showed a missing regional-overview image. The regenerated report/contact sheet are pinned to the round-7 handoff.</p>
 <p>Round 8 supersedes the round-7 evidence package with the 2026-09-11 clean handoff at <code>single-earth/eudr-dmi-gil@d68e7ebbcc99fdff75742452538b241a382feb24</code>. The refreshed report/contact sheet are pinned to the round-8 handoff and add the FDP/JRC morphology and threshold sensitivity artifacts while preserving the 12-page PDF and 3 by 4 contact-sheet structure.</p>
 <p>Expected publish command:</p>
 <p><code>python3 tools/okf_gsp.py publish eudr-coffee-brazil-fazenda-sucuri --dest /Users/server/projects/okf-bundle-snapshots --evidence-handoff /Users/server/projects/eudr-dmi-gil/out/okf_handoffs/eudr-coffee-brazil-fazenda-sucuri.json</code></p>
+
+
+
+
 
 
 

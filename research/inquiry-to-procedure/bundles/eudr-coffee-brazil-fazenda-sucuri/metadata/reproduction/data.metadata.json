@@ -31,7 +31,7 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "03be4e8975e30e7e1e746eda8a51bef5745a4b24ad5caebd1031093ed5d1e32b",
+    "html_checksum_sha256": "ae36fb86055468a08cb31b1bd7019f9abe7a7df898d3d1239e143b06375d520e",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",

@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: Bundle evolution analysis — two committed trajectories
 status: draft
-updated: 2026-08-24
+updated: 2026-09-14
 sources:
   - bundles/framework-self/            # observer-disagreement-framework, self-description bundle
   - bundles/eudr-coffee-brazil-fazenda-sucuri/  # geospatial-evidence-framework, applied EUDR bundle
@@ -19,6 +19,11 @@ recorded inquiries, including the MHS/world-models example under
 `recorded-inquiries/`, are intentionally analyzed below bundle level and should
 not be counted as a third formal bundle case.
 
+The current public article also uses Estonian forest management as a non-bundle comparison for
+interpretive conflict and contestation, drawn from *Evidence First, Consensus Later*. That case is
+useful for the public synthesis, but it is intentionally outside the bundle-evolution metrics here:
+there is no committed formal bundle trajectory to count, classify, or measure.
+
 The corrected interpretation separates four things:
 
 - the bundle as a historical/provenance record;
@@ -33,9 +38,10 @@ the later artifact, or that replaying history is necessary to execute the result
 It also cannot establish this by contrasting "history" with an impossible blank observer. No human
 or AI observer begins from zero. The relevant counterfactual asks what the local recorded trajectory
 `H_{0:t}: S_0 -> S_1 -> ... -> S_t` adds beyond the next observer's background knowledge `B_j`,
-explicitly communicated prior knowledge `L`, and a sufficiently specified current project/problem
-state `S_t`. In other words, the comparison is `B_j + L + S_t` versus
-`B_j + L + S_t + H_{0:t}`.
+explicitly communicated prior knowledge `L`, and a sufficiently rich current-state handoff
+`X_state`, including the current evidence/project state, assumptions and frame, unresolved issues,
+operational method, and queryable verification provenance. In other words, the comparison is
+`X_state` versus `X_traj = X_state + H_{0:t}`.
 
 ## 1. Approach decision: commit the bundles, do not link the repos
 
@@ -62,10 +68,12 @@ This remains the more faithful option, for three reasons.
   (`agent-contract.md`, `answer.md`, `log.md`, `index.md`, `inquiry/`, `r/*.csv`, `s/`, `pf/`,
   `reproduction/`) and omits the rendered `_site/` tree. The two CSVs are retained because they
   carry the metrics and retrospective classification.
-- **The applied snapshot omits machine/data artifacts.** The Fazenda Sucuri copy keeps the Markdown
-  trajectory, method, and result summaries, while omitting JSON, GeoJSON, PDF, and canonical
-  `report.html` artifacts. It links back to the public source bundle for repository context without
-  republishing those files through COIN.
+- **The applied snapshot is now publicly inspectable beyond prose.** The Fazenda Sucuri copy keeps
+  the Markdown trajectory, method, and result summaries, and now also exposes public inspection
+  material: the derived 12-page contact-sheet PDF, its metadata sidecar, reading and artifact
+  guides, `source-evidence.json`, and a copied `evidence-package/` with canonical report files and
+  supporting artifacts. The contact sheet is a derived convenience view, not canonical evidence; the
+  manifest, hashes, copied evidence package, and source-package relationship remain authoritative.
 - **"pinned-not-reproduced" is the honest provenance state.** The EUDR `answer.md` is
   `human_review_required` with provenance `pinned-not-reproduced`: hashes and artifacts were
   independently checked, but no qualifying independent rerun was performed. The trail should state
@@ -84,7 +92,7 @@ research/inquiry-to-procedure/
 ├── recorded-inquiries/                   (supporting non-bundle records)
 └── bundles/
     ├── framework-self/                    (Markdown source tree only)
-    └── eudr-coffee-brazil-fazenda-sucuri/ (Markdown source tree only; no JSON/PDF/GeoJSON/report.html)
+    └── eudr-coffee-brazil-fazenda-sucuri/ (Markdown source tree plus public inspection artifacts)
 ```
 
 ## 2. Bundle A — framework-self (general, self-referential)
@@ -197,13 +205,35 @@ What they do not support:
 - They do not establish that replaying or loading the historical trajectory is necessary for routine
   execution once the method has been successfully compiled.
 - They do not compare trajectory-aware derivation with trajectory-blind derivation from appropriate
-  observer background knowledge, explicit prior knowledge, and an adequate current-state handoff.
+  observer background knowledge, explicit prior knowledge, and a sufficiently rich current-state
+  handoff `X_state`.
 - They do not test whether archived provenance improves later method revision under failure.
 - They do not test whether recorded project history improves cross-observer handoff or transfer when
   observers differ in background knowledge or framing.
 - They do not establish a general law that recorded inquiry reduces error or transfers across
   problems. Two bundles, one self-referential, can support a disciplined case study, not a general
   law.
+
+### A third possible target: trajectory of disagreement
+
+The two committed bundles demonstrate operational and conceptual trajectory analysis. Fazenda Sucuri
+shows operational correction: changes in evidence handling, visualisation, source semantics,
+decision rules, and their compilation into the current screening method. `framework-self` shows
+conceptual/framework correction: a recorded change in the object of study and category scheme, with
+later artifacts preserving why the current framework differs from the earlier one.
+
+The Estonian forest-management example identifies a third possible target, but does not instantiate
+it here: the trajectory of disagreement itself. The public conflict analysis exposes current
+endpoint claims that may differ because they use different accounting objects, system boundaries,
+indicators, time horizons, definitions, and normative criteria. A current-state conflict bundle
+could record those differences at one time. A trajectory-aware conflict bundle would become
+methodologically interesting if diagnosis required reconstructing how those claims, frames,
+evidence selections, definitions, boundaries, counterarguments, or normative choices changed over
+time.
+
+No such Estonian formal bundle is committed in this research folder. The case is therefore
+motivation for a future bundle and counterfactual test, not evidence that trajectory-aware bundling
+has already been empirically shown necessary for resolving the Estonian disagreement.
 
 ## 5. Bundle evolution mechanics
 
@@ -224,10 +254,10 @@ typed relation set needs to distinguish at least:
 A bare `supersedes` link silently encodes the latest observer's frame as epistemic progress, which
 is exactly the failure the retention argument is meant to prevent.
 
-The determination at time `t` should be treated as a function:
+The technical/evidentiary determination at time `t` should be treated as a function:
 
 ```text
-D_t = f(E_t, F_t, P_t)
+T_t = f(E_t, F_t, P_t)
 ```
 
 where `E` is the evidence and its versions, `F` is the frame / assumptions / scope / definitions,
@@ -237,15 +267,26 @@ an earlier AI-generated conceptualization. Observer identity matters only throug
 relevant differences it introduces: prompt or instruction version, method version, assumptions,
 scope, and dataset versions. Bare identity is not itself an explanatory variable.
 
+Where the project has the evidence and institutional authority to represent one, a downstream legal
+or operational disposition should be treated separately:
+
+```text
+D_t = g(T_t, L_t, J_t)
+```
+
+Do not silently substitute `D_t` for `T_t`; a screening flag, classification, technical
+determination, and legal/operational disposition can be challenged at different levels.
+
 As a candidate answer to the article's open retention question, the minimum reconstructible state is:
 
 ```text
-R_t = {C_t, E_t, F_t, P_t, V_t, Δ_t}
+R_t = {C_t, E_t, F_t, P_t, O_t, V_t, Δ_t}
 ```
 
 Here `C_t` is the claim state, `E_t` the referenced evidence, `F_t` the relevant
-frame/assumptions, `P_t` the procedure/version, `V_t` the verdict or determination, and `Δ_t`
-the stated reason for transition. What must survive is enough to reconstruct the contested
+frame/assumptions, `P_t` the procedure/version, `O_t` the result object such as a screening flag,
+classification, `T_t`, or where applicable `D_t`, `V_t` the queryable verification provenance, and
+`Δ_t` the stated reason for transition. What must survive is enough to reconstruct the contested
 transition, not every prompt, transcript, or temporary artifact.
 
 The symmetric resolution procedure is:
@@ -269,8 +310,11 @@ The historical record is provenance; the disciplined use of that record to recon
 ## 6. Effect on the article and the research folder
 
 - **Research trail:** link to `bundles/framework-self/` and
-  `bundles/eudr-coffee-brazil-fazenda-sucuri/`, noting that the applied public copy omits JSON,
-  GeoJSON, PDF, and canonical `report.html` artifacts.
+  `bundles/eudr-coffee-brazil-fazenda-sucuri/`, and direct readers from the applied public bundle
+  to the bundle reading guide, contact-sheet/artifact guide, contact-sheet PDF, machine manifest,
+  and copied evidence package. State that this improves public visual and machine inspection while
+  preserving the distinction between the derived contact sheet and canonical report/provenance
+  artifacts.
 - **Claims ledger:** keep bundle-sourced empirical claims specific, while marking the ontology
   (`H`, `P`, `M`) and counterfactual interpretation as inferential.
 - **Evidence Base / Source Evaluation:** cite specifics above (frame-change 2/13, the Fazenda
