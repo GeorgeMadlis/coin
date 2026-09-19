@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: From Inquiry to Procedure — Recorded Inquiry, Method Evolution, and Operational Method
 status: draft
-updated: 2026-09-14
+updated: 2026-09-19
 ---
 
 # Claims ledger
@@ -79,14 +79,15 @@ versions of this inquiry described the COIN copy as an artifact-reduced reading 
 description is no longer current. Bundle-sourced claims below upgrade the earlier generic
 "repository state" tag to specific round/file references.
 
-- **C3′** *[sourced: bundles/framework-self/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/log.md]* Two committed bundles: framework-self (20 rounds, parties codex/claude) and the Fazenda Sucuri EUDR coffee bundle (7 native rounds).
-- **C4′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* The applied trajectory records repeated conversion of review findings into corrected artifacts: Sentinel-2 visual repair, AOI label/report-map fixes, coffee temporal-mask correction, and page-4 regional-overview repair, while preserving the screening verdict class.
+- **C3′** *[sourced: bundles/framework-self/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/log.md]* Two committed bundles: framework-self (20 rounds, parties codex/claude) and the Fazenda Sucuri EUDR coffee bundle (10 native rounds).
+- **C4′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/log.md; bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* The applied trajectory records repeated conversion of review findings into corrected artifacts: Sentinel-2 visual repair, AOI label/report-map fixes, coffee temporal-mask correction, page-4 regional-overview repair, and a verified Sucuri FDP/JRC diagnostic execution, while preserving the screening verdict class. Round 10 separately finds the visual observation's geographic origin underdetermined.
 - **C5′** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/s/task-scope.md; bundles/eudr-coffee-brazil-fazenda-sucuri/s/gsp-mapping.md]* The task scope fixes EUDR coffee screening for Brazil/Minas Gerais/Fazenda Sucuri and keeps production/evidence linkage explicit rather than silently generalizing from a commodity mask alone.
 - **C-schema** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/s/modeling.md; bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md]* The modeling and results separate FDP-only, MapBiomas-only, and both-source agreement signals; new coffee/post-2020 loss overlap is source-specific rather than averaged into a single warrant.
 - **C-frame4** *[sourced: bundles/framework-self/inquiry/round-0004.md]* Round 4 records a human-instructed scope widening (observer disagreement → statement evolution) as a frame transition f(t)→f(t+1) with SHA256 hashes and fc-supersedes on answer/pf/s pages. Direct support for C1–C2 and the "human framing is itself under inquiry" claim.
 - **C-wolfram** *[sourced: bundles/framework-self/inquiry/round-0019.md; s/specification.md]* Rounds 18–19 make Wolfram observer theory a mandatory `fc-foundation-role: formal-analogy` disclosure with validator rejection conditions; specification frontmatter records `fc-irreducibility: none`. Upgrades C19 from [flagged] to [sourced].
 - **C-metrics** *[sourced: bundles/framework-self/r/metrics-rounds-0001-0013.csv]* Frame-change frequency 2/13; observer-handoff 2/12; observer-distance family NOT_MEASURABLE with stated reasons; round 14 excluded to avoid circular self-measurement. Support for C12–C13 and C16's honest-negative half.
-- **C-review** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* Current answer is `human_review_required`, provenance `pinned-not-reproduced`; the bundle records a screening flag, not a legal non-compliance determination. Support for C17–C18 and the structural human-in-the-loop boundary.
+- **C-review** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md]* The current bundle verdict is `possible_relevant_deforestation`, the counterpart report requires human review, and provenance is `pinned-not-reproduced`; the bundle records a screening flag, not a legal non-compliance determination. Support for C17–C18 and the structural human-in-the-loop boundary.
+- **C-provenance-origin** *[sourced: bundles/eudr-coffee-brazil-fazenda-sucuri/inquiry/round-0010.md]* Round 8 verifies diagnostic execution on Sucuri and records a Sucuri attribution for its motivation, but the surviving record does not verify where the corridor-versus-broad-unit observation originated. Earlier Ibiá / Patrocínio imagery is compatible without proving transfer. This is evidence for distinguishing recorded provenance from verified provenance, not evidence for either causal origin account.
 
 ## Items still to verify
 
@@ -96,6 +97,7 @@ description is no longer current. Bundle-sourced claims below upgrade the earlie
 - **V6** Some framework-self commit refs read "NOT AVAILABLE until merge" (rounds 19–20); pin the committed snapshot to a resolved state or note them as pending.
 - **V7** No controlled comparison has yet tested trajectory-aware derivation against trajectory-blind derivation: competent observers with normal prior knowledge, shared explicit prior knowledge, and a sufficiently explicit current-state handoff, with only one condition receiving the project-specific recorded trajectory.
 - **V8** No controlled method-revision experiment has yet tested whether archived provenance materially improves diagnosis and revision when the current operational method encounters a contradiction, unexplained rule, frame failure, source-authenticity problem, or new class of case.
+- **V9** The morphology-task provenance audit cannot reconstruct the originating observation event or a transfer event from Ibiá / Patrocínio to Sucuri. Any causal claim about that origin remains future-test material, not a result of the present bundle.
 
 ## Additional claims
 

@@ -1,26 +1,26 @@
 {
   "bundle": {
-    "bundle_round": 9,
+    "bundle_round": 10,
     "id": "eudr-coffee-brazil-fazenda-sucuri",
     "profile": "okf-gsp",
-    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
     "source_dirty": false,
-    "source_repository_round": 53,
+    "source_repository_round": 54,
     "status": "NOT AVAILABLE in this committed COIN copy"
   },
   "concept_manifest_record": {},
   "frontmatter": {
     "fc-axis": "PF",
     "fc-level": 3,
-    "fc-round": 8,
-    "fc-supersedes": "pf/full-context.md@round-0005",
+    "fc-round": 10,
+    "fc-supersedes": "pf/full-context.md@round-0008",
     "gsp-aoi": "fazenda_sucuri_screening_aoi",
     "title": "Full context",
     "type": "Claim"
   },
-  "frontmatter_raw": "type: Claim\ntitle: \"Full context\"\nfc-level: 3\nfc-axis: PF\nfc-round: 8\nfc-supersedes: \"pf/full-context.md@round-0005\"\ngsp-aoi: fazenda_sucuri_screening_aoi",
+  "frontmatter_raw": "type: Claim\ntitle: \"Full context\"\nfc-level: 3\nfc-axis: PF\nfc-round: 10\nfc-supersedes: \"pf/full-context.md@round-0008\"\ngsp-aoi: fazenda_sucuri_screening_aoi",
   "inquiry": {
-    "bundle_round_for_page": 8,
+    "bundle_round_for_page": 10,
     "move": "NOT AVAILABLE in this committed COIN copy",
     "party": "NOT AVAILABLE in this committed COIN copy",
     "stage": "NOT AVAILABLE in this committed COIN copy",
@@ -33,13 +33,13 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "b03346bcc6d6e2a1996250fbb9d607d9f7e9508de8e5bacd007559fdcfc282b3",
+    "html_checksum_sha256": "ea834493d26f16c3182effee12ff55ceb20263ac2c2f6cf773fedcb600ebcf9b",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
-    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
-    "rendered_at": "2026-09-12",
-    "source_checksum_sha256": "5a77cf5726fe498d6586edaee9ca642f3f8103144d62299759cfeb23c5698c91"
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+    "rendered_at": "2026-09-19",
+    "source_checksum_sha256": "2c67d0990d81d13aa9c0e615d76c4f351511cd4b276e84e0971bf6bcd46fa8c0"
   },
   "represented_artifact": {
     "artifact_type": "Claim",
@@ -56,6 +56,6 @@
     "path": "pf/full-context.html"
   },
   "supersession": {
-    "supersedes": "pf/full-context.md@round-0005"
+    "supersedes": "pf/full-context.md@round-0008"
   }
 }

@@ -54,6 +54,9 @@ then descend into [answer.md](bundles/eudr-coffee-brazil-fazenda-sucuri/answer.m
 [s/data-sources.md](bundles/eudr-coffee-brazil-fazenda-sucuri/s/data-sources.md),
 [r/results.md](bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md), and
 [reproduction/data.md](bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md).
+Read [round 10](bundles/eudr-coffee-brazil-fazenda-sucuri/inquiry/round-0010.md) before using round
+8's motivation in a causal narrative: it verifies the Sucuri execution but classifies the
+observation origin as underdetermined.
 
 ## What each evidence class can answer
 
@@ -110,8 +113,9 @@ evidence.
   proof, and not as validation of the COIN bundle's raster outputs.
 - **Committed Fazenda Sucuri bundle**:
   [bundles/eudr-coffee-brazil-fazenda-sucuri/](bundles/eudr-coffee-brazil-fazenda-sucuri/). Its
-  current answer is `human_review_required` / `pinned-not-reproduced`; it records a screening flag,
-  not legal non-compliance. The source-specific conversion signal is FDP 0.27 ha while MapBiomas and
+  current bundle verdict is `possible_relevant_deforestation` with provenance
+  `pinned-not-reproduced`; the counterpart report requires human review. It records a screening flag,
+  not legal non-compliance. The source-specific conversion signal is FDP 1.17 ha while MapBiomas and
   both-source agreement are 0.0 ha for the same new-coffee/post-2020-loss overlap.
 
 ### Dataset and scientific sources to read
@@ -144,16 +148,15 @@ evidence.
   Cover Change," *Science* 342, 850-853, DOI <https://doi.org/10.1126/science.1244693>. Also read
   the v1.13 user notes: <https://storage.googleapis.com/earthenginepartners-hansen/GFC-2025-v1.13/download.html>.
   Use Hansen as stand-replacement/tree-cover-loss evidence, not as commodity-causation evidence.
-- **Forest Data Partnership coffee model 2025b**, Earth Engine asset
-  `projects/forestdatapartnership/assets/coffee/model_2025b`:
-  <https://developers.google.com/earth-engine/datasets/catalog/projects_forestdatapartnership_assets_coffee_model_2025b>.
-  The catalog describes a 10 m per-pixel coffee probability collection for 2020-2024, produced by
-  Google for the Forest Data Partnership and cited as "Forest Data Partnership. 2026. Community
-  models 2025b. Online."
-- **Forest Data Partnership `model_2025b` technical README**:
-  <https://github.com/google/forest-data-partnership/blob/main/models/model_2025b/README.md>. Use it
-  for probability/threshold semantics, training/evaluation caveats, geographic representativeness
-  limits, and the warning that generated evaluation can overestimate real accuracy.
+- **Forest Data Partnership coffee model 2026a**, Earth Engine asset
+  `projects/forestdatapartnership/assets/coffee/model_2026a`:
+  this is the asset/version pinned by the current Sucuri evidence package. The older public
+  `model_2025b` catalog material can supply general product-family context, but it is not a
+  version-specific source for 2026a.
+- **Forest Data Partnership model documentation.** The current pinned Sucuri evidence identifies
+  `model_2026a`; retain the provider asset/version and local checksums from the bundle. The earlier
+  `model_2025b` README remains background for shared probability-model caveats only and must not be
+  presented as the current asset's version-specific documentation.
 - **MapBiomas Land Use and Land Cover - Brazil V1.0**, Earth Engine asset
   `projects/mapbiomas-public/assets/brazil/lulc/v1`:
   <https://developers.google.com/earth-engine/datasets/catalog/projects_mapbiomas-public_assets_brazil_lulc_v1>.
@@ -199,9 +202,13 @@ No such exact work was found in the inspected COIN and related local source reco
   claim dates, and supply-chain production dates need not align.
 - **Probability-threshold sensitivity.** FDP is a probability product. Area and overlap can change
   with the operating threshold; the chosen threshold is a procedural state, not ground truth.
-- **Disagreement between FDP and MapBiomas.** In the Fazenda Sucuri bundle, FDP reports 0.27 ha of
+- **Disagreement between FDP and MapBiomas.** In the Fazenda Sucuri bundle, FDP reports 1.17 ha of
   new-coffee/post-2020-loss overlap while MapBiomas and both-source agreement report 0.0 ha.
   Preserve that disagreement rather than averaging it away.
+- **Task-formation provenance uncertainty.** The Sucuri diagnostic execution is verified, but the
+  task-forming visual observation's geographic origin is underdetermined. The identical earlier
+  Ibiá / Patrocínio rectangle supplies compatible imagery, not proof of transfer. Keep observation
+  origin, diagnostic transfer, target execution, and ledger attribution separate.
 - **Component accuracies cannot simply be multiplied.** A three-layer intersection does not become an
   AOI-specific decision accuracy by multiplying published component accuracies without assumptions
   about independence, common definitions, common spatial support, common reference periods, local

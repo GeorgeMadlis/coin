@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: From Inquiry to Procedure — Critical Overview
 status: draft
-updated: 2026-09-14
+updated: 2026-09-19
 ---
 
 # Critical overview
@@ -166,6 +166,12 @@ evidence, definitions, boundaries, counterarguments, and revisions`.
    claim that recorded disagreement trajectory would improve diagnosis or contestation remains a
    methodological hypothesis.
 
+8. **Recorded and verified provenance are not interchangeable.** Fazenda Sucuri round 8 contains a
+   recorded attribution that the morphology hypothesis came from visual inspection of Sucuri, and
+   it verifies that the diagnostic was executed on Sucuri. Round 10 finds the originating
+   observation underdetermined: older Ibiá / Patrocínio imagery is compatible with the hypothesis,
+   but no retained artifact establishes observation origin or cross-AOI transfer.
+
 ## Where the proposition overstates
 
 1. **Historical dependence of discovery is not operational dependence of execution.** The fact that
@@ -230,6 +236,12 @@ evidence, definitions, boundaries, counterarguments, and revisions`.
    versioned formal bundle with recorded internal trajectory. It therefore cannot show that a
    trajectory-aware conflict bundle is necessary, or that an equivalently rich current-state dossier
    could not resolve the apparent contradiction.
+
+10. **Round 8 is not clean task-discovery evidence.** Its morphology numbers and target execution
+    are valid bundle evidence, but its motivation sentence cannot support a causal narrative of
+    discovery. A defensible transfer claim would require a contemporaneous source image or
+    observation note, a recorded transfer decision, the target execution, and the resulting ledger
+    attribution. The present record has only the latter two.
 
 ## Roles, not forced alternatives
 
@@ -298,9 +310,12 @@ may become relevant again.
   bundle, do not give it `fc-*` metadata, and do not infer observer
   disagreement merely because an external headline becomes the claim object
   under examination.
-- The EUDR bundle's own state is `human_review_required` / `pinned-not-reproduced`. Do not let the
-  public prose imply the evidence is reproduced or that a legal compliance verdict has been reached;
-  it has not.
+- The EUDR bundle verdict is `possible_relevant_deforestation`, the counterpart report requires
+  human review, and provenance is `pinned-not-reproduced`. Do not collapse these fields or imply the
+  evidence is reproduced or that a legal compliance verdict has been reached; it has not.
+- Do not cite Sucuri round 8 as proof that the morphology task originated on Sucuri, or cite the
+  earlier Ibiá / Patrocínio images as proof that it transferred from that AOI. Cite round 10's
+  `underdetermined` origin finding and keep causal claims future-only.
 - The Estonian forest-management example is the non-bundle conflict-analysis case from *Evidence
   First, Consensus Later*. Do not promote it to a formal bundle or count it in bundle-evolution
   metrics. It motivates construction and study of a possible trajectory-aware conflict bundle; it

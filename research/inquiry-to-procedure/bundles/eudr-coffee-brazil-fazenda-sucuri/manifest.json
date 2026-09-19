@@ -16,7 +16,7 @@
     "reproduction/source-evidence.json"
   ],
   "bundle_id": "eudr-coffee-brazil-fazenda-sucuri",
-  "bundle_round": 9,
+  "bundle_round": 10,
   "copied_artifacts": [
     {
       "relpath": "inputs/aoi.geojson",
@@ -623,6 +623,7 @@
     "inquiry/round-0007.html",
     "inquiry/round-0008.html",
     "inquiry/round-0009.html",
+    "inquiry/round-0010.html",
     "log.html",
     "pf/formal.html",
     "pf/full-context.html",
@@ -649,16 +650,16 @@
     "s/task-scope.html"
   ],
   "profile": "okf-gsp",
-  "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
-  "rendered_at": "2026-09-12",
+  "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+  "rendered_at": "2026-09-19",
   "report_pdf_sha256": "dc519f6bfb730c79368f03c43a7e07891e6724c5bc1764a081bb0131ec1734e7",
   "resolved_end_year": 2025,
-  "snapshot_name": "2026-09-12-r0009-4eccee8",
-  "source_branch": "work/fazenda-sucuri-morphology-evidence",
-  "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+  "snapshot_name": "2026-09-19-r0010-1c93f7a",
+  "source_branch": "HEAD",
+  "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
   "source_dirty": false,
-  "source_repository_round": 53,
-  "source_short_commit": "4eccee8",
+  "source_repository_round": 54,
+  "source_short_commit": "1c93f7a",
   "task_dimensions": {
     "aoi_id": "fazenda_sucuri_screening_aoi",
     "bundle_id": "eudr-coffee-brazil-fazenda-sucuri",
@@ -677,5 +678,5 @@
   },
   "tool": "okf-gsp render",
   "type": "okf-gsp-render-manifest-v1",
-  "zip_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8.zip"
+  "zip_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a.zip"
 }

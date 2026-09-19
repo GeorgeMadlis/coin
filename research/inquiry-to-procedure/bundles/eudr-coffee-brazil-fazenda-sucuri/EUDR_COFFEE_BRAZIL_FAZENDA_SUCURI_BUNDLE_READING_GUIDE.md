@@ -21,7 +21,5 @@ Use this order when inspecting the bundle.
 8. Read [inquiry/index.md](inquiry/index.md) for the full round history, including the round 8
    FDP/JRC morphology and threshold-sensitivity enrichment.
 
-The evidence files themselves originate in the counterpart evidence bundle. This COIN copy now also
-includes a verified `evidence-package/` copy for public inspection; provenance identity remains
-defined by the source evidence manifest, report manifest, hashes, and bundle documentation rather
-than by the derived contact sheet.
+The evidence files themselves live in the counterpart evidence bundle and are copied only into a
+generated publish snapshot's `evidence-package/` after verification.
