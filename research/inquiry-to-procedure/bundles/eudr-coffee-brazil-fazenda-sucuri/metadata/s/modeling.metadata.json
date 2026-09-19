@@ -1,25 +1,25 @@
 {
   "bundle": {
-    "bundle_round": 9,
+    "bundle_round": 10,
     "id": "eudr-coffee-brazil-fazenda-sucuri",
     "profile": "okf-gsp",
-    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
     "source_dirty": false,
-    "source_repository_round": 53,
+    "source_repository_round": 54,
     "status": "NOT AVAILABLE in this committed COIN copy"
   },
   "concept_manifest_record": {},
   "frontmatter": {
     "fc-axis": "S",
     "fc-level": 2,
-    "fc-round": 8,
-    "fc-supersedes": "s/modeling.md@round-0006",
+    "fc-round": 10,
+    "fc-supersedes": "s/modeling.md@round-0008",
     "title": "Decision rules",
     "type": "Method"
   },
-  "frontmatter_raw": "type: Method\ntitle: \"Decision rules\"\nfc-level: 2\nfc-axis: S\nfc-round: 8\nfc-supersedes: \"s/modeling.md@round-0006\"",
+  "frontmatter_raw": "type: Method\ntitle: \"Decision rules\"\nfc-level: 2\nfc-axis: S\nfc-round: 10\nfc-supersedes: \"s/modeling.md@round-0008\"",
   "inquiry": {
-    "bundle_round_for_page": 8,
+    "bundle_round_for_page": 10,
     "move": "NOT AVAILABLE in this committed COIN copy",
     "party": "NOT AVAILABLE in this committed COIN copy",
     "stage": "NOT AVAILABLE in this committed COIN copy",
@@ -32,13 +32,13 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "5706db0101ea85339d09a0694259bfafe39ea699eafb8e515847680c1dfa7309",
+    "html_checksum_sha256": "1a5776a7792aa4c2868dafc4ba4b24985f3f249bb1368a594c6cf85f114a3766",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
-    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
-    "rendered_at": "2026-09-12",
-    "source_checksum_sha256": "8fb957f7bb02e3204fcb0afa6c905b070deb487f3ef0c778fbae3d7b4d670cc7"
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+    "rendered_at": "2026-09-19",
+    "source_checksum_sha256": "a85fb889fcc0bae7eebdb2022fea929714e64cdf42bcaffbbede06ce26835a7b"
   },
   "represented_artifact": {
     "artifact_type": "Method",
@@ -55,6 +55,6 @@
     "path": "s/modeling.html"
   },
   "supersession": {
-    "supersedes": "s/modeling.md@round-0006"
+    "supersedes": "s/modeling.md@round-0008"
   }
 }

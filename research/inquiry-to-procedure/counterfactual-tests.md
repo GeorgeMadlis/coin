@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: Counterfactual Tests for Recorded Inquiry and Method Evolution
 status: draft
-updated: 2026-09-14
+updated: 2026-09-19
 ---
 
 # Counterfactual tests
@@ -17,6 +17,12 @@ bundle-backed evidence of correction and frame revision. Estonian forest managem
 non-bundle conflict-analysis comparison for interpretation and contestation. None of the three
 settles the stronger causal question of whether explicit trajectory access outperforms a sufficiently
 rich current-state handoff.
+
+The Fazenda Sucuri round-10 audit adds a design constraint for every proposed test below: a ledger's
+task motivation is **recorded provenance**, not automatically **verified provenance** of the
+originating observation. If an experiment studies diagnostic transfer, it must capture the source
+AOI/artifact, observation time, transfer decision, target execution, and recorded attribution as
+distinct events. Retrospective visual similarity must not substitute for those links.
 
 ## Terminology and handoff classes
 
@@ -147,6 +153,10 @@ already-compiled operational artifacts whose derivation is the target of the exp
 This test addresses method formation. It asks whether archived trajectory improves derivation of
 operational method compared with derivation from prior knowledge plus an explicit current-state
 handoff.
+
+For diagnostic-task formation, pre-register and preserve the chain `observation origin -> diagnostic
+transfer -> target execution -> recorded provenance`. Score an origin or transfer claim only when
+the corresponding contemporaneous artifact exists; otherwise classify it as underdetermined.
 
 ## Test 2 - operational sufficiency
 

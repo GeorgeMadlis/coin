@@ -1,11 +1,11 @@
 {
   "bundle": {
-    "bundle_round": 9,
+    "bundle_round": 10,
     "id": "eudr-coffee-brazil-fazenda-sucuri",
     "profile": "okf-gsp",
-    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
     "source_dirty": false,
-    "source_repository_round": 53,
+    "source_repository_round": 54,
     "status": "NOT AVAILABLE in this committed COIN copy"
   },
   "concept_manifest_record": {},
@@ -34,12 +34,12 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "23dcb516f849a83f9b047efe48585645201afc10c042a26c58fb91da6b95053d",
+    "html_checksum_sha256": "3a7500d3dcfe5558aa92cb9a145d58634f1f6bc0c9141d321ba13c326db015da",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
-    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
-    "rendered_at": "2026-09-12",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+    "rendered_at": "2026-09-19",
     "source_checksum_sha256": "f9ec11b6cbe181202de537ec8c244db1bd6375b7a4428fa1f56bec7ba38d6aeb"
   },
   "represented_artifact": {

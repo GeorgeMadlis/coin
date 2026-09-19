@@ -1,0 +1,68 @@
+{
+  "bundle": {
+    "bundle_round": 10,
+    "id": "eudr-coffee-brazil-fazenda-sucuri",
+    "profile": "okf-gsp",
+    "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
+    "source_dirty": false,
+    "source_repository_round": 54,
+    "status": "open"
+  },
+  "concept_manifest_record": {},
+  "frontmatter": {
+    "date": "2026-09-19",
+    "fc-axis": "INQUIRY",
+    "fc-level": 3,
+    "fc-move": "contestation",
+    "fc-party": "codex",
+    "fc-round": 10,
+    "fc-stage": "contestation",
+    "fc-status": "open",
+    "fc-touches": "answer.md, pf/full-context.md, s/modeling.md, r/overview.md, r/results.md, log.md, inquiry/index.md",
+    "gsp-aoi": "fazenda_sucuri_screening_aoi",
+    "gsp-provenance": "pinned-not-reproduced",
+    "gsp-verdict-class": "possible_relevant_deforestation",
+    "title": "Round 10 - provenance audit of the morphology trigger",
+    "type": "InquiryRound"
+  },
+  "frontmatter_raw": "type: InquiryRound\ntitle: \"Round 10 - provenance audit of the morphology trigger\"\nfc-level: 3\nfc-axis: INQUIRY\nfc-round: 10\nfc-move: contestation\nfc-stage: contestation\nfc-party: codex\nfc-status: open\ndate: 2026-09-19\ngsp-aoi: fazenda_sucuri_screening_aoi\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced\nfc-touches: \"answer.md, pf/full-context.md, s/modeling.md, r/overview.md, r/results.md, log.md, inquiry/index.md\"",
+  "inquiry": {
+    "bundle_round_for_page": 10,
+    "move": "contestation",
+    "party": "codex",
+    "stage": "contestation",
+    "timestamp_or_date": "2026-09-19"
+  },
+  "progressive_disclosure": {
+    "axis": "INQUIRY",
+    "level": 3
+  },
+  "provenance": {
+    "bundle_json": "bundle.json",
+    "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
+    "html_checksum_sha256": "4277e28bedf305a57edd20a8a26396560857f0fa1212d4c09271353d59c120bc",
+    "local_metadata_manifest": "metadata/local-metadata-manifest.json",
+    "published_manifest": "manifest.json",
+    "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+    "rendered_at": "2026-09-19",
+    "source_checksum_sha256": "4080d633f479febff7680d72d31d75fff04b585913507c6b819125edb339aa9b"
+  },
+  "represented_artifact": {
+    "artifact_type": "InquiryRound",
+    "description": "NOT AVAILABLE in this committed COIN copy",
+    "html_path": "inquiry/round-0010.html",
+    "metadata_path": "metadata/inquiry/round-0010.metadata.json",
+    "source_available_in_coin_copy": true,
+    "source_concept_kind": "inquiry-round",
+    "source_path": "inquiry/round-0010.md",
+    "title": "Round 10 - provenance audit of the morphology trigger"
+  },
+  "schema": "coin-bundle-local-metadata/v1",
+  "snapshot_manifest_record": {
+    "path": "inquiry/round-0010.html"
+  },
+  "supersession": {
+    "supersedes": "NOT AVAILABLE in this committed COIN copy"
+  }
+}

@@ -1,28 +1,28 @@
 {
   "bundle": {
-    "bundle_round": 9,
+    "bundle_round": 10,
     "id": "eudr-coffee-brazil-fazenda-sucuri",
     "profile": "okf-gsp",
-    "source_commit": "4eccee877e2dca86788ced0eaf6022ca6c0f45e0",
+    "source_commit": "1c93f7a104e31a7964ba832b187824791c4da9d7",
     "source_dirty": false,
-    "source_repository_round": 53,
+    "source_repository_round": 54,
     "status": "open"
   },
   "concept_manifest_record": {},
   "frontmatter": {
     "fc-axis": "R",
     "fc-level": 0,
-    "fc-round": 8,
+    "fc-round": 10,
     "fc-status": "open",
-    "fc-supersedes": "answer.md@round-0006",
+    "fc-supersedes": "answer.md@round-0008",
     "gsp-provenance": "pinned-not-reproduced",
     "gsp-verdict-class": "possible_relevant_deforestation",
     "title": "eudr-coffee-brazil-fazenda-sucuri: current verdict",
     "type": "Finding"
   },
-  "frontmatter_raw": "type: Finding\ntitle: \"eudr-coffee-brazil-fazenda-sucuri: current verdict\"\nfc-level: 0\nfc-axis: R\nfc-round: 8\nfc-supersedes: \"answer.md@round-0006\"\nfc-status: open\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced",
+  "frontmatter_raw": "type: Finding\ntitle: \"eudr-coffee-brazil-fazenda-sucuri: current verdict\"\nfc-level: 0\nfc-axis: R\nfc-round: 10\nfc-supersedes: \"answer.md@round-0008\"\nfc-status: open\ngsp-verdict-class: possible_relevant_deforestation\ngsp-provenance: pinned-not-reproduced",
   "inquiry": {
-    "bundle_round_for_page": 8,
+    "bundle_round_for_page": 10,
     "move": "NOT AVAILABLE in this committed COIN copy",
     "party": "NOT AVAILABLE in this committed COIN copy",
     "stage": "NOT AVAILABLE in this committed COIN copy",
@@ -35,13 +35,13 @@
   "provenance": {
     "bundle_json": "bundle.json",
     "external_evidence_note": "External citations and remote datasets are referenced by metadata; they are not all bundled for offline use.",
-    "html_checksum_sha256": "f15b2e2663948f53379a5cb3c88787be80789b738b1e1510a3321b7eb5f3d5ea",
+    "html_checksum_sha256": "7cbd68d32a37a0c6aa274be8230e7716a88e83610ab45ba08867994e73eb10e1",
     "local_metadata_manifest": "metadata/local-metadata-manifest.json",
     "published_manifest": "manifest.json",
     "published_manifest_source_checksum_sha256": "NOT AVAILABLE in this committed COIN copy",
-    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-12-r0009-4eccee8",
-    "rendered_at": "2026-09-12",
-    "source_checksum_sha256": "d43c6f0a866519f4cb9d8d75105336d5097e512f1261f27b5c1c35b7c3f15b63"
+    "published_path": "eudr-coffee-brazil-fazenda-sucuri/2026-09-19-r0010-1c93f7a",
+    "rendered_at": "2026-09-19",
+    "source_checksum_sha256": "11fd971db44d4403af35dfb2ab69687ff61e0948bd0800eeb7a4502f6d612aa8"
   },
   "represented_artifact": {
     "artifact_type": "Finding",
@@ -58,6 +58,6 @@
     "path": "answer.html"
   },
   "supersession": {
-    "supersedes": "answer.md@round-0006"
+    "supersedes": "answer.md@round-0008"
   }
 }

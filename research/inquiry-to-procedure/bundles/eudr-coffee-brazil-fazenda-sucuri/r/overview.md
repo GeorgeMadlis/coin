@@ -3,8 +3,8 @@ type: Finding
 title: "Result overview"
 fc-level: 1
 fc-axis: R
-fc-round: 8
-fc-supersedes: "r/overview.md@round-0006"
+fc-round: 10
+fc-supersedes: "r/overview.md@round-0008"
 gsp-provenance: pinned-not-reproduced
 gsp-verdict-class: possible_relevant_deforestation
 ---
@@ -26,3 +26,8 @@ sensitivity signals but no independent causal or compliance determination.
 
 The provenance is `pinned-not-reproduced`: the source evidence is cleanly committed and
 hash-verified, but this round did not perform an independent byte-identical rerun audit.
+
+Round 10 adds a separate provenance finding without changing the evidence result: execution on
+Sucuri is verified, while the geographic origin of the task-forming visual observation is
+underdetermined. The older Ibiá / Patrocínio imagery is compatible with the hypothesis but does not
+prove that the observation transferred from that AOI.

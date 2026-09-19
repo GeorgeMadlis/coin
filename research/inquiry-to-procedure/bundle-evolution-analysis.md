@@ -2,7 +2,7 @@
 inquiry: inquiry-to-procedure
 title: Bundle evolution analysis — two committed trajectories
 status: draft
-updated: 2026-09-14
+updated: 2026-09-19
 sources:
   - bundles/framework-self/            # observer-disagreement-framework, self-description bundle
   - bundles/eudr-coffee-brazil-fazenda-sucuri/  # geospatial-evidence-framework, applied EUDR bundle
@@ -74,10 +74,10 @@ This remains the more faithful option, for three reasons.
   guides, `source-evidence.json`, and a copied `evidence-package/` with canonical report files and
   supporting artifacts. The contact sheet is a derived convenience view, not canonical evidence; the
   manifest, hashes, copied evidence package, and source-package relationship remain authoritative.
-- **"pinned-not-reproduced" is the honest provenance state.** The EUDR `answer.md` is
-  `human_review_required` with provenance `pinned-not-reproduced`: hashes and artifacts were
-  independently checked, but no qualifying independent rerun was performed. The trail should state
-  this rather than imply the evidence is reproduced.
+- **"pinned-not-reproduced" is the honest provenance state.** The EUDR bundle verdict is
+  `possible_relevant_deforestation`, the counterpart report requires human review, and provenance is
+  `pinned-not-reproduced`: hashes and artifacts were independently checked, but no qualifying
+  independent rerun was performed. These states should remain distinct.
 - **Some self-bundle refs read `NOT AVAILABLE until merge`** (rounds 19-20). Either pin the
   committed snapshot to a state where they resolve, or note them as pending. Do not silently drop
   them.
@@ -147,8 +147,8 @@ support.
 
 ## 3. Bundle B — eudr-coffee-brazil-fazenda-sucuri (applied)
 
-Source: `geospatial-evidence-framework`, EUDR coffee task bundle. 7 native rounds,
-2026-08-11 -> 2026-08-12, party `codex`.
+Source: `geospatial-evidence-framework`, EUDR coffee task bundle. 10 native rounds,
+2026-08-11 -> 2026-09-19, party `codex`.
 
 ### The coffee screening correction, in the record
 
@@ -162,11 +162,32 @@ The bundle therefore supports a public EUDR coffee screening example of method f
 provenance: observed defects were converted into corrected artifacts, tighter source semantics, and
 an explicitly limited screening verdict.
 
+Round 8 adds a verified Sucuri execution of FDP/JRC morphology and threshold-sensitivity
+diagnostics; round 9 fixes snapshot links. Round 10 then audits a different question: whether the
+visual observation stated as round 8's motivation was itself first made on Sucuri. That origin is
+underdetermined. Earlier imagery over the identical Minas Gerais / Ibiá–Patrocínio rectangle is
+visually compatible with the hypothesis, but the retained record contains no bridge showing that
+the observation moved from that AOI into the Sucuri task. The named August 12 compliant-Minas
+snapshot also uses MapBiomas for its commodity layer, not FDP; a separate August 11 Ibiá snapshot
+uses FDP.
+
+This makes round 10 methodologically important without changing the screening result. The desired
+provenance chain is:
+
+```text
+observation origin -> diagnostic transfer -> target execution -> recorded provenance
+```
+
+The current record verifies target execution and records an attribution, but does not verify the
+first two links. Recorded provenance is what the ledger says happened; verified provenance is the
+subset independently supported by identified artifacts or events. Round 8 must therefore not be
+used as clean empirical evidence that the diagnostic task was discovered from Sucuri imagery.
+
 ### The current operational outputs, concretely
 
 - **Layered EUDR evidence semantics.** `s/modeling.md` and `r/results.md` keep FDP-only,
   MapBiomas-only, and both-source agreement evidence distinct. New coffee/post-2020 loss overlap is
-  reported source-specifically (FDP 0.27 ha; MapBiomas 0.0 ha; both-source agreement 0.0 ha), not
+  reported source-specifically (FDP 1.17 ha; MapBiomas 0.0 ha; both-source agreement 0.0 ha), not
   averaged into a single warrant. This operationalizes Layer A (land/forest-change evidence), Layer
   B (production linkage), and Layer C (commodity-specific evidence) without pretending those layers
   are interchangeable.
@@ -193,7 +214,8 @@ What the two committed bundles jointly support:
    `human_review_required`).
 2. The human's own framing is a legitimate object of recorded method formation: the self bundle
    records a human scope-widening in round 4; the EUDR line records visual, map, temporal-mask, and
-   publish-contract defects being corrected.
+   publish-contract defects being corrected. Round 10 also shows that a recorded motivation is not
+   automatically verified provenance of the originating observation.
 3. Reproducibility is not correctness: the EUDR `pinned-not-reproduced` state and the self bundle's
    refusal to claim unmeasurable metrics both keep deterministic execution separate from epistemic
    warrant.
@@ -210,6 +232,8 @@ What they do not support:
 - They do not test whether archived provenance improves later method revision under failure.
 - They do not test whether recorded project history improves cross-observer handoff or transfer when
   observers differ in background knowledge or framing.
+- They do not establish that the round-8 morphology observation originated on Sucuri or transferred
+  from Ibiá / Patrocínio. Both causal accounts remain underdetermined.
 - They do not establish a general law that recorded inquiry reduces error or transfers across
   problems. Two bundles, one self-referential, can support a disciplined case study, not a general
   law.
@@ -318,8 +342,9 @@ The historical record is provenance; the disciplined use of that record to recon
 - **Claims ledger:** keep bundle-sourced empirical claims specific, while marking the ontology
   (`H`, `P`, `M`) and counterfactual interpretation as inferential.
 - **Evidence Base / Source Evaluation:** cite specifics above (frame-change 2/13, the Fazenda
-  Sucuri visual/mask/publish-contract fixes, the Wolfram validator guardrail, the `NOT_MEASURABLE`
-  honesty, `human_review_required`).
+  Sucuri visual/mask/publish-contract fixes, the verified round-8 target execution, the round-10
+  provenance limitation, the Wolfram validator guardrail, the `NOT_MEASURABLE` honesty, and the
+  human-review boundary).
 - **Synthesis:** revise direction: the bundles demonstrate observed transformation into operational
   artifacts, but not the incremental value of recording the trajectory beyond a rich current-state
   handoff.

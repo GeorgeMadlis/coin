@@ -3,8 +3,8 @@ type: Finding
 title: "Per-AOI results"
 fc-level: 2
 fc-axis: R
-fc-round: 8
-fc-supersedes: "r/results.md@round-0006"
+fc-round: 10
+fc-supersedes: "r/results.md@round-0008"
 gsp-provenance: pinned-not-reproduced
 gsp-verdict-class: possible_relevant_deforestation
 ---
@@ -65,6 +65,20 @@ At threshold 0.25:
 The report.html conclusion is: "The morphology is mixed or inconclusive from shape metrics alone."
 This records boundary/corridor-like and threshold-sensitive signals requiring human review, not a
 confirmed broad/persistent forest-to-coffee transition.
+
+## Provenance audit of the task-forming observation
+
+Round 10 audits two distinct propositions:
+
+| proposition | finding | basis |
+|---|---|---|
+| P1: the morphology/threshold diagnostic was executed on Fazenda Sucuri | verified | Clean counterpart commit `d68e7eb`, verified Sucuri handoff, 117 artifacts, and the metrics above. |
+| P2: the corridor-versus-broad-unit observation originated on Fazenda Sucuri | underdetermined | The first retained exact wording is a task instruction that asserts Sucuri but does not identify the inspected image or observation event. Earlier Ibiá / Patrocínio imagery is visually compatible, but no retained bridge proves transfer. |
+
+This distinction does not alter any area, component, threshold, verdict, report artifact, or
+evidence-package hash. It changes only how the motivation provenance may be cited: round 8 is clean
+evidence of a recorded attribution and of subsequent Sucuri execution, but not clean empirical
+evidence that the observation was discovered on Sucuri.
 
 ## Sentinel-2 scene depth
 

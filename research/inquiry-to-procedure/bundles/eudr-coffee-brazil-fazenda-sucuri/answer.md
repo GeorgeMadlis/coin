@@ -3,8 +3,8 @@ type: Finding
 title: "eudr-coffee-brazil-fazenda-sucuri: current verdict"
 fc-level: 0
 fc-axis: R
-fc-round: 8
-fc-supersedes: "answer.md@round-0006"
+fc-round: 10
+fc-supersedes: "answer.md@round-0008"
 fc-status: open
 gsp-verdict-class: possible_relevant_deforestation
 gsp-provenance: pinned-not-reproduced
@@ -26,3 +26,11 @@ This is not a legal non-compliance determination. The diagnostic report says the
 overlap is threshold-sensitive and morphology-inconclusive from shape metrics alone: JRC 2020
 intersecting FDP new coffee drops from 17.25 ha at 0.025 to 5.67 ha at 0.25, and the 0.025
 new-overlap boundary-adjacency fraction is 0.54029. Human review remains required.
+
+Round 10 corrects the provenance status of the motivation recorded in round 8. The diagnostic was
+executed on Fazenda Sucuri and its results remain verified against the pinned handoff. The surviving
+record does not, however, establish that the task-forming visual observation originated on the
+Sucuri imagery. Earlier Ibiá / Patrocínio imagery is retrospectively compatible with the same shape
+hypothesis, but no retained artifact links that observation to the later task. The observation-origin
+question is therefore **underdetermined**; no metric, screening verdict, or evidence-package hash is
+changed.

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="source_commit" content="1c93f7a104e31a7964ba832b187824791c4da9d7">
+  <title>Round 10 - provenance audit of the morphology trigger - eudr-coffee-brazil-fazenda-sucuri</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><strong>eudr-coffee-brazil-fazenda-sucuri</strong><span>inquiry/round-0010.md</span></header>
+<main>
+<nav><a href="../EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.html">EUDR_COFFEE_BRAZIL_FAZENDA_SUCURI_BUNDLE_READING_GUIDE.md</a><a href="../agent-contract.html">agent-contract.md</a><a href="../answer.html">answer.md</a><a href="../index.html">index.md</a><a href="index.html">inquiry/index.md</a><a href="round-0001.html">inquiry/round-0001.md</a><a href="round-0002.html">inquiry/round-0002.md</a><a href="round-0003.html">inquiry/round-0003.md</a><a href="round-0004.html">inquiry/round-0004.md</a><a href="round-0005.html">inquiry/round-0005.md</a><a href="round-0006.html">inquiry/round-0006.md</a><a href="round-0007.html">inquiry/round-0007.md</a><a href="round-0008.html">inquiry/round-0008.md</a><a href="round-0009.html">inquiry/round-0009.md</a><a class="active" href="round-0010.html">inquiry/round-0010.md</a><a href="../log.html">log.md</a><a href="../pf/formal.html">pf/formal.md</a><a href="../pf/full-context.html">pf/full-context.md</a><a href="../pf/index.html">pf/index.md</a><a href="../pf/overview.html">pf/overview.md</a><a href="../r/artifact-inventory.html">r/artifact-inventory.md</a><a href="../r/index.html">r/index.md</a><a href="../r/overview.html">r/overview.md</a><a href="../r/report-page-audit.html">r/report-page-audit.md</a><a href="../r/results.html">r/results.md</a><a href="../reproduction/code.html">reproduction/code.md</a><a href="../reproduction/data.html">reproduction/data.md</a><a href="../reproduction/environment.html">reproduction/environment.md</a><a href="../reproduction/gee-auth.html">reproduction/gee-auth.md</a><a href="../reproduction/index.html">reproduction/index.md</a><a href="../reproduction/lineage.html">reproduction/lineage.md</a><a href="../s/data-sources.html">s/data-sources.md</a><a href="../s/gsp-mapping.html">s/gsp-mapping.md</a><a href="../s/index.html">s/index.md</a><a href="../s/modeling.html">s/modeling.md</a><a href="../s/overview.html">s/overview.md</a><a href="../s/report-structure.html">s/report-structure.md</a><a href="../s/specification.html">s/specification.md</a><a href="../s/task-scope.html">s/task-scope.md</a></nav>
+<article>
+<details><summary>Frontmatter</summary><dl><dt>type</dt><dd>InquiryRound</dd><dt>title</dt><dd>Round 10 - provenance audit of the morphology trigger</dd><dt>fc-level</dt><dd>3</dd><dt>fc-axis</dt><dd>INQUIRY</dd><dt>fc-round</dt><dd>10</dd><dt>fc-move</dt><dd>contestation</dd><dt>fc-stage</dt><dd>contestation</dd><dt>fc-party</dt><dd>codex</dd><dt>fc-status</dt><dd>open</dd><dt>date</dt><dd>2026-09-19</dd><dt>gsp-aoi</dt><dd>fazenda_sucuri_screening_aoi</dd><dt>gsp-verdict-class</dt><dd>possible_relevant_deforestation</dd><dt>gsp-provenance</dt><dd>pinned-not-reproduced</dd><dt>fc-touches</dt><dd>answer.md, pf/full-context.md, s/modeling.md, r/overview.md, r/results.md, log.md, inquiry/index.md</dd></dl></details>
+<h1>Round 10 - provenance audit of the morphology trigger</h1>
+<h2>Move</h2>
+<p>Contest the origin claim embedded in round 8&#x27;s motivation without rewriting round 8. Separate the verified target execution from the underdetermined origin of the task-forming visual observation.</p>
+<h2>Evidence added</h2>
+<h3>AOI identity</h3>
+<p>The rectangle <code>[-46.775, -19.26, -46.745, -19.23]</code> is not Fazenda Sucuri. The August 12 snapshot <code>eudr-coffee-brazil-minas-gerais-eudr-compliant/2026-08-12-r0008-c0ec8b7</code> preserves that exact polygon in <code>evidence-package/inputs/aoi.geojson</code> (SHA-256 <code>78dfab852ee5697ed150ca53da044c9b93b1bcd0de57d46fd61d868254d1982d</code>). Its inspected 12-page contact sheet has SHA-256 <code>4ba01fdb1c4dcb01b89aa34a09b99b4d75e469045506721f8d041a54d1584992</code>. The later formal <code>coffee_brazil_ibia_patrocinio_mg</code> input has byte-different metadata but exactly the same coordinate array and identifies the region as Ibiá / Patrocínio border, municipality Serra do Salitre, Minas Gerais. Fazenda Sucuri is a different Coromandel screening polygon around <code>(-46.8977, -18.5178)</code>.</p>
+<h3>Retrospective image inspection</h3>
+<p>On 2026-09-19, direct inspection found narrow, branching JRC-forest structures and broader agricultural units in the earlier Minas Gerais / Ibiá–Patrocínio imagery. This is retrospective visual compatibility, not evidence that the historical observer used those images to form the September task.</p>
+<p>The artifact roles also matter:</p>
+<ul><li>The named August 12 compliant snapshot&#x27;s page 6 and method page identify its commodity layer as</li></ul>
+<p><code>Coffee plantations (2023)</code> from MapBiomas, not FDP. Its relevant hashes are <code>02_jrc_forest_2020.png = c5473b03ac85f1c8f9332d772e15ac95fbd0b63730be669913aa0a94839fd74e</code> and <code>04_commodity_layer.png = d636bbfd38ac29cff14089000ba7ce97619ef4e669d8019b3522562c029891fb</code>.</p>
+<ul><li>A separate August 11 Ibiá / Patrocínio inspection snapshot over the identical geometry identifies</li></ul>
+<p>its commodity layer as FDP Coffee Probability model 2025b at threshold 0.25. Its relevant hashes are <code>02_jrc_forest_2020.png = 011eb81f8e0af6a39b93321e4e1e2cc311c3e21bf0e50439aaa28f7b474096c0</code> and <code>04_commodity_layer.png = efc3b9fc3db0978f0dc4767777a504c337c2f57f14b9cbfc3082f402e426ad2b</code>.</p>
+<p>The distinction prevents the visually similar MapBiomas snapshot from being retroactively described as an FDP observation.</p>
+<h3>Surviving chronology</h3>
+<table><thead><tr><th>time</th><th>surviving event</th><th>provenance implication</th></tr></thead><tbody>
+</tbody></table>
+<p>|---|---|---|</p>
+<table><thead><tr><th>2026-08-11/12</th><th>Ibiá / Patrocínio and compliant-Minas imagery exists over the identical rectangle</th><th>Earlier compatible artifacts exist; no task-transfer link is recorded.</th></tr></thead><tbody>
+<tr><td>2026-09-10 17:28 +03:00</td><td><code>geospatial-evidence-framework@8a6992c</code> records a JRC/Hansen <code>treecover2000 &gt;=10%</code> diagnostic</td><td>This is a different JRC/Hansen conditioning question, not an FDP morphology trigger.</td></tr>
+<tr><td>2026-09-11 15:54 +03:00</td><td>Retained implementation prompt, SHA-256 <code>a2fd7f375480a4aad081851307a3d651e6089f592c0466bdce4664cb9f3a0156</code>, first carries the exact corridor-versus-broad-unit wording and attributes it to Sucuri</td><td>This proves recorded attribution at task formation, not the underlying observation event.</td></tr>
+<tr><td>2026-09-11 16:08 +03:00</td><td><code>eudr-dmi-gil@d68e7eb</code> commits the FDP/JRC diagnostic implementation</td><td>P1 target execution is established.</td></tr>
+<tr><td>2026-09-11 16:30 +03:00</td><td>Retained framework-recording prompt, SHA-256 <code>a4c156004c10ea2eab0402f9464dc8363e114bc49e4f3db2faf22e59feea4625</code>, repeats the Sucuri attribution</td><td>The assertion is propagated into the bundle instruction.</td></tr>
+<tr><td>2026-09-11 16:45 +03:00</td><td><code>geospatial-evidence-framework@898a192</code> records Sucuri round 8</td><td>Round 8 accurately records the instructed attribution and the executed result.</td></tr>
+</tbody></table>
+<p>Targeted search found no earlier retained occurrence of the exact corridor/broad-unit wording and no historical <code>VIS_THRESHOLD</code> variable or instruction. <code>VIS_THRESHOLD</code> first appears in the 2026-09-19 audit request. Therefore it cannot be used to bridge the August images to the September task. The two prompt files are locally retained audit inputs identified by checksum; they are not copied into this public source bundle. Their content supports this local reconstruction but is not upgraded to a publicly packaged primary artifact.</p>
+<h2>Proposition findings</h2>
+<ul><li>**P1: the diagnostic was executed on Sucuri — verified.** The implementation commit, clean</li></ul>
+<p>handoff, evidence package, threshold table, morphology metrics, and round-8 record agree.</p>
+<ul><li>**P2: the observation originated on Sucuri — underdetermined.** The retained task instruction</li></ul>
+<p>asserts Sucuri, while older Ibiá / Patrocínio imagery is compatible with the observation. Neither is a retained record of the originating inspection, and no artifact establishes transfer.</p>
+<p>The audit therefore does **not** confirm that the observation originated on Minas Gerais / Ibiá– Patrocínio, and it does **not** confirm that it originated on Sucuri. Chronological precedence plus visual similarity is insufficient to choose between those accounts.</p>
+<h2>Effect on state</h2>
+<p>Round 8 remains immutable. Its numerical diagnostic and conclusion remain valid for the Sucuri target. Its phrase &quot;Visual inspection showed...&quot; must now be cited as a recorded motivation attribution, not as verified provenance of where the observation was first made.</p>
+<p>No retrospective Ibiá / Patrocínio round is added because doing so would convert a plausible origin into an unsupported historical claim. No metric, report artifact, evidence hash, provenance class, screening verdict, or legal interpretation changes. Current state remains <code>possible_relevant_deforestation</code> / <code>pinned-not-reproduced</code>, with human review required.</p>
+<h2>Resulting revisions</h2>
+<ul><li><code>answer.md</code> states the P1/P2 distinction at L0.</li><li><code>pf/full-context.md</code> corrects current explanatory wording while retaining round 8 as history.</li><li><code>s/modeling.md</code> separates execution provenance from task-formation provenance.</li><li><code>r/overview.md</code> and <code>r/results.md</code> record the underdetermined origin finding and its no-metric-</li></ul>
+<p>change boundary.</p>
+<ul><li>The bundle and repository ledgers append this contestation round.</li></ul>
+<p>Supersedes ledger for current concept files:</p>
+<ul><li><code>answer.md@round-0008</code></li><li><code>pf/full-context.md@round-0008</code></li><li><code>s/modeling.md@round-0008</code></li><li><code>r/overview.md@round-0008</code></li><li><code>r/results.md@round-0008</code></li></ul>
+<h2>Classification rationale</h2>
+<p>**fc-stage: contestation.** The round challenges a provenance attribution in an earlier round, preserves the earlier record, evaluates discriminating evidence, and retains the origin question as underdetermined rather than manufacturing a supersession that the evidence cannot support.</p>
+
+<!-- coin-local-metadata:start -->
+<section class="coin-local-metadata" aria-label="Local metadata links">
+  <h2>Metadata</h2>
+  <p>
+    <a href="../metadata/inquiry/round-0010.metadata.json">Page metadata JSON</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../manifest.json">Published bundle manifest</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../metadata/local-metadata-manifest.json">Local metadata manifest</a>
+  </p>
+</section>
+<!-- coin-local-metadata:end -->
+
+</article>
+</main>
+<footer><span>bundle: <code>eudr-coffee-brazil-fazenda-sucuri</code></span> <span>bundle_round: <code>10</code></span> <span>source_repository_round: <code>54</code></span> <span>source_commit: <code>1c93f7a104e31a7964ba832b187824791c4da9d7</code></span> <span>source_dirty: <code>false</code></span></footer>
+</body>
+</html>

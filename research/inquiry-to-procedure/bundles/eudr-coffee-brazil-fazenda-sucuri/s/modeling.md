@@ -3,8 +3,8 @@ type: Method
 title: "Decision rules"
 fc-level: 2
 fc-axis: S
-fc-round: 8
-fc-supersedes: "s/modeling.md@round-0006"
+fc-round: 10
+fc-supersedes: "s/modeling.md@round-0008"
 ---
 # Decision rules
 
@@ -51,3 +51,19 @@ post-2020 establishment. The threshold sensitivity views use 0.025, 0.05, 0.10, 
 0.025 is a permissive 2.5% model-probability diagnostic threshold, not verified parcel ground
 truth. The morphology evidence is interpretive screening evidence and cannot independently
 establish EUDR non-compliance or causation.
+
+## Execution provenance versus task-formation provenance
+
+The numerical and morphology rules above describe the diagnostic actually executed on Fazenda
+Sucuri. They do not establish where the observation that prompted the diagnostic was first made.
+Round 10 classifies those claims separately:
+
+- **P1 — executed target:** verified. The pinned Sucuri handoff contains the threshold and morphology
+  outputs produced by `single-earth/eudr-dmi-gil@d68e7eb`.
+- **P2 — observation origin:** underdetermined. The first retained instruction with the exact
+  corridor-versus-broad-unit wording calls it a Sucuri observation, but it contains no source-image
+  reference. Older Ibiá / Patrocínio images are compatible with the wording but are not a retained
+  causal link.
+
+Accordingly, the diagnostic can support interpretation of Sucuri evidence, but its round-8
+motivation sentence is recorded provenance rather than independently verified discovery provenance.
